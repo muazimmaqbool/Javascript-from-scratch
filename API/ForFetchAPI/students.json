@@ -1,0 +1,33 @@
+[
+    {
+        "name":"Syed Muntazir",
+        "enroll":"6636",
+        "city":"Budgam",
+        "marks":46
+    },
+    {
+        "name":"Muazim Maqbool",
+        "enroll":"6655",
+        "city":"Sopore",
+        "marks":44
+    },
+    {
+        "name":"Haseeb Nabi",
+        "enroll":"6593",
+        "city":"Srinagar",
+        "marks":45 
+    },
+    {
+        "name":"Amir Suhail",
+        "enroll":"6656",
+        "city":"Pulwama",
+        "marks":47
+    },
+    {
+        "name":"Syed Danish",
+        "enroll":"6671",
+        "city":"Pulwama",
+        "marks":46 
+    }
+
+]

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>illegal shadowing in JS</title>
+    </head>
+    <body>
+        from N.S video :block scope and shadowing from 14:45
+        Arrow functions also covered from line number 64
+        <!--
+        what is illegal shadowing?
+        Ans: So, if we try to shadow let variable by var variable, 
+             it is known as Illegal Shadowing and it will give the error as “variable is already defined.”
+        -->
+       
+        <script>
+            //var a=10; //shadowing done easily by var also by let and const
+
+            //let b=10; // error when try to shadow by var
+
+            //const s=13; // error when try to shadow by var
+
+            {
+                //var b=15; // trying to shadow let, it  will be error : b has already been declared
+                // and this is called illegal shadowing (let can't be redecalered)
+
+                //let b=15; // now this is perfectly valid ,
+                            // you can shadow a let using let but can't let by var
+                
+                //it behaves same in consts as well
+                //var s=14; // error 's' has already been declared
+                //const s=14 // no error
+              
+            }
+            
+            // lets see can we shadow var by let
+            var b=5;
+            {
+                let b=6; // yes we can shadow var by let
+                console.log("let b= "+b); //6
+            } 
+            console.log("var b= "+b); // 5   (important watch at 15:50)    
+            
+            //shadowing let by var in function
+            console.log("var shadows let inside function:")
+            let c=7;
+            function x(){
+                var c=8; // now it won't show any error because var is inside its boundries(var is now not interfering let)
+                //and is not illegal-shadowing 
+                console.log("var c= "+c); // 8
+            }
+            x();
+            console.log("let c= "+c); //7
+            // it behaves same in const
+
+            const d=17;
+            function y(){
+                var d=18; // now it won't show any error because var is inside its boundries(var is now not interfering const)
+                //and is not illegal-shadowing (var is a function scope) 
+                console.log("var d= "+d); // 18
+            }
+            y();
+            console.log("const d= "+d); //17
+
+            // important : All the scope rules that applied on functions are same with Arrow Functions as well
+            // Arrow functions studied in next program 27.4
+
+        </script>
+    </body>
+</html>

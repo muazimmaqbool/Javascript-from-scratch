@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Closures in JavaScript</title>
+    </head>
+    <body>
+        <strong>
+        See Program 29 Closures in JS before this program
+        </strong>
+            
+        <script>
+            //use debugger amd see from video to understand concept better
+
+            // closure gives you access to an outer function's scope from an inner function.
+            //In JS, a closure is created every time a function is created at function creation time
+            function x(){
+                var a=10;
+                function y(){
+                    console.log(a); // o/p 10 and this is what closure is
+                // closure basically means that a function bind/group together with its lexical environment (parent)
+                // or function along with its lexical scope forms a "closure" thats known as closure
+
+                // here Inside y() function, it forms a closure with the varibale 'a' which is the part of x()
+                // lexical scope/function and it has access to its parents lexical scope that's why it prints 10
+                
+                // watch at 3:56 about functions (very very important)
+
+                // now study from next code 29.2 closures in JS
+            
+                }
+                y();
+            }
+            x();
+
+            // returing function at:6:00
+            function test(){
+                var x=20;
+                function b(){
+                    console.log(x); 
+                }
+                return b; //this will return whole function b()
+            }
+            var c=test();
+            console.log(c); // o/p function b()'s code
+
+            // now study from next code 29.2 closures in JS 
+            
+        </script>
+    </body>
+</html>

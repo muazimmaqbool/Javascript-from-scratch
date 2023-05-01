@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Closures in JavaScript</title>
+    </head>
+    <body>
+        <strong>
+        See Program 29,29.1,29.2 before this program
+        </strong>
+            
+        <script>
+            //Closures came with lot of corner cases/side things watch at 13:15
+
+            // case 1/extra things
+            function x(){
+                var a=10;
+                function y(){
+                    console.log(a);
+                }
+                //changing value of a 
+                a=50; 
+                return y;
+            }
+            var z=x();
+            console.log(z); 
+            /*****/
+            z(); // o/p:10 before changing the value of a and after changing its value in line number 21 
+                //output will be : 50 , Actually its not value of 'a' which is returned
+    //its reference of 'a' which is returned, so the function remember the reference to the variable 'a'
+
+        //case 2/extra things-2 (suppose above code was inside the function )
+        //lets see what happens when you access varibale of another level parent from the deapest function
+        
+        console.log("case 2:");
+        function outer(){
+            var b=30;
+            function x(){
+                var a=10;
+                function y(){
+                    console.log(a,b); // 10 30 (watch at 17:48)
+                    // it form a closure along with 'a' which is its parent and also with 'b' which is its parents parent
+                } 
+                y();
+            }
+            x();
+        }
+        outer();
+        // watch uses of closures at 18:45
+        // uses of closures:
+            // 1) module design pattern
+            // 2) currying
+            // 3) functions like once(a function which is called only once)
+            // 4) memoize
+            // 5) maintaining state in async world
+            // 6) setTimeouts
+            // 7) Iterators
+            // 8) and many more, see on google
+            // closures in JS are everywhere , the came naturally
+
+        </script>
+    </body>
+</html>

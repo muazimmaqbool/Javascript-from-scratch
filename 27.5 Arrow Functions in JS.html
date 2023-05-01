@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Arrow functions in JS</title>
+    </head>
+    <body>
+        <!-- See previous program 27.4 
+            visit: https://www.w3schools.com/js/js_arrow_function.asp
+        
+            ->Arrow functions were introduced in ES6.
+            ->Arrow functions allow us to write shorter function syntax:
+                let myFunction = (a, b) => a * b;   
+            ->  Before Arrow:
+                            hello = function() {
+                                return "Hello World!";
+                            }
+                With Arrow function:
+                        hello = () => {
+                            return "Hello World!";
+                        }
+        NOTE: It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:
+        NOTE: Arrow Functions Return Value by Default:
+               -> hello = () => "Hello World!";
+        Note: This works only if the function has only one statement.
+        If you have parameters, you pass them inside the parentheses:
+        -> Arrow Function With Parameters:
+           hello = (val) => "Hello " + val;
+        -> In fact, if you have only one parameter, you can skip the parentheses as well:
+           -> Arrow Function Without Parentheses:
+            hello = val => "Hello " + val;
+        -->
+          
+        <script>
+            //example
+            callme =()=>"Arrow Function"; // returns "Arrow Function"
+            console.log(callme());
+            //without using arrow function
+            // function callme(){
+            //     return "Arrow Function";
+            // }
+            // console.log(callme())
+
+            //example
+            square =(x)=>{                 // or square= x=>x*x;
+               return x*x;                // console.log(square(4));
+            }
+            console.log("square of 4: "+square(4));
+
+            //example
+            cube=a=>a*a*a; //returns cube of a
+            console.log("cube of 2: "+cube(2));
+
+            //example
+            sum =(a,b)=>a+b;
+            console.log("sum of 5 and 15: "+sum(5,15));
+
+            //example
+            multiple =(a,b)=>a*b;
+            console.log("multiple of 5 and 5: "+multiple(5,5));
+
+            //example
+            section=x=>{
+                if(x =='B'){
+                    return "Go Right!";
+                }
+                else
+                    return "Go Left!";
+            }
+            console.log("For class B: "+section("B"));
+
+          
+            
+        </script>
+    </body>
+</html>

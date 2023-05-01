@@ -1,0 +1,89 @@
+<html lang="en">
+    <head><title>Arrays</title>
+       <!-- An array is a data structure, which can store a fixed-size collection of elements of the same data type.  -->
+       <!-- An array is a special variable, which can hold more than one value:-->
+    </head>
+    <body>
+        <script type="text/javascript">
+            //var myarray; // this will also work
+
+            var myarray=[];
+            // or var myarray=new Array(4);
+            myarray[0]="Pizza";
+            myarray[1]="Choclate";
+            myarray[2]="Milk Shake";
+            myarray[3]="Burger";
+            // also try with this myarray[5]="briyani"; and console.log(myarray[8]); then see 0/p
+            //if you use above var "myarray=new Array(4);" then use this (myarray[5]="briyani";) it won't work
+           
+            alert(myarray[1]); // diplaying array value in popup
+           //alert(myarray); // displays whole array
+            // alert(myarray.length); // displays array length in popup
+           console.log(myarray); // displays array in console , it will also show you array length
+           // or use this to get array length in console
+           console.log(myarray.length); 
+
+           //another way of creating array
+           var products=["Camera","Laptop","SmartPhone"];
+           //alert(products[2]); // will display item of products which is at index 2
+           console.log("Products array: "+products);
+           // adding another item to the product array using push
+           products.push("Monitor"); 
+           products.push("UPS"); 
+           console.log("products array updated: "+products);
+           
+           products[5]="Display-Screen"; // this also adds item to array but you need to mention index here 
+           products[1]="CPU";// adds items at specific place and removes previous item at this place here laptop is replaced by CPU
+           console.log("products array updated: "+products);
+
+           
+            products.splice(1,1); // means it will delete item at 1 and just 1 item thats what 1,1 means so, here it removes CPU element
+            console.log("after removing index 1: "+products);
+            products.splice(0,2); // means delete from 0 and delete two items i.e 0 and 1 so, it will delete Camera and SmartPhone
+            // it will delete two items staring from 0 index i.e 0 and 1 index
+            console.log("products array updated: "+products);
+
+            //splice can we used to add in items
+            products.splice(1,0,"Mouse"); // means it will add Mouse just before the item at index 1
+            // means starting at index 1 , 0 means don't delete anything, and add item at index 1
+            // new products array = Monitor,mouse,ups, display screen
+            console.log("products array updated: "+products);
+
+            products.splice(3,1,"Keyboard") // replacing display screen with Keyboard
+            // we can add any items
+            products.splice(0,1,"Printer","Scanner","MousePAD");//replacing item at index 0 with many itmes
+            console.log("Items in products: "+products);
+            // new products array =Printer,Scanner,MousePAD ,mouse,ups, Keyboard
+
+            //removing item from array using pop
+            console.log("Pop()");
+            products.pop();// removing last element of the array i.e keyboard
+            console.log(products);
+            console.log("Pop()");
+            products.pop();// now removes Ups
+            console.log(products);
+           //console.log(products.pop()); //now removes mouse and returns mouse
+            console.log("item at index 1: ",products[1]); // displays scanner
+        </script>
+        <!--
+            Why Use Arrays?
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+
+let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";
+However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+
+The solution is an array!
+
+An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+Creating an Array
+Using an array literal is the easiest way to create a JavaScript Array.
+
+Syntax:
+
+const array_name = [item1, item2, ...];  
+        -->
+    </body>
+</html>

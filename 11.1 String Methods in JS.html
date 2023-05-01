@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Strings Methods</title>
+    </head>
+    <body>
+        <!-- visit: https://www.w3schools.com/js/js_string_methods.asp -->
+        <script>
+        //String Length:
+            //The length property returns the length of a string
+            let str1="Muazim Maqbool";
+            console.log(str1.length);
+
+        //Converting to Upper and Lower Case
+            //A string is converted to upper case with toUpperCase()
+            let text="computer";
+            console.log(text.toUpperCase());
+            //A string is converted to lower case with toLowerCase()
+            let text1="LAPTOP";
+            console.log(text1.toLowerCase());
+        
+        //String concat():
+            //concat() joins two or more strings
+            let txt1="Jio";
+            let txt2="fiber"
+            let txt3=txt1.concat(" ",txt2);
+            console.log(txt3);
+            txt4="wi-fi";
+            console.log(txt1.concat(" ",txt2," ",txt4));
+            /*
+            The concat() method can be used instead of the plus operator. These two lines do the same:
+                Example
+                text = "Hello" + " " + "World!";
+                text = "Hello".concat(" ", "World!");
+            Note:
+                All string methods return a new string. They don't modify the original string.
+                Formally said:
+                Strings are immutable: Strings cannot be changed, only replaced.
+            */
+
+            //Replacing String Content:
+                //The replace() method replaces a specified value with another value in a string:
+                let day="Today is Monday!"; 
+                console.log(day.replace("Monday","Friday"));
+                // this will replace only first Monday , like below
+                let day1="Today is Monday! Monday"; 
+                console.log(day1.replace("Monday","Friday"));
+            //String ReplaceAll():
+                //In 2021, JavaScript introduced the string method replaceAll()
+                //replaceAll() is an ES2021 feature.
+                //replaceAll() does not work in Internet Explorer.
+                let features="laptop is very good, laptop is very easy to use, laptop have good memory space, laptop also have front camera";
+                console.log(features.replaceAll("laptop","mobile-phone"));
+                // it will replace every laptop with mobile-phone
+
+            //String trim():
+                //The trim() method removes whitespace from both sides of a string // it didn't return anything
+                let fullName="      Muazim Maqbool Rather         ";
+                console.log("length before trim() "+fullName.length);
+                let name=fullName.trim();
+                console.log("Length after trim() "+name.length);
+                // it removes white space only before and after the text not in between the text
+            //String trimStart():
+                //The trimStart() method works like trim(), but removes whitespace only from the start of a string. 
+                let branch="   CSE      ";
+                console.log("Before trimStart() "+branch.length);
+                let b=branch.trimStart();
+                console.log("After trimStart() "+b.length);
+            //String trimEnd() : rmeoves whitespaces only at the end see example in w3schools
+
+            //String charAt():
+                //The charAt() method returns the character at a specified index (position) in a string
+                let x="NoteBook";
+                console.log(x.charAt(2)); // i.e t
+                console.log(x.charAt(0)); // i.e N
+
+            //String charCodeAt():
+                //The charCodeAt() method returns the unicode of the character at a specified index in a string:
+                //The method returns a UTF-16 code (an integer between 0 and 65535).
+                // UTF= Unicode Transformation Format
+                let y="Computer Science";
+                console.log(y.charCodeAt(1)); // UTF-16 code of o is : 111
+                console.log(y.charCodeAt(0));
+                // C and c will have different UTF-16 code
+                console.log(y.charCodeAt(9));
+                console.log(y.charCodeAt(5));
+            //Property Access:
+                //ECMAScript 5 (2009) allows property access [ ] on strings:
+                let z="Laptop";
+                console.log(z[1]); // a
+                console.log(z[0]); // L
+                /*
+                Note:
+                    Property access might be a little unpredictable:
+                    It makes strings look like arrays (but they are not)
+                    If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+                    It is read only. str[0] = "A" gives no error (but does not work!)
+                    Example
+                    let text = "HELLO WORLD";
+                    text[0] = "A";    // Gives no error, but does not work
+                */
+            //Converting a String to an Array - A string can be converted to an array with the split() method:
+                //JavaScript String split(): - used to convert string to array
+                let str2="Smart, Phone";
+                let myarray=str2.split(",");
+                console.log(myarray[0]);
+                /* text.split(",")    // Split on commas
+                   text.split(" ")    // Split on spaces
+                   text.split("|")    // Split on pipe */
+            /* Note :
+                If the separator is omitted, the returned array will contain the whole string in 
+                index [0].
+             -> If the separator is "", the returned array will be an array of single characters:*/
+                let str3="HomeWork";
+                let array2=str3.split("");
+                console.log(array2[0]); // H
+                console.log(array2[2]); // m
+                console.log(array2); //  ['H', 'o', 'm', 'e', 'W', 'o', 'r', 'k']
+                let text5="";
+                for(let i=0;i<array2.length;i++){
+                    text5+=array2[i]+" ";
+                }
+                console.log(text5);
+
+            // visit this page: https://www.w3schools.com/jsref/jsref_obj_string.asp
+
+        </script>
+    </body>
+</html>

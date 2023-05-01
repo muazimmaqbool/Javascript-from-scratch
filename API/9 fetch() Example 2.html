@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre>
+      https://youtu.be/VX8FRdr0Xb0?list=PLt5mNkGuWcuXXFysDLVdCHRh33p9HiGF7
+    </pre>
+    <script>
+      const url = "https://catfact.ninja/fact"; //api we are going to use
+      console.log("a"); // will print first
+      const fetchData = () => {
+        fetch(url)
+          .then((response) => {
+            console.log("then 1"); // will be printed after z
+            return response.json();
+          })
+          .then((data) => {
+            console.log("then 2"); //will be shown after then 1 and then API o/p will be shown
+            console.log(data);
+          });
+      };
+      fetchData();
+      console.log("z"); // this will print after a
+      // because fetch() returns promise and it may take time that's called asynchronous and its running
+      //in background while executing other lines of code
+
+      //in next program we will be working on this code but keeping code simple
+    </script>
+  </body>
+</html>

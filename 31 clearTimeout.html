@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>clearTimeout</title>
+    </head>
+    <body>
+        <!--
+            clearTimeout():
+            The clearTimeout() method clears a timer set with the setTimeout() method.
+            clearTimeout()  does not return anything
+
+            Note
+            To clear a timeout, use the id returned from setTimeout():
+            var myTimeout = setTimeout(function, milliseconds);
+
+            //Then you can to stop the execution by calling clearTimeout():
+
+            clearTimeout(myTimeout);
+
+            syntax of clearTimeout:
+            clearTimeout(id_of_setTimeout)
+        -->
+        <p id="displaytime"></p>
+        <button onclick="stoptime()">stop time</button>
+        <br>
+        <button id="startbtn" onclick="startCount()">Start</button>
+        <input type="text" id="displayCount">
+        <button onclick="stopCount()">Stop</button>
+        <button onclick="startfromZero()">Start From Zero</button>
+        
+        <script>
+            var timeoutID=setTimeout(showTime,5000);
+            function showTime(){
+                let datetime=new Date(); //return new date and time
+
+                let time=datetime.toLocaleTimeString(); //return current local time
+                
+                document.getElementById("displaytime").innerHTML=time;
+                console.log(time);
+            }
+           //How to showTime() to execute:
+            function stoptime(){
+                clearTimeout(timeoutID);
+            }
+
+            //This example has a "Start" button to start a timer, an input field for a counter,
+            // and a "Stop" button to stop the timer:
+            let counter=0;
+            let timeout;
+            let timer_on=0;
+            function timeCount(){
+                document.getElementById("displayCount").value=counter;
+                counter++;
+                timeout=setTimeout(timeCount,1000);
+            }
+            function startCount(){
+                if(timer_on==0){
+                    timer_on=1;
+                    timeCount();
+                }
+            }
+            function stopCount(){
+                clearTimeout(timeout);
+                timer_on=0;
+                document.getElementById("startbtn").innerHTML="Resume";
+            }
+            function startfromZero(){
+                clearTimeout(timeout);
+                document.getElementById("displayCount").value="0";
+                timer_on=0;
+                counter=0;
+                document.getElementById("startbtn").innerHTML="Start";
+                timeCount();
+            }
+        </script>
+    </body>
+</html>

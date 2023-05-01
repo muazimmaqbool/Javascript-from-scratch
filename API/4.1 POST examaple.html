@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let newTodo = {
+        userId: "6655",
+        title: "Solve GFG POTD",
+        completed: "false",
+      };
+      let url = "https://jsonplaceholder.typicode.com/todos";
+      const Todo = () => {
+        fetch(url, {
+          method: "POST",
+          body: JSON.stringify(newTodo),
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data)
+            console.log("id of yor new data is: ",data.id)
+          })
+          .catch((er) => consol.log(er));
+      };
+      Todo();
+    </script>
+  </body>
+</html>

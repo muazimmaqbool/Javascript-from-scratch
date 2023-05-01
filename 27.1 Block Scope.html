@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Block and Block scope</title>
+    </head>
+    <body>
+        from N.S video :block scope  
+
+        <!--
+        Block: A block statement is used to group zero or more statements. The block is delimited 
+               by a pair of braces ("curly brackets") and contains a list of zero or more statements 
+               and declarations.
+               {
+                //block 
+               }
+               *** Block is also known as "compound statement" ****
+
+               Block is used to combine multiple statements into one group
+               eg.
+               {
+                var a=10;
+                console.log(a);
+               } // this block is combining multiple js statements into one group
+
+            *** why we group multiple statements ?
+            ANS : we group multiple statements together in a block so that we can use it where JS expects
+            one statement (watch at 2:00 from N.S)
+
+            exmple:
+            if(true) and run this code it will show error because if expects one statements 
+            -> if(true)true : runs perfectly because we give it true as one statements.
+            but if you want to write multiple statements after if. You can only do that by grouping them
+            together via block eg: if(true){
+                                            }
+
+                we can also write like this for only one statement: if(true)console.log("hi");
+                but for multiple statemts we need to use block example in script elements
+
+                What is Block Scope?
+                ANS: Block Scope means what variable and fuctions we can access inside this block
+                i.e known as block scope example in code.
+        --> 
+        
+        <script>
+            if(true){
+                var a=5;
+                console.log(a);
+            }
+
+            //if(true)console.log("hi"); //runs perfectly
+
+            //block scope example at 5:00
+            console.log('inside block')
+            {
+                var b=10;
+                let c=20;  
+                const d=30;
+                // let are const can't be accessed outside the block but var can be
+                console.log("var: ",b); // 10
+                console.log("let: ",c); //20
+                console.log("const: ",d); //30
+            }
+            console.log('outside block')
+            console.log("var: ",b); //10
+            //console.log("let: ",c); //error 
+            //console.log("const: ",d); //error
+            
+            
+        </script>
+    </body>
+</html>

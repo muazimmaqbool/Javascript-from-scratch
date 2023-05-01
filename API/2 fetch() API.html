@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch() api part 2</title>
+  </head>
+  <body>
+    <script>
+      //here we will use fake json data for practice from : https://jsonplaceholder.typicode.com/
+      //url we are fetching inside fetch() : https://jsonplaceholder.typicode.com/users
+https://jsonplaceholder.typicode.com/users
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json()) // here response will be in json form
+        .then((result) => console.log(result)) // o/p will be object of all 10 records
+        .catch((error) => console.log("can't fetch the data"));
+
+      //Now printing this json data in document/webpage :
+      // because document.write(result) will show object,object,etc... as o/p
+      //Note: we can't print object in document.write but we can print value of it like this result[x].name
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((result) => {
+          //displaying result in document/webpage
+          for (var x in result) {
+            document.write(result[x].name, "-", result[x].email, "<br>");
+            document.write("City: ", result[x].address.city, "<br>");
+            document.write(
+              "street: ",
+              result[x].address.street,
+              " - Zipcode: ",
+              result[x].address.zipcode,
+              "<br>"
+            );
+          }
+        })
+        .catch((error) => console.log("can't fetch the data"));
+
+      //using another fake json data
+
+      fetch("https://dummyjson.com/carts")
+        .then((items) => items.json())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("Error: ", error));
+    </script>
+  </body>
+</html>

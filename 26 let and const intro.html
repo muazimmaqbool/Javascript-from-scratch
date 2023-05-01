@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Let and Const Intro</title>
+  </head>
+  <body>
+    <!--
+
+        var variables can be re-declared and updated
+        This means that we can do this within the same scope and won't get an error:
+        var greeting = "hey hi";
+        var greeting = "say Hello instead";
+
+        Let:
+           let is now preferred for variable declaration. 
+           It's no surprise as it comes as an improvement to var declarations. 
+
+           "let is block scoped"
+            A block is a chunk of code bounded by {}. A block lives in curly braces. 
+            Anything within curly braces is a block.
+         So a variable declared in a block with let  is only available for use within that block. 
+
+         "let can be updated but not re-declared."
+         Just like var,  a variable declared with let can be updated within its scope. Unlike var,
+          a let variable cannot be re-declared within its scope. 
+          
+          So while this will work:
+            let greeting = "say Hi";
+            greeting = "say Hello instead"; // greeting updated but not re-declared
+
+
+           this will return an error:
+              let greeting = "say Hi";
+              let greeting = "say Hello instead"; 
+               // error: Identifier 'greeting' has already been declared
+
+            Hoisting of let
+            Just like  var, let declarations are hoisted to the top. 
+            Unlike var which is initialized as undefined, the let keyword is not initialized. 
+            So if you try to use a let variable before declaration, you'll get a Reference Error.
+
+
+            const:
+            Variables declared with the const maintain constant values. 
+            const declarations share some similarities with let declarations.
+
+            "const declarations are block scoped"
+           Like let declarations, const declarations can only be accessed within
+            the block they were declared.
+
+            "const cannot be updated neither re-declared"
+            This means that the value of a variable declared with const remains the same within its scope.
+            It cannot be updated or re-declared.
+             So if we declare a variable with const, we can't update or re-declared it:
+              const greeting = "say Hi";
+              greeting = "say Hello instead";// error: Assignment to constant variable.
+
+              const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared
+            
+              "Every const declaration, therefore, must be initialized at the time of declaration."
+
+              This behavior is somehow different when it comes to objects declared with const.
+               While a const object cannot be updated, the properties of this objects can be updated. 
+               Therefore, if we declare a const object as this:
+
+                    const greeting = {
+                        message: "say Hi",
+                        times: 4
+                    }
+
+                    while we cannot do this:
+                    greeting = {
+                        words: "Hello",
+                        number: "five"
+                    } // error:  Assignment to constant variable.
+
+                    we can do this:
+                    greeting.message = "say Hello instead";
+                    This will update the value of greeting.message without returning errors.
+
+                    Hoisting of const
+                    Just like let, const declarations are hoisted to the top but are not initialized.
+
+                -> So just in case you missed the differences, here they are:
+
+                    var declarations are globally scoped or function scoped while let and const are 
+                    block scoped.
+                    
+                    var variables can be updated and re-declared within its scope; let variables
+                    can be updated but not re-declared; const variables can neither be updated nor re-declared.
+                    
+                    They are all hoisted to the top of their scope. But while var 
+                    variables are initialized with undefined, let and const variables are not initialized.
+                    
+                    While var and let can be declared without being initialized, const must be 
+                    initialized during declaration.
+       
+            -->
+    <script></script>
+  </body>
+</html>

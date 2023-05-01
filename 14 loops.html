@@ -1,0 +1,32 @@
+<html lang="en">
+    <head><title>Loops</title>
+        <!--loops are used to iterate the piece of code using for, while, do while or for/in loops. It makes the code compact. It is mostly used in array.-->
+        <!--
+            Different Kinds of Loops
+            JavaScript supports different kinds of loops:
+            for - loops through a block of code a number of times
+            for/in - loops through the properties of an object
+            for/of - loops through the values of an iterable object
+            while - loops through a block of code while a specified condition is true
+            do/while - also loops through a block of code while a specified condition is true
+         -->
+    </head>
+  
+    <body>
+        <script type="text/javascript">
+          for(var i=0;i<3;i++){
+            alert(i);
+          }
+          for(var i=5;i>0;i--){
+            //document.write(i,"<br>");
+            document.write("<h",i,">","Heading ",i,"</h",i,">");
+          }
+
+          var items=["EggRole","ChickenTika","FrenchFries","Pizaa","Briyani","Fruity"];
+          for(var i=0;i<items.length;i++){
+            document.write("<strong>Item: ",i," = ",items[i],"<br></strong>");
+            //document.write("<strong>Item: ",i+1," = ",items[i],"<br></strong>"); // also try this
+          }
+        </script>
+    </body>
+</html>

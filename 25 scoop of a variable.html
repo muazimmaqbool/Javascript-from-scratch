@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Scoop of a variable</title>
+    </head>
+    <!-- 
+    scope means: where you can access a varibale or a function in a code
+
+    Variables have a global or local "scope". 
+    For example, variables declared within either in the setup() or draw() functions may be only used in these functions. 
+    Global variables, variables declared outside of setup() and draw(), may be used anywhere within the program.
+    
+      Scope: Global scoped or function scoped. The scope of the var keyword is the global or function 
+      scope. It means variables defined outside the function can be accessed globally, and variables
+       defined inside a particular function can be accessed within the function. 
+    
+        -->
+    <body>
+        from video 8
+        <script>
+            var a=7; //global variable
+            f1();
+            f2();
+            
+            // 1) using global variable inside function
+            function f1(){
+                console.log(a); // will print value of a
+            }
+            
+
+            // 2) using global variable inside nested function
+            function f2(){
+                f3();
+                function f3(){
+                    console.log(a); // will still print value of a
+                }
+            }
+            
+            //3) trying to use varibale which is declared inside function outside the function
+            function f4(){
+                var b=8; // local variable
+                // b is in a scope of function f4()
+                console.log("b is in f4() and value of b is: "+b); //8 
+            }
+            f4(); 
+            //console.log(b); // o/p b is not defined//shows error as b is local variable/local scoped
+
+            // watch video from 6:00 to understand this in more details
+        </script>
+    </body>
+</html>
+
+
+
+

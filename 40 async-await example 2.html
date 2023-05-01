@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre>
+        https://youtu.be/zCXOR3wBJVA?list=PLt5mNkGuWcuXXFysDLVdCHRh33p9HiGF7
+    </pre>
+    <h1></h1>
+    <script>
+      //check previous code first
+
+      //this code we have taken from code API folder : 57.1 it displays random cat facts
+      const url = "https://catfact.ninja/fact"; //api we are going to use
+      const h1 = document.querySelector("h1");
+      /*const fetchData = () => {
+        fetch(url)
+          .then((response) => response.json())
+          //.then((data) => h1.innerHTML=data)
+          .then((data) => (h1.innerHTML = data.fact))
+          .catch((e) => console.log(e))
+          .finally(() => console.log("finally done"));
+      };
+      fetchData();*/
+
+      //above example using async-await
+      /* const fetchData = async () => {
+        const response = await fetch(url); //here await because it returns promise
+        const data = await response.json(); // here it also returns promise therefore await here aswell
+        //console.log(data);
+        h1.innerHTML = data.fact;
+      };
+      fetchData(); */
+
+      /* console.log("A");
+      const fetchData = async () => {
+        console.log("F1");
+        const response = await fetch(url);
+        console.log("F2");
+        const data = await response.json();
+        console.log("F3");
+        h1.innerHTML = data.fact; // or //console.log(data);
+        console.log("F4");
+      };
+      fetchData();
+      console.log("Z");*/
+      // o/p : A,F1,Z,F2,F3,F4
+      // if we use console.log.. in place of h1.innHTML... we get o/p: A,F1,Z,F2,F3,api result,F4
+
+      //handling error
+      /*const fetchData = async () => {
+        const response = await fetch(url);
+        const data = await response.json();
+        h1.innerHTML = data.fact;
+      };
+      fetchData().catch((error) => console.log("error: ", error));*/
+
+      //handling error using try and catch
+      const fetchData = async () => {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          h1.innerHTML = data.fact;
+        } catch (error) {
+          document.write("Error: ",error);
+          //console.log("Error: ",error)
+        }finally{
+            console.log("Finally is optional")
+        }
+      };
+      fetchData();
+      //Note: now its mostly recomended to use try and catch with async-await
+
+      //throw error
+      //we can throw error by our will if we throw it before statments in try{} then they won't run
+      //and we if use it after statements in try{} then they will still run and and error will be shown
+      /* syntax of throw: 1) throw "error message";
+                          2) throw Error("error message");
+                          3) throw new Error("error message");
+      */
+      //Note: throw is optional
+      /*const fetchData = async () => {
+        try {
+          //throw "meri marzi wala error" //statments after it won't run
+          const response = await fetch(url);
+          const data = await response.json();
+          h1.innerHTML = data.fact;
+          //throw "meri marzi wala error" //statments before it will still run but make sure you display error message in console
+          //throw Error("Error after statements")
+          throw new Error("Error using new keyword"); //better to use this if you use throw
+        } catch (error) {
+          //document.write("Error: ",error);
+          console.log("Error: ", error);
+          //console.log(error.message); //gets error message
+          // console.log(error.name); // gets error name
+        } finally {
+          console.log("Finally is optional");
+        }
+      };
+      fetchData();*/
+    </script>
+  </body>
+</html>

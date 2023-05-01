@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Async/Await in JS</title>
+  </head>
+  <body>
+    <script>
+        // check notes for basic info
+        //->async-await makes asynchronous programming easy
+        //->handles promises easily and in proper manner
+
+      //normal function :
+      // function test(){
+      //     return "Hello";
+      // }
+      // console.log(test()); // hello
+
+      //async funciton:
+      async function test() {
+        // or let test =  async function(){...}
+        return "hello async";
+      }
+      //console.log(test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
+
+      //here we don't need to write resolve and reject we can directly call then and catch:
+      //if test() function runs successfully then this then() is going to call automatically
+      test().then((result) => {
+        //the return value of function gets stored in result
+        console.log(result);
+      });
+
+      //async in arrow function
+      let test2 = async () => "async inside arrow function";
+      test2()
+        .then((data) => console.log(data))
+        .catch((e) => console.log("error:",e));
+
+        //in next code we will be looking at both async-await methods together
+    </script>
+  </body>
+</html>

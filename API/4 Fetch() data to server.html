@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passing data to server</title>
+  </head>
+  <body>
+    <script>
+      //before looking at this code please visit notes first
+      //here we will use fake json file to which we can make changes : https://jsonplaceholder.typicode.com/guide/
+      // we will send/post data to this link: https://jsonplaceholder.typicode.com/guide/
+
+      //POST method is used to send data to server
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST", //used to send/pass data to server
+        body: JSON.stringify({
+          //json.stringify() : converts js object to json string before sending it to server
+          //js object
+          title: "new data",
+          body: "Hello", 
+          userId: 1, // can be anything
+        }),
+        //or we write it like this -> body:JSON.stringify(obj), .. obj is defined above outside fetch like this -> var obj={ title:"ghjvsd",body:"kjbsdk",userId:1};
+        headers: {
+          "Content-type": "application/json;  charset=UTF-8", //charset=UTF-8 is optional
+        },
+      })
+        .then((response) => response.json())
+        .then((result) => console.log(result));
+        //it returns data we send also an id : in this case its : 101 means the data we send to server
+        //is added to this number (its an response from the server)
+        //initally in this file there was 100 records and we added new recorde and which is added at 101
+
+        //here its not saved permentally on this file as this is fake file its juts for understanding purpose
+        //but if we have used our own server path/file then it will save it permentally , working flow is same
+    </script>
+  </body>
+</html>

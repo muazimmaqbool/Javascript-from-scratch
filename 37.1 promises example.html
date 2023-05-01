@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //here i have three simple promises and they always resolved they never reject
+        const video1=new Promise((resolve,reject)=>{
+            resolve("video one recorded")
+        })
+        const video2=new Promise((resolve,reject)=>{
+            resolve("video two recorded")
+        })
+        const video3=new Promise((resolve,reject)=>{
+            resolve("video three recorded")
+        })
+
+        //now here i want to run all these three prmoises in paralled same time
+        //promise.all will run all of these promises and when its done its going to call the .then and .catch
+
+        Promise.all([ // takes array of promises to run them
+            video1,
+            video2,
+            video3
+        ]).then((messages)=>{ //.then contains array of all the successfull message
+            console.log(messages)
+        })
+        //no catch is required here as they all return resolve
+
+        //promise.race will give us only one promises which is completed first
+        Promise.race([
+            video1,
+            video2,
+            video3
+        ]).then((message)=>{
+            console.log(message)
+        })
+    </script>
+</body>
+</html>

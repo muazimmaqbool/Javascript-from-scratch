@@ -1,0 +1,18 @@
+body{
+    background-color:palegoldenrod
+}
+h1{
+    background-color: aquamarine;
+    width: fit-content;
+}
+p input{
+    font-size: 150%;
+    background-color:blue;
+    color:white;
+}
+p button{
+    background-color: black;
+    color:yellow;
+    font-size: 120%;
+    margin-left:100px;
+}

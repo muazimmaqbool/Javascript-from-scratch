@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API-fetch()</title>
+  </head>
+  <body>
+    <pre>
+   Note: read notes before looking at this code | In spiral binding copy
+    </pre>
+    <script>
+      //here we are going to read a file which is in "ForFetchAPI" folder its name
+      // is intro.txt using using fetch() method 
+
+      fetch("ForFetchAPI/Intro.txt").then(function(response){ //can use arrow function here as well and response can be named as anything
+        //console.log(response) // just for checking what it returns here in response
+        //console.log(response.text()) // also look at its result , here it will return text of the response inside promise object
+        return response.text(); // returning text using .text() as we want text of the resoponse
+    }).then((result)=>{ // result contains data which is returned by the above then()
+        console.log(result);
+        document.write(result)
+    }).catch((error)=>console.log(error));
+    //in next code we will work with json and see more exmaples of API
+    </script>
+  </body>
+</html>

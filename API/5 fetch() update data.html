@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update data to server</title>
+  </head>
+  <body>
+    <script>
+      //PUT method is used to update data in server
+
+      //object we want to update to server
+      //in reality we don't take data like this from user for updating/inserting we take data from user using
+      //html forms (see code 7)
+      let data = {
+        id: 1,
+        title: "data updated",
+        body: "fetch() is cool",
+        userId:7
+      };
+      fetch("https://jsonplaceholder.typicode.com/posts/1", {
+        //here in url posts/1 tells at 1 we want to update
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json",
+        },
+      })
+        .then((r) => r.json())
+        .then((data) => console.log(data))
+        .catch((e) => console.log("some error has occurred",e));
+    </script>
+  </body>
+</html>

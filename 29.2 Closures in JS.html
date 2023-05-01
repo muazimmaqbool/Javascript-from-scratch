@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Closures in JavaScript</title>
+    </head>
+    <body>
+        <strong>
+        See Program 29 Closures in JS and 29.1 Closures in JS before this program
+        </strong>
+            
+        <script>
+            function x(){
+                var a=20;
+                function y(){              // or return function y(){
+                    console.log(a);              //console.log(a) 
+                }                          //      } this is same as return y;
+                return y;  
+            }
+            var z=x(); // calling function x and returns y into z and x() is gone. Now z contains y()
+            console.log(z); // o/p function y() code
+
+            //calling z ; (we can call this although its variable but now it contains function in it)
+            z(); // i.e we are actually calling y()
+        // o/p : ? , it will print 20 , Here comes closure into picture. When functions are returned
+        //from another function they still maintain their lexical scope, they remember where they were
+        // actually present. So y() remembers from where it came and it remembers their was something a and look for its value
+        
+        //when function y() was returned not just the function code was returned but
+        //the whole closure was also returned and it was put into z. and when you execute z() it still remembers
+        // the reference to a and prints value of 'a'
+      
+        </script>
+    </body>
+</html>

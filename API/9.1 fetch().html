@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      //check previous code first
+      const url = "https://catfact.ninja/fact"; //api we are going to use
+       
+      const fetchData = () => {
+        fetch(url)
+          .then((response) => response.json())
+          //.then((data) => h1.innerHTML=data) //printing data in h1 // this will o/p object,object
+          .then((data) => (h1.innerHTML=data.fact)) //displays new facts in every refresh also try this : (h1.innerHTML = data.fact + data.length)
+          .catch((e) => console.log(e))
+          .finally(()=>console.log("finally done"))
+      };
+      fetchData();
+
+      //its better to use asyn-await with fetch, although it also works
+      // in our weather app project we will be using async-await with fetch
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>chaining map,filter and reduce</title></head>
+    <body>
+        <!-- -> See previous codes | from 31:45     
+        -->
+        <script>
+            //example of array with objects (and each object has 3 properties)
+            const students=[
+                {name:"Syed Danish",enroll:"6671",marks:"40"},
+                {name:"Muazim Maqbool",enroll:"6655",marks:"39"},
+                {name:"Mezy Jan",enroll:"6631",marks:"42"},
+                {name:"Aabida Farooq",enroll:"6645",marks:"41"},
+                {name:"Danish Gul",enroll:"6644",marks:"37"},
+                {name:"Amir Suahil",enroll:"6656",marks:"48"},
+                {name:"Syed Muntazir",enroll:"6636",marks:"39"},
+                {name:"Shariq Rafiq",enroll:"6657",marks:"39"},
+                {name:"Haseeb Nabi",enroll:"6499",marks:"40"}
+            ];
+            //find name of all the people who marks are less than 40
+            // o/p like this ["Muazim Maqbool","Danish Gul",...]
+            //-> the of power these function is that you can chain them/combine them (watch at 33:55)
+            //->
+            //using only filter (this will o/p whole details of those with less than 40 marks but want only their name)
+            // const stds1=students.filter((x)=>x.marks<40);
+            // console.log(stds1);
+            //->
+            const stds=students.filter((x)=>x.marks<40).map(x=>x.name+":"+x.marks);
+            console.log(stds);
+            //this map() with filter() works on/with the output of the filter function so we get name 
+            //and marks of only those whos marks are less than 40.
+            // with filter() we got only those with marks<40 and with map we got their name and marks
+
+            //can do above task with reduce() now this is a task , lets try it!
+            const output=students.reduce(function(acc,curr){
+                if(curr.marks<40){
+                    acc.push(curr.name+":"+curr.marks);
+                }
+                return acc;
+            },[]); // using {} here will show error, because if we use {} then we can't use acc.push
+            console.log(output);
+
+            //Note:
+            //You can chain the reduce() after map() and filter() as they return an array but can't chain map() and filter() on reduce as it returns a single value.
+
+        </script>
+    </body>
+</html>

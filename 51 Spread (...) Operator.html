@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Spread (...) Operator</title>
+  </head>
+  <body>
+    <!--
+        ->The Spread (...) Operator :
+            The ... operator expands an iterable (like an array) into more elements
+            The spread (...) syntax allows an iterable, such as an array or string, to be expanded 
+            in places where zero or more arguments (for function calls) or elements (for array literals) 
+            are expected. 
+        { -> matlab ye kisi b iterable object(like array/string) ko spread(kholne) ke liye hota hain 
+          -> spread karna app keh skhte hoo ek tarah se copy karna hota hain}
+    -->
+    <script>
+        let array1 = [1, 2, 3, 4, 5];
+        //let array2 = [6, 7, 8, 9, 10];
+      //now i want to include array1 in array2 and we do it using spread operator
+        let array2 = [6, 7, 8, 9, 10, ...array1]; // to do this first comment array2 previous
+        // or let array2 = [...array1, 6, 7, 8, 9, 10,];
+        // or let array2 = [6, 7, 8, ...array1, 9, 10,];
+        console.log(array2); // o/p: [6, 7, 8, 9, 10, 1, 2, 3, 4, 5]
+
+    // -> isliye isko bolte hain spread operator isne array1 ko array2 main khol ke rakh diya
+
+       //we can also do this
+       let array3=[...array1,...array2];
+       console.log(array3); // o/p: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5]
+
+       //example of sum
+       const numbers=[7,8,9];
+       function sum(x,y,z){
+        return x+y+z;
+       }
+       console.log(sum(...numbers));
+
+       let str1="Hello Javascript";
+       let str2=" Its spread operator";
+       console.log(str1.concat(...str2))
+
+       /*
+       -> Spread syntax can be used when all elements from an object or array need to be included in a 
+       new array or object, or should be applied one-by-one in a function call's arguments list. 
+       There are three distinct places that accept the spread syntax:
+       */
+        
+    </script>
+  </body>
+</html>

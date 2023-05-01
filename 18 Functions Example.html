@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <title>Fnnctons Example</title>
+  </head>
+  <!--In this code computer guesses how many fingers we are holding up using Functions
+   watch video functins in javascript from 6:00 -->
+  <body>
+    <p>How many fingers you are holding up?</p>
+    <p>
+      <select id="mynumber">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <button id="ComputerGuess">Computer Guesses</button>
+    </p>
+    <script type="text/javascript">
+      function doAguess(correctnumber) {
+        // so correctnumber contains mynumberEnterted
+
+        var computerNumber = Math.floor(Math.random() * 6);
+        if (computerNumber == correctnumber) {
+          return true; // or return true;
+        } else {
+          return false;
+        }
+      }
+      document.getElementById("ComputerGuess").onclick = function () {
+        var mynumberEnterted = document.getElementById("mynumber").value;
+        var gotIt = false;
+        var numberofGuesses = 1;
+        while (gotIt == false) {
+          if (doAguess(mynumberEnterted) == true) {
+            gotIt = true;
+            alert(
+              "Got It Right! It was a " +
+                mynumberEnterted +
+                " And It took PC " +
+                numberofGuesses +
+                " Guesses"
+            );
+          } else {
+            numberofGuesses++;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

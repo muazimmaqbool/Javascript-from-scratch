@@ -1,0 +1,33 @@
+<html lang="en">
+    <head><title>Changing content</title>
+    </head>
+    <body>
+        <P id="text">This is some text</P>
+        <button id="button">change text</button>
+
+        <p id="text2">javascript is...</p><!-- adding some extra text to it / appending text to it-->
+        <button id="button2">Append Text</button>
+
+        <p id="text3"></p><!-- add text to this empty paragraph-->
+        <button id="button3">MakeText</button>
+        <script type="text/javascript">
+            document.getElementById("button").onclick=function(){
+                document.getElementById("text").innerHTML="Some New Text";
+            }
+
+            document.getElementById("button2").onclick=function(){
+                //appending some text to existed text
+                document.getElementById("text2").innerHTML=document.getElementById("text2").innerHTML+"Awesome";
+                // or can also do this
+               // document.getElementById("text2").innerHTML="I think "+document.getElementById("text2").innerHTML+"Awesome";  
+            }
+            document.getElementById("button3").onclick=function(){
+                //document.getElementById("text3").innerHTML="Complete New Text";
+                // or do this
+                document.getElementById("text3").innerHTML="<h1>Complete New Text</h1>" 
+                // we can put any html element there lists, forms, tables etc
+            }
+            // innerhtml is not a function its a value/content of the paragraph
+        </script>
+    </body>
+</html>

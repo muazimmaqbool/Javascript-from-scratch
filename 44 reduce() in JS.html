@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>reduce() in JS</title>
+    </head>
+    <body>
+        <!--See previous code 41 
+            (reduce is important)(11:36)
+        
+        -> reduce() function is basically at a place were you have to take all the elements of an array
+                    and come-up with a single value out of them
+        ->The reduce() method reduces an array of values down to just one value. To get the output value, 
+            it runs a reducer function on each element of the array.
+            Syntax
+                arr.reduce(callback, initialValue)
+                The callback argument is a function that will be called once for every element in the array. 
+                This function takes four arguments, but often only the first two are used.
+
+                accumulator - the returned value of the previous iteration
+                currentValue - the current item in the array
+                index - the index of the current item
+                array - the original array on which reduce was called
+                The initialValue argument is optional. If provided, it will be used as the initial 
+                accumulator value in the first call to the callback function.
+        
+        -> suppose you want to iterate through the elements of an array and find out the sum or
+          find out the largest/smallest among them reduce is used
+        -->
+        <script>
+            const arr=[0,1,2,3,4,5,6,7,8,9];
+            //find sum of array
+            //without reduce() function
+            function sumArray(arr){
+                let sum=0;
+                for(var i=0;i<arr.length;i++){
+                    sum=sum+arr[i];
+                }
+                return sum;
+            }
+           console.log(sumArray(arr)) // o/p: 45
+           
+           //finding sum with reduce() (watch at 14:55 and 15:00 its important)
+           const output=arr.reduce(function(acc,curr){
+                acc=acc+curr;
+                return acc;
+           },0); // here if we don't give it initial value as zero it will still use 0 value for acc
+           console.log("with reduce(): "+output); // o/p: 45
+           //explanation: 
+           //acc(accumulator): this is used to accumulate the values/result
+           //curr(current): represents the value when we are iterating(every element)
+              //{i.e curr will be array elements}
+           // here: acc is in place of sum(line no.33) and curr is in place of arr[i]
+           // so previous to get sum we do: sum=sum+arr[i] now, 
+             //we will do like this: acc=acc+curr 
+        // but we need to initialize the first value for the first go like we do sum=0(line 33), here
+        //also the function takes second argument as index(initial value), 
+              //we set it to 0 i.e acc will be 0 in first go   
+      //so, the reduce funtion takes first argument function and second argument is any initial value                 
+           
+    // see more examples in next program 44.1
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html lang="en">
+    <head><title>Responding to a Click</title>
+    </head>
+    <body>
+        <p id="text">Hello javascript</p>
+        <!-- changing the content when the button is clicked-->
+        <button id="mybutton">Change Text</button>
+
+        <script type="text/javascript">
+            document.getElementById("mybutton").onclick=function(){
+                document.getElementById("text").innerHTML="Let's start JS";
+            }
+            /* onclick=function(){} says when ever button is clicked do whatever
+            code is written inside the function*/
+        </script>
+    </body>
+</html>

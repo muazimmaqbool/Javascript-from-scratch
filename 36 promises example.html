@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Promises are used to handle Async operations in JS 
+        such as fetching data from a server, reading/writing files, or waiting for a user input.
+
+    ->Promises allow you to write asynchronous code that is easier to read and maintain. 
+      Instead of nesting callbacks, promises let you chain operations and handle errors in a more 
+      structured way
+    -->
+    <script>
+        
+        // promise object takes one parameter which is a function which gets passed two variable
+        // resolve and reject
+        let p=new Promise((resolve,reject)=>{
+            //function definition
+            let a =1+1 //try for 1+2 as well
+            //this is what this promise does and if this fail we will reject it otherwise resolve it
+            if(a==2){
+                resolve('success')
+            }
+            else{
+                reject('failed')
+            }
+        })
+        //interacting with promises
+        //anything inside .then is going to run for resolve
+        //then takes a method in our cases its going to be single parameter i.e success message
+        //to get error/reject we use .catch
+        p.then((message)=>{
+            console.log('this is inside then: '+message)
+        }).catch((message)=>{
+            console.log('this is inside catch: '+message)
+        })
+        //then is called when our promise resolved successfully and catch is going to called if
+        //our promises rejected or failed
+
+        //example two
+        let complete=true;
+        let prom = new Promise((res,rej)=>{
+            if(complete) res("its completed successfully");
+            else rej("some error has occurred!");
+        });
+        console.log(prom); //try this and see its result
+
+        let onResolve = (result) => console.log(result);
+        let onReject = (error) => console.log(error);
+
+        prom.then(onResolve);
+        prom.catch(onReject);
+        //onResolve and onReject functions needs to be defined before using them in .then() and .catch()
+
+        //example three
+        function check(status){
+            return new Promise((resolve,reject)=>{
+                if(status) resolve("status is true");
+                else reject("status is false");
+            });
+        }
+        //console.log(check(true));
+        let onResolve1 = (result) => console.log(result);
+        let onReject1 = (error) => console.log(error);
+
+        //check(true).then(onResolve1);
+        //check(true).catch(onReject1);
+        //better way to use via method chaning
+        check(true).then(onResolve1).catch(onReject1);
+
+    </script>
+</body>
+</html>

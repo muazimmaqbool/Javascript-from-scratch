@@ -1,0 +1,95 @@
+<html lang="en">
+
+    <head><title>Strings</title>
+    </head>
+    <body>
+        <!-- 
+            JavaScript strings are for storing and manipulating text.
+            A JavaScript string is zero or more characters written inside quotes.
+            let carName1 = "Volvo XC60";  // Double quotes
+            let carName2 = 'Volvo XC60';  // Single quotes
+
+        -> You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+            Example:
+            let answer1 = "It's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"';
+        -->
+
+        <script>
+            let answer1 = "It's alright";
+            console.log(answer1);
+            let answer2 = "He is called 'Hacker'";
+            console.log(answer2);
+
+            //String Length
+            let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let length = text.length;
+            console.log(length);
+            let words="Hey how are you! doing today" //space and special characters are also counted
+            console.log(words.length);
+
+            //Escape Character
+            /*The backslash (\) escape character turns special characters into string characters:
+                   Code	 Result	    Description
+                    \'	   '	    Single quote
+                    \"	   "	    Double quote
+                    \\	   \	    Backslash    */
+            //let text1="I am using "Hp" laptop with 8GB of RAM"; //error
+            let text1="I am using \"Hp\" laptop with 8GB of RAM";
+            console.log(text1);
+
+            //Six other escape sequences are valid in JavaScript:
+           /*   Code	Result
+                \b	  Backspace
+                \f	  Form Feed
+                \n	  New Line
+                \r	  Carriage Return
+                \t	  Horizontal Tabulator
+                \v	  Vertical Tabulator 
+            NOTE: The 6 escape characters above were originally designed to control typewriters,
+                 teletypes, and fax machines. They do not make any sense in HTML.
+                */
+
+            //JavaScript Strings as Objects
+          /*  Normally, JavaScript strings are primitive values, created from literals:
+                    let x = "John";
+                    But strings can also be defined as objects with the keyword new:
+                    let y = new String("John");*/
+
+                    //Example
+                    // x is a string
+                    let x = "NoteBook";
+                    console.log(x);
+                    // y is an object
+                    let y = new String("TextBook");
+                    console.log(y);
+ 
+                  /* Do not create Strings objects.
+                        The new keyword complicates the code and slows down execution speed.
+                        String objects can produce unexpected results:*/
+
+                //Note: Comparing two JavaScript objects always returns false.
+                //example
+                let x1 = new String("Laptop");  // x1 is an object
+                let y1 = new String("Laptop");  // y1 is an object
+                console.log(x1==y1); // false
+
+                // for ===
+                let x2 = new String("Mobile");  // x2 is an object
+                let y2 = new String("Mobile");  // y2 is an object
+                console.log(x2===y2); // false
+
+            /*  Extra : 
+                The main difference between the == and === operator in javascript is that the == operator
+                 does the type conversion of the operands before comparison, whereas the === operator
+                 compares the values as well as the data types of the operands.
+            */
+            //for == in object and string
+                    let x3 = "Camera";  //string
+                    let y3 = new String("Camera"); //object
+                    console.log(x3==y3); // true
+        </script>
+        
+    </body>
+</html>

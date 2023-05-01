@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>setInterval function in js</title>
+    </head>
+    <body>
+        <!--
+            The setInterval() method calls a function at specified intervals (in milliseconds).
+            The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+            1 second = 1000 milliseconds.
+
+            ** To execute the function only once, use the setTimeout() method instead **
+
+         NOTE:
+            To clear an interval, use the id returned from setInterval():
+            var  myInterval = setInterval(function, milliseconds);
+
+            //Then you can use it to stop the execution by calling clearInterval():
+
+            clearInterval(myInterval);
+
+            Syntax of setInterval :
+            setInterval(function, milliseconds, param1, param2, ...) 
+            //parameters are optional 
+            setInterval and setTimeout returns the ID of the times use this id to stop
+        -->
+
+        <p id="time"></p>
+        <button id="stop" onclick="stopwatch()">stop time</button>
+        <script>
+            //Example
+            //setInterval(time,1000);
+            function time(){
+                const date=new Date();
+                document.getElementById("time").innerHTML=date.toLocaleTimeString();
+                console.log(date.toLocaleTimeString());
+            }
+            var myinterval=setInterval(time,1000);
+            //Using clearInterval() to stop the digital watch:
+            function stopwatch(){
+                clearInterval(myinterval);
+            }
+            // see more examples at https://www.w3schools.com/jsref/met_win_setinterval.asp
+            
+        </script>
+    </body>
+</html>

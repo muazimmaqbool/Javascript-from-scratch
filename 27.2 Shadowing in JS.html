@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>shadowing in JS</title>
+  </head>
+  <body>
+    from N.S video :block scope and shadowing from 8:00
+    <!-- 
+        what is shadowing?
+        ANS : shadowing occurs when a variable declared in a certain scope (e.g. a local variable) has
+             the same name as a variable in an outer scope (e.g. a global variable).
+        -->
+
+    <script>
+      console.log("shadowing with var");
+      var a = 10;
+      {
+        var a = 20; //this variable 'a' in block shadows the variable 'a' in outside block/global scope
+        console.log("var a in block scope= " + a); //20
+        // this variables value comes from line number 18 and not from line number 16. This is known as shadowing
+      }
+      console.log("global var a= " + a); // prints 20 again , So value of 'a' modifies the value of varibale 'a'
+      // which is declared outside the block. Because they both pointing to the
+      // same memory location (watch at 9:28)
+      // and they both are in the gobal object(same memory space)
+
+      // lets try this with let
+      console.log("Shadowing with let");
+      let b = 5; // this b is in script scope
+      {
+        let b = 10; // this b is in block scope
+        console.log("inside block: let b= " + b); // 10 , this refers to the block scope
+      }
+      console.log("outside block: let b= " + b); // 5 , this refers to the script scope
+      // so, nothing changed here , Because both b's are different in block and outside the block
+      // The both b's have different scope , they both have different memory space
+      // and this is known as shadowing (same thing also happens with const let's try:)
+
+      // lets try this with const
+      console.log("Shadowing with const");
+
+      const c = 40;
+      {
+        const c = 80;
+        console.log("inside block: const c= " + c); // 80
+      }
+      console.log("outside block: const c= " + c); // 40
+      // so we have same o/p here like we have in let .Same thing happens here as well
+      // they both are coming from different memory space/scope
+
+      //shadowing behaves same way in functions as well
+      console.log("Shadowing in functions:");
+      var x = 2;
+      let y = 3;
+      const z = 4;
+      shadowing();
+      function shadowing() {
+        var x = 12;
+        console.log("var x= " + x); // 12
+        let y = 13;
+        console.log("let y= " + y); // 13
+        const z = 14;
+        console.log("const z= " + z); // 14
+      }
+      console.log("Now they are outside the function:");
+      console.log("var x= " + x); // 2 (here in functions var  have have different memory space inside and outside the functions so, will have different o/p here as compared to a in block)
+      console.log("let y= " + y); // 3
+      console.log("const z= " + z); // 4
+    </script>
+  </body>
+</html>

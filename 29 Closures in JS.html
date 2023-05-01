@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Closures in JavaScript</title>
+    </head>
+    <body>
+        <strong>
+        study closures from: <a href="https://www.w3schools.com/js/js_function_closures.asp" target="_blank">W3 Schools<br></a>
+        And from N.S youtube video: <a href="https://www.youtube.com/watch?v=qikxEIxsXco&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=12" target="_blank">Youtube</a>
+        </strong>
+        <!--
+        -> A closure is the combination of a function bundled together (enclosed) with references to its 
+            surrounding state (the lexical environment). 
+            In other words, a closure gives you access to an outer function's scope from an inner function
+        
+        -> JavaScript variables can belong to the local or global scope.
+           Global variables can be made local (private) with closures.
+
+        (global variables belong to the page. Global variables can be used (and changed) by all other scripts in the page.)
+        (A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.)    
+        (Global and local variables with the same name are different variables. Modifying one, does not modify the other.)
+        (Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.)
+
+        What is meant by lexical scope?
+        ANS: Lexical scope is the ability for a function scope to access variables from the parent scope.
+    (stydy from video of NS)
+    -->   
+        <script>
+            //from N.S video
+            function x(){
+                var a=10;
+                function y(){
+                    console.log(a); // will print a , because of lexical scope, it will first look 'a' in 
+                //its local memory space and then in its parent functions memory space, and that's what
+                // closure is . now see in code 29.1 Closures in js
+                }
+                y();
+            }
+            x();
+        </script>
+    </body>
+</html>

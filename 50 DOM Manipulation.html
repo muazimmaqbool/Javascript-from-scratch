@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="50style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box random" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+    </div>
+
+    <script>
+        //DOM : Document object model
+        //DOM Manipulation: how we access,modify,change,add manipulate html elements using Javascript
+        //we can manipulate html and css using javascript
+        
+        //->What is DOM?
+        /* ANS-> when a page is loaded the browser creates a document object model of the page
+                ->the html DOM model is constructed as a tree of objects {document -> html ->head and body etc. see image on google}
+        */
+
+        //Accessing ELEMENTS:
+        /*
+        Finding HTML elements by id : document.getElementByld("intro");
+        Finding HTML elements by tag name : document.getelementsByTagName("p");
+        Finding HTML elements by class name : document.getElementsByClassName("intro);
+        Finding HTML elements by CSS selectors : document.querySelectorAll("p.intro");
+        */
+        const b=document.body; //selets body
+        console.log(b); //prints whole code inside body
+        //b.style.backgroundColor="green";
+
+        const box2=document.getElementById("box-2");
+        console.log(box2);
+
+        const divs=document.getElementsByTagName("div"); //selects all div's
+        console.log(divs); 
+
+        const boxes=document.getElementsByClassName("box");
+        console.log(boxes)
+
+        const random=document.querySelector(".container .random"); //selects random class which is inside container class
+        console.log(random);
+
+        //const randomAll=document.querySelectorAll(".container .random") //selects all random classes inside container class    
+
+        //Modifying Elements
+       /*
+        ->changing HTML Content using innerHTML:
+              document.getElementByld(id).innerHTML= new HTML
+
+        ->changing HTML attributes value :
+              document.getElementByid("myImage").src: = "landscape.jpg";
+              document.getElementByld("p2").style.color: = "blue";
+
+        ->modifying class in HTML
+             element.classList.add("mystyle");
+             element.classList.remove("mystyle");
+             element.classList.toggle("mystyle");*/
+        const box1=document.getElementById("box-1");
+        box1.innerHTML="Hello Box1";
+        box2.innerHTML="<h1>BOX2</h1>";
+        //these things have already seen in css
+        box2.style.backgroundColor="purple";
+
+        //using classes
+
+        //giving box1 class round-border
+        //const box1=document.getElementById("box-1");
+        //box1.classList.add("round-border");
+
+        //adding round-border class to all boxes using for loop
+        for(let i=0; i<boxes.length;i++){
+            boxes[i].classList.add('round-border')
+        }
+
+        //removing class round-border form box-1
+        box1.classList.remove("round-border");
+
+        //-> Creating a new html element
+        /*
+        We can create a new Element using the createElement() method of the document. We can append this
+        new Element (node) inside any other element.
+        const para = document.createElement("p");
+        const element = document.getElementByld("div1");
+        element.appendChild(para);
+        */
+       const newP= document.createElement('p');
+       newP.innerText="This is new paragraph";
+       //now this paragraph is create in memory but its not attached to DOM tree yet
+
+       //putting this paragraph in container
+        const container =document.getElementById("container");
+        container.appendChild(newP);
+        //now this new p is inside container
+        //we can also attatch box class to it
+        newP.classList.add('box','round-border');
+
+
+        // innHTML: we can put any new html inside it
+        // innText : we can only add or change its text
+    </script>
+</body>
+</html>

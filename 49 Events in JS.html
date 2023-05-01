@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Events in JS</title>
+        <style>
+            div{
+               width: 200px;
+               height: 200px;
+            }
+            #div2{
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- visit : https://www.w3schools.com/js/js_events.asp
+            Events: HTML events are "things" that happen to HTML elements.
+                   When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+            events can be : click,scolling, changing, hover etc
+         For example:
+         if the user clicks a button on a webpage, you might want to react to that action by displaying an information box
+        -> An HTML event can be something the browser does, or something a user does.
+                Here are some examples of HTML events:
+                    An HTML web page has finished loading
+                    An HTML input field was changed
+                    An HTML button was clicked
+        -->
+        <!-- Example-1 (the JavaScript code changes the content of the element with id="demo")-->
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+        <p id="demo"></p>
+
+        <!-- Example-2( the code changes the content of its own element (using this.innerHTML)) -->
+        <button onclick="this.innerHTML=Date()">Get Time</button>
+
+        <!-- Example-3-->
+        <button onclick="displayDate()">The time is?</button>
+        <p id="demo1"></p>
+        
+        <!--Example-4-->
+        <div onmouseover="this.style.backgroundColor='green'">myDIV.</div>
+        <div id="div2" onmouseout="this.style.backgroundColor='blue'">Div2</div>
+        <script>
+            function displayDate() {
+                document.getElementById("demo1").innerHTML = Date();
+            }
+        </script>
+        <!-- Common HTML Events
+            Here is a list of some common HTML events:
+
+              Event	                    Description
+            onchange	           An HTML element has been changed
+            onclick	               The user clicks an HTML element
+            onmouseover	           The user moves the mouse over an HTML element
+            onmouseout	           The user moves the mouse away from an HTML element
+            onkeydown	           The user pushes a keyboard key
+            onload	               The browser has finished loading the page
+
+            do visit this page : https://www.w3schools.com/jsref/dom_obj_event.asp  -->
+    </body>
+
+</html>

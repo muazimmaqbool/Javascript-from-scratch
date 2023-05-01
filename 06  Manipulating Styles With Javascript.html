@@ -1,0 +1,36 @@
+<html lang="en">
+    <head><title>Manipulating Styles With Javascript</title>
+    </head>
+    <body>
+        <p id="text">This is some Text</p> <!-- changing its color to red using JS-->
+        <button id="button">Color Text</button>
+        <button id="button2">Font Text</button>
+        <button id="button3">Disappeare Text</button>
+        <button id="button4">Bring Text Back</button>
+        <button id="button5">Text to default</button>
+        
+
+        <script type="text/javascript">
+            document.getElementById("button").onclick=function(){
+                document.getElementById("text").style.color="blue";
+            }
+            document.getElementById("button2").onclick=function(){
+                document.getElementById("text").style.fontSize="50px";
+            }
+            document.getElementById("button3").onclick=function(){
+                document.getElementById("text").style.display="none"; // its removed from the flow of the page
+            }
+            document.getElementById("button4").onclick=function(){
+                document.getElementById("text").style.display="block";
+                // this will bring text back on the screen but with the previously applied styles with it
+            }
+            //brings text back to default
+            document.getElementById("button5").onclick=function(){
+                document.getElementById("text").style.display="block";
+                document.getElementById("text").style.color="black";
+                document.getElementById("text").style.fontSize="16px";
+                
+            }
+        </script>
+    </body>
+</html>

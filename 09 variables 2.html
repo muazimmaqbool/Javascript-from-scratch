@@ -1,0 +1,21 @@
+<html lang="en">
+    <head><title>Variables example</title>
+       
+    </head>
+    <body>
+        <input id="textinput" type="text"> <!-- the default type of input is text-->
+        <button id="button">change text below</button>
+        <p id="textToChange" >This is some text</p>
+        <!-- change text of p tag by whatever is written in input -->
+        <script type="text/javascript">
+           document.getElementById("button").onclick=function(){
+                var textEntered=""; // tells the browser that its string but initially is empty
+                textEntered=document.getElementById("textinput").value;
+                //this will set the value that user has typed into the textentered variable 
+
+                document.getElementById("textToChange").innerHTML=textEntered;
+                 // p tag will be updated with new text in textEntered variable
+           }
+        </script>
+    </body>
+</html>

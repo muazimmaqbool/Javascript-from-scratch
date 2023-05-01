@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Tricky map() function</title></head>
+    <body>
+        <!-- -> See previous codes of map() | from 23:07 
+        -->
+        <script>
+            //example of array with objects (and each object has 3 properties)
+            const students=[
+                {name:"Syed Danish",enroll:"6671",marks:"40"},
+                {name:"Muazim Maqbool",enroll:"6655",marks:"39"},
+                {name:"Mezy Jan",enroll:"6631",marks:"42"},
+                {name:"Aabida Farooq",enroll:"6645",marks:"41"},
+                {name:"Danish Gul",enroll:"6644",marks:"37"},
+                {name:"Amir Suahil",enroll:"6656",marks:"48"}
+            ]; 
+            //suppose this data is comming from an API
+            //suppose we are given a task to find out list of name and enroll of all the students
+            //it should look like this : ["Syed Danish 6671","Muazim Maqbool 6655",....]
+            //so, we will be using map() function here
+            const result=students.map(x=>x.name+":"+x.enroll);
+            console.log("list of students with enroll: ",result);
+
+            //now getting name enroll and marks 
+            const result1=students.map(x=>"\n"+x.name+"-"+x.enroll+":"+x.marks);
+            console.log("Students result: "+result1);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+    <head><title>JavaScript Game - How Many Fingers</title>
+    </head>
+    <style type="text/css">
+        body{
+            background-color: burlywood;
+        }
+        p{
+            background-color: aqua;
+            width:fit-content;
+            font-size: 170%;
+            font-family: monospace;
+            font-style: italic;
+            font-weight: bold;
+        }
+        p button{
+            background-color: blueviolet;
+            font-size: 150%;
+            color:white;
+            font-family: cursive;
+        }
+    </style>
+    <body>
+        <p>Guess How many Finger am I holding up ?</p>
+        <p><input type="text" placeholder="0 to 5 " id="guessentered"></p>
+        <p><button id="button">Guess</button></p>
+        <script type="text/javascript">
+           document.getElementById("button").onclick=function(){
+             var guessfinger=document.getElementById("guessentered").value;
+
+             var randomfingers=Math.floor((Math.random() * 5) + 0);
+             // this return whole number from 0 to 5 like 1,2,3,..
+             //Math.floor is used to make a number whole number
+             //let x= Math.random() * 5;// return random numbers also but like this 4.562162134561, 
+             //that we didn't need
+             if(guessfinger==randomfingers){
+                alert("You Got It Right!");
+             }else{
+                alert("Opps! Try Again.");
+             }
+           }
+        </script>
+    </body>
+</html>

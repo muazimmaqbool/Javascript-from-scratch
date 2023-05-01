@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Array Methods in JS</title>
+    </head>
+    <body>
+    <!-- An array is a data structure, which can store a fixed-size collection of elements of the same data type.
+    ->An array is a special variable, which can hold more than one value.
+      ->  see program 10
+      
+      visit: https://www.w3schools.com/js/js_array_methods.asp
+    -->
+        <script>
+            //JavaScript Array Methods:
+
+            const fruits=['Ornage',"Apple", "Mango","Banana"]
+            console.log("array: ",fruits)
+            //1-> Converting Arrays to Strings (toString() converts an array to a string )
+            console.log("Array to String using toString()");
+            console.log(fruits.toString());
+                //The join() method also joins all array elements into a string.
+                //It behaves just like toString(), but in addition you can specify the separator:
+            console.log("Array to String using join()");
+            console.log(fruits.join("*"));
+            
+            /*
+            Automatic toString()
+                JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+                (In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties)
+                
+                This is always the case when you try to output an array.
+
+                These two examples will produce the same result:
+
+                Example
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo").innerHTML = fruits.toString();
+                is same as :
+                Example
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo").innerHTML = fruits;
+                */
+
+
+            //see pop() and push() in code 10
+
+            //Shifting is equivalent to popping, but working on the first element instead of the last.
+            //2->JavaScript Array shift()
+            //The shift() method removes the first array element and "shifts" all other elements to a lower index.
+            console.log("Array shift()")
+            var items=["Mouse","CPU","Camera","Keyboard"];
+            console.log(items.shift()); //shift() method returns the value that was "shifted out"/removed i.e mouse
+            //now CPU comes at zero
+            console.log(items); // o/p: ['CPU', 'Camera', 'Keyboard']
+
+            //3->JavaScript Array unshift()
+            //unshift() method adds a new element to an array (at the beginning), and "unshifts" older element
+            console.log("Array unshift()")
+            const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+            console.log(fruits1.unshift());// 4 //didn't add anything just returns array length which is here 4
+            console.log(fruits1.unshift("Lemon")); //5 // adds element Lemon at index 0 and returns new array length which is now 5
+            //The unshift() method returns the new array length.
+            console.log(fruits1)
+
+            //4-> Merging (Concatenating) Arrays
+            //The concat() method creates a new array by merging (concatenating) existing arrays:
+            //The concat() method does not change the existing arrays. It always returns a new array.
+            //The concat() method can take any number of array arguments:
+            console.log("Array concat()")
+            let arr1=["one","two"]
+            console.log("arr1: "+arr1);
+            let arr2=["three","four"]
+            console.log("arr2: "+arr2);
+            let Newarray=arr1.concat(arr2);
+            console.log("arr1 + arr2 = "+Newarray)
+            //we can merg also three array like this: var arr=arr1.concat(arr2,arr3);
+            //Merging an Array with Values:
+            console.log("Merging an Array with Values");
+            let arr=["This","is"];
+            console.log("arr: "+arr);
+            const newarray=arr.concat("Javascript");
+            console.log(newarray);
+           // console.log(arr1+arr2); // can also join two arrays like this
+
+            //Splicing and Slicing Arrays already studied in program 10
+
+            //visit: https://www.javatpoint.com/javascript-array
+
+            //5-> JavaScript Array reverse() method
+            //The reverse() method is represented by the following syntax
+            console.log("Array reverse()")
+            const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+            console.log(fruits2);
+            console.log("Reverse: ",fruits2.reverse());
+
+            //6->JavaScript Array sort() method
+            //The JavaScript array sort() method is used to arrange the array elements in some order. By default, sort() method follows the ascending order
+            console.log("Array sort()")
+            var skills=["AngularJS","Node.js","JQuery","Bootstrap","Python","Java","C++"]
+            console.log(skills);
+            console.log("After sorting: ",skills.sort());  
+            //example 2:
+            var num=[8,9,5,4,7,6,2,3,1,0];
+            console.log(num.sort());
+
+            //study more methods from : https://www.javatpoint.com/javascript-array
+
+            
+        </script>
+    </body>
+</html>

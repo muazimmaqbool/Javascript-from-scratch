@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>filter() in JS</title>
+  </head>
+  <body>
+    <!--
+            See previous code 41
+        
+        -> filter() function is used to filter the values inside an array
+
+        ->The filter() method takes each element in an array and it applies a conditional statement 
+          against it. If this conditional returns true, the element gets pushed to the output array.
+          If the condition returns false, the element does not get pushed to the output array.
+        
+        -> So, you are talking an array as an input and finding out a array which has only the value which
+           are filtered based on some logic
+          syntax: const output=arr.filter(filterlogic);
+        -->
+
+    <script>
+      const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      //filter out odd values
+      function IsOdd(x) {
+        return x % 2; // or return x%2==1
+        // so, suppose x=2 i.e 2%2=0; and in programming 0 is false and let x=5 i.e 5%2=1 and 1 is true
+        // that's it will only return true values and those will be odd numbers
+      }
+      const output = arr.filter(IsOdd);
+      console.log(output);
+
+      //filter even values
+      const output1 = arr.filter(function IsEven(x) {
+        return x % 2 == 0;
+      });
+      console.log(output1);
+
+      //filter values greater than 4
+      const output2 = arr.filter((x) => {
+        return x > 4;
+      });
+      console.log(output2);
+
+      //filter values less than 5
+      const output3 = arr.filter((x) => x < 5); // or x=>{return x<5} // or (x)=>x<5
+      console.log("Less than 5: " + output3);
+
+      //filter students with 90 or 90+ marks
+      const students = [
+        { name: "Danish", marks: 96 },
+        { name: "Haseeb", marks: 84 },
+        { name: "Muntazir", marks: 100 },
+        { name: "Muazim", marks: 65 },
+        { name: "Adil", marks: 90 },
+      ];
+      const toppers = students.filter((x) => x.marks >= 90);
+      console.log("Toppers:", toppers);
+      //filter students with marks less then 90
+      const lessmarks = students.filter((x) => x.marks < 90);
+      console.log("Less marks:", lessmarks);
+
+      //filter items which are above 1000
+      const items = [
+        { name: "Laptop", price: "28000" },
+        { name: "powerbank", price: "1150" },
+        { name: "charger", price: "150" },
+        { name: "mouse", price: "380" },
+        { name: "printer", price: "7000" },
+      ];
+      const above1000=items.filter(x => x.price>1000);
+      console.log("Items above 1000",above1000);
+
+      const under1000=items.filter(x => x.price<=1000);
+      console.log("Items under 1000",under1000);
+    </script>
+  </body>
+</html>

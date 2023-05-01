@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <title>While Loops Example</title>
+  </head>
+  <!--In this code computer guesses how many fingers we are holding up -->
+  <body>
+    <p>How many fingers you are holding up?</p>
+    <!--<p><input type="text" placeholder="1 to 5" id="mynumber">-->
+    <!-- With input you can type any number and we have set the code to make computer guess upto 5 only
+        so if user enters number > 5 the code will crash so instead of input we use select-->
+    <p>
+      <select id="mynumber">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <button id="ComputerGuess">Computer Guesses</button>
+    </p>
+    <script type="text/javascript">
+      document.getElementById("ComputerGuess").onclick = function () {
+        var mynumberEnterted = document.getElementById("mynumber").value;
+
+        //now we're going to check wheather computer got it right or not
+        // by comparing computerNumbr and myNumber . We can do it by if statement but
+        // we want this code to keep executing until computer is correct and then we want
+        // to tell the user how many goes it took the computer to get it right and we do this
+        // by using boolean datatype and using if statement inside while
+
+        var gotIt = false;
+        var numberofGuesses = 1; // computer has to guess atleast 1 time
+
+        while (gotIt == false) {
+          //Now anyrandom number between 0 and 5 is generated and put in computerNumber variable
+          // which is guess made by computer
+          var computerNumber = Math.floor(Math.random() * 6); // makes any random number between 0 to 5
+
+          if (computerNumber == mynumberEnterted) {
+            gotIt = true; // so it will run until two number match and then gotit becomes true and while loop stops;
+            alert(
+              "Got It Right! It was a " +
+                mynumberEnterted +
+                " And It took PC " +
+                numberofGuesses +
+                " Guesses"
+            );
+          } else {
+            //happens when computer gets it wrong
+            numberofGuesses++; // this will increase number of guesses computer made but failed to got it right
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

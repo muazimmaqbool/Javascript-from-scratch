@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>How functions work inside JS</title>
+    </head>
+    <body>
+        from video 5
+        <script>
+            var x=5; // global variable
+            f1();
+            f2();
+            console.log(x);
+            function f1(){
+                var x=20;
+                console.log(x);
+            }
+            function f2(){
+                var x=40;
+                console.log(x);
+            }
+        </script>
+    </body>
+</html>
+<!-- Let's see how this works :
+first js will create an execution context and assign memory to variable and functions
+and this global execute context(GEC) will be pushed to call  stack
+i.e :        memory             code                                             call stack:
+              x: undefined                                                           
+              f1:{...}                                                 
+              f2:{...}                                                               GEC
+
+    -> Now it will run the first line of code in the js i.e inside <script></script>
+    i.e :        memory             code
+              x: undefined         line 8: var x=5; // will replace x: undefined with x:5
+              f1:{...}
+              f2:{...}
+
+             ********
+              memory             code
+              x: 5         line 8: var x=5; 
+              f1:{...}
+              f2:{...}
+
+    -> now it will move to the next line of code to execute i.e line number 9.
+
+              memory             code
+              x: 5         line 8: var x=5; 
+              f1:{...}         f1();    // here new execution context is created for the function and will 
+                                    be pushed to call stack and control moves from line 9 to line 12
+              f2:{...}                                call stack:
+                                                        f1()
+                                                        GEC
+              i.e :
+              memory             code
+              x: 5             line 8: var x=5; 
+              f1:{...}         f1();       memory           code  // here it will again do same process
+              f2:{...}                     x:undefined       var x=20;           
+                                           now x:20      
+                                                             console.log(x); 
+                                                             // it will look in the local memory of the execution context to find value of x and prints it in the console
+                              // once this function finishes execution its execution context box is removed/deleted
+                                       
+                              console :  20      now, call stack:
+                                                        GEC
+
+//now control moves back to GEC and it will to next line from 9 to 10 . and also at line 10 same process is 
+done new execution context box is created and added to call stack and the value of x=40 is printed to the console
+and after the execution process its execution context box is deleted and control moves back to GEC
+ and now it starts executing the next line i.e 11 and prints the value of x=5; and prints it to the 
+ console and the whole code is executed
+ and the whole execution context box is deleted i.e GEC .
+ this is how the functions works inside js.
+ and try this example in the system and try to see this in degubbing -->
+
+
+

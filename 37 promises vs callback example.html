@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const userLeft = false
+        const userWatchingMeme = false
+
+        //using callbacks
+        //this function takes two variables one for success and one for error
+        function exampleTwo(callback, errorCallback) {
+            if (userLeft) {
+                errorCallback({
+                    name: "user has left",
+                    message: " ok bye"
+                })
+            } else if (userWatchingMeme) {
+                errorCallback({
+                    name: " user is still watching memes",
+                    message: " he is enjoying it"
+                })
+            } else {
+                callback('thanku for coding it')
+            }
+        }
+        exampleTwo((message) => {
+            console.log('success: ', message)
+        }, (error) => {
+            console.log(error.name + " " + error.message)
+        })
+
+        console.log("now using promises")
+        const userLeft1 = false
+        const userWatchingMeme1 = false
+        //now lets do it using promises
+        function usingPromises() {
+            return new Promise((resolve, reject) => {
+                if (userLeft1) {
+                    reject({
+                        name: "user has left",
+                        message: "ok bye"
+                    })
+                } else if (userWatchingMeme1) {
+                    reject({
+                        name: "user is watching memes",
+                        message: "so sad"
+                    })
+                } else {
+                    resolve('thanku for coding it')
+                }
+            })
+        }
+
+        usingPromises().then((message)=>{
+            console.log('success: '+message)
+        }).catch((errors)=>{
+            console.log(errors.name+' '+errors.message)
+        })
+
+
+        //its better two use promises then nested callbacks and in prmoises instead of nesting callbacks
+        //use another then like this:
+        /*
+        usingPromises().then((message)=>{
+            console.log('success: '+message)
+        }).then((message)=>{
+            console.log('success: '+message)
+        }).catch((errors)=>{
+            console.log(errors.name+' '+errors.message)
+        })
+        */
+    </script>
+</body>
+
+</html>

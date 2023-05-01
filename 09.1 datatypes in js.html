@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types in js</title>
+</head>
+<body>
+    <!-- https://www.w3schools.com/js/js_datatypes.asp 
+    
+        JavaScript has 8 Datatypes            The Object Datatype
+            1. String                            The object data type can contain:
+            2. Number                            1. An object
+            3. Bigint                            2. An array
+            4. Boolean                           3. A date
+            5. Undefined
+            6. Null
+            7. Symbol
+            8. Object                                                                                                                                                   
+    -->
+    <script>
+        // Numbers:
+        let length = 16;
+        let weight = 7.5;
+        console.log(length,"and",weight);
+
+        // Strings:
+        let color = "Yellow";
+        let lastName = "Johnson";
+        console.log(color);
+
+        // Booleans
+        let x = true;
+        let y = false;
+        console.log(x);
+
+        // Object:
+        const person = {firstName:"Muazim", lastName:"Maqbool"};
+        console.log(person)
+        // Array object or array:
+        const cars = ["Saab", "Volvo", "BMW"];
+        console.log(cars)
+        
+        // Date object:
+        const date = new Date(); // will give current date
+        console.log(date)
+        const time=date.toLocaleTimeString(); //will give current local time
+        //or
+        //const time=new Date().toLocaleTimeString();
+        console.log(time);
+
+        //Note!
+        let result= 16 + "laptop";
+        //JavaScript will treat the example above as: let result="16" + "laptop";
+        //When adding a number and a string, JavaScript will treat the number as a string.
+        console.log(result) // o/p: 16laptop
+        //same goes with : let result="laptop" + 16 ; o/p: laptop16
+
+        //Note!
+        //JavaScript evaluates expressions from left to right. Different sequences can produce different 
+        //results:
+        let output=16+4+ "Desktop";
+        console.log(output); // o/p: 20Desktop
+        //JavaScript treats 16 and 4 as numbers, until it reaches "Desktop" , then result of previous truns to string
+
+        //Note!
+        let output1="Desktop"+ 16+4;
+        console.log(output1); // o/p: Desktop164
+        //since the first operand is a string, all operands are treated as strings.
+
+        //JavaScript Types are Dynamic
+        //JavaScript has dynamic types. This means that the same variable can be used to hold different 
+        //data types:
+        let a;         // Now a is undefined
+        a = 5;         // Now a is a Number
+        a = "printer";    // Now a is a String
+        console.log(a); // o/p: printer
+
+        //JavaScript BigInt
+        //All JavaScript numbers are stored in a a 64-bit floating-point format.
+        //JavaScript BigInt is a new datatype (2020) that can be used to store integer values that 
+        //are too big to be represented by a normal JavaScript Number.
+        let b = BigInt("123456789012345678901234567890");
+        console.log(b);
+
+        //JavaScript Objects - important
+        //JavaScript objects are written with curly braces {}.
+        //Object properties are written as name:value pairs, separated by commas.
+        const item={
+            name:"Hp laptop",
+            model:"2018",
+            ram:"8GB",
+            processor:"i3"
+        }
+        console.log(item);
+        //The object (item) in the example above has 4 properties: name,model,ram,processor
+        console.log("the product is: "+item.name+" it has "+item.ram); // or use , in place of +
+
+        //The typeof Operator
+        //You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+        //The typeof operator returns the type of a variable or an expression:
+        console.log(typeof(""));
+        console.log(typeof("laptop"));
+        console.log(typeof "mobile phone");
+        console.log(typeof 0);
+        console.log(typeof 12);
+        console.log(typeof 3.14);
+        let z=true;
+        console.log(typeof z);//boolean
+
+
+    </script>
+</body>
+</html>

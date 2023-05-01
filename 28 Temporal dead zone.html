@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Temporal dead zone</title>
+    </head>
+    <body>
+        from N.S video : let and const at 5:31  
+        <strong>
+            The let and const variables are not accessible before they are initialized with some value,
+             and the phase between the starting of the execution of block in which the let or const variable is declared till that variable is 
+             being initialized is called Temporal Dead Zone for the variable
+             (time between hoisting and initializing with some value is known as TDZ)
+
+             or 
+             in simple words:
+             Temporal dead zone : TDZ is the time since when this let and const variables has hoisted and till it is 
+             initialized with some value.(the time between this is known as TDZ)
+        </strong>
+        <script>
+            console.log(a); // TDZ started here and finishes when value is assigned to a i.e in line number 21
+
+            let a=5;  //TDZ ends here
+            var b=10;
+            
+            /*
+            SO, that phase from hoisting till it gets/assigns with some value, this phase is known as TDZ
+            and, Whenever you try to access a varibale inside a TDZ it gives a ReferenceError like this 
+            "Cannot access 'a' before intialization ".
+            You cannot access the varible when its in TDZ, you can access it when some value is asigned to it
+            */
+
+            /* What is this ReferenceError: watch video at 7:51 :
+            The ReferenceError object represents an error when a variable that doesn't exist (or hasn't yet been initialized) in the current scope is referenced.
+
+            when you try to access any random varibale which is not in our program, we get ReferenceError : x is not defined
+
+            */
+
+            /*
+            RELATION BETWEEN LET AND CONST WITH GLOBAL OBJECT watch video at : 9:18.
+
+            var b : will be attached to window object(global object) try: window.b in console
+
+            let and const varibales will not be attached to the window object(global object ) they are maintained in the 
+            seperated space i.e for let and const try window.a in console will show undefined
+            */
+            
+            /* see in video at these parts : 13:56 syntax error in js 
+
+             14:54 : type error and 15:11 and 17:52
+             at 19:00 : its how to avoid temporal dead zone
+                        (To avoid the TDZ always put your deceleration and initialization at the top)
+
+             20:70 : interview questions on hoisting of let and const.
+
+             important things:
+
+             What Does Syntax Error Mean?
+                A syntax error in computer science is an error in the syntax of a coding or programming language,
+                 entered by a programmer. Syntax errors are caught by a software program called a compiler,
+                  and the programmer must fix them before the program is compiled and then run.
+
+             What Does Type Error Mean?
+                The TypeError object represents an error when an operation could not be performed, 
+                typically (but not exclusively) when a value is not of the expected type.
+
+                A TypeError may be thrown when:
+                an operand or argument passed to a function is incompatible with the type expected by that
+                operator or function; 
+                or
+                when attempting to modify a value that cannot be changed;
+                 or
+                when attempting to use a value in an inappropriate way.
+                            
+            What Does ReferenceError Mean?
+                When JS Engine trys to find out a specific variable inside a memory space and you cannot access it, then
+                it gives a ReferenceError.
+
+            What is the difference between a TypeError and ReferenceError?
+                A ReferenceError occurs when you try to use a variable that doesn't exist at all.
+
+                A TypeError occurs when the variable exists, but the operation you're trying to 
+                perform is not appropriate for the type of value it contains.
+            
+            
+            */
+
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Hoisting in JS</title>
+    </head>
+    <!-- 
+    Hoisting in js: Hoisting in js is the phenomeno by which you can access the variables and functions
+    before initializing them, or before you put some value in it . You can access them without any error
+    -->
+    <body>
+        from video 4
+        <script>
+            
+         // 02) here we are trying to access variables and functions before declearing them .
+                    //this will not work in most programming languages
+            //getName(); // will give result
+            //console.log(x); // will show undefined or no result and if we remove var x=7;
+            // it wil show not defined in error
+            // javascript was somehow able to get the function but not variable
+            
+
+            // console.log(getName); 
+            //it will print the function itself i.e whole code of the function
+
+
+            var x=7;
+            function getName(){
+                console.log("Hoisting in JAVASCRIPT");
+            }
+            //4) : for debugging watch at 7:00
+            getName();
+            console.log(x);
+            console.log(getName);    
+
+        /* 1)   getName(); 
+            console.log(x);*/
+            // using them here will print results , now lets try them at top
+
+           // 3)
+            // it will print the function itself i.e whole code of the function
+            console.log(getName);
+           // if you write this command before the function it will still print the function
+           
+           /* this code in js behaves like this because of working process of execution context,
+           watch video 3 full its important and watch video 4 at 5:00
+           */
+
+           
+        </script>
+        
+    </body>
+</html>

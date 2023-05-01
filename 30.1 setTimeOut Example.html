@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>setTimeout Example</title>
+    </head>
+    <body>
+        <p id="displaytime"></p>
+        <script>
+            //Example 2: Display Time in Every 3 Second
+            function showTime(){
+                let datetime=new Date(); //return new date and time
+                //console.log(datetime);
+                let time=datetime.toLocaleTimeString(); //return current local time
+                
+                document.getElementById("displaytime").innerHTML=time;
+                console.log(time);
+
+                setTimeout(showTime,3000);// display the time after every 3 seconds
+                //since the function is calling itself, the program displays the time every 3 seconds.
+
+                /*This program runs ifinitely (until the memory runs out).
+Note: If you need to execute a function multiple times, it's better to use the setInterval() method.*/
+            }
+            showTime();
+        </script>
+    </body>
+</html>

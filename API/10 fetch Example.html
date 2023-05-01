@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //api used: https://dummyjson.com/quotes
+      let url = "https://dummyjson.com/quotes";
+      let func = () => {
+        fetch(url)
+          .then((response) => response.json())
+          .then((result) => {
+           console.log(result);
+           for (let x in result.quotes) {
+              let y = "<h3>"+result.quotes[x].quote + "</h3> by "+ result.quotes[x].author;
+              console.log(y)
+              document.write(y, "<br>");
+            }
+          })
+          .catch((error) => console.log(error));
+      };
+      func();
+    </script>
+  </body>
+</html>

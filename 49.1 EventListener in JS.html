@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>EventListener in JS</title>
+    </head>
+    <body>
+        <!-- visit: https://www.w3schools.com/jsref/met_document_addeventlistener.asp and
+                    https://youtu.be/QedZL8kXX6Y
+                    https://www.geeksforgeeks.org/javascript-addeventlistener-with-examples/#:~:text=The%20addEventListener()%20is%20an,element.
+        
+        ->An event listener is a procedure in JavaScript that waits for an event to occur. 
+          The simple example of an event is a user clicking the mouse or pressing a key on the keyboard.
+        
+        ->The addEventListener() is an inbuilt function in JavaScript which takes the event to listen 
+        for, and a second argument to be called whenever the described event gets fired. Any number 
+        of event handlers can be added to a single element without overwriting existing event handlers. 
+                Syntax: 
+                 element.addEventListener(event, listener, useCapture);
+        Parameters: 
+            event : event can be any valid JavaScript event.Events are used without “on” prefix like use “click” instead of “onclick” or “mousedown” instead of “onmousedown”.
+            listener(handler function) : It can be a JavaScript function which respond to the event occur.
+            useCapture: It is an optional parameter used to control event propagation. A boolean value is passed where “true” denotes capturing phase and “false” denotes the bubbling phase.
+                    -->
+        <button id="btn1">Click btn1</button>
+        <button id="btn2">Change Me</button>
+        <button id="btn3">Click for Hover</button>
+        <p id="Text">Hover over this Text !</p>
+        <b id="effect"></b>
+        <script>
+            //Example-1
+            document.getElementById("btn1").addEventListener('click',()=>{
+                console.log("clicked via addEventListener()");
+            })
+            //Example-2
+            document.getElementById("btn2").addEventListener('click',(myevent)=>{ 
+                //myevent can be called anything like event, e,.. etc
+                //myevent (passed in function): myevent refers to the button
+                myevent.target.textContent="You change Me!";
+    
+            })
+            //Example-3
+            let x=document.getElementById("btn3");
+            let y=document.getElementById("Text");
+            x.addEventListener("click",Clicked);
+            y.addEventListener('mouseover',mousehoverin);
+            y.addEventListener('mouseout',mousehoverout);
+            function Clicked(){
+                document.getElementById("effect").innerHTML="Click Event"+"<br>";
+            }
+            function mousehoverin(){
+                document.getElementById("effect").innerHTML="MouseHoverIn Event"+"<br>";
+            }
+
+            function mousehoverout(){
+                document.getElementById("effect").innerHTML="MouseHoverOut Event"+"<br>";
+            }
+            //or
+            // document.getElementById("btn3").addEventListener('click',()=>{
+            //     document.getElementById("effect").innerHTML="Clicked!";
+            // })
+            // document.getElementById("Text").addEventListener('mouseover',()=>{
+            //     document.getElementById("effect").innerHTML="MouseHoverIn Event"+"<br>";
+            // })
+            // document.getElementById("Text").addEventListener('mouseout',()=>{
+            //     document.getElementById("effect").innerHTML="MouseHoverOut Event"+"<br>";
+            // })
+
+        </script>
+    </body>
+</html>

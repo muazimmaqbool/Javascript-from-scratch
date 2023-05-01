@@ -1,0 +1,115 @@
+<html lang="en">
+    <head><title>Mini Challenge - Disappearing Circles</title>
+        <style type="text/css">
+            .circle{
+                width:200px;
+                height:200px;
+                border-radius: 50%;
+                margin: 20px;
+                float: left;
+            }
+            #blue{
+                background-color: blue;
+            }
+            #pink{
+                background-color: pink;
+            }
+            #choclate{
+                background-color: chocolate;
+            }
+            #orange{
+                background-color: orange;
+            }
+            #grey{
+                background-color: grey;
+            }
+            #yellow{
+                background-color: yellow;
+            }
+            #green{
+                background-color: green;
+            }
+            #red{
+                background-color: red;
+            }
+            #slateblue{
+                background-color:slateblue;
+            }
+            #gold{
+                background-color: gold;
+            }
+            h2{
+                text-align: center;
+            }
+            button{
+                font-size: 150%;
+                /*making button in center*/
+                margin: auto;    
+                background-color:pink;
+                border-radius: 5px;
+                border: 5px black dotted;
+                display: none;
+        
+            }
+        </style>
+    </head>
+    <body>
+        <h2 >Click on Circles so make them Disappeare</h2>
+        <button id="btn">Bring Circles back</button>
+        <div class="circle" id="blue"></div>
+        <div class="circle" id="pink"></div>
+        <div class="circle" id="choclate"></div>
+        <div class="circle" id="orange"></div>
+        <div class="circle" id="grey"></div>
+        <div class="circle" id="yellow"></div>
+        <div class="circle" id="green"></div>
+        <div class="circle" id="red"></div>
+        <div class="circle" id="slateblue"></div>
+        <div class="circle" id="gold"></div>
+
+        <script type="text/javascript">
+            document.getElementById("blue").onclick=function(){
+                document.getElementById("blue").style.display="none";
+            }
+            document.getElementById("pink").onclick=function(){
+                document.getElementById("pink").style.display="none";
+            }
+            document.getElementById("choclate").onclick=function(){
+                document.getElementById("choclate").style.display="none";
+            }
+            document.getElementById("orange").onclick=function(){
+                document.getElementById("orange").style.display="none";
+            }
+            document.getElementById("yellow").onclick=function(){
+                document.getElementById("yellow").style.display="none";
+            }
+            document.getElementById("green").onclick=function(){
+                document.getElementById("green").style.display="none";
+            }
+            document.getElementById("red").onclick=function(){
+                document.getElementById("red").style.display="none";
+            }
+            document.getElementById("slateblue").onclick=function(){
+                document.getElementById("slateblue").style.display="none";  
+            }
+            document.getElementById("grey").onclick=function(){
+                document.getElementById("grey").style.display="none";      
+            }
+            document.getElementById("gold").onclick=function(){
+                document.getElementById("gold").style.display="none";
+                document.getElementById("btn").style.display="block";
+            }
+            
+            document.getElementById("btn").onclick=function(){
+                var ids=["grey","gold","slateblue","red","green","yellow","orange","choclate","pink","blue"];
+                // document.write(ids.length);
+                for(var i=0;i<ids.length;i++){
+                    document.getElementById(ids[i]).style.display="block";   
+                }
+                document.getElementById("btn").style.display="none";  
+            }
+
+
+        </script>
+    </body>
+</html>

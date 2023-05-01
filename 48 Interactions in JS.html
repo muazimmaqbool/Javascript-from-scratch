@@ -1,0 +1,76 @@
+<html lang="en">
+
+    <head>
+        <title>JavaScript interaction:alert,prompt,confirm box</title>
+        
+    </head>
+    <body>
+        <!-- JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+        Alert Box:
+        An alert box is often used if you want to make sure information comes through to the user.
+        When an alert box pops up, the user will have to click "OK" to proceed. 
+                Syntax:
+                    window.alert("sometext");
+                    The window.alert() method can be written without the window prefix.
+                    i.e: alert("sometext");
+        
+        Confirm Box:
+        A confirm box is often used if you want the user to verify or accept something.
+        When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.
+        If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+                    Syntax:
+                        window.confirm("sometext");
+                        The window.confirm() method can be written without the window prefix.
+                        i.e: confirm("sometext");
+
+        Prompt Box:
+        A prompt box is often used if you want the user to input a value before entering a page.
+        When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.
+        If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+             Syntax:
+                window.prompt("sometext","defaultText");
+                The window.prompt() method can be written without the window prefix.
+                   i.e : prompt("sometext","defaultText");
+    -->
+        <button id="alert-btn">Alert box</button>
+        <button onclick="userClicks()">confirm box</button>
+        <p id="text-box-confirm"></p>
+        <button onclick="functionPrompt()">prompt box</button>
+        <p id="text-box-promt"></p>
+        
+
+        <script>
+            document.getElementById("alert-btn").onclick=function(){
+                alert("I am an alert box");
+            }
+            function userClicks(){
+                var userRespond;
+                if(confirm("Press a button!")){
+                    userRespond="You Pressed Ok!"
+                }
+                else{
+                    userRespond="You Pressed Cancel";
+                }
+                document.getElementById("text-box-confirm").innerHTML=userRespond;
+            }
+            function functionPrompt(){
+                let userText;
+                let user=prompt("Enter You Enroll Number for Entry!","eg:1234"); // providing default value here is optional
+                // or let user=prompt("Enter You Enroll Number for Entry!");
+                if(user==null || user==''){
+                    userText="You didn't provided your enroll number";
+                }
+                else{
+                    userText="Thanku: "+user+" Please Enter Your Class Room!";
+                }
+                document.getElementById("text-box-promt").innerHTML=userText;
+            }
+     //Line Breaks
+     // To display line breaks inside a popup box, use a back-slash followed by the character n.
+     // i.e \n
+        // Example
+        alert("Hello\nHow are you?");
+        </script>
+        
+    </body>
+</html>
