@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Definition</title>
+</head>
+<body>
+    <pre>
+        Objects are Variables
+        JavaScript variables can contain single values: example let x="java";
+
+        -> Objects are variables too. But objects can contain many values.
+        Object values are written as name : value pairs (name and value separated by a colon).
+        example: let product={name:"laptop", ram:"4GB", color:"black"}
+        -> A JavaScript object is a collection of named values
+        -> It is a common practice to declare objects with the const keyword.
+    </pre>
+    <script>
+        const item={
+            name:"Laptop",
+            ram:"8GB",
+            brand:"HP",
+            color:"Black"
+        }
+        console.log(item);
+        console.log(typeof(item)); // object
+        console.log(typeof(item.name)); //string
+    </script>
+</body>
+</html>
