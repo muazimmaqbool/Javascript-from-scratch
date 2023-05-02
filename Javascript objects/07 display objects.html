@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="text"></h3>
+    <script>
+        //How to Display JavaScript Objects?
+        const laptop={
+            brand:"Hp",
+            Ram:"4GB",
+            model:"2018",
+            HDD:"1TB",
+            OS:"Windows 10pro"
+        }
+        console.log(laptop);// this way o/p: {brand: 'Hp', Ram: '4GB', model: '2018', HDD: '1TB', OS: 'Windows 10pro'}
+        document.getElementById("text").innerHTML=laptop; // this way o/p: [object Object].
+
+        /*
+        Some common solutions to display JavaScript objects are:
+            Displaying the Object Properties by name
+            Displaying the Object Properties in a Loop
+        */
+
+       //Displaying Object Properties
+       console.log(laptop.brand+", "+laptop.OS);
+       console.log(laptop.Ram,laptop.HDD); // here space will be given automatically
+
+       //Displaying the Object in a Loop
+       let text="";
+       for(let x in laptop){
+        text+= laptop[x]+" ";
+       }
+       console.log(text);
+       /*
+        You must use person[x] in the loop.
+        person.x will not work (Because x is a variable).
+        */
+    </script>
+</body>
+</html>
