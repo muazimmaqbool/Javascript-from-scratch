@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-       /*
+      /*
        The PATCH method is very similar to the PUT method because it also modifies an existing resource.
        The difference is that for the PUT method, the request body contains the complete new version,
         whereas for the PATCH method, the request body only needs to contain the specific changes
@@ -20,18 +20,61 @@
          // PATCH to the resource id = 1
         // update that task is completed
        */
-      Update=()=>{
-       fetch('https://jsonplaceholder.typicode.com/todos/4',{
-           method:"PATCH",
-           body:JSON.stringify({
-               completed:true
-           }),
-           headers:{
-               "Content-type":"application/json",
-           }
-       }).then((res)=>res.json()).then((result)=>console.log(result)).catch((e)=>console.log(e));
-      }
+      Update = () => {
+        fetch("https://jsonplaceholder.typicode.com/todos/4", {
+          method: "PATCH",
+          body: JSON.stringify({
+            completed: true,
+          }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((result) => console.log(result))
+          .catch((e) => console.log(e));
+      };
       Update();
+
+      //example 2
+      const obj = {
+        marks: "47",
+      };
+      UpdateStd = () => {
+        fetch("ForFetchAPI/students.json/001", {
+          method: "PATCH",
+          body: JSON.stringify(obj),
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
+          .then((r) => r.json())
+          .then((data) => console.log(data))
+          .catch((e) => console.log(e));
+      };
+      //UpdateStd();
+      //here it will not work properly as above file is not on the server its locally stored
+
+      //example 3
+      updatePeson = () => {
+        fetch("https://jsonplaceholder.typicode.com/users/1", {
+          method: "PATCH",
+          body: JSON.stringify({
+            name: "Muazim Maqbool",
+            username: "Muazim007",
+            address: {
+              city: "Sopore",
+            },
+          }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
+          .then((r) => r.json())
+          .then((data) => console.log(data))
+          .catch((e) => console.log(e));
+      };
+      updatePeson();
     </script>
   </body>
 </html>

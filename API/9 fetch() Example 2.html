@@ -16,11 +16,11 @@
       const fetchData = () => {
         fetch(url)
           .then((response) => {
-            console.log("then 1"); // will be printed after z
+            console.log("1"); // will be printed after z
             return response.json();
           })
           .then((data) => {
-            console.log("then 2"); //will be shown after then 1 and then API o/p will be shown
+            console.log("2"); //will be shown after 1 and then API o/p will be shown
             console.log(data);
           });
       };
