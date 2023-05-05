@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This keyword</title>
+  </head>
+  <body>
+    <!--
+        this in Event Handlers
+      {In HTML event handlers, this refers to the HTML element that received the event}
+    -->
+    <button onclick="this.innerHTML='changed'">Click to change</button>
+    <button onclick="this.style.color='teal'">color change</button>
+    <script>
+      /*
+        ->What is this?
+            In JavaScript, the this keyword refers to an object.
+            Which object depends on how this is being invoked (used or called).
+            The this keyword refers to different objects depending on how it is used:
+                 {  
+                    In an object method, this refers to the object.
+                    Alone, this refers to the global object.
+                    In a function, this refers to the global object.
+                    In a function, in strict mode, this is undefined.
+                    In an event, this refers to the element that received the event. 
+                 }
+        ->Note:
+            this is not a variable. It is a keyword. You cannot change the value of this
+
+        */
+
+     // -> this in a Method
+      let item = {
+        name: "Smart Phone",
+        brand: "Apple",
+        getData() { //method
+          console.log("model is: "+data.model); // we have accessed the properties of one object inside other object
+          //console.log("brand is: ",item.brand);
+          /*
+          Here, when we accessed the properties of other object i.e data.model so we have to mention the object name which is right
+          but when we accessed the properties of own object i.e item.brand , why we mention objects name inside it as its using its own property 
+          //so accessing property of same same we can write this instead of object name i.e this.brand (it means we are accessing own property)
+          */
+         console.log("brand is: ",this.brand);
+        }
+      };
+      let data = {
+        model:"Iphone 12pro max",
+        price:"120,000",
+        Camera:"20Mp and 12Mp",
+      };
+
+      item.getData();
+
+      //example-2
+      const std={
+        firstName:"Muazim",
+        lastName:"Maqbool",
+        enroll:"6655",
+        branch:"CSE",
+        fullName:function(){
+            return this.firstName+" "+this.lastName
+        }
+      }
+      console.log(std.fullName());
+
+      //-> This alone 
+      //{when this is used alone it refers to global object, because its running in global space}
+      let x=this;
+      console.log(x); //window
+      //In strict mode, when used alone, this also refers to the global object:
+      "use strict"
+      let y=this;
+      console.log(this);  
+
+      //-> this in Event Handlers
+      //{In HTML event handlers, this refers to the HTML element that received the event}
+      //example above outside script
+
+    </script>
+  </body>
+</html>
