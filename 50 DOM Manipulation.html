@@ -32,7 +32,7 @@
         Finding HTML elements by class name : document.getElementsByClassName("intro);
         Finding HTML elements by CSS selectors : document.querySelectorAll("p.intro");
         */
-        const b=document.body; //selets body
+        const b=document.body; //selects body
         console.log(b); //prints whole code inside body
         //b.style.backgroundColor="green";
 
@@ -56,8 +56,8 @@
               document.getElementByld(id).innerHTML= new HTML
 
         ->changing HTML attributes value :
-              document.getElementByid("myImage").src: = "landscape.jpg";
-              document.getElementByld("p2").style.color: = "blue";
+              document.getElementByid("myImage").src = "landscape.jpg";
+              document.getElementByld("p2").style.color = "blue";
 
         ->modifying class in HTML
              element.classList.add("mystyle");
@@ -99,8 +99,12 @@
         const container =document.getElementById("container");
         container.appendChild(newP);
         //now this new p is inside container
+
         //we can also attatch box class to it
         newP.classList.add('box','round-border');
+
+        //changing fontsize of newP
+        newP.style.fontSize="1.2rem";
 
 
         // innHTML: we can put any new html inside it
