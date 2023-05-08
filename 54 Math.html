@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math function</title>
+  </head>
+  <body>
+
+    <h2>JavaScript Celcius to Fahrenhet</h2>
+    <p>Insert a number into one of the input fields below:</p>
+
+    <p><input id="c" onkeyup="convert('C')" /> degrees Celsius</p>
+    <p><input id="f" onkeyup="convert('F')" /> degrees Fahrenheit</p>
+
+    <p>Note that the <b>Math.round()</b> method is used, so that the result will be returned as an integer.</p>
+
+    <script>
+      console.log(Math.PI); //returns value of pi
+
+      //Math.round(x) returns the value of x rounded to its nearest integer:
+      let x = 4.8;
+      console.log(Math.round(x)); // o/p 5
+
+      //Math.pow(x,y) returns the value of x to the power of y:
+      console.log(Math.pow(4, 2)); //16 i.e 4^2
+
+      //Math.sqrt(x) returns the square root of x
+      console.log(Math.sqrt(36));
+
+      //Math.abs(x) returns the absolute (positive) value of x
+      console.log(Math.abs(-4.8)); // 4.8
+
+      //Math.ceil() rounds a number up to its nearest integer:
+      console.log(Math.ceil(2.2)); // o/p: 3 // it gets its nearest bigger integer
+
+      //Math.floor(x) returns the value of x rounded down to its nearest integer:
+      console.log(Math.floor(2.8)); // o/p: 2 // it gets to its nearest down integer
+
+      //Math.max() returns the highest value in a list of arguments.
+      console.log(Math.max(0, 5, 0, 4, 5, 8)); // o/p: 8
+
+      //Math.min() returns the lowest value in a list of arguments:
+      console.log(Math.min(4, 5, 6, 8, 2, 3, 5)); // o/p: 2
+
+      //JavaScript Celcius to Fahrenhet (half code in body)
+      function convert(degree){
+        var x;
+        if(degree=='C'){
+            x=document.getElementById("c").value*9/5+32;
+            document.getElementById('f').value=Math.round(x);
+        }else{
+            x=(document.getElementById('f').value-32)*5/9;
+            document.getElementById('c').value=Math.round(x);
+        }
+      }
+    </script>
+  </body>
+</html>
