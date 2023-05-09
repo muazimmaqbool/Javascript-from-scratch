@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Random()</title>
+</head>
+<body>
+    <button onclick="document.getElementById('demo').innerHTML=getInteger(0,20)">Click Me</button>
+    <p id="demo"></p>
+    <script>
+        //Math.random() returns a random number between 0 (included) and 1 (excluded):
+        console.log(Math.random());
+
+        //Math.floor(Math.random() * 10) returns a random integer between 0 and 9 (both included):
+        console.log(Math.floor(Math.random()*10));
+        //can also use ceil in place of floor
+
+        //Math.floor(Math.random() * 11) returns a random integer between 0 and 10 (both included):
+        console.log(Math.floor(Math.random()*11));
+
+        console.log(Math.floor(Math.random()*100)); //returns random integer between 0 to 99
+
+        console.log(Math.floor(Math.random()*10)+1); //returns random integer between 1 to 10
+
+        console.log(Math.floor(Math.random()*100)+1); //returns random integer between 1 to 100
+
+        console.log(Math.floor(Math.random()*300)+100) //returns random integer between 100 to 300
+
+        //returns integer between min and max
+        function getInteger(min,max){
+            return Math.floor(Math.random()*(max - min +1)) +min;
+        }
+    </script>
+</body>
+</html>
