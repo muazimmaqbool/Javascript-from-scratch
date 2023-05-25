@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Date()</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Using new Date()
-        const currDate=new Date();
-        //new Date() without arguments, creates a date object with the current date and time:
-        console.log(currDate);
+      //Using new Date()
+      const currDate = new Date();
+      //new Date() without arguments, creates a date object with the current date and time:
+      console.log(currDate);
 
-        //The getFullYear() Method
-        console.log(currDate.getFullYear()) //Return the full year of a date object:
+      //The getFullYear() Method
+      console.log(currDate.getFullYear()); //Return the full year of a date object:
 
-        //The getDay() Method
-        console.log(currDate.getDay()); //Return the day as a number: 0->sunday, 1->monday,....
+      //The getDay() Method
+      console.log(currDate.getDay()); //Return the day as a number: 0->sunday, 1->monday,....
 
-        //The toLocaleTimeString() method
-        console.log(currDate.toLocaleTimeString());
+      //The toLocaleTimeString() method
+      console.log(currDate.toLocaleTimeString());
 
-        //displaying day
-        const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-        let day=days[currDate.getDay()];
-        console.log("Today is: ",day);
+      //displaying day
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      let day = days[currDate.getDay()];
+      console.log("Today is: ", day);
+      //or use switch statement
+      let day_;
+      switch (new Date().getDay()) {
+        case 0:
+          day_ = "Sunday";
+          break;
+        case 1:
+          day_ = "Monday";
+          break;
+        case 2:
+          day_ = "Tuesday";
+          break;
+        case 3:
+          day_ = "Wednesday";
+          break;
+        case 4:
+          day_ = "Thursday";
+          break;
+        case 5:
+          day_ = "Friday";
+          break;
+        case 6:
+          day_ = "Saturday";
+      }
+      console.log(day_);
+
+      //get hours
+      const hours = new Date().getHours();
+      console.log(hours);
+
+      
     </script>
-</body>
+  </body>
 </html>
