@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click</button>
+    <script>
+      //visit: https://www.youtube.com/watch?v=8zKuNo4ay8E
+      /*call stack: its inside js engine, it executes js code , it does one thing at a time
+        ->the main job of this call stack is execute whatever comes inside it, thats all it does
+        ->anything comes inside this call stack it quickly executes it , this call stack doesn't have a timer
+
+      ->before functions/code is pushes to callstack but it cannot directly go to the 
+         callstack it can go to the callstack through callback queue
+       ->A callback queue is a queue of tasks that are executed after the current task.
+
+      -> event loop: JavaScript has a runtime model based on an event loop, which is responsible for
+            executing the code, collecting and processing events, and executing queued sub-tasks.
+            ->job of the Event loop is to check this callback queue and puts the functions which is
+              inside callback queue into the callstack, so it acts as an gatekeeper it checks 
+              callback queue and if there is something it pushs it to the callback queue
+        ->event loop has only one job to contineously monitor this callback queue and callstack
+          when it sees callstack is empty it check callback queue and sees a callback function there it quickly
+          puts it to callstack and callstack quickly executes it
+
+          example:
+      */
+      console.log("start");
+      document.getElementById("btn").addEventListener("click",function cb(){
+        console.log("callback clicked")
+      });
+      console.log("end");
+      //o/p: start,end,callback(when button is clicked)
+      /*
+      ->here when code is run GEC is created and the process goes on studied before then start is printed
+      and then cb() callback function is put to callback queue then end is printed
+      then when button is clicked this cb() is pushed to callstack and executed there
+      */
+     //Why we need callback queue:
+       //we need callback queue because suppose user clicks the button multiple times and everytime
+       //the function is put inside callback queue and event loop contineuosly check it and puts these functions
+       //to callstack and this is where its usefull
+
+    //important
+    //the callback function which comes through setTimeout,setInterval,etc,DOM API's go inside callback queue
+    //callback queue is also know as task queue
+
+    //the callback functions which comes through promises and mutation observer go inside microtask queue
+    /*microtask queue-> iily to callback queue but with higher priority, functions inside microtaskqueue
+      are executed first and then functions inside callback queue are executed
+    */
+   //mutation observer: The MutationObserver interface provides the ability to watch for changes being made to the DOM tree. 
+                  //if there is some change it cal execute callback functions
+
+    
+    /* 
+    //what is starvation of function in callback queue?
+      Let us take a scenario of a callback function from the microtask queue create another callback
+       function, and get pushed into the microtask queue. If this process goes in a loop, 
+       then the functions in the callback queue will not get any opportunity 
+       to execute. This is called starvation in the callback queue
+    */
+    </script>
+  </body>
+</html>
