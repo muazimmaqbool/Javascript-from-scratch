@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--
+        from : https://youtu.be/cjIswDCKgu0
+    -->
+  </head>
+  <body>
+    <input type="text" />
+    <div>
+      <b>Default:</b>
+      <span id="default"></span>
+    </div>
+    <div>
+      <b>Debounce:</b>
+      <span id="debounce"></span>
+    </div>
+    <script>
+      /*
+      ->What is Debounce in Javascript?
+      ->Debouncing is a programming pattern or a technique to restrict the calling of a time-consuming
+          function frequently, by delaying the execution of the function until a specified time
+          to avoid unnecessary CPU cycles, and API calls and improve performance.
+
+      ->Explanation:
+          in our example we have input element imagine,search movie name inside and database and you
+          want to list of all movies with name MATRIX , and it gives you list, When you each character
+          its going to set the brand new request, so when i type M its going to search for all
+          movie starting with M, so when i type MA its going to search all movies with MA, then so on..
+          And for searching MATRIX we made 6 requests to server which will cause performace issue, slows down process
+          to over come this "Debouncing and Throttle comes"
+          (->Debounce and throttle have different ways of working)
+          ->They are the ways to actually slow down a function, instead of calling a function every time
+          its only going to call a function after a set delay.
+          ->Debounce : instead of call every single time, instead what debounce does is that, it does
+          hey has there been a delay since last time you called the function.
+          so when i type M it waits(say 1 second) before calling the function as long as nothing changes in
+          1 second then function runs, but during that 1 second i type another character say A, its
+          going to say something has changed reset our timer back to 1s and wait to see if anything
+          has changed so, if type another charatcer it resets timer and waits and if nothing changes
+          then function runs
+          ->so Debounce waits until there's been atleast a set period of time in our case 1 second
+             before actually calls the function , now in code watch at 3:18
+
+
+      */
+      const input = document.querySelector("input");
+      const defaultText = document.getElementById("default");
+      const debounceText = document.getElementById("debounce");
+
+      const updateDebounceText = debounce((text) => {
+        //calling debounce with argument as callback fucntion and it goes inside cb
+        debounceText.textContent = text;
+      });
+
+      input.addEventListener("input", (e) => {
+        defaultText.textContent = e.target.value;
+        updateDebounceText(e.target.value);
+      });
+
+      //debounce
+      //it calls this callback function cb after delay as long as we haven't
+      //recalled debounce in the past
+      //we give debounce a function inside it
+      function debounce(cb, delay = 1000) { //cb = callback
+        //debounce returns us a function
+        let timeout;
+        return (...args) => {
+          clearTimeout(timeout); // resetting timer
+          timeout=setTimeout(() => {
+            cb(...args);
+          }, delay); //so its forcing our function to wait 1 second before it runs
+        };
+      }
+      //important watch at: 5:05
+      //debounce makes sure you make one request after everything has changed
+      //throttle in next code
+    </script>
+  </body>
+</html>

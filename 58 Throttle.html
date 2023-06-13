@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <div>
+      <b>Default:</b>
+      <span id="default"></span>
+    </div>
+    <div>
+      <b>Debounce:</b>
+      <span id="debounce"></span>
+    </div>
+    <div>
+      <b>Throttle:</b>
+      <span id="throttle"></span>
+    </div>
+    <script>
+      //first check previous code //throttle is optional to study
+      const input = document.querySelector("input");
+      const defaultText = document.getElementById("default");
+      const debounceText = document.getElementById("debounce");
+      const throttleText=document.getElementById("throttle");
+
+      /* debounce on previous code (throttle is little bit different then debounce)
+     -> throtle works where it delay your function call but instead of waiting until everything is done
+     what throttle does is it says okay as soon as you make a change i'm going to send off a request
+     and then every single second if that's your delay i'm going to continually send a new request based
+     on whatevery the last input was, watch at 7:15
+     so, throttling limits the rate at which function is called, its useful when dealing with events
+     that may triggered many times in a short period of time or making server requests that should
+     not be sent too frequently
+
+     ->Debounce is more useful for control events like typing or button clicks
+     ->Throttle is mot suitable for continuous user events like resizing and scrolling
+     -> debounce waits until there has been some time delay before it runs
+     -> throttle runs immediately when you call the function
+      */
+
+      const updateDebounceText = debounce((text) => {
+        debounceText.textContent = text;
+      });
+
+      const updateThrottleText=throtle(text=>{
+        throttleText.textContent=text;
+      })
+
+      input.addEventListener("input", (e) => {
+        defaultText.textContent = e.target.value;
+        updateDebounceText(e.target.value);
+        updateThrottleText(e.target.value);
+      });
+
+      //cbFunc = call back function
+      function debounce(cbFunc, delay = 1000) { 
+        let timeout;
+
+        return (...args) => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            cbFunc(...args);
+          }, delay);
+        };
+      }
+
+      //easy way to implement
+      function throtle(cb, delay=1000){
+        let shouldWait=false; 
+        //i.e in waiting period  when shouldWait is true then don't call the function
+
+        //watch at 11:00
+        let waitingArgs;
+
+        const timeoutFunc=()=>{
+            if(waitingArgs==null){
+              shouldWait=false
+            }else{
+              cb(...waitingArgs)
+              waitingArgs= null
+              setTimeout(timeoutFunc,delay)
+            }
+          }
+
+        return (...args)=>{
+          if(shouldWait){ // here its false so this is not going to return
+            waitingArgs=args //now in waiting stages we are saving whatever the last call to the function was, we are svaing those arguments we can call the function
+            //later with those arguments
+            return
+          } 
+
+          cb(...args) 
+          shouldWait=true
+
+          //now wait 1second(whatever our delay is) until we call this function again
+          setTimeout(timeoutFunc,delay)
+        }
+        //the first time we call throttle it immediately calls the callback(cb) function and then every
+        //other time that we call it, it does nothing until our delay has finish,
+        //once our delay has finished this shouldWait is back to false. which means it no longer returns here
+        // it calls the function again forces you to wait and you have to wait another second 
+        //watch at 10:15
+      }
+
+  // throttling is used for : drag and drop, scrolling, resizing, mouse movement
+  
+
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
                     https://www.geeksforgeeks.org/javascript-addeventlistener-with-examples/#:~:text=The%20addEventListener()%20is%20an,element.
         
         ->An event listener is a procedure in JavaScript that waits for an event to occur. 
-          The simple example of an event is a user clicking the mouse or pressing a key on the keyboard.
+          The simple example of an event is a user clicking the mouse or pressing any key on the keyboard.
         
         ->The addEventListener() is an inbuilt function in JavaScript which takes the event to listen 
         for, and a second argument to be called whenever the described event gets fired. Any number 
@@ -16,7 +16,7 @@
                 Syntax: 
                  element.addEventListener(event, listener, useCapture);
         Parameters: 
-            event : event can be any valid JavaScript event.Events are used without “on” prefix like use “click” instead of “onclick” or “mousedown” instead of “onmousedown”.
+            event : event can be any valid JavaScript event.Here Events are used without “on” prefix like use “click” instead of “onclick” or “mousedown” instead of “onmousedown”.
             listener(handler function) : It can be a JavaScript function which respond to the event occur.
             useCapture: It is an optional parameter used to control event propagation. A boolean value is passed where “true” denotes capturing phase and “false” denotes the bubbling phase.
                     -->
@@ -44,14 +44,14 @@
             y.addEventListener('mouseover',mousehoverin);
             y.addEventListener('mouseout',mousehoverout);
             function Clicked(){
-                document.getElementById("effect").innerHTML="Click Event"+"<br>";
+                document.getElementById("effect").innerHTML="Click Event";
             }
             function mousehoverin(){
-                document.getElementById("effect").innerHTML="MouseHoverIn Event"+"<br>";
+                document.getElementById("effect").innerHTML="MouseHoverIn Event";
             }
 
             function mousehoverout(){
-                document.getElementById("effect").innerHTML="MouseHoverOut Event"+"<br>";
+                document.getElementById("effect").innerHTML="MouseHoverOut Event";
             }
             //or
             // document.getElementById("btn3").addEventListener('click',()=>{

@@ -16,8 +16,8 @@
       const getFacts = async () => {
         try {
           const response = await fetch(url);
-          const result = await response.json();
-          h1.innerHTML = result.fact;  // here it also returns promise therefore await here aswell
+          const result = await response.json(); // here it also returns promise therefore await here aswell
+          h1.innerHTML = result.fact;  
           //console.log("Fact Length: ",result.length) //this is optional
         } catch (error) {
           console.log(error);

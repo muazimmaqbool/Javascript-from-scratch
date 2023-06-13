@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <div>
+      <b>Default:</b>
+      <span id="default"></span>
+    </div>
+    <div>
+      <b>Debounce:</b>
+      <span id="debounce"></span>
+    </div>
+    <div>
+      <b>Throttle:</b>
+      <span id="throttle"></span>
+    </div>
+    <script>
+      //watch at 14:50 important
+      const input = document.querySelector("input");
+      const defaultText = document.getElementById("default");
+      const debounceText = document.getElementById("debounce");
+      const throttleText = document.getElementById("throttle");
+
+      const updateDebounceText = debounce(() => {
+        incrementCount(debounceText)
+      });
+
+      const updateThrottleText = throtle(() => {
+        incrementCount(throttleText)
+      });
+
+      function debounce(cbFunc, delay = 1000) {
+        let timeout;
+
+        return (...args) => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            cbFunc(...args);
+          }, delay);
+        };
+      }
+
+      function throtle(cb, delay = 1000) {
+        let shouldWait = false;
+        let waitingArgs;
+
+        const timeoutFunc = () => {
+          if (waitingArgs == null) {
+            shouldWait = false;
+          } else {
+            cb(...waitingArgs);
+            waitingArgs = null;
+            setTimeout(timeoutFunc, delay);
+          }
+        };
+
+        return (...args) => {
+          if (shouldWait) {
+
+            waitingArgs = args;
+
+            return;
+          }
+
+          cb(...args);
+          shouldWait = true;
+
+          setTimeout(timeoutFunc, delay);
+        };
+      }
+
+      //calling debounce , throttle and default using mousemove
+      document.addEventListener("mousemove", e =>{
+        incrementCount(defaultText)
+        updateDebounceText();
+        updateThrottleText();
+      })
+      function incrementCount(element){
+        element.textContent=(parseInt(element.innerText) || 0)+1;
+      }
+    </script>
+  </body>
+</html>

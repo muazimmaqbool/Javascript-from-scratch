@@ -29,6 +29,16 @@
                 return max;
            },0);
            console.log(output); // o/p: 8
+
+           //find minimu value in an array using reduce
+           const arr2=[5,1,8,4,5,-6,0];
+           const minVal=arr2.reduce((min,currVal)=>{
+            if(currVal < min){
+                min=currVal;
+            }
+            return min;
+           },0)
+           console.log(minVal)
         </script>
     </body>
 </html>

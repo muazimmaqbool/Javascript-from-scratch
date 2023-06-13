@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        //here i have three simple promises and they always resolved they never reject
+        //here i have four simple promises and they always resolved they are never reject
         const video1=new Promise((resolve,reject)=>{
             resolve("video one recorded")
         })
@@ -18,6 +18,9 @@
         const video3=new Promise((resolve,reject)=>{
             resolve("video three recorded")
         })
+        const video4=new Promise((resolve,reject)=>{
+            resolve("video four recorded")
+        })
 
         //now here i want to run all these three prmoises in paralled same time
         //promise.all will run all of these promises and when its done its going to call the .then and .catch
@@ -25,7 +28,8 @@
         Promise.all([ // takes array of promises to run them
             video1,
             video2,
-            video3
+            video3,
+            video4
         ]).then((messages)=>{ //.then contains array of all the successfull message
             console.log(messages)
         })
@@ -33,11 +37,12 @@
 
         //promise.race will give us only one promises which is completed first
         Promise.race([
+            video4,
             video1,
             video2,
             video3
         ]).then((message)=>{
-            console.log(message)
+            console.log(message) // video 4 recorded as we mention video 4 here first
         })
     </script>
 </body>

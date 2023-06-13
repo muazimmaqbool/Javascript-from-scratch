@@ -26,7 +26,7 @@
 
       //getData(true).then(onResolve);
       //getData(true).catch(onReject);
-      //here we are going to use method chaning because its calling console.log inside funciton twice
+      //here we are going to use method chaning
       getData(true).then(onResolve).catch(onReject);
 
       //example two writing fucntion inside .then and .catch
@@ -49,19 +49,19 @@
         .catch((error) => console.log("error:", error));
 
       //division example
-      function division(a,b) {
+      function division(a, b) {
         return new Promise((resolve, reject) => {
           var c = a / b;
           setTimeout(() => {
             if (c) {
-              resolve("your answer "+c);
+              resolve("your answer " + c);
             } else {
               reject("Failed to calculate");
             }
-          }, 1000);
+          }, 5000);
         });
       }
-      division(10,3)
+      division(10, 2)
         .then((result) => console.log(result))
         .catch((error) => console.log("error:", error));
     </script>

@@ -22,10 +22,10 @@
             //-> the of power these function is that you can chain them/combine them (watch at 33:55)
             //->
             //using only filter (this will o/p whole details of those with less than 40 marks but want only their name)
-            // const stds1=students.filter((x)=>x.marks<40);
-            // console.log(stds1);
+             //const stds1=students.filter(x=>x.marks<40)
+             //console.log(stds1);
             //->
-            const stds=students.filter((x)=>x.marks<40).map(x=>x.name+":"+x.marks);
+            const stds=students.filter(x=>x.marks<40).map(x=>x.name+"-"+x.enroll)
             console.log(stds);
             //this map() with filter() works on/with the output of the filter function so we get name 
             //and marks of only those whos marks are less than 40.
@@ -33,10 +33,10 @@
 
             //can do above task with reduce() now this is a task , lets try it!
             const output=students.reduce(function(acc,curr){
-                if(curr.marks<40){
-                    acc.push(curr.name+":"+curr.marks);
-                }
-                return acc;
+               if(curr.marks < 40){
+                acc.push(curr.name+" : "+curr.enroll);
+               }
+               return acc;
             },[]); // using {} here will show error, because if we use {} then we can't use acc.push
             console.log(output);
 

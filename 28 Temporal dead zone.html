@@ -6,17 +6,18 @@
         from N.S video : let and const at 5:31  
         <strong>
             The let and const variables are not accessible before they are initialized with some value,
-             and the phase between the starting of the execution of block in which the let or const variable is declared till that variable is 
-             being initialized is called Temporal Dead Zone for the variable
+             and the phase between the starting of the execution of block in which the let or const
+             variable is declared till that variable is being initialized is called 
+             Temporal Dead Zone for the variable
              (time between hoisting and initializing with some value is known as TDZ)
 
              or 
              in simple words:
-             Temporal dead zone : TDZ is the time since when this let and const variables has hoisted and till it is 
-             initialized with some value.(the time between this is known as TDZ)
+             Temporal dead zone : TDZ is the time since when this let and const variables has hoisted 
+             and till it is initialized with some value.(the time between this is known as TDZ)
         </strong>
         <script>
-            console.log(a); // TDZ started here and finishes when value is assigned to a i.e in line number 21
+            console.log(a); // TDZ started here and finishes when value is assigned to a i.e in line number 22
 
             let a=5;  //TDZ ends here
             var b=10;

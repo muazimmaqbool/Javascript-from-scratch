@@ -6,7 +6,7 @@
         <!--
             setTimeout():
             The setTimeout() method executes a block of code after the specified time. 
-            The method executes the code only once.
+            This method executes the code only once.
             
             The commonly used syntax of JavaScript setTimeout is:
             setTimeout(function, milliseconds); function - a function containing a block of code
@@ -28,7 +28,7 @@
             // will be shown first
 
 
-            //The setTimeout() method returns the interval id. For example,
+            //The setTimeout() method returns the interval id. 
             //The returned intervalID is a numeric, non-zero value which identifies the timer created
                 // by the call to setTimeout() ;
             // this value can be passed to clearInterval() to cancel the interval.
@@ -38,7 +38,28 @@
                 console.log('Hello world');
             }
             let intervalId = setTimeout(greet1, 5000);
-            console.log('Id: ' + intervalId);   
+            console.log('Id: ' + intervalId);  
+            
+            
+            console.log(1);
+            function callme(){
+                console.log(2)
+                setTimeout(()=>{
+                    console.log(3);
+                },1000) // if it was 0 in place of 1000 the output would be still same
+                console.log(4)
+            }
+            console.log(0);
+            callme();
+            console.log(5)
+            // o/p: 1,0,2,4,5,3
+
+            //important:
+            // ->“Blocking” statements prevent the next statement from running until its execution finishes. 
+            // ->Functions like setTimeout(), setInterval(), promises, network calls, events,
+               // and all other asynchronous calls are non-blocking statements.
+
+
         </script>
     </body>
 </html>

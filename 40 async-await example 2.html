@@ -75,33 +75,6 @@
       fetchData();
       //Note: now its mostly recomended to use try and catch with async-await
 
-      //throw error
-      //we can throw error by our will if we throw it before statments in try{} then they won't run
-      //and we if use it after statements in try{} then they will still run and and error will be shown
-      /* syntax of throw: 1) throw "error message";
-                          2) throw Error("error message");
-                          3) throw new Error("error message");
-      */
-      //Note: throw is optional
-      /*const fetchData = async () => {
-        try {
-          //throw "meri marzi wala error" //statments after it won't run
-          const response = await fetch(url);
-          const data = await response.json();
-          h1.innerHTML = data.fact;
-          //throw "meri marzi wala error" //statments before it will still run but make sure you display error message in console
-          //throw Error("Error after statements")
-          throw new Error("Error using new keyword"); //better to use this if you use throw
-        } catch (error) {
-          //document.write("Error: ",error);
-          console.log("Error: ", error);
-          //console.log(error.message); //gets error message
-          // console.log(error.name); // gets error name
-        } finally {
-          console.log("Finally is optional");
-        }
-      };
-      fetchData();*/
     </script>
   </body>
 </html>

@@ -32,6 +32,25 @@
                  return Marks;
             },{}); //initial value will be object(because above we have array of objects)
             console.log(output);
+
+            //find out how many items are available of particular type
+            const mobiles=[
+                {brand:"Note 10",Ram:"4GB"},
+                {brand:"Note 10",Ram:"8GB"},
+                {brand:"Note 11",Ram:"8GB"},
+                {brand:"Note 11",Ram:"4GB"},
+                {brand:"Note 9",Ram:"4GB"},
+            ];
+            const output1=mobiles.reduce((result,currRAM)=>{
+                if(result[currRAM.Ram] ){
+                    result[currRAM.Ram]++;
+                }
+                else{
+                    result[currRAM.Ram]=1;
+                }
+                return result;
+            },{})
+            console.log(output1);
         </script>
     </body>
 </html>
