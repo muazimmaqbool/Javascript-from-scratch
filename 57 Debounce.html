@@ -28,15 +28,15 @@
 
       ->Explanation:
           in our example we have input element imagine,search movie name inside and database and you
-          want to list of all movies with name MATRIX , and it gives you list, When you each character
+          want to list of all movies with name MATRIX , and it gives you list, When you type each character
           its going to set the brand new request, so when i type M its going to search for all
           movie starting with M, so when i type MA its going to search all movies with MA, then so on..
           And for searching MATRIX we made 6 requests to server which will cause performace issue, slows down process
           to over come this "Debouncing and Throttle comes"
           (->Debounce and throttle have different ways of working)
-          ->They are the ways to actually slow down a function, instead of calling a function every time
+          ->They are the ways to actually slow down a function call, instead of calling a function every time
           its only going to call a function after a set delay.
-          ->Debounce : instead of call every single time, instead what debounce does is that, it does
+          ->Debounce : instead of calling every single time, instead what debounce does is that, it does
           hey has there been a delay since last time you called the function.
           so when i type M it waits(say 1 second) before calling the function as long as nothing changes in
           1 second then function runs, but during that 1 second i type another character say A, its
