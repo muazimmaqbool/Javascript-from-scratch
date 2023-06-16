@@ -11,9 +11,9 @@
       //visit: https://www.youtube.com/watch?v=8zKuNo4ay8E
       /*call stack: its inside js engine, it executes js code , it does one thing at a time
         ->the main job of this call stack is execute whatever comes inside it, thats all it does
-        ->anything comes inside this call stack it quickly executes it , this call stack doesn't have a timer
+        ->anything comes inside this call stack it quickly executes it , this callstack doesn't have a timer
 
-      ->before functions/code is pushes to callstack but it cannot directly go to the 
+      ->before callback function is pushes to callstack but it cannot directly go to the 
          callstack it can go to the callstack through callback queue
        ->A callback queue is a queue of tasks that are executed after the current task.
 
@@ -21,7 +21,7 @@
             executing the code, collecting and processing events, and executing queued sub-tasks.
             ->job of the Event loop is to check this callback queue and puts the functions which is
               inside callback queue into the callstack, so it acts as an gatekeeper it checks 
-              callback queue and if there is something it pushs it to the callback queue
+              callback queue and if there is something it pushs it to the callstack
         ->event loop has only one job to contineously monitor this callback queue and callstack
           when it sees callstack is empty it check callback queue and sees a callback function there it quickly
           puts it to callstack and callstack quickly executes it
@@ -53,7 +53,7 @@
       are executed first and then functions inside callback queue are executed
     */
    //mutation observer: The MutationObserver interface provides the ability to watch for changes being made to the DOM tree. 
-                  //if there is some change it cal execute callback functions
+                  //if there is some change it can execute callback functions
 
     
     /* 
