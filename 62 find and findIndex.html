@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //find() returns first element that satisfies the condition
+      //findIndex() returns index of that element which satisfies the condition
+
+      const data = [
+        { id: 1, tile: "First" },
+        { id: 2, tile: "Second" },
+        { id: 3, tile: "Third" },
+        { id: 4, tile: "Fourth" },
+      ];
+
+      //findIndex()
+      const itemIndex = data.findIndex((el) => el.id === 2);
+      console.log(itemIndex); // o/p: 1
+
+      //find()
+      const item = data.find((el) => el.id === 2);
+      console.log(item); // o/p: Second
+
+      //extra
+      //The == operator performs a loose equality comparison that performs type coercion if 
+      //necessary to make the comparison possible. The === operator, on the other hand, performs 
+      //a strict equality comparison that does not perform type coercion and requires
+      // the operands to have the same type (as well as the same value).
+    </script>
+  </body>
+</html>

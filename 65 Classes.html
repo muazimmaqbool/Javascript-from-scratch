@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
+        JavaScript Classes are templates for JavaScript Objects.
+
+        ->JavaScript Class Syntax:
+            Use the keyword class to create a class.
+            Always add a method named constructor(){...}
+                Syntax:
+                    class ClassName {
+                        constructor() { ... }
+                    }
+        */
+       //example
+       class car{ //class name car
+        constructor(name,model){
+            this.name=name;
+            this.model=model;
+        }
+        //The class has two initial properties: "name" and "year".
+       }
+       //A JavaScript class is not an object. It is a template for JavaScript objects.
+
+       //creating objects of class car
+       const car1=new car("Ford",2019);
+       const car2=new car("BMW",2023);
+       //The constructor method is called automatically when a new object is created.
+       console.log(car1.name);
+       console.log(car2.name," and ",car2.model)
+
+       /* important
+       ->The Constructor Method
+          The constructor method is a special method:
+            It has to have the exact name "constructor"
+            It is executed automatically when a new object is created
+            It is used to initialize object properties
+            If you do not define a constructor method, JavaScript will add an empty constructor method.
+       */
+      //we can have many class methods
+      //example
+      //add a method that returns bike age
+      class bike{
+        constructor(name,model){
+            this.name=name;
+            this.model=model;
+        }
+        //class methods
+        bikeAge(){
+            const date=new Date();
+            return date.getFullYear() - this.model;
+        }
+        //You can send parameters to Class methods:
+        bikeColor(color){
+            console.log("Bike Color is: ",color)
+        }
+      }
+      const myBike=new bike("BMW",2015);
+      console.log(myBike.bikeAge());
+      myBike.bikeColor("Blue and Gray");
+
+    </script>
+</body>
+</html>

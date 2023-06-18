@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    visit : <a href="https://www.w3schools.com/js/js_modules.asp" target="_blank">Click Here</a>
+    <script type="module">
+      //we can export program and use it in another program
+      //example we have here function contact which is inside 63.1 Export.js
+      //and we can use it here in 63
+
+      import contact from "./63.1 Export.js";
+      import {id,address,fullName as name} from "./63.1 Export.js";
+      contact("muazim", "muazim@gmail.com");
+      console.log(id); 
+      console.log(address);
+      console.log(name);
+      /*
+        Modules:
+        JavaScript modules allow you to break up your code into separate files.
+        This makes it easier to maintain a code-base.
+        Modules are imported from external files with the import statement.
+        */
+    </script>
+  </body>
+</html>
