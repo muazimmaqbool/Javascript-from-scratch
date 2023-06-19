@@ -1,5 +1,5 @@
 function contact(name, email) {
-  //or export default function contact, then bottom export default is removed
+  //or export default function contact(), then bottom export default is removed
   console.log(`the name is ${name} & the email is ${email}`);
 
   //the template literals has made it easy to include variables inside a string

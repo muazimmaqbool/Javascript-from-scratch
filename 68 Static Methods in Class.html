@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Static class methods are defined on the class itself.
+        //You cannot call a static method on an object, only on an object class.
+        
+        //example
+        class Bike{
+            constructor(brand){
+                this.bikeName=brand;
+            }
+            //static method
+            static message(b){
+                return "hello "+b.bikeName;
+            }
+        }
+        const myBike=new Bike("BMW");
+        console.log(myBike.bikeName);
+        //calling static method using Bike class
+        //console.log(Bike.message());
+        
+         //to use myBike object inside static method you can use it as parameter
+         console.log(Bike.message(myBike))
+
+        //// But NOT on a Car Object:
+        // myCar.hello(); // this will raise an error.
+
+        //to use myBike object inside static method you can use it as parameter
+    </script>
+</body>
+</html>

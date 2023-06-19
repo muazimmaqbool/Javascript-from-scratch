@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //A class created with a class inheritance inherits all the methods from another class:
+      //class created from another class
+      //To create a class inheritance, use the extends keyword.
+
+      //Create a class named "Mode;" which will inherit the methods from the "Car" class:
+      class Car { //parent class
+        constructor(brand) {
+          this.carname = brand;
+        }
+        present() {
+          return "I have a " + this.carname;
+        }
+      }
+      //child class
+      class Model extends Car {
+        constructor(brand, mod) {
+          super(brand); //refers to parent
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ", it is a " + this.model;
+        }
+      }
+      let myCar = new Model("Ford", "Mustang");
+      console.log(myCar);
+      //Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+      
+    </script>
+  </body>
+</html>
