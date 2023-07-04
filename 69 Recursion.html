@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Recursion means function calling itself
+        //Recursion happes when function calls itself and keeps calling itself until something stops it
+
+        //Example of normal function : it prints hello once
+        /*function display(){
+            console.log("Hello");
+        }
+        display();*/
+
+        //Example of recursion which never stops : it prints hello continuously
+       /* function display(){
+            console.log("Hello");
+            display(); //calls display function again
+        }
+        display();*/
+        //its infinite recursive function that crashes out application
+
+        //Example of recursion
+        let counter=0;
+        function display(){
+            console.log("Hello",counter);
+            counter++
+            if(counter>6) return //when counter becomes >6 recrusion stops and
+                                  // the condition which stop the recursion is known as "Base Case"
+            //the return keyword terminates the recursion
+            display(); //calls display function again
+        }
+        display();
+    </script>
+</body>
+</html>

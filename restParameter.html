@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+    //->Rest Paramater allows our function to accept indefinite number of 
+         //arguments
+    //->syntax: ...anyName  or ... anyName -> now name becomes an array
+    
+        function sum(...args) { //now this args becomes array
+        let result = 0;
+        for (let i = 0; i < args.length; i++) {
+          result += args[i];
+        }
+        return result;
+      }
+      
+     
+    </script>
+</body>
+</html>
