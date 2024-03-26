@@ -16,6 +16,9 @@
       //The getFullYear() Method
       console.log(currDate.getFullYear()); //Return the full year of a date object:
 
+      //getMonth()
+      console.log(currDate.getMonth()); //Return the month as a number: 0=>January, 1=>February,...
+
       //The getDay() Method
       console.log(currDate.getDay()); //Return the day as a number: 0->sunday, 1->monday,....
 
@@ -32,7 +35,7 @@
         "Friday",
         "Saturday",
       ];
-      let day = days[currDate.getDay()];
+      let day = days[currDate.getDay()]; //or let day = days[new Date().getDay()];
       console.log("Today is: ", day);
       //or use switch statement
       let day_;
