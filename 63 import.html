@@ -13,11 +13,13 @@
       //and we can use it here in 63
 
       import contact from "./63.1 Export.js";
-      import {id,address,fullName as name} from "./63.1 Export.js";
+      import {id,address,fullName as name,batch,getAddress} from "./63.1 Export.js";
       contact("muazim", "muazim@gmail.com");
       console.log(id); 
       console.log(address);
       console.log(name);
+      console.log(batch)
+      getAddress(name,address)
       /*
         Modules:
         JavaScript modules allow you to break up your code into separate files.
