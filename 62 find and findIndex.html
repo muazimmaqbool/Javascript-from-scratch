@@ -18,12 +18,12 @@
       ];
 
       //findIndex()
-      const itemIndex = data.findIndex((el) => el.id === 2);
-      console.log(itemIndex); // o/p: 1
+      const itemIndex = data.findIndex((el) => el.id === 1);
+      console.log(itemIndex); // o/p: 0
 
       //find()
       const item = data.find((el) => el.id === 2);
-      console.log(item); // o/p: Second
+      console.log(item); // o/p: { id: 2, tile: "Second" },
 
       //extra
       //The == operator performs a loose equality comparison that performs type coercion if 

@@ -8,9 +8,15 @@ function contact(name, email) {
   //Note: Template literals won't work with double quotes: " "
 
 }
+export const getAddress=(name,address)=>{
+  console.log(`Address of ${name} is ${address}`)
+}
+
+
 export const id = "6655-CSE-B";
 const fullName = "Muazim Maqbool";
 const address = "Sopore";
+export const batch=2016
 //rather then using seperate export we can do like this
 export { address, fullName }; //we can also put id here
 export default contact;
