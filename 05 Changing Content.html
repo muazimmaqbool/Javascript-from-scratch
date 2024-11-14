@@ -10,6 +10,10 @@
 
         <p id="text3"></p><!-- add text to this empty paragraph-->
         <button id="button3">MakeText</button>
+
+        <!-- adding some text to it on both sides-->
+        <p id="text4">my name is</p>
+        <button id="button4">Add Text on both sides</button>
         <script type="text/javascript">
             document.getElementById("button").onclick=function(){
                 document.getElementById("text").innerHTML="Some New Text";
@@ -28,6 +32,10 @@
                 // we can put any html element there lists, forms, tables etc
             }
             // innerhtml is not a function its a value/content of the paragraph
+
+            document.getElementById("button4").onclick=function(){
+                document.getElementById("text4").innerHTML="Hi "+document.getElementById("text4").innerHTML+" JavaScript!";
+            }
         </script>
     </body>
 </html>
