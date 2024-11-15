@@ -39,18 +39,18 @@
         const person = {firstName:"Muazim", lastName:"Maqbool"};
         console.log(person)
         // Array:
-        const cars = ["Saab", "Volvo", "BMW"];
+        const cars = ["Honda", "Volvo", "BMW"];
         console.log(cars)
         
         // Date object:
-        const date = new Date(); // will give current date
+        const date = new Date(); // will give current date and time
         console.log(date)
         const time=date.toLocaleTimeString(); //will give current local time
         //or
         //const time=new Date().toLocaleTimeString();
         console.log(time);
 
-        //Note!
+        //Note
         let result= 16 + "laptop";
         //JavaScript will treat the example above as: let result="16" + "laptop";
         //When adding a number and a string, JavaScript will treat the number as a string.
@@ -72,7 +72,7 @@
         //JavaScript Types are Dynamic
         //JavaScript has dynamic types. This means that the same variable can be used to hold different 
         //data types:
-        let a;         // Now a is undefined
+        let a;         // here a is undefined
         a = 5;         // Now a is a Number
         a = "printer";    // Now a is a String
         console.log(a); // o/p: printer
