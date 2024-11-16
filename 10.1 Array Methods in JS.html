@@ -50,16 +50,17 @@
             var items=["Mouse","CPU","Camera","Keyboard"];
             console.log(items.shift()); //shift() method returns the value that was "shifted out"/removed i.e mouse
             //now CPU comes at zero
-            console.log(items); // o/p: ['CPU', 'Camera', 'Keyboard']
+            console.log("array after shift():",items); // o/p: ['CPU', 'Camera', 'Keyboard']
 
             //3->JavaScript Array unshift()
             //unshift() method adds a new element to an array (at the beginning), and "unshifts" older element
             console.log("Array unshift()")
             const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+            console.log("fruits array before unshift('Lemon')",fruits1)
             console.log(fruits1.unshift());//o/p :4 //didn't add anything just returns array length which is here 4
-            console.log(fruits1.unshift("Lemon")); //5 // adds element Lemon at index 0 and returns new array length which is now 5
+            console.log(fruits1.unshift("Lemon")); //o/p: 5 // adds element Lemon at index 0 and returns new array length which is now 5
             //The unshift() method returns the new array length.
-            console.log(fruits1)
+            console.log("fruits array after unshift('Lemon')",fruits1)
 
             //4-> Merging (Concatenating) Arrays
             //The concat() method creates a new array by merging (concatenating) existing arrays:
@@ -78,7 +79,7 @@
             let arr=["This","is"];
             console.log("arr: "+arr);
             const newarray=arr.concat("Javascript");
-            console.log(newarray);
+            console.log("arr:->",newarray);
            // console.log(arr1+arr2); // can also join two arrays like this
 
             //Splicing and Slicing Arrays already studied in program 10
@@ -89,14 +90,14 @@
             //The reverse() method is represented by the following syntax
             console.log("Array reverse()")
             const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-            console.log(fruits2);
-            console.log("Reverse: ",fruits2.reverse());
+            console.log("Before Reverse",fruits2);
+            console.log("After Reverse: ",fruits2.reverse());
 
             //6->JavaScript Array sort() method
             //The JavaScript array sort() method is used to arrange the array elements in some order. By default, sort() method follows the ascending order
             console.log("Array sort()")
             var skills=["AngularJS","Node.js","JQuery","Bootstrap","Python","Java","C++"]
-            console.log(skills);
+            console.log("Before Sorting",skills);
             console.log("After sorting: ",skills.sort());  
             //example 2:
             var num=[8,9,5,4,7,6,2,3,1,0];
