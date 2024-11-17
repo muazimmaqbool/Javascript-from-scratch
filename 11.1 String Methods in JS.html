@@ -40,9 +40,11 @@
             //Replacing String Content:
                 //The replace() method replaces a specified value with another value in a string:
                 let day="Today is Monday!"; 
+                console.log("Replacing Monday with Friday:",day)
                 console.log(day.replace("Monday","Friday"));
                 // this will replace only first Monday , like below
                 let day1="Today is Monday! Monday"; 
+
                 console.log(day1.replace("Monday","Friday"));
             //String ReplaceAll():
                 //In 2021, JavaScript introduced the string method replaceAll()
@@ -58,7 +60,8 @@
                 console.log("length before trim() "+fullName.length);
                 let name=fullName.trim();
                 console.log("Length after trim() "+name.length);
-                // it removes white space only before and after the text not in between the text
+                
+                // trimStart() it removes white space only before and after the text not in between the text
             //String trimStart():
                 //The trimStart() method works like trim(), but removes whitespace only from the start of a string. 
                 let branch="   CSE      ";
