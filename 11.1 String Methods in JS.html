@@ -60,7 +60,7 @@
                 console.log("length before trim() "+fullName.length);
                 let name=fullName.trim();
                 console.log("Length after trim() "+name.length);
-                
+
                 // trimStart() it removes white space only before and after the text not in between the text
             //String trimStart():
                 //The trimStart() method works like trim(), but removes whitespace only from the start of a string. 
@@ -86,8 +86,9 @@
                 // C and c will have different UTF-16 code
                 console.log(y.charCodeAt(9));
                 console.log(y.charCodeAt(5));
-            //Property Access:
-                //ECMAScript 5 (2009) allows property access [ ] on strings:
+                
+                //Property Access:
+                //ECMAScript 5 (2009) allows property access using [ ] on strings:
                 let z="Laptop";
                 console.log(z[1]); // a
                 console.log(z[0]); // L
@@ -101,11 +102,14 @@
                     let text = "HELLO WORLD";
                     text[0] = "A";    // Gives no error, but does not work
                 */
+               
             //Converting a String to an Array - A string can be converted to an array with the split() method:
                 //JavaScript String split(): - used to convert string to array
-                let str2="Smart, Phone";
+                let str2="Smart,Phone";
+                console.log("str2 before converting to array:",str2)
                 let myarray=str2.split(",");
-                console.log(myarray[0]); //o/p: smart
+                console.log("str2 after converting to string",myarray); //o/p: ["Smart","Phone"]
+                console.log(myarray[0]); // o/p: smart
                 /* text.split(",")    // Split on commas
                    text.split(" ")    // Split on spaces
                    text.split("|")    // Split on pipe */
