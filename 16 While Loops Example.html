@@ -24,28 +24,22 @@
         var mynumberEnterted = document.getElementById("mynumber").value;
 
         //now we're going to check wheather computer got it right or not
-        // by comparing computerNumbr and myNumber . We can do it by if statement but
-        // we want this code to keep executing until computer is correct and then we want
+        // by comparing computerNumbr and myNumber .
+        // We can do it by if statement but we want this code to keep executing until computer is correct and then we want
         // to tell the user how many goes it took the computer to get it right and we do this
         // by using boolean datatype and using if statement inside while
 
         var gotIt = false;
         var numberofGuesses = 1; // computer has to guess atleast 1 time
 
-        while (gotIt == false) {
+        while (gotIt === false) {
           //Now anyrandom number between 0 and 5 is generated and put in computerNumber variable
           // which is guess made by computer
           var computerNumber = Math.floor(Math.random() * 6); // makes any random number between 0 to 5
 
           if (computerNumber == mynumberEnterted) {
             gotIt = true; // so it will run until two number match and then gotit becomes true and while loop stops;
-            alert(
-              "Got It Right! It was a " +
-                mynumberEnterted +
-                 " And It took PC " +
-                numberofGuesses +
-                " Guesses"
-            );
+            alert("Got It Right! It was a " + mynumberEnterted + " And It took PC " + numberofGuesses +" Guesses");
           } else {
             //happens when computer gets it wrong
             numberofGuesses++; // this will increase number of guesses computer made but failed to got it right
