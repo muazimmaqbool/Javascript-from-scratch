@@ -22,18 +22,24 @@
             //document.write(i,"<br>");
             document.write("<h",i,">","Heading ",i,"</h",i,">");
           }
-
-          var items=["EggRole","ChickenTika","FrenchFries","Pizaa","Briyani","Fruity"];
+         
+          //loops on array
+          var items=["EggRole","ChickenTika","FrenchFries","Pizaa","Briyani","Butter Chicken"];
           for(var i=0;i<items.length;i++){
             document.write("<strong>Item: ",i," = ",items[i],"<br></strong>");
             //document.write("<strong>Item: ",i+1," = ",items[i],"<br></strong>"); // also try this
           }
 
           //looping on object
-          const products={name:"Laptop",brand:"HP",Price:50000,model:"2018"}
+          const products={
+            name:"Laptop",
+            brand:"HP",
+            Price:50000,
+            model:"2018"
+          }
           let text="";
           for(let x in products){
-            text += products[x]+",";
+            text += products[x] + ",";
           }
           console.log(text)
         </script>
