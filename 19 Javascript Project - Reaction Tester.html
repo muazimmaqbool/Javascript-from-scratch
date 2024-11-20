@@ -4,10 +4,11 @@
 </head>
     <body>
         <!-- Also see CSS file of it to understand code well -->
-        <!-- Time Taken will be shown/placed here -->
+        
         <h1>Reaction Tester Game</h1>
         <h4>Tip: Click on Boxes and Circles as quickly as you can!</h4>
-        <p>Time Taken To Click On Image: <span id="timedisplay"></span></p>
+        <!-- Time Taken will be shownhere -->
+        <p>Time Taken To Click On The Shape: <span id="timedisplay"></span></p>
         <button id="exit">Exit </button>
         <div id="shape"></div>
         <script type="text/javascript">
@@ -19,6 +20,7 @@
              var start=new Date().getTime();
 
             //function to show shape again after clicking on it
+            //basically this function generates an random shape
             function makeShapeAgain(){
 
                 //changing positioning of the shape by passing random values to top and left (see css file)
@@ -27,8 +29,9 @@
                 var leftrandom=Math.random()*1200;
                 document.getElementById("shape").style.left=leftrandom+"px";
 
-                //Giving shape a random size(changing its shape) watch at 26:45
-                var widthrandom=(Math.random()*200)+100; // random width and height between 0 to 200 then we add 100 and that gives us random number between 100 and 300 , so that its not too small
+                //Giving shape a random size(changing its shape)
+                // random width and height between 0 to 200 then we add 100 and that gives us random number between 100 and 300 , so that its not too small
+                var widthrandom=(Math.random()*200)+100;
                 document.getElementById("shape").style.width=widthrandom+"px";
                 document.getElementById("shape").style.height=widthrandom+"px"; // keeping height same as width
 
@@ -39,7 +42,6 @@
                 if(Math.random()>0.5){
                     document.getElementById("shape").style.borderRadius="50%";
                 }else{
-                    //watch at 25:40
                     document.getElementById("shape").style.borderRadius="0";
                 }
 
@@ -63,7 +65,7 @@
 
             //Function that changes color of the shape
             function randomColor(){
-                var latters='0123456789ABCDEF'.split(''); // watch at 21:00
+                var latters='0123456789ABCDEF'.split(''); 
                 var color='#';
                 for(var i=0;i<6;i++){
                     color+=latters[Math.floor(Math.random()*16)]
@@ -85,9 +87,6 @@
             }
         </script>
         <!-- important tasks : update this code to show users best and worst click speed
-        i.e show min time and max time
-    and show average time-->
-
-        <!-- Moving the shape is defined in css file-->
+        i.e show min time and max time and show average time-->
     </body>
 </html>
