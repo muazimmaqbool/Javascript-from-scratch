@@ -23,7 +23,7 @@
             
             // 1) using global variable inside function
             function f1(){
-                console.log(a); // will print value of a
+                console.log("a in f1() :",a); // will print value of a
             }
             
 
@@ -31,7 +31,7 @@
             function f2(){
                 f3();
                 function f3(){
-                    console.log(a); // will still print value of a
+                    console.log("a in f3() which is inside f2() :",a); // will still print value of a
                 }
             }
             
