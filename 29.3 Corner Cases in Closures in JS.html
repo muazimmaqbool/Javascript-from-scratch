@@ -36,7 +36,7 @@
             function x(){
                 var a=10;
                 function y(){
-                    console.log(a,b); // 10 30 (watch at 17:48)
+                    console.log(a,b); // 10 30 
                     // it form a closure along with 'a' which is its parent and also with 'b' which is its parents parent
                 } 
                 y();
@@ -44,7 +44,6 @@
             x();
         }
         outer();
-        // watch uses of closures at 18:45
         // uses of closures:
             // 1) module design pattern
             // 2) currying
