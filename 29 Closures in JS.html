@@ -25,13 +25,12 @@
     (stydy from video of NS)
     -->   
         <script>
-            //from N.S video
             function x(){
                 var a=10;
                 function y(){
-                    console.log(a); // will print a , because of lexical scope, it will first look 'a' in 
-                //its local memory space and then in its parent functions memory space, and that's what
-                // closure is . now see in code 29.1 Closures in js
+                    console.log(a); // o/p: 10 , because of lexical scope, it will first look 'a' in 
+                //its local memory space and then in its parent functions memory space, and that's what closure is. 
+                //now see in code 29.1 Closures in js
                 }
                 y();
             }
