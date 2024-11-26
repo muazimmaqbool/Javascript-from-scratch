@@ -12,7 +12,7 @@
 
              or 
              in simple words:
-             Temporal dead zone : TDZ is the time since when this let and const variables has hoisted 
+             Temporal dead zone (TDZ) is the time since when this let and const variables has hoisted 
              and till it is initialized with some value.(the time between this is known as TDZ)
         </strong>
         <script>
@@ -22,13 +22,13 @@
             var b=10;
             
             /*
-            SO, that phase from hoisting till it gets/assigns with some value, this phase is known as TDZ
+            SO, that phase from hoisting till it gets/assigned with some value, this phase is known as TDZ
             and, Whenever you try to access a varibale inside a TDZ it gives a ReferenceError like this 
             "Cannot access 'a' before intialization ".
             You cannot access the varible when its in TDZ, you can access it when some value is asigned to it
             */
 
-            /* What is this ReferenceError: watch video at 7:51 :
+            /* What is this ReferenceError:
             The ReferenceError object represents an error when a variable that doesn't exist (or hasn't yet been initialized) in the current scope is referenced.
 
             when you try to access any random varibale which is not in our program, we get ReferenceError : x is not defined
@@ -36,7 +36,7 @@
             */
 
             /*
-            RELATION BETWEEN LET AND CONST WITH GLOBAL OBJECT watch video at : 9:18.
+            RELATION BETWEEN LET AND CONST WITH GLOBAL OBJECT
 
             var b : will be attached to window object(global object) try: window.b in console
 
@@ -44,14 +44,7 @@
             seperated space i.e for let and const try window.a in console will show undefined
             */
             
-            /* see in video at these parts : 13:56 syntax error in js 
-
-             14:54 : type error and 15:11 and 17:52
-             at 19:00 : its how to avoid temporal dead zone
-                        (To avoid the TDZ always put your deceleration and initialization at the top)
-
-             20:70 : interview questions on hoisting of let and const.
-
+            /* 
              important things:
 
              What Does Syntax Error Mean?
@@ -63,7 +56,7 @@
                 The TypeError object represents an error when an operation could not be performed, 
                 typically (but not exclusively) when a value is not of the expected type.
 
-                A TypeError may be thrown when:
+            A TypeError may be thrown when:
                 an operand or argument passed to a function is incompatible with the type expected by that
                 operator or function; 
                 or
