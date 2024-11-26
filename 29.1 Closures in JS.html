@@ -21,23 +21,19 @@
 
                 // here Inside y() function, it forms a closure with the varibale 'a' which is the part of x()
                 // lexical scope/function and it has access to its parents lexical scope that's why it prints 10
-                
-                // watch at 3:56 about functions (very very important)
-
-                // now study from next code 29.2 closures in JS
-            
                 }
                 y();
             }
             x();
 
-            // returing function at:6:00
+
             function test(){
                 var x=20;
                 function b(){
                     console.log(x); 
                 }
                 return b; //this will return whole function b()
+                //return b(); //o/p: 20
             }
             var c=test();
             console.log(c); // o/p function b()'s code
