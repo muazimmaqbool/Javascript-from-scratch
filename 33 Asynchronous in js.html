@@ -26,12 +26,12 @@
           The above code is pretty simple – it sums two numbers and then logs the sum to the browser 
           console. The interpreter executes these instructions one after another in that order until it
           is done.
-        But this method comes along with disadvantages. Say we wanted to fetch some large amount of 
+        But this method comes along with disadvantages. Suppose we wanted to fetch some large amount of 
         data from a database and then display it on our interface. When the interpreter reaches the 
         instruction that fetches this data, the rest of the code is blocked from executing until the
          data has been fetched and returned.
         Now you might say that the data to be fetched isn't that large and it won't take any noticeable
-        time. Imagine that you have to fetch data are at multiple different points. This delay compounded
+        time. Imagine that you have to fetch data is at multiple different points. This delay compounded
         doesn't sound like something users would want to come across.
         Luckily for us, the problems with synchronous JavaScript were addressed by introducing 
         asynchronous JavaScript.
