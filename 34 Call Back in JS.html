@@ -25,7 +25,7 @@
             }
             myFirst(); // here It will display : Hello
             mysecond(); // but Value is now changed to : JavaScript
-            // now if i call myFirst() here it will display Hello to the screen i.e they are executed in the
+            // now if i call myFirst() here again it will display Hello to the screen i.e they are executed in the
             // sequence they are called i.e //myFirst();
              
             //Sequence Control
@@ -70,7 +70,7 @@
                  the calculator function from displaying the result.*/
 
                //Now it is time to bring in a callback.
-              /* JavaScript Callbacks
+              /* JavaScript Callbacks:
                 A callback is a function passed as an argument to another function.
                 Using a callback, you could call the calculator function (myCalculator) with a callback,
                  and let the calculator function run the callback after the calculation is finished:*/
@@ -78,7 +78,7 @@
                  function result(some){
                     document.getElementById("SUM").innerHTML=some;
                  }
-                 function calculator(num1, num2, callback){
+                 function calculator(num1, num2, callback){ //callback can be any name
                     let sum=num1+num2;
                     callback(sum); // in callback we have result function
                  }
@@ -94,7 +94,8 @@
         
         They are simplified to teach you the callback syntax.
         
-        Where callbacks really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).       
+        Where callbacks really shines are in asynchronous functions, where one function has to wait for another
+         function (like waiting for a file to load).       
         Asynchronous functions are covered in the next program. -->
     </body>
 </html>
