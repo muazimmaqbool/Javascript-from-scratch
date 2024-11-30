@@ -17,8 +17,7 @@
     -->
     <script>
         
-        // promise object takes one parameter which is a function which gets passed with two variables
-        // resolve and reject
+        // promise object takes one parameter which is a function which gets passed with two variables resolve and reject
         let p=new Promise((resolve,reject)=>{
             //function definition
             let a =1+1 //try for 1+2 as well
@@ -48,10 +47,10 @@
             if(complete) res("its completed successfully");
             else rej("some error has occurred!");
         });
-        console.log(prom); //try this and see its result
+        console.log("prom :",prom); //try this and see its result
 
-        let onResolve = (result) => console.log(result);
-        let onReject = (error) => console.log(error);
+        let onResolve = (result) => console.log("result:",result);
+        let onReject = (error) => console.log("error:",error);
 
         prom.then(onResolve);
         prom.catch(onReject);
