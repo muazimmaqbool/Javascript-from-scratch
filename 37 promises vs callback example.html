@@ -11,26 +11,28 @@
 <body>
     <script>
         const userLeft = false
-        const userWatchingMeme = false
+        const userIsWatchingMeme = false
 
+        console.log("using callback")
         //using callbacks
         //this function takes two variables one for success and one for error
-        function exampleTwo(callback, errorCallback) {
+        function checkUserActivity(callback, errorCallback) {
             if (userLeft) {
                 errorCallback({
                     name: "user has left",
                     message: " ok bye"
                 })
-            } else if (userWatchingMeme) {
+            } else if (userIsWatchingMeme) {
                 errorCallback({
-                    name: " user is still watching memes",
-                    message: " he is enjoying it"
+                    name: "user is watching memes",
+                    message: "and he is enjoying!"
                 })
             } else {
-                callback('thanku for coding it')
+                callback('user is still coding...')
+               // console.log("callback function:",callback) // see its o/p its function passed to it
             }
         }
-        exampleTwo((message) => {
+        checkUserActivity((message) => {
             console.log('success: ', message)
         }, (error) => {
             console.log(error.name + " " + error.message)
