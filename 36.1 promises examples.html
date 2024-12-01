@@ -27,7 +27,7 @@
       //getData(true).then(onResolve);
       //getData(true).catch(onReject);
       //here we are going to use method chaning
-      getData(true).then(onResolve).catch(onReject);
+      getData(true).then(onResolve).catch(onReject); // also try with getData(false).... 
 
       //example two writing fucntion inside .then and .catch
       function getData1(status) {
@@ -42,6 +42,7 @@
           }, 4000);
         });
       }
+      //also try with false value
       getData1(true)
         .then((result) => {
           console.log(result);
