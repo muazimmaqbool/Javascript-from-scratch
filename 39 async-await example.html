@@ -9,23 +9,26 @@
   <body>
     <script>
       //here we are fetching data from json file in folder ForFetchAPI / use fake json api
-      /*async function getData() {
-        console.log("2");
-        const response = await fetch("API/ForFetchAPI/students.json");
-        console.log("3");
-        const result = await response.json();
-        return result;
-      }
-      console.log("1");
-      let a = getData();
-      console.log("4");
-      */
+
+      //Example 1
+      // async function getData() {
+      //   console.log("2");
+      //   const response = await fetch("API/ForFetchAPI/students.json");
+      //   console.log("3");
+      //   const result = await response.json();
+      //   return result;
+      // }
+      // console.log("1");
+      // let a = getData();
+      // console.log("4");
+      
       //check o/p : 1,2,4,promise,3
 
       //printing 1,2,3 etc where used to explain how the flow of code works
 
+      //Example 2
       //now lets keep the code simple
-     /* async function getData() {
+      async function getData() {
         const response = await fetch("API/ForFetchAPI/students.json");
         const result = await response.json();
         return result;
@@ -40,7 +43,9 @@
         })
         .catch((err) => {
           console.log("error occurred ->", err);
-        });*/
+        });
+
+
       /* Here: we called getData() which is an async function which returns us a promise if promise
         is successfully returned, then() is called and in case of error, catch() function is called*/
 
@@ -62,16 +67,16 @@
       //if we need to call the function multiple times then everytime we need to use catch to avoid it
       //we are going to use try and catch inside asyn function:
 
-      async function getData() {
-        try {
-          return (await fetch("API/ForFetchAPI/students.json")).json();
-        } catch (err) {
-          console.log("error occurred ->", err);
-        }
-      }
-      getData().then((std) => {
-        console.log(std);
-      });
+      // async function getData() {
+      //   try {
+      //     return (await fetch("API/ForFetchAPI/students.json")).json();
+      //   } catch (err) {
+      //     console.log("error occurred ->", err);
+      //   }
+      // }
+      // getData().then((std) => {
+      //   console.log(std);
+      // });
 
       
       //now we don't need to write catch here everytime we call this function we can only use
