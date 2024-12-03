@@ -28,22 +28,22 @@
 
       //Example 2
       //now lets keep the code simple
-      async function getData() {
-        const response = await fetch("API/ForFetchAPI/students.json");
-        const result = await response.json();
-        return result;
-      }
-      //let a = getData();
-      //console.log(a);
+      // async function getData() {
+      //   const response = await fetch("API/ForFetchAPI/students.json");
+      //   const result = await response.json();
+      //   return result;
+      // }
+      // let a = getData();
+      // console.log(a);
 
-      //using then and catch
-      getData()
-        .then((std) => {
-          console.log(std);
-        })
-        .catch((err) => {
-          console.log("error occurred ->", err);
-        });
+      // //using then and catch
+      // getData()
+      //   .then((std) => {
+      //     console.log(std);
+      //   })
+      //   .catch((err) => {
+      //     console.log("error occurred ->", err);
+      //   });
 
 
       /* Here: we called getData() which is an async function which returns us a promise if promise
