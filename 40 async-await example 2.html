@@ -17,7 +17,9 @@
       //this code we have taken from code API folder : 9.1 it displays random cat facts
       const url = "https://catfact.ninja/fact"; //api we are going to use
       const h1 = document.querySelector("h1");
-      /*const fetchData = () => {
+      
+      /*
+      const fetchData = () => {
         fetch(url)
           .then((response) => response.json())
           //.then((data) => h1.innerHTML=data)
@@ -25,16 +27,18 @@
           .catch((e) => console.log(e))
           .finally(() => console.log("finally done"));
       };
-      fetchData();*/
+      fetchData();
+      */
 
-      //above example using async-await
-      /* const fetchData = async () => {
+      //using async-await
+      /*const fetchData = async () => {
         const response = await fetch(url); //here await because it returns promise
         const data = await response.json(); // here it also returns promise therefore await here aswell
         //console.log(data);
         h1.innerHTML = data.fact;
       };
-      fetchData(); */
+      fetchData(); 
+      */
 
       /* console.log("A");
       const fetchData = async () => {
@@ -60,7 +64,7 @@
       fetchData().catch((error) => console.log("error: ", error));*/
 
       //handling error using try and catch
-      const fetchData = async () => {
+      /*const fetchData = async () => {
         try {
           const response = await fetch(url);
           const data = await response.json();
@@ -72,7 +76,7 @@
             console.log("Finally is optional")
         }
       };
-      fetchData();
+      fetchData();*/
       //Note: now its mostly recomended to use try and catch with async-await
 
     </script>
