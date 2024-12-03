@@ -63,20 +63,21 @@
         .catch((err) => {
           console.log("error occurred ->", err);
         });*/
+
       //now this looks fine, but what about error handing currently we handle errors using catch but
       //if we need to call the function multiple times then everytime we need to use catch to avoid it
-      //we are going to use try and catch inside asyn function:
+      //we are going to use try and catch inside of async function:
 
-      // async function getData() {
-      //   try {
-      //     return (await fetch("API/ForFetchAPI/students.json")).json();
-      //   } catch (err) {
-      //     console.log("error occurred ->", err);
-      //   }
-      // }
-      // getData().then((std) => {
-      //   console.log(std);
-      // });
+      async function getData() {
+        try {
+          return (await fetch("API/ForFetchAPI/students.json")).json();
+        } catch (err) {
+          console.log("error occurred ->", err);
+        }
+      }
+      getData().then((std) => {
+        console.log(std);
+      });
 
       
       //now we don't need to write catch here everytime we call this function we can only use
