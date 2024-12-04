@@ -9,15 +9,15 @@
         ->map() function: map() function is basically used to transform an array
             (means getting new array out of it)
            ->The map() method is used for creating a new array from an existing one, 
-                  by  applying a function to each element of the array.
+             by  applying a function to each element of the array.
         -->
 
         <script>
             //example
             const arr1=[2,4,6,8];
             // these are the some examples of transformations of the arr1:
-            //double - [4,8,12,16]; //doubles the orginal value
-            //triple - [6,12,18,24]; //tripes the orginal value etc...
+            //double : [4,8,12,16]; //doubles the orginal value
+            //triple : [6,12,18,24]; //tripes the orginal value etc...
             //the things is that if you want to transfromation you do it with the map() function
 
             //syntax: const output=arr1.map(function); //function->which tells what transformation we need to do 
@@ -46,8 +46,8 @@
             console.log(result);
 
             //we can also put function inside map like this
-            const arrChar=['a','e','i','o','u'];
-            const result1=arrChar.map(function toUpperCase(x){
+            const arrayChar=['a','e','i','o','u'];
+            const result1=arrayChar.map(function toUpperCase(x){
                 return x.toString().toUpperCase();
                 //or
                //return x.toString().toUpperCase().split(",");
@@ -55,9 +55,9 @@
             console.log(result1);
 
             //arrow functions inside map
-            const arrstr=["JAVASCRIPT"]; 
-            const result2=arrstr.map((x)=>{        // or const result2=arrstr.map((x)=>x.toString().toLowerCase());
-                return x.toString().toLowerCase(); //watch at 6:00 to 6:30
+            const arraystr=["JAVASCRIPT"]; 
+            const result2=arraystr.map((x)=>{        // or const result2=arrstr.map((x)=>x.toString().toLowerCase());
+                return x.toString().toLowerCase(); 
             })
             console.log(result2); 
 
