@@ -71,15 +71,24 @@
         { year: "2023", winner: "Australia" },
       ];
 
-      const cupsCount=cricketWorldCups.reduce((worldCups,currentYear)=>{
-        if(worldCups[currentYear.winner]){
+      const cupsCount = cricketWorldCups.reduce((worldCups, currentYear) => {
+        if (worldCups[currentYear.winner]) {
           worldCups[currentYear.winner]++;
-        }else{
-          worldCups[currentYear.winner]=1;
+        } else {
+          worldCups[currentYear.winner] = 1;
         }
         return worldCups;
-      },{})
-      console.log("world Cups winners count:",cupsCount)
+      }, {});
+      console.log("world Cups winners count:", cupsCount);
+
+      //example : find name of all the people who marks are less than 40
+      const marks = students.reduce(function (acc, curr) {
+        if (curr.marks < 40) {
+          acc.push(curr.name + " : " + curr.enroll);
+        }
+        return acc;
+      }, []); // using {} here will show error, because if we use {} then we can't use acc.push so we use []
+      console.log(marks);
     </script>
   </body>
 </html>
