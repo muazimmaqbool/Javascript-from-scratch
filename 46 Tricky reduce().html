@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><title>Tricky reduce() function</title></head>
-    <body>
-        <!-- -> See previous codes of reduce() | from 25:40 
+  <head>
+    <title>Tricky reduce() function</title>
+  </head>
+  <body>
+    <!-- -> See previous codes of reduce() | from 25:40 
              
         -->
-        <script>
-            //example of array with objects (and each object has 3 properties)
-            const students=[
-                {name:"Syed Danish",enroll:"6671",marks:"40"},
-                {name:"Muazim Maqbool",enroll:"6655",marks:"39"},
-                {name:"Mezy Jan",enroll:"6631",marks:"42"},
-                {name:"Aabida Farooq",enroll:"6645",marks:"41"},
-                {name:"Danish Gul",enroll:"6644",marks:"37"},
-                {name:"Amir Suahil",enroll:"6656",marks:"48"},
-                {name:"Syed Muntazir",enroll:"6636",marks:"39"},
-                {name:"Shariq Rafiq",enroll:"6657",marks:"39"},
-                {name:"Haseeb Nabi",enroll:"6499",marks:"40"}
-            ];
-            //so, here we have task to find how many students have a particular marks
-            // we want o/p like this ["40:2","39:3",...] // we have 2 students with 40 marks and similarly 3 students with 39 marks ,...
-            // so, here we are going to use reduce() function, because we need to find one value inside array
-            // we want one value/object with its count so for that we are going to use reduce function here
-            const output=students.reduce(function(Marks,current){ //current will be each object everytime(so, initially it will be first object)
-                 if(Marks[current.marks]){ //checks if current.marks are presents are not, by default if is true, if its there we give it ++ but if its not there we give it 1
-                    Marks[current.marks]++;
-                 }
-                 else{
-                    Marks[current.marks]=1;
-                 }
-                 return Marks;
-            },{}); //initial value will be object(because above we have array of objects)
-            console.log(output);
+    <script>
+      //example of array with objects (and each object has 3 properties)
+      const students = [
+        { name: "Syed Danish", enroll: "6671", marks: "40" },
+        { name: "Muazim Maqbool", enroll: "6655", marks: "39" },
+        { name: "Mezy Jan", enroll: "6631", marks: "42" },
+        { name: "Aabida Farooq", enroll: "6645", marks: "41" },
+        { name: "Danish Gul", enroll: "6644", marks: "37" },
+        { name: "Amir Suahil", enroll: "6656", marks: "48" },
+        { name: "Syed Muntazir", enroll: "6636", marks: "39" },
+        { name: "Shariq Rafiq", enroll: "6657", marks: "39" },
+        { name: "Haseeb Nabi", enroll: "6499", marks: "40" },
+      ];
+      //so, here we have task to find how many students have a particular marks
+      // we want o/p like this ["40:2","39:3",...] // we have 2 students with 40 marks and similarly 3 students with 39 marks ,...
+      // so, here we are going to use reduce() function, because we need to find one value inside array
+      // we want one value/object with its count so for that we are going to use reduce function here
+      const output = students.reduce(function (Marks, current) {
+        //current will be each object everytime(so, initially it will be first object)
+        if (Marks[current.marks]) {
+          //checks if current.marks are presents are not, by default if is true, if its there we give it ++ but if its not there we give it 1
+          Marks[current.marks]++;
+        } else {
+          Marks[current.marks] = 1;
+        }
+        return Marks;
+      }, {}); //initial value will be object(because above we have array of objects)
+      console.log(output);
 
-            //find out how many items are available of particular RAM type
-            const mobiles=[
-                {brand:"Note 10",Ram:"4GB"},
-                {brand:"Note 10",Ram:"8GB"},
-                {brand:"Note 11",Ram:"8GB"},
-                {brand:"Note 11",Ram:"4GB"},
-                {brand:"Note 9",Ram:"4GB"},
-            ];
-            const output1=mobiles.reduce((result,currRAM)=>{
-                if(result[currRAM.Ram] ){
-                    result[currRAM.Ram]++;
-                }
-                else{
-                    result[currRAM.Ram]=1;
-                }
-                return result;
-            },{})
-            console.log(output1);
-        </script>
-    </body>
+      //find out how many items are available of particular RAM type
+      const mobiles = [
+        { brand: "Note 10", Ram: "4GB" },
+        { brand: "Note 10", Ram: "8GB" },
+        { brand: "Note 11", Ram: "8GB" },
+        { brand: "Note 11", Ram: "4GB" },
+        { brand: "Note 9", Ram: "4GB" },
+      ];
+      const output1 = mobiles.reduce((result, currRAM) => {
+        if (result[currRAM.Ram]) {
+          result[currRAM.Ram]++;
+        } else {
+          result[currRAM.Ram] = 1;
+        }
+        return result;
+      }, {});
+      console.log(output1);
+
+      //Example of cricket team and world cups they have won so output will be like this: England:1, etc...
+      const cricketWorldCups = [
+        { year: "1975", winner: "West Indies" },
+        { year: "1979", winner: "West Indies" },
+        { year: "1983", winner: "India" },
+        { year: "1987", winner: "Australia" },
+        { year: "1992", winner: "Pakistan" },
+        { year: "1996", winner: "Sri Lanka" },
+        { year: "1999", winner: "Australia" },
+        { year: "2003", winner: "Australia" },
+        { year: "2007", winner: "Australia" },
+        { year: "2011", winner: "India" },
+        { year: "2015", winner: "Australia" },
+        { year: "2019", winner: "England" },
+        { year: "2023", winner: "Australia" },
+      ];
+
+      const cupsCount=cricketWorldCups.reduce((worldCups,currentYear)=>{
+        if(worldCups[currentYear.winner]){
+          worldCups[currentYear.winner]++;
+        }else{
+          worldCups[currentYear.winner]=1;
+        }
+        return worldCups;
+      },{})
+      console.log("world Cups winners count:",cupsCount)
+    </script>
+  </body>
 </html>
