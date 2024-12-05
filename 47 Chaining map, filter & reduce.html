@@ -2,7 +2,7 @@
 <html lang="en">
     <head><title>chaining map,filter and reduce</title></head>
     <body>
-        <!-- -> See previous codes | from 31:45     
+        <!-- -> See previous codes of map,   
         -->
         <script>
             //example of array with objects (and each object has 3 properties)
@@ -19,17 +19,17 @@
             ];
             //find name of all the people who marks are less than 40
             // o/p like this ["Muazim Maqbool","Danish Gul",...]
-            //-> the of power these function is that you can chain them/combine them (watch at 33:55)
-            //->
-            //using only filter (this will o/p whole details of those with less than 40 marks but want only their name)
+            //-> the of power these function is that you can chain them/combine them together
+
+            //using only filter (this will o/p whole details of those with less than 40 marks but want only their names)
              //const stds1=students.filter(x=>x.marks<40)
              //console.log(stds1);
             //->
             const stds=students.filter(x=>x.marks<40).map(x=>x.name+"-"+x.enroll)
             console.log(stds);
-            //this map() with filter() works on/with the output of the filter function so we get name 
+            //this map() works on/with the output of the filter() function so we get name 
             //and marks of only those whos marks are less than 40.
-            // with filter() we got only those with marks<40 and with map we got their name and marks
+            //with filter() we got only those with marks<40 and with map we got their name and marks
 
             //can do above task with reduce() now this is a task , lets try it!
             const output=students.reduce(function(acc,curr){
@@ -37,7 +37,7 @@
                 acc.push(curr.name+" : "+curr.enroll);
                }
                return acc;
-            },[]); // using {} here will show error, because if we use {} then we can't use acc.push
+            },[]); // using {} here will show error, because if we use {} then we can't use acc.push so we use []
             console.log(output);
 
             //Note:
