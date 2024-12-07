@@ -22,7 +22,7 @@
         
         //->What is DOM?
         /* ANS:
-           -> when a page is loaded the browser creates a document object model of the page
+           ->when a page is loaded the browser creates a document object model of the page
            ->the html DOM model is constructed as a tree of objects {document -> html ->head and body etc. see image on google}
         */
 
@@ -98,7 +98,7 @@
        newP.innerText="This is new paragraph";
        //now this paragraph is create in memory but its not attached to DOM tree yet
 
-       //putting this paragraph in container
+       //putting this paragraph inside container
         const container =document.getElementById("container");
         container.appendChild(newP);
         //now this new p is inside container
@@ -108,6 +108,21 @@
 
         //changing fontsize of newP
         newP.style.fontSize="1.2rem";
+
+        //creating h3 element and putting it inside container and adding box class to it
+        const newH3=document.createElement('h3');
+        newH3.innerText="This is H3 Element";
+        //getting container above on line number 102
+        container.appendChild(newH3);
+        newH3.classList.add("box")
+        //adding button element which will toggle the class to newH3
+        const newButton=document.createElement("button");
+        newButton.innerText="Toggle Class To H3";
+        container.appendChild(newButton);
+        newButton.addEventListener("click",()=>{
+            newH3.classList.toggle('round-border')
+        })
+
 
 
         // innerHTML: we can put any new html element inside it
