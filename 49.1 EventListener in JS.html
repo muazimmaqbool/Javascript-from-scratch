@@ -11,15 +11,14 @@
           The simple example of an event is a user clicking the mouse or pressing any key on the keyboard.
         
         ->The addEventListener() is an inbuilt function in JavaScript which takes the event to listen 
-        for, and a second argument to be called whenever the described event gets fired. Any number 
-        of event handlers can be added to a single element without overwriting existing event handlers. 
-                Syntax: 
-                 element.addEventListener(event, listener, useCapture);
+        for, and a second argument to be called whenever the described event gets fired. 
+        Any number of event handlers can be added to a single element without overwriting existing event handlers. 
+                Syntax: element.addEventListener(event, listener, useCapture);
         Parameters: 
             event : event can be any valid JavaScript event.Here Events are used without “on” prefix like use “click” instead of “onclick” or “mousedown” instead of “onmousedown”.
             listener(handler function) : It can be a JavaScript function which respond to the event occur.
             useCapture: It is an optional parameter used to control event propagation. A boolean value is passed where “true” denotes capturing phase and “false” denotes the bubbling phase.
-                    -->
+        -->
         <button id="btn1">Click btn1</button>
         <button id="btn2">Change Me</button>
         <button id="btn3">Click for Hover</button>
