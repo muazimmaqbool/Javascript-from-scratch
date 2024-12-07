@@ -34,20 +34,20 @@
         Finding HTML elements by CSS selectors : document.querySelectorAll("p.intro");
         */
         const b=document.body; //selects body
-        console.log(b); //prints whole code inside body
+        console.log("body:",b); //prints whole code inside body
         //b.style.backgroundColor="green";
 
         const box2=document.getElementById("box-2");
-        console.log(box2);
+        console.log("box-2:",box2);
 
         const divs=document.getElementsByTagName("div"); //selects all div's
-        console.log(divs); 
+        console.log("All Divs: ",divs); 
 
         const boxes=document.getElementsByClassName("box");
-        console.log(boxes)
+        console.log("Elements With Class box",boxes)
 
         const random=document.querySelector(".container .random"); //selects random class which is inside container class
-        console.log(random);
+        console.log("random class inside container class",random);
 
         //const randomAll=document.querySelectorAll(".container .random") //selects all random classes inside container class    
 
@@ -65,7 +65,7 @@
              element.classList.remove("mystyle");
              element.classList.toggle("mystyle");*/
         const box1=document.getElementById("box-1");
-        box1.innerHTML="Hello Box1";
+        box1.innerHTML="Hello Box-1";
         box2.innerHTML="<h1>BOX2</h1>";
         //these things have already seen in css
         box2.style.backgroundColor="purple";
@@ -83,6 +83,8 @@
 
         //removing class round-border form box-1
         box1.classList.remove("round-border");
+
+        
 
         //-> Creating a new html element
         /*
@@ -108,7 +110,7 @@
         newP.style.fontSize="1.2rem";
 
 
-        // innerHTML: we can put any new html inside it
+        // innerHTML: we can put any new html element inside it
         // innerText : we can only add or change its text
     </script>
 </body>
