@@ -10,20 +10,20 @@
     <script>
       //Using new Date()
       const currDate = new Date();
-      //new Date() without arguments, creates a date object with the current date and time:
-      console.log(currDate);
+      //new Date() without arguments, creates a date object with the current date and time
+      console.log("current date and time:",currDate);
 
       //The getFullYear() Method
-      console.log(currDate.getFullYear()); //Return the full year of a date object:
+      console.log("current year:",currDate.getFullYear()); //Return the full year of a date object
 
       //getMonth()
-      console.log(currDate.getMonth()); //Return the month as a number: 0=>January, 1=>February,...
+      console.log("current month:",currDate.getMonth()); //Return the month as a number: 0=>January, 1=>February,...
 
       //The getDay() Method
-      console.log(currDate.getDay()); //Return the day as a number: 0->sunday, 1->monday,....
+      console.log("current day",currDate.getDay()); //Return the day as a number: 0->sunday, 1->monday,....
 
       //The toLocaleTimeString() method
-      console.log(currDate.toLocaleTimeString());
+      console.log("current local time:",currDate.toLocaleTimeString());
 
       //displaying day
       const days = [
@@ -65,7 +65,9 @@
 
       //get hours
       const hours = new Date().getHours();
-      console.log(hours);
+      console.log("current hour:",hours);
+      console.log("current minute:",new Date().getMinutes())
+      console.log("current second:",new Date().getSeconds())
 
       
     </script>
