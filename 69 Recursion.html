@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        //Recursion means function calling itself
+        //Recursion means: function calling itself
         //Recursion happes when function calls itself and keeps calling itself until something stops it
 
         //Example of normal function : it prints hello once
@@ -29,8 +29,8 @@
         function display(){
             console.log("Hello",counter);
             counter++
-            if(counter>6) return //when counter becomes >6 recrusion stops and
-                                  // the condition which stop the recursion is known as "Base Case"
+            if(counter>6) return 
+            //when counter becomes >6 recrusion stops (the condition which stop the recursion is known as "Base Case")
             //the return keyword terminates the recursion
             display(); //calls display function again
         }
