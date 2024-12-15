@@ -36,8 +36,30 @@
         //Note: even if the getter is a method, you do not use parentheses when you want to get the property value.
         //he name of the getter/setter method cannot be the same as the name of the property, in this case carName
         
+        //Example Two:
+        class myCycle{
+          constructor(name,type){
+            this.name=name;
+            this.type=type;
+          }
+          get checkCycle(){
+            return "Cycle Name is: "+this.name+", and its type is: "+this.type;
+          }
+          set cycleName(name){
+            this.name=name;
+          }
+          set cycleType(type){
+            this.type=type;
+          }
+        }
+
+        const cycle=new myCycle("Honda","Sports");
+        console.log("cycle info:",cycle.checkCycle)
+
+        cycle.cycleName="BMW"
+        cycle.cycleType="Mountain"
+        console.log("updated cycle info:",cycle.checkCycle)
         
-    
     </script>
   </body>
 </html>
