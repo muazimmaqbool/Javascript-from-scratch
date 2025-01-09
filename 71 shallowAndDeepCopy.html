@@ -33,5 +33,18 @@
     // Both objects are affected
     console.log(original.hobbies); // Output: ["Gym", "Coding", "Cricket"]
     console.log(shallowCopy.hobbies); // Output: ["Gym", "Coding", "Cricket"]
+
+    //Deep copy example
+    const intro = {
+      name: "Muazim",
+      address: ["Sopore", "Kashmir"],
+    };
+    // Deep copy using JSON methods (simplified deep copy for basic objects)
+    const deepCopy = JSON.parse(JSON.stringify(intro));
+    // Modify the nested array in the deep copy
+    deepCopy.address.push("193201");
+
+    console.log(intro.address); // Output: ['Sopore', 'Kashmir']
+    console.log(deepCopy.address); // Output: ['Sopore', 'Kashmir', '193201']
   </script>
 </html>
