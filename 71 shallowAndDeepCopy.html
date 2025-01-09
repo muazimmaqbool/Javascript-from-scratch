@@ -24,27 +24,27 @@
       hobbies: ["Gym", "Coding"],
     };
 
-    // Shallow copy using Object.assign or spread operator
+    // shallow copy using Object.assign or spread operator
     const shallowCopy = { ...original };
 
-    // Modify the nested array in the shallow copy
+    // modify the nested array in the shallow copy
     shallowCopy.hobbies.push("Cricket");
 
-    // Both objects are affected
-    console.log(original.hobbies); // Output: ["Gym", "Coding", "Cricket"]
-    console.log(shallowCopy.hobbies); // Output: ["Gym", "Coding", "Cricket"]
+    // both objects are affected
+    console.log(original.hobbies); // output: ["Gym", "Coding", "Cricket"]
+    console.log(shallowCopy.hobbies); // output: ["Gym", "Coding", "Cricket"]
 
-    //Deep copy example
+    //Deep Copy Example:
     const intro = {
       name: "Muazim",
       address: ["Sopore", "Kashmir"],
     };
-    // Deep copy using JSON methods (simplified deep copy for basic objects)
+    // deep copy using JSON methods
     const deepCopy = JSON.parse(JSON.stringify(intro));
-    // Modify the nested array in the deep copy
+    // modify the nested array in the deep copy
     deepCopy.address.push("193201");
 
-    console.log(intro.address); // Output: ['Sopore', 'Kashmir']
-    console.log(deepCopy.address); // Output: ['Sopore', 'Kashmir', '193201']
+    console.log(intro.address); // output: ['Sopore', 'Kashmir']
+    console.log(deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
   </script>
 </html>
