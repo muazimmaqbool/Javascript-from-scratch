@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shallow and deep copy</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
     ->Shallow Copy:
        A shallow copy creates a new object or array, but it only duplicates the top-level properties. 
@@ -16,9 +16,22 @@
         A deep copy creates a new object or array, duplicating all levels of nested structures. 
         Changes to the copy will not affect the original and vice versa.
     </pre>
+  </body>
+  <script>
+    //Shallow Copy Example:
+    const original = {
+      name: "Muazim",
+      hobbies: ["Gym", "Coding"],
+    };
 
-</body>
-<script>
+    // Shallow copy using Object.assign or spread operator
+    const shallowCopy = { ...original };
 
-</script>
+    // Modify the nested array in the shallow copy
+    shallowCopy.hobbies.push("Cricket");
+
+    // Both objects are affected
+    console.log(original.hobbies); // Output: ["Gym", "Coding", "Cricket"]
+    console.log(shallowCopy.hobbies); // Output: ["Gym", "Coding", "Cricket"]
+  </script>
 </html>
