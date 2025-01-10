@@ -8,9 +8,12 @@
   <body>
     <pre>
     ->Shallow Copy:
-       A shallow copy creates a new object or array, but it only duplicates the top-level properties. 
-       If the properties are references (like objects or arrays), the references are copied, not the actual values.
-       This means changes to nested objects or arrays will affect both the original and the copy.
+       A shallow copy occurs when you copy the reference of an object to a new variable. 
+       In this process, only the top-level properties are copied, while nested objects or arrays still 
+       reference the original memory location. This means that if you change the nested properties in one object, 
+       those changes will reflect in the other because they share the same memory reference.
+
+      Example:When you assign one object to another using the assignment operator (=), a shallow copy is created:
 
     ->Deep Copy:
         A deep copy creates a new object or array, duplicating all levels of nested structures. 
