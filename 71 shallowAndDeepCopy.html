@@ -10,15 +10,17 @@
     ->Shallow Copy:
        A shallow copy occurs when you copy the reference of an object to a new variable. 
        In this process, only the top-level properties are copied, while nested objects or arrays still 
-       reference the original memory location. This means that if you change the nested properties in one object, 
-       those changes will reflect in the other because they share the same memory reference.
+       reference the original memory location. 
+       This means that if you change the nested properties in one object, those changes will reflect in the other because
+       they share the same memory reference.
 
       Example:When you assign one object to another using the assignment operator (=), a shallow copy is created:
 
     ->Deep Copy:
        A deep copy, on the other hand, creates a completely independent copy of the object, 
-       including all nested objects or arrays. This ensures that changes made to one object do not affect the other.
-        Each object is stored in a separate memory location, making them entirely independent.
+       including all nested objects or arrays. 
+       This ensures that changes made to one object do not affect the other.
+       Each object is stored in a separate memory location, making them entirely independent.
 
         //Note: To create a deep copy of an object in JavaScript we use JSON.parse() and JSON.stringify() methods.
     </pre>
@@ -43,7 +45,7 @@
     console.log("New Employee=> ", newEmployee);
    
 
-    //Example 2:
+    //Example 2:shallow copy using spread operator
     const original = {
       name: "Muazim",
       hobbies: ["Gym", "Coding"],
@@ -56,8 +58,8 @@
     shallowCopy.hobbies.push("Cricket");
 
     // both objects are affected
-    console.log(original.hobbies); // output: ["Gym", "Coding", "Cricket"]
-    console.log(shallowCopy.hobbies); // output: ["Gym", "Coding", "Cricket"]
+    console.log("orginal:",original.hobbies); // output: ["Gym", "Coding", "Cricket"]
+    console.log("shallowCopy:",shallowCopy.hobbies); // output: ["Gym", "Coding", "CrshallowCopy
 
     //Deep Copy Example:
     const intro = {
@@ -69,8 +71,8 @@
     // modify the nested array in the deep copy
     deepCopy.address.push("193201");
 
-    console.log(intro.address); // output: ['Sopore', 'Kashmir']
-    console.log(deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
+    console.log("intro",intro.address); // output: ['Sopore', 'Kashmir']
+    console.log("deepCopy",deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
 
     /*
       Explanation: Here the new object is created using the JSON.parse() and JSON.stringify() methods of JavaScript.
