@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Currying</title>
+  </head>
+  <body>
+    <pre>
+        What is Currying Function in JavaScript ?
+        Currying is a functional programming technique where a function with multiple arguments is transformed
+        into a series of functions, each taking a single argument.Instead of taking all arguments at once,
+        the curried function takes the first argument, returns a new function that takes the next argument,
+        and so on until all arguments are provided. The final function then returns the result.
+
+        In simpler terms, currying breaks down a function that takes multiple parameters into a chain of functions
+        that each take one parameter.
+
+    Note: An American mathematician named Haskell Curry developed this technique, that’s why it is called currying.   
+          Although he didn’t invent it, currying is named in his honor due to his significant contributions to functional programming.  
+    </pre>
+  </body>
+  <script>
+    //How Currying Works
+    //Here’s how a regular function is translated into a curried function:
+
+    // Regular function
+    function simpleFunction(param1, param2, param3) {
+      return param1 + param2 + param3;
+    }
+    console.log("regular function:",simpleFunction(5,6,7))
+    // Curried function
+    function curriedFunction(param1) {
+      return function (param2) {
+        return function (param3) {
+          return param1 + param2 + param3;
+        };
+      };
+    }
+    console.log("curried function:",curriedFunction(5)(6)(7))
+
+    
+  </script>
+</html>
