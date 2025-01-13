@@ -50,5 +50,15 @@
         It helps us to avoid passing the same variable multiple times
         It makes the code more readable
     */
+
+    //Calculating the Volume of a Cuboid Example:
+    function calculateVolume(length){
+      return function (breadth){
+        return function (height){
+          return length*breadth*height;
+        }
+      }
+    }
+    console.log("volume of cuboid:",calculateVolume(4)(5)(6))
   </script>
 </html>
