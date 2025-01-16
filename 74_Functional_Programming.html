@@ -74,7 +74,7 @@
             sum(x, y)           // sum is function taking x and y as arguments
                 return x + y  
                 
-        2)Recursion
+        2)Recursion:
             There are no “for” or “while” loop in functional languages. Iteration in functional languages is
             implemented through recursion. 
             Recursive functions repeatedly call themselves, until it reaches the base case. 
@@ -85,6 +85,14 @@
                     return 1;
                 else
                     return fib(n - 1) + fib(n - 2);
+
+        3)Referential Transparency:
+        In functional programs variables once defined do not change their value throughout the program. Functional programs do not have assignment statements. If we have to store some value, we define new variables instead. This eliminates any chances of side effects because any variable can be replaced with its actual value at any point of execution. State of any variable is constant at any instant. 
+        
+        Example:  
+        
+        x = x + 1 // this changes the value assigned to the variable x.
+                  // So the expression is not referentially transparent. 
     </pre>
 </body>
 </html>
