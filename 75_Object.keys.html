@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Object.keys()</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         ->JavaScript Object.keys():
           Object.keys() is a JavaScript method that returns an array of a given object's own enumerable property names (keys),
@@ -21,5 +21,29 @@
             -Object.values() returns the values of all object keys (properties).
             -Object.entries() returns the keys and values of any object types.
     </pre>
-</body>
+    <script>
+      //Example One:
+      const person = {
+        name: "Muazim",
+        age: 25,
+        city: "Kashmir",
+      };
+
+      console.log(Object.keys(person));
+      // o/p:  ["name", "age", "city"]
+
+      //Example Two: (Common Use Case: Looping over an object)
+      const obj = { a: "Apple", b: "Boy", c: "Cat" };
+      Object.keys(obj).forEach(key=>{
+        console.log("key",obj[key])
+      })
+
+     //Object.values(obj) → returns all the values in an array.
+     console.log("Object.values(obj):",Object.values(obj))
+
+     //Object.entries(obj) → returns [key, value] pairs in an array
+     console.log("Object.entries(obj):",Object.entries(obj))
+
+    </script>
+  </body>
 </html>
