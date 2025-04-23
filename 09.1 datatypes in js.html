@@ -55,10 +55,24 @@
         let result= 16 + "laptop"; 
         //JavaScript will treat the example above as: let result="16" + "laptop";
         //When adding a number and a string, JavaScript will treat the number as a string.
+        //That's because + is also used for string concatenation in JavaScript — so if either operand is a string, it treats it like a string concat.
         console.log(result) // o/p: 16laptop
         //same goes with : let result="laptop" + 16 ; o/p: laptop16
 
         //Important: //when you do like this 16-"8" here o/p: is 8
+        let result1= 16 - "8"; 
+        //JavaScript will treat the example above as: let result1=16-8;
+        console.log("result1:",result1) // o/p: 8
+        /*
+        In javascript, the - operator forces numeric conversion on both operands if at least one is not a number
+        ->Here 16 is a number and "8" is a string, so "8" will be converted to a number.because - is a mathematical operator, 
+        and it expects numbers.
+
+        ->This is known as type coercion (process of converting a value from one type to another).
+         Other concepts:
+            -Implicit Coercion = JS does it for you (without asking).
+            -Explicit Coercion = You do it manually using functions like Number(), String(), etc.
+        */
 
         //Note:
         //JavaScript evaluates expressions from left to right. Different sequences can produce different 
