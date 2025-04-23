@@ -30,34 +30,37 @@
         let lastName = "Johnson";
         console.log(color);
 
-        // Booleans
+        // Booleans:
         let x = true;
         let y = false;
         console.log(x);
 
         // Object:
         const person = {firstName:"Muazim", lastName:"Maqbool"};
-        console.log(person)
+        console.log("object:",person)
+
         // Array:
         const cars = ["Honda", "Volvo", "BMW"];
-        console.log(cars)
+        console.log("array:",cars)
         
         // Date object:
         const date = new Date(); // will give current date and time
-        console.log(date)
+        console.log("current date and time:",date)
         const time=date.toLocaleTimeString(); //will give current local time
         //or
         //const time=new Date().toLocaleTimeString();
-        console.log(time);
+        console.log("current local time:",time);
 
-        //Note
-        let result= 16 + "laptop"; //try 16-"8" here o/p: is 8
+        //Note:
+        let result= 16 + "laptop"; 
         //JavaScript will treat the example above as: let result="16" + "laptop";
         //When adding a number and a string, JavaScript will treat the number as a string.
         console.log(result) // o/p: 16laptop
         //same goes with : let result="laptop" + 16 ; o/p: laptop16
 
-        //Note!
+        //Important: //when you do like this 16-"8" here o/p: is 8
+
+        //Note:
         //JavaScript evaluates expressions from left to right. Different sequences can produce different 
         //results:
         let output=16+4+ "Desktop";
