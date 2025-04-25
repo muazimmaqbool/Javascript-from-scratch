@@ -35,6 +35,7 @@
                 All string methods return a new string. They don't modify the original string.
                 Formally said:
                 Strings are immutable: Strings cannot be changed, only replaced.
+                and in javaScript, an array is mutable.
             */
 
             //Replacing String Content:
@@ -47,7 +48,7 @@
 
                 console.log(day1.replace("Monday","Friday"));
             //String ReplaceAll():
-                //In 2021, JavaScript introduced the string method replaceAll()
+                //In 2021, JavaScript introduced the string method called replaceAll()
                 //replaceAll() is an ES2021 feature.
                 //replaceAll() does not work in Internet Explorer.
                 let features="laptop is very good, laptop is very easy to use, laptop have good memory space, laptop also have front camera";
@@ -55,13 +56,13 @@
                 // it will replace every laptop with mobile-phone
 
             //String trim():
-                //The trim() method removes whitespace from both sides of a string // it didn't return anything
+                //The trim() method removes whitespace from both sides of a string // it only returns length of string
                 let fullName="      Muazim Maqbool Rather         ";
                 console.log("length before trim() "+fullName.length);
                 let name=fullName.trim();
                 console.log("Length after trim() "+name.length);
 
-                // trimStart() it removes white space only before and after the text not in between the text
+                // trimStart() it removes white space only before the text
             //String trimStart():
                 //The trimStart() method works like trim(), but removes whitespace only from the start of a string. 
                 let branch="   CSE      ";
