@@ -3,16 +3,20 @@
     </head>
     <body>
         <!-- code to see if the username and password is correct then login if not then show some error message-->
-        <p ><h1>ID and Password to Enter</h1></p>
-        <p><input type="text" placeholder="username" id="id"></p>
-        <p><input type="password" placeholder="*********" id="pass"></p>
-        <p><button id="login">Login</button></p>
+        <h1>ID and Password to Enter</h1>
+       <div style="display:flex; flex-direction:column; gap:5px; width:20%">
+        <input type="text" placeholder="username" id="id">
+        <input type="password" placeholder="*********" id="pass">
+        <button id="login">Login</button>
+       </div>
         <script type="text/javascript">
             document.getElementById("login").onclick=function(){
-                var identered=document.getElementById("id").value;
                 var actualid="muazim6655";
-                var passentered=document.getElementById("pass").value;
                 var actualpass="6655";
+
+                var identered=document.getElementById("id").value;
+                var passentered=document.getElementById("pass").value;
+                
                 if(identered==actualid && passentered==actualpass){
                     document.write("Login successfully!")
                 }
