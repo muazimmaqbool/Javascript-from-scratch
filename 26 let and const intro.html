@@ -45,25 +45,24 @@
             const declarations share some similarities with let declarations.
 
             "const declarations are block scoped"
-            Like let declarations, const declarations can only be accessed within
-            the block they were declared.
+            Like let declarations, const declarations can only be accessed within the block they were declared.
 
             "const cannot be updated neither re-declared"
             This means that the value of a variable declared with const remains the same within its scope.
             It cannot be updated or re-declared.
-             So if we declare a variable with const, we can't update or re-declared it:
-              const greeting = "say Hi";
+            So if we declare a variable with const, we can't update or re-declared it:
+            ->const greeting = "say Hi";
               greeting = "say Hello instead";// error: Assignment to constant variable.
 
-              const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared
+              const greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
             
               "Every const declaration, therefore, must be initialized at the time of declaration."
 
-              This behavior is somehow different when it comes to objects declared with const.
-               While a const object cannot be updated, the properties of this objects can be updated. 
+              ->This behavior is somehow different when it comes to objects declared with const.
+                While a const object cannot be updated, the properties of this objects can be updated. 
                Therefore, if we declare a const object as this:
 
-                    const greeting = {
+                   -> const greeting = {
                         message: "say Hi",
                         times: 4
                     }
@@ -75,13 +74,13 @@
                     } // error:  Assignment to constant variable.
 
                     we can do this:
-                    greeting.message = "say Hello instead";
-                    This will update the value of greeting.message without returning errors.
+                    ->greeting.message = "say Hello instead";
+                      This will update the value of greeting.message without returning errors.
 
                     Hoisting of const:
                     Just like let, const declarations are hoisted to the top but are not initialized.
 
-                -> So just in case you missed the differences, here they are:
+                ->So just in case you missed the differences, here they are:
 
                     var declarations are globally scoped or function scoped while let and const are 
                     block scoped.
