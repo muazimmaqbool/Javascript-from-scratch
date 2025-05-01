@@ -3,19 +3,19 @@
     <head><title>Let and Const Examples</title>
     </head>
     <body>
-        Note: Before seeing this code , please read previous code explanation full
+        Note: Before seeing this code , please read previous code explanation full (26 let and const intro.html)
         <script> 
-            console.log(b); // o/p: undefined
+            console.log("var b before initialization",b); // o/p: undefined
             var b=10;
-            console.log(b); // o/p:10
+            console.log("var b:",b); // o/p:10
 
             //console.log(a); // ReferenceError: Cannot access 'a' before initialization
             let a=5;
-            console.log(a); // o/p : 5 
+            console.log("let a:",a); // o/p : 5 
 
             //console.log(c); // ReferenceError: Cannot access 'c' before initialization
             const c=15;
-            console.log(c); // o/p : 15
+            console.log("const c:",c); // o/p : 15
             /*
             Hoisting of let
             Just like  var, let declarations are hoisted to the top. 
@@ -23,12 +23,12 @@
             So if you try to use a let variable before declaration, you'll get a Reference Error.
             same is in case of const
 
-            but why, because in case of var b , memory way assigned to b and this variable b was 
+            but why, because in case of var b , memory which is assigned to b and this variable b was 
             attached to global object.
             But in case of let and const they are also allocated with memory, but they are stored in the 
             different memory space and not in the  global object and you can't access this memory space
             before putting some value in it that's why var : hoisting shows : undefined
-            and   let and consts : hoisting shows: Error
+            and let and consts : hoisting shows: Error
             */
 
             
