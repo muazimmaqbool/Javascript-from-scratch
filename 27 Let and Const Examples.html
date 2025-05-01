@@ -29,6 +29,13 @@
             different memory space and not in the  global object and you can't access this memory space
             before putting some value in it that's why var : hoisting shows : undefined
             and let and consts : hoisting shows: Error
+
+            ->They are stored in different memory space called TDZ (Temporal Dead Zone)
+                This separation ensures stricter scoping and avoids accidental access before declaration.
+                You can't access this memory space before putting some value in it. 
+                That's why:
+                var → hoisting shows: undefined
+                let and const → hoisting shows: Error
             */
 
             
