@@ -24,28 +24,28 @@
             Just like var,  a variable declared with let can be updated within its scope. Unlike var,
             a let variable cannot be re-declared within its scope. 
           
-          So while this will work:
+          ->So while this will work:
             let greeting = "say Hi";
             greeting = "say Hello instead"; // greeting updated but not re-declared
 
 
-           this will return an error:
+          ->this will return an error:
               let greeting = "say Hi";
               let greeting = "say Hello instead"; 
                ! error: Identifier 'greeting' has already been declared
 
-            Hoisting of let
+          ->Hoisting of let
             Just like  var, let declarations are hoisted to the top. 
             Unlike var which is initialized as undefined, the let keyword is not initialized. 
             So if you try to use a let variable before declaration, you'll get a Reference Error.
 
 
-            const:
+        const:
             Variables declared with the const maintain constant values. 
             const declarations share some similarities with let declarations.
 
             "const declarations are block scoped"
-           Like let declarations, const declarations can only be accessed within
+            Like let declarations, const declarations can only be accessed within
             the block they were declared.
 
             "const cannot be updated neither re-declared"
