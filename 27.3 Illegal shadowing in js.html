@@ -12,9 +12,9 @@
         <script>
             //var a=10; //shadowing done easily by var also by let and const
 
-            //let b=10; // error when try to shadow by var
+            //let b=10; // error when try to shadow by var, can be shadowed by let
 
-            //const s=13; // error when try to shadow by var
+            //const s=13; // error when try to shadow by var, can be shadowed by const
 
             {
                 //var b=15; // trying to shadow let, it  will give error : b has already been declared
@@ -23,7 +23,7 @@
                 //let b=15; // now this is perfectly valid ,
                             // you can shadow a let using let but can't let by var
                 
-                //it behaves same in consts as well
+                //it behaves same in const as well
                 //var s=14; // error 's' has already been declared
                 //const s=14 // no error
               
