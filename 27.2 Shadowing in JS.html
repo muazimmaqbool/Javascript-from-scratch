@@ -25,18 +25,18 @@
 
       //shadowing with let
       console.log("Shadowing with let:");
-      let b = 5; // this b is in script scope
+      let b = 5; // this b is in script scope/global scope
       {
         let b = 10; // this b is in block scope
-        console.log("inside block: let b= ", b); // 10 , this refers to the block scope
+        console.log("inside block: let b= ", b); // 10 , this refers to the block scope b
       }
       console.log("outside block: let b= ",b); // 5 , this refers to the script scope
       // so, nothing changed here , Because both b's are different in block and outside the block
       // The both b's have different scope , they both have different memory space
       // and this is known as shadowing (same thing also happens with const let's try:)
 
-      // lets try shadowing with const
-      console.log("Shadowing with const");
+      //shadowing with const
+      console.log("Shadowing with const:");
       const c = 40;
       {
         const c = 80;
