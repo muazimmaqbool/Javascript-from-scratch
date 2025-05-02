@@ -4,8 +4,8 @@
     </head>
     <body>
         <!--
-        Block: A block statement is used to group zero or more statements. The block is delimited 
-               by a pair of braces ("curly brackets") and it contains a list of zero or more statements 
+        Block: A block statement is used to group zero or more statements together. 
+               The block is delimited by a pair of braces ("curly brackets") and it contains a list of zero or more statements 
                and declarations.
                {
                 block 
@@ -20,10 +20,9 @@
                } // this block is combining multiple js statements into one group
 
             *** why we group multiple statements ?
-            ANS : we group multiple statements together in a block so that we can use it where JS expects
-            one statement
+            ANS : we group multiple statements together in a block so that we can use it where JS expects one statement
 
-            exmple:
+            Exmple:
             if(true) and run this code it will show error because if expects one statements 
             -> if(true)true : runs perfectly because we give it true as one statements.
             but if you want to write multiple statements after if. You can only do that by grouping them
@@ -50,7 +49,7 @@
                 var b=10;
                 let c=20;  
                 const d=30;
-                // let are const can't be accessed outside the block but var can be
+                // let anf const can't be accessed outside the block but var can be
                 console.log("var: ",b); // 10
                 console.log("let: ",c); //20
                 console.log("const: ",d); //30
