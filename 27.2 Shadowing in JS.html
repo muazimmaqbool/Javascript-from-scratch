@@ -11,10 +11,11 @@
     -->
 
     <script>
-      console.log("shadowing with var");
+      console.log("shadowing with var:");
       var a = 10;
+      console.log("global var a= ",a); // 10
       {
-        var a = 20; //this variable 'a' in block shadows the variable 'a' in outside block/global scope
+        var a = 20; //this variable 'a' is in block shadows the variable 'a' in outside block/global scope
         console.log("var a in block scope= ",a); //20
         // this variables value comes from line number 17 and not from line number 15. This is known as shadowing
       }
@@ -22,8 +23,8 @@
       // which is declared outside the block. Because they both pointing to the same memory location
       // and they both are in the gobal object(same memory space)
 
-      // lets try shadowing with let
-      console.log("Shadowing with let");
+      //shadowing with let
+      console.log("Shadowing with let:");
       let b = 5; // this b is in script scope
       {
         let b = 10; // this b is in block scope
