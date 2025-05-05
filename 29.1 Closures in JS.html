@@ -10,14 +10,14 @@
         <script>
             //use debugger amd see from video to understand concept better
 
-            // closure gives you access to an outer function's scope from an inner function.
+            //Closure gives you access to an outer function's scope from an inner function.
             //In JS, a closure is created every time a function is created at function creation time
             function x(){
                 var a=10;
                 function y(){
                     console.log(a); // o/p 10 and this is what closure is
-                // closure basically means that a function bind/group together with its lexical environment (parent)
-                // or function along with its lexical scope forms a "closure" thats known as closure
+                //closure basically means that a functions bind/group together with its lexical environment (parent)
+                //or function along with its lexical scope forms a "closure" that's known as closure
 
                 // here Inside y() function, it forms a closure with the varibale 'a' which is the part of x()
                 // lexical scope/function and it has access to its parents lexical scope that's why it prints 10
@@ -33,7 +33,7 @@
                     console.log(x); 
                 }
                 return b; //this will return whole function b()
-                //return b(); //o/p: 20
+                //return b(); //o/p: 20 at line 40
             }
             var c=test();
             console.log(c); // o/p function b()'s code
