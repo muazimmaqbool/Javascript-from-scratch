@@ -16,18 +16,18 @@
                 return y;  
             }
             var z=x(); //we are calling function x and it returns y , which is put inside z and x() is gone.
-            // Now z contains y()
+            //Now z contains y()
             console.log(z); // o/p function y() code
 
-            //When calling z ; (we can call this although its a variable but now it contains function in it)
+            //When calling z; (we can call this although its a variable but now it contains function in it)
             z(); // i.e we are actually calling function y()
         // o/p : ? , it will print 20 , Here comes closure into picture. When functions are returned
-        //from another function they still maintain their lexical scope, they remember where they were
+        //from another function they still maintain their lexical scope, they remember where they where
         // actually present. So y() remembers from where it came and it remembers their was something a and it will look for its value
         
         //when function y() was returned not just the function code was returned but
         //the whole closure was also returned and it was put into z. and when you execute z() it still remembers
-        // the reference to a and prints value of 'a'
+        //the reference to a and prints value of 'a'
       
         </script>
     </body>
