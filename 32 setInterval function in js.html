@@ -8,10 +8,10 @@
             The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
             1 second = 1000 milliseconds.
 
-            ** To execute the function only once, use the setTimeout() method instead **
+            Note: To execute the function only once, use the setTimeout() method instead
 
          NOTE:
-            To clear an interval, use the id returned from setInterval():
+            To clear an interval, use the id returned by setInterval():
             var  myInterval = setInterval(function, milliseconds);
 
             Then you can use it to stop the execution by calling clearInterval():
@@ -20,7 +20,7 @@
 
             Syntax of setInterval :
             setInterval(function, milliseconds, param1, param2, ...) 
-             parameters are optional 
+             parameters param1 and param2 are optional 
             setInterval and setTimeout returns the ID of the times use this id to stop
         -->
 
@@ -28,7 +28,6 @@
         <button id="stop" onclick="stopwatch()">stop time</button>
         <script>
             //Example
-            //setInterval(time,1000);
             function time(){
                 const date=new Date();
                 document.getElementById("time").innerHTML=date.toLocaleTimeString();
