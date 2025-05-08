@@ -5,7 +5,7 @@
     <body>
         <!-- 
         Functions running in parallel with other functions are called asynchronous
-                        A good example is JavaScript setTimeout().
+            - A good example is JavaScript setTimeout().
         Asynchronous makes js different then other languages.
          There are three different types of Asynchronous JS: 
          1)Callbacks 2)Promises 3)Async/Await(new feature of JS)
@@ -14,8 +14,8 @@
                 A typical example is JavaScript setTimeout().
 
 
-        important :
-        By default, JavaScript is a synchronous, single threaded programming language.
+        Important :
+         By default, JavaScript is a synchronous, single threaded programming language.
          This means that instructions can only run one after another, and not in parallel.
           Consider the little code snippet below:
           let a = 1;
@@ -23,13 +23,12 @@
           let sum = a + b;
           console.log(sum);
 
-          The above code is pretty simple – it sums two numbers and then logs the sum to the browser 
-          console. The interpreter executes these instructions one after another in that order until it
-          is done.
+        The above code is pretty simple – it sums two numbers and then logs the sum to the browser console. 
+        The interpreter executes these instructions one after another in that order until it is done.
         But this method comes along with disadvantages. Suppose we wanted to fetch some large amount of 
         data from a database and then display it on our interface. When the interpreter reaches the 
-        instruction that fetches this data, the rest of the code is blocked from executing until the
-         data has been fetched and returned.
+        instruction that fetches this data from backend, the rest of the code is blocked from executing until the
+        data has been fetched and returned.
         Now you might say that the data to be fetched isn't that large and it won't take any noticeable
         time. Imagine that you have to fetch data is at multiple different points. This delay compounded
         doesn't sound like something users would want to come across.
@@ -37,9 +36,9 @@
         asynchronous JavaScript.
         Think of asynchronous code as code that can start now, and finish its execution later. 
         When JavaScript is running asynchronously, the instructions are not necessarily executed
-         one after the other as we saw before.
+        one after the other as we saw before.
 
-visit this website : https://www.freec odecamp.org/news/asynchronous-javascript-explained/
+        visit this website : https://www.freec odecamp.org/news/asynchronous-javascript-explained/
         -->
         <script>
             //Waiting for a Timeout
@@ -48,10 +47,12 @@ visit this website : https://www.freec odecamp.org/news/asynchronous-javascript-
                 console.log("It took me 3 seconds to display!");
             }
             console.log("hi");
-            // Asynchronous programming is a technique that enables your program to start a potentially 
-            // long-running task and still be able to be responsive to other events while that task runs,
-            // rather than having to wait until that task has finished. Once that task has finished, 
-            // your program is presented with the result.
+            /*
+            Asynchronous programming is a technique that enables your program to start a potentially 
+            long-running task and still be able to be responsive to other events while that task runs,
+            rather than having to wait until that task has finished. Once that task has finished, 
+            your program is presented with the result.
+            */
               
         </script>
     </body>
