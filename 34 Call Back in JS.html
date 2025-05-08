@@ -12,10 +12,10 @@
         <script type="text/javascript">
             //Function Sequence (before seeing examples of call back see these basic concepts)
             /* JavaScript functions are executed in the sequence they are called.
-             Not in the sequence they are defined.
+            Not in the sequence they are defined.
             This example will end up displaying "JavaScript": */
-            function display(some){
-                document.getElementById("TEXT").innerHTML=some;
+            function display(text){
+                document.getElementById("TEXT").innerHTML=text;
             }
             function myFirst(){
                 display("Hello");
@@ -23,8 +23,8 @@
             function mysecond(){
                 display("JavaScript");
             }
-            myFirst(); // here It will display : Hello
-            mysecond(); // but Value is now changed to : JavaScript
+            myFirst(); // here it will display : Hello
+            mysecond(); // but her the value is now changed to : JavaScript
             // now if i call myFirst() here again it will display Hello to the screen i.e they are executed in the
             // sequence they are called i.e //myFirst();
              
@@ -49,7 +49,7 @@
                 myDisplayer(result);
 
                 Or, you could call a calculator function (myCalculator), and
-                 let the calculator function call the display function (myDisplayer):
+                 let the calculator function calls the display function (myDisplayer):
 
                 Example
                 function myDisplayer(some) {
@@ -63,11 +63,10 @@
 
                 myCalculator(5, 5);
 
-                The problem with the first example above, is that you have to 
-                call two functions to display the result.
+                ->The problem with the first example, is that you have to call two functions to display the result.
 
-                // The problem with the second example, is that you cannot prevent
-                 the calculator function from displaying the result.*/
+                ->The problem with the second example, is that you cannot prevent the calculator function from displaying the result.
+              */
 
                //Now it is time to bring in a callback.
               /* JavaScript Callbacks:
@@ -75,14 +74,14 @@
                 Using a callback, you could call the calculator function (myCalculator) with a callback,
                  and let the calculator function run the callback after the calculation is finished:*/
                 
-                 function result(some){
-                    document.getElementById("SUM").innerHTML=some;
+                 function result(text){
+                    document.getElementById("SUM").innerHTML=text;
                  }
                  function calculator(num1, num2, callback){ //callback can be any name
                     let sum=num1+num2;
                     callback(sum); // in callback we have result function
                  }
-                 calculator(6,7,result); // result function passed as argument to the calculator function
+                 calculator(6,7,result); // result function is passed as argument to the calculator function
 
                  /* When you pass a function as an argument, remember not to use parenthesis.
                     Right: myCalculator(5, 5, myDisplayer);
