@@ -8,16 +8,15 @@
 </head>
 <body>
     <!--
-    -> Promises are used to handle Async operations in JS, such as fetching data from a server, reading/writing files,
+    ->Promises are used to handle Async operations in JS, such as fetching data from a server, reading/writing files,
        or waiting for a user input.
 
     ->Promises allow you to write asynchronous code that is easier to read and maintain. 
-      Instead of nesting callbacks, promises let you chain operations and handle errors in a more 
-      structured way
+      Instead of nesting callbacks, promises let you chain operations and handle errors in a more structured way
     -->
     <script>
         
-        // promise object takes one parameter which is a function which gets passed with two variables resolve and reject
+        //promise object takes one parameter which is a function which gets passed with two variables resolve and reject
         let p=new Promise((resolve,reject)=>{
             //function definition
             let a =1+1 //try for 1+2 as well
@@ -38,10 +37,9 @@
         }).catch((message)=>{
             console.log('this is inside catch: '+message)
         })
-        //then is called when our promise resolved successfully and catch is going to called if
-        //our promises rejected or failed
+        //then is called when our promise resolved successfully and catch is going to called if our promises rejected or failed
 
-        //example two
+        //Example two
         let complete=true;
         let prom = new Promise((res,rej)=>{
             if(complete) res("its completed successfully");
