@@ -67,7 +67,20 @@
         .catch((error) => console.log("error:", error));
 
 
-      
+      //Checking if number is present in array
+      function isPresent(arr,num){
+        return new Promise((res,rej)=>{
+          console.log("checking for number in array");
+          if(arr.includes(num)){
+            res("Number is present in the array!");
+          }else{
+            rej("Number is not present in the array!");
+          }
+        })
+      }
+       let arr=[1,2,3,4,5];
+       let num=2;
+      isPresent(arr,num).then((res)=>console.log(res)).catch((rej)=>console.log(rej));
     </script>
   </body>
 </html>
