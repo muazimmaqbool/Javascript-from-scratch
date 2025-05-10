@@ -14,7 +14,7 @@
         const userIsWatchingMeme = false
 
         console.log("using callback")
-        //using callbacks
+        //using callbacks:
         //this function takes two variables one for success and one for error
         function checkUserActivity(callback, errorCallback) {
             if (userLeft) {
@@ -29,7 +29,7 @@
                 })
             } else {
                 callback('user is still coding...')
-               // console.log("callback function:",callback) // see its o/p its function passed to it
+               //console.log("callback function:",callback) // see its o/p its function passed to it
             }
         }
         checkUserActivity((message) => {
@@ -41,7 +41,7 @@
         console.log("now using promises")
         const userLeft1 = false
         const userWatchingMeme1 = false
-        //now lets do it using promises
+        //now lets do it using promises:
         function usingPromises() {
             return new Promise((resolve, reject) => {
                 if (userLeft1) {
