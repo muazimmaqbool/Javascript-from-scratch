@@ -20,7 +20,7 @@
       async function test() { // or let test =  async function(){...}
         return "hello Async";
       }
-      //console.log(test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
+      console.log(test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
 
       //here we don't need to write resolve and reject we can directly call then and catch:
       //if test() function runs successfully then() is going to be called automatically
