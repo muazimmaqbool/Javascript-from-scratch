@@ -7,7 +7,7 @@
     <script>
         // check notes for basic info
         //->async-await makes asynchronous programming easy
-        //->it handles promises easily and in proper manner
+        //->It handles promises easily and in a proper manner
         //->it always returns a promise
 
       //normal function :
@@ -18,12 +18,12 @@
 
       //async funciton:
       async function test() { // or let test =  async function(){...}
-        return "hello async";
+        return "hello Async";
       }
       //console.log(test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
 
       //here we don't need to write resolve and reject we can directly call then and catch:
-      //if test() function runs successfully then this then() is going to call automatically
+      //if test() function runs successfully then() is going to be called automatically
       test().then((result) => {
         //the return value of function gets stored in result
         console.log(result);
