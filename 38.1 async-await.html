@@ -11,7 +11,8 @@
         Study previous code before this code and also check notes
     -->
     <script>
-      console.log("Without await inside async");
+      //Withoung using await inside async function:
+      console.log("Without using 'await' inside 'async'");
       async function test() {
         console.log("2: message");
         console.log("3: message");
@@ -22,8 +23,8 @@
       console.log("5: message"); // runs last after code inside async function test()
       // o/p -> 1,2,3,4,5
 
-      //Now using await
-      console.log("using await inside async");
+      //Now using await inside async function:
+      console.log("Using 'await' inside 'async'");
       async function test2() {
         console.log("2: message");
         await console.log("3: message : contains await!"); // it waits after printing/running  3
