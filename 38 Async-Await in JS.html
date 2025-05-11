@@ -5,10 +5,10 @@
   </head>
   <body>
     <script>
-        // check notes for basic info
-        //->async-await makes asynchronous programming easy
-        //->It handles promises easily and in a proper manner
-        //->it always returns a promise
+      // check notes for basic info
+      //->async-await makes asynchronous programming easy
+      //->It handles promises easily and in a proper manner
+      //->it always returns a promise
 
       //normal function :
       // function test(){
@@ -17,7 +17,8 @@
       // console.log(test()); // hello
 
       //async funciton:
-      async function test() { // or let test =  async function(){...}
+      async function test() {
+        // or let test =  async function(){...}
         return "hello Async";
       }
       console.log(test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
@@ -33,8 +34,16 @@
       let test2 = async () => "async inside arrow function";
       test2()
         .then((data) => console.log(data))
-        .catch((e) => console.log("error:",e));
-        //in next code we will be looking at both async-await methods together
+        .catch((e) => console.log("error:", e));
+      //in next code we will be looking at both async-await methods together
+
+      //Another example:
+      let sum = async (a, b) => {
+        return a + b;
+      };
+      sum(10,15)
+        .then((result) => console.log(result))
+        .catch((e) => console.log("error:", e));
     </script>
   </body>
 </html>
