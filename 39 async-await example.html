@@ -70,13 +70,16 @@
 
       async function getData() {
         try {
-          return (await fetch("API/ForFetchAPI/students.json")).json();
+          //return (await fetch("API/ForFetchAPI/students.json")).json();
+          const response=await fetch("API/ForFetchAPI/students.json");
+          const result= await response.json();
+          return result;
         } catch (err) {
           console.log("error occurred ->", err);
         }
       }
       getData().then((std) => {
-        console.log(std);
+        console.log("Data received:",std);
       });
 
       
