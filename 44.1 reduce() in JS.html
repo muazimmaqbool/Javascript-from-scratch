@@ -7,7 +7,7 @@
         -->
         <script>
             const arr=[5,4,2,8,7,6]; 
-            //find max inside arr
+            //find max value inside arr array
             //without reduce() function
             function MaxValue(arr){
                 let max=0; 
@@ -22,15 +22,15 @@
            
            //with reduce() function(watch at 21:25)
            const output=arr.reduce(function(max,currElement){ 
-                //we can use any name of accumulator and also for curr
-                if(currElement > max){ //i.e if current value is greate then max value/acc the max becomes currElement  
+                //we can use any name for accumulator and also for current
+                if(currElement > max){ //i.e if current value is greater then max value/acc the max becomes currElement  
                     max=currElement;
                 }
                 return max;
            },0);
            console.log(output); // o/p: 8
 
-           //find minimu value in an array using reduce
+           //find minimum value in an array using reduce
            const arr2=[5,1,8,4,5,-6,0];
            const minVal=arr2.reduce((min,currVal)=>{
             if(currVal < min){
@@ -39,6 +39,13 @@
             return min;
            },0)
            console.log(minVal)
+
+           //find multiple of all values in the array
+           const arr3=[1,2,3,4,5];
+           const multiple=arr3.reduce((acc,currVal)=>{
+            return acc*currVal;
+           },1)
+           console.log(multiple) // o/p: 120
         </script>
     </body>
 </html>
