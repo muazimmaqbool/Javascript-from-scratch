@@ -27,7 +27,7 @@
       const output = students.reduce(function (Marks, current) {
         //current will be each object everytime(so, initially it will be first object)
         if (Marks[current.marks]) {
-          //checks if current.marks are presents are not, by default if is true, if its there we give it ++ but if its not there we give it 1
+          //checks if current.marks are presents or not, if its there we give it ++ but if its not there we give it 1
           Marks[current.marks]++;
         } else {
           Marks[current.marks] = 1;
@@ -46,6 +46,7 @@
       ];
       const output1 = mobiles.reduce((result, currRAM) => {
         if (result[currRAM.Ram]) {
+          console.log("result[currRAM.Ram]:", result[currRAM.Ram]);
           result[currRAM.Ram]++;
         } else {
           result[currRAM.Ram] = 1;
