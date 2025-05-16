@@ -5,6 +5,7 @@
             div{
                width: 200px;
                height: 200px;
+               border: 1px solid gray;
             }
             #div2{
                 width: 200px;
@@ -26,20 +27,24 @@
                     An HTML input field was changed
                     An HTML button was clicked
         -->
-        <!-- Example-1 (the JavaScript code changes the content of the element with id="demo")-->
+        <!-- Example 1 (the JavaScript code changes the content of the element with id="demo")-->
         <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
         <p id="demo"></p>
 
-        <!-- Example-2( the code changes the content of its own element (using this.innerHTML)) -->
+        <!-- Example 2 (the code changes the content of its own element (using this.innerHTML)) -->
         <button onclick="this.innerHTML=Date()">Get Time</button>
 
         <!-- Example-3-->
         <button onclick="displayDate()">The time is?</button>
         <p id="demo1"></p>
         
-        <!--Example-4-->
-        <div onmouseover="this.style.backgroundColor='green'">myDIV.</div>
-        <div id="div2" onmouseout="this.style.backgroundColor='blue'">Div2</div>
+        <!--Example 4-->
+        <div onmouseover="this.style.backgroundColor='green'">Hover Over Me!</div>
+        <div id="div2" onmouseout="this.style.backgroundColor='blue'">Hover and Leave</div>
+        <!-- or use onmouseleave in place of onmouseout -->
+
+        <!-- tabindex="0" attribute to your <div> so it can receive focus and keyboard events. -->
+        <div tabindex="0" onkeydown="this.style.backgroundColor='red'">Press any key</div>
         
         <script>
             function displayDate() {
