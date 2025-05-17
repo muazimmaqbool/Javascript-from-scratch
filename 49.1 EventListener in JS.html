@@ -35,19 +35,19 @@
         <p id="boxText"></p>
         </div>
         <script>
-            //Example-1
+            //Example 1
             document.getElementById("btn1").addEventListener('click',()=>{
                 console.log("clicked via addEventListener()");
             })
-            //Example-2
+            //Example 2
             document.getElementById("btn2").addEventListener('click',(myevent)=>{ 
                 //myevent can be called anything like event, e,.. etc i.e it can be any name
                 //myevent (passed in function): myevent refers to the button
                 myevent.target.textContent="You change Me!";
-                //here myevent is like this, example: : this.style.backgroundColor='green'
+                //here myevent is like this, example : this.style.backgroundColor='green'
     
             })
-            //Example-3
+            //Example 3
             let x=document.getElementById("btn3");
             let y=document.getElementById("Text");
             x.addEventListener("click",Clicked);
