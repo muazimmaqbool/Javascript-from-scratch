@@ -102,18 +102,18 @@
        //putting this paragraph inside container
         const container =document.getElementById("container");
         container.appendChild(newP);
-        //now this new p is inside container
+        //now this new p is inside container and can be seen in the browser/screen
 
         //we can also attatch box class to it
         newP.classList.add('box','round-border');
-
         //changing fontsize of newP
-        newP.style.fontSize="1.2rem";
+        newP.style.fontSize="13px";
+        
 
         //creating h3 element and putting it inside container and adding box class to it
         const newH3=document.createElement('h3');
         newH3.innerText="This is H3 Element";
-        //getting container above on line number 102
+        //getting container above on line number 103
         container.appendChild(newH3);
         newH3.classList.add("box")
         //adding button element which will toggle the class to newH3
