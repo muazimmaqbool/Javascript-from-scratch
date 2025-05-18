@@ -18,7 +18,8 @@
             ->syntax: ...name  or ... name -> now name becomes an array
         */
 
-      function sum(...args) { //now this args becomes array
+      function sum(...args) {
+        //now this args becomes array
         //getting sum of inputs
         let result = 0;
         for (let i = 0; i < args.length; i++) {
@@ -31,8 +32,6 @@
       console.log("sum of (11,2,3): ", sum(11, 2, 3));
       console.log("sum of (1,2,5,6,7): ", sum(1, 2, 5, 6, 7));
       console.log("sum of (1,2,2,5,6,8): ", sum(1, 2, 2, 5, 6, 8));
-
-      
     </script>
   </body>
 </html>
