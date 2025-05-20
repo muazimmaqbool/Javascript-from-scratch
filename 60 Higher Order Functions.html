@@ -31,6 +31,16 @@
         console.log(callBack(name))
       }
       greetUser("Muazim",greet)
+
+      //returning a function from another function:
+      function multiplier(num){
+        return (x)=>{
+            return x*num
+        }
+      }
+      //the double is a function returned from the multiplier function
+      const double=multiplier(5); //this 5 is passed to multiplier and is inside num
+      console.log(double(10)); //50
     </script>
   </body>
 </html>
