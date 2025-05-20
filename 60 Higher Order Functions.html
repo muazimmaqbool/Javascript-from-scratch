@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //visit: https://www.codecademy.com/learn/game-dev-learn-javascript-higher-order-functions-and-iterators/modules/game-dev-learn-javascript-iterators/cheatsheet
-        
-        //higher order function:
-        /*
-        Basically, a function which takes another function as an argument or returns a function is known as a higher order function.
-        higher order functions are:
-            In JavaScript functions, map, filter and reduce are examples of built-in higher-order functions
-            they are studied before
-            setInterval and setTimeout are also the higher order functions in Javascript.
-            they are also covered before 
-            */
+      //visit: https://www.codecademy.com/learn/game-dev-learn-javascript-higher-order-functions-and-iterators/modules/game-dev-learn-javascript-iterators/cheatsheet
 
+      //higher order function:
+      /*
+        -> Basically, a function which takes another function as an argument or returns a function or does both
+           is known as a higher order function.
+        -> Higher order functions are:
+            - In JavaScript functions, map, filter and reduce are examples of built-in higher-order functions they are studied before
+            - setInterval and setTimeout are also the higher order functions in Javascript.
+              they are also covered before 
+            - find() / some() / every() / forEach() / sort() / reverse() / splice() / slice() / concat() / join() / push() / 
+              pop() / shift() / unshift() are also higher order functions.
+        */
+      //forEach(): Performs a given action on each element (no return value).
+      [1, 2, 3].forEach((num) => console.log(num));
+
+      //custom higher order function:
+      function greet(name){
+        return `Aslamualium ${name}`;
+      }
+      function greetUser(name,callBack){
+        console.log(callBack(name))
+      }
+      greetUser("Muazim",greet)
     </script>
-</body>
+  </body>
 </html>
