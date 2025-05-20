@@ -10,7 +10,7 @@
     <script>
       //Using new Date()
       const currDate = new Date();
-      //new Date() without arguments, creates a date object with the current date and time
+      //new Date() without arguments, gives the current date and time
       console.log("current date and time:",currDate);
 
       //The getFullYear() Method
@@ -20,7 +20,7 @@
       console.log("current month:",currDate.getMonth()); //Return the month as a number: 0=>January, 1=>February,...
 
       //The getDay() Method
-      console.log("current day",currDate.getDay()); //Return the day as a number: 0->sunday, 1->monday,....
+      console.log("current day",new Date().getDay()); //Return the day as a number: 0->sunday, 1->monday,....
 
       //The toLocaleTimeString() method
       console.log("current local time:",currDate.toLocaleTimeString());
