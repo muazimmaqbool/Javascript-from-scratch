@@ -53,6 +53,7 @@
       const debounceText = document.getElementById("debounce");
 
       const updateDebounceText = debounce((text) => {
+        console.log("debounce function called");
         //calling debounce with argument as callback fucntion and it goes inside cb
         debounceText.textContent = text;
       });
@@ -62,11 +63,12 @@
         updateDebounceText(e.target.value);
       });
 
-      //debounce
+      //debounce:
       //it calls this callback function cb after delay as long as we haven't
       //recalled debounce in the past
       //we give debounce a function inside it
       function debounce(cb, delay = 1000) { //cb = callback
+        console.log("debounce called");
         //debounce returns us a function
         let timeout;
         return (...args) => {
