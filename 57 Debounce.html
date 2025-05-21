@@ -23,12 +23,12 @@
       /*
       ->What is Debounce in Javascript?
       ->Debouncing is a programming pattern or a technique to restrict the calling of a time-consuming
-          function frequently, by delaying the execution of the function until a specified time
-          to avoid unnecessary CPU cycles, and API calls and to improve performance.
+         function frequently, by delaying the execution of the function until a specified time
+         to avoid unnecessary CPU cycles, and API calls and to improve performance.
 
       ->Explanation:
-          in our example we have input element imagine,searching a movie name inside an database and you
-          want to list of all movies with name MATRIX , and it gives you list, When you type each character
+          In our example we have an input element imagine,searching a movie name inside an database and you
+          want the list of all movies with name MATRIX , and it gives you list, When you type each character
           its going to set the brand new request, so when i type M its going to search for all
           movie starting with M, so when i type MA its going to search all movies with MA, then so on..
           And for searching MATRIX we made 6 requests to server which will cause performace issue, slows down process
@@ -36,12 +36,12 @@
           (->Debounce and throttle have different ways of working)
           ->They are the ways to actually slow down a function call, instead of calling a function every time
           its only going to call a function after a set delay.
-          ->Debounce : instead of calling a function every single time, instead what debounce does is that, it does
+        ->Debounce : Instead of calling a function every single time, instead what debounce does is that, it does:
           hey has there been a delay since last time you called the function.
           so when i type M it waits(say 1 second) before calling the function as long as nothing changes in
           1 second then function runs, but during that 1 second i type another character say A, its
           going to say something has changed reset our timer back to 1s and wait to see if anything
-          has changed so, if type another charatcer it resets timer and waits and if nothing changes
+          has changed so, if i type another charatcer it resets timer and waits and if nothing changes
           then function runs
           ->so Debounce waits until there's been atleast a set period of time in our case 1 second
              before actually calls the function , 
