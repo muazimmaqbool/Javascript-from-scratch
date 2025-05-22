@@ -17,6 +17,6 @@ export const id = "6655-CSE-B";
 const fullName = "Muazim Maqbool";
 const address = "Sopore";
 export const batch=2016
-//rather then using seperate export we can do like this
+//rather using seperate export we can do like this
 export { address, fullName }; //we can also put id here
 export default contact;
