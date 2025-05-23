@@ -11,17 +11,16 @@
       //visit: https://www.youtube.com/watch?v=8zKuNo4ay8E
       /*
       ->call-stack: its inside js engine, it executes js code , it does one thing at a time
-      ->the main job of this call-stack is to execute whatever comes inside it, thats all it does
-      ->anything comes inside it, this call-stack quickly executes it,
-      ->this callstack doesn't have a timer
+        the main job of this call-stack is to execute whatever comes inside it, thats all it does
+        anything comes inside it, this call-stack quickly executes it, this callstack doesn't have a timer
 
-      ->before callback function is pushes to call-stack but it cannot directly go to the 
+      ->Before callback function is pushed to the call-stack but it cannot directly go to the 
          call-stack it can go to the call-stack through call-back queue
       ->A callback queue is a queue of tasks that are executed after the current task.
 
-      ->event loop: JavaScript has a runtime model based on an event loop, which is responsible for
+      ->Event loop: JavaScript has a runtime model based on an event loop, which is responsible for
             executing the code, collecting and processing events, and executing queued sub-tasks.
-            ->job of the Event loop is to check this callback queue and puts the functions which is
+            ->job of the Event loop is to check this callback queue and it puts the functions which are
               inside callback queue into the callstack, so it acts as an gatekeeper it checks 
               callback queue and if there is something it pushs it to the callstack
         ->event loop has only one job to contineously monitor this callback queue and callstack
@@ -55,11 +54,11 @@
       are executed first and then functions inside callback queue are executed
     */
    //mutation observer: The MutationObserver interface provides the ability to watch for changes being made to the DOM tree. 
-                  //if there is some change it can execute callback functions
+    //if there is some change it can execute callback functions
 
     
     /* 
-    //what is starvation of function in callback queue?
+    ->what is starvation of function in callback queue?
       Let us take a scenario of a callback function from the microtask queue create another callback
        function, and get pushed into the microtask queue. If this process goes in a loop, 
        then the functions in the callback queue will not get any opportunity 
