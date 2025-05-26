@@ -18,7 +18,7 @@
 
     ->Deep Copy:
        A deep copy, on the other hand, creates a completely independent copy of the object, 
-       including all nested objects or arrays. 
+       Including all nested objects or arrays. 
        This ensures that changes made to one object do not affect the other.
        Each object is stored in a separate memory location, making them entirely independent.
 
@@ -67,12 +67,14 @@
       address: ["Sopore", "Kashmir"],
     };
     // deep copy using JSON methods
+    //here JSON.stringify() converts the object into a JSON string,
+    //and then JSON.parse() converts the JSON string back into a JavaScript object.
     const deepCopy = JSON.parse(JSON.stringify(intro));
     // modify the nested array in the deep copy
     deepCopy.address.push("193201");
 
     console.log("intro",intro.address); // output: ['Sopore', 'Kashmir']
-    console.log("deepCopy",deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
+    console.log("deepCopy of intro",deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
 
     /*
       Explanation: Here the new object is created using the JSON.parse() and JSON.stringify() methods of JavaScript.
