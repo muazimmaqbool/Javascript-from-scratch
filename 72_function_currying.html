@@ -74,5 +74,14 @@
       this process will continue till the second last function. Finally, 
       the innermost return keyword returns the expected result.
     */
+
+    //Another Example:
+    function getSection(branch){
+      return function(enroll){
+        return `Hello, Muazim Maqbool(${enroll}) Your Section Is: B of(${branch} Dept.)`;
+      }
+    }
+    const section=getSection("CSE")(6655);
+    console.log(section);
   </script>
 </html>
