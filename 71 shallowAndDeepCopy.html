@@ -66,9 +66,7 @@
       name: "Muazim",
       address: ["Sopore", "Kashmir"],
     };
-    // deep copy using JSON methods
-    //here JSON.stringify() converts the object into a JSON string,
-    //and then JSON.parse() converts the JSON string back into a JavaScript object.
+    // deep copy using JSON methods (Explanation below)
     const deepCopy = JSON.parse(JSON.stringify(intro));
     // modify the nested array in the deep copy
     deepCopy.address.push("193201");
