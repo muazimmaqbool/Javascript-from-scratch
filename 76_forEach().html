@@ -24,6 +24,20 @@
         forEach() does not return a new array. It always returns undefined.
         It cannot be broken using break or return like in for or for...of.
         If you want a loop that supports break, consider using for, for...of, or some().
+
+
+    ->forEach() vs map():
+        - forEach() is used to execute a function on each element of an array without returning a new array.
+        - map() is used to create a new array by applying a function to each element of the original array.
+
+        -forEach() is typically used for side effects, such as logging or modifying external variables.
+        -map() is used when you want to transform the elements of an array and return a new array with the transformed values.
+
+        -forEach() does not return anything (undefined)
+        -while map() returns a new array.
+
+        -forEach() is not chainable, meaning you cannot call another array method on its result.
+        -map() is chainable, allowing you to call other array methods on the resulting array.
     </pre>
     <script>
       //Example One:
