@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>forEach()</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
     ->The forEach() method in JavaScript is used to execute a function once for each element in an array. 
       It's a cleaner and more readable alternative to the traditional for loop when you just want to perform an
@@ -19,9 +19,31 @@
         currentValue(required): The value of the current element being processed in the array.
         index (optional): The index of the current element being processed in the array.
         arr (optional): The array that forEach() is being applied to.
+
+    
     </pre>
     <script>
-        
+      //Example One:
+      const fruits = ["apple", "banana", "cherry"];
+      fruits.forEach((fruit) => {
+        console.log(fruit);
+      });
+
+      //Example Two:
+      const numbers = [1, 2, 3, 4, 5];
+      numbers.forEach((num, index) => {
+        console.log(`Index: ${index} & value: ${num}`);
+      });
+
+      //Example Three:
+      const users = [
+        { name: "Muazim", city:"Sopore", age: 25 },
+        { name: "Ali", city:"Srinagar", age: 30 },
+        { name: "Sara", city:"Kupwara", age: 22 },
+      ];
+      users.forEach((user) => {
+        console.log(`User is ${user.name} and is from ${user.city}`);
+      });
     </script>
-</body>
+  </body>
 </html>
