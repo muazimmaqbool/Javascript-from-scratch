@@ -20,7 +20,10 @@
         index (optional): The index of the current element being processed in the array.
         arr (optional): The array that forEach() is being applied to.
 
-    
+    ->Note:
+        forEach() does not return a new array. It always returns undefined.
+        It cannot be broken using break or return like in for or for...of.
+        If you want a loop that supports break, consider using for, for...of, or some().
     </pre>
     <script>
       //Example One:
@@ -31,9 +34,10 @@
 
       //Example Two:
       const numbers = [1, 2, 3, 4, 5];
-      numbers.forEach((num, index) => {
+      const result=numbers.forEach((num, index) => {
         console.log(`Index: ${index} & value: ${num}`);
       });
+        console.log("Result of forEach:", result); //undefined
 
       //Example Three:
       const users = [
