@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>some() method in JavaScript </title>
+</head>
+<body>
+    <pre>
+    ->The .some() method in JavaScript checks whether at least one element in an array passes a test (provided as a function).
+      It returns a boolean (true or false).
+
+    ->Syntax: 
+        array.some(callback(element, index, array))
+        element - The current element being processed.
+        index (optional) - The index of the current element.
+        array (optional) - The array the method was called on.
+
+    ->What it does:
+        Returns true if any element passes the test.
+        Returns false if none pass.
+        Stops iterating as soon as it finds a match (efficient).
+    </pre>
+    <script>
+        //Example one:
+        const numbers = [1, 3, 5, 7,9,11];
+        const hasEven = numbers.some(num => num % 2 === 0);
+        console.log(hasEven); //false
+
+        //Example two:
+        const hasGreaterThanSix=numbers.some(num=>num>6);
+        console.log(hasGreaterThanSix); //true
+
+        //Example three:
+        const fruits = ["apple", "banana", "cherry"];
+        console.log("Is Apple Available:",fruits.some(fruit=>fruit==="apple")); //true
+
+        //Example four:
+        const items=[
+            {name:"Laptop",inStock:true},
+            {name:"Phone",inStock:false},
+            {name:"Tablet",inStock:true},
+            {name:"Monitor",inStock:false},
+            {name:"Keyboard",inStock:true}
+        ]
+        const isLaptopInStock=items.some(item=>item.name==="Laptop" && item.inStock);
+        console.log("Is Laptop in Stock:",isLaptopInStock); //true
+    </script>
+</body>
+</html>
