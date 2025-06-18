@@ -2,4 +2,10 @@
     OOP is a programming paradigm based on the concept of "objects", which can contain data (properties) and methods (functions).
     Instead of writing code with just functions and variables, you bundle data and behavior together into objects.
 
-    NOTE:The term programming paradigm is used to specify an overall approach to writing program code
+    NOTE: The term programming paradigm is used to specify an overall approach to writing program code
+
+➡️ 4 Pillars of OOP:
+        1️⃣ Encapsulation
+        2️⃣ Abstraction
+        3️⃣ Inheritance
+        4️⃣ Polymorphism
