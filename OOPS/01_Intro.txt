@@ -9,3 +9,23 @@
         2️⃣ Abstraction
         3️⃣ Inheritance
         4️⃣ Polymorphism
+
+    1️⃣ Encapsulation:
+        Meaning: Wrapping up data (variables) and methods (functions) into a single unit — a class.
+        Goal: Hide the internal details of how an object works and only expose what’s necessary.
+        Benefit: Makes code more secure and easier to maintain
+
+    2️⃣ Abstraction:
+        Meaning: Hiding complex implementation details and showing only the essential features of the object.
+        Goal: Reduce complexity and allow the programmer to focus on interactions rather than internal logic.
+        Benefit: Makes code simpler to understand and use.
+
+    3️⃣ Inheritance:
+        Meaning: One class (child) can inherit properties and methods from another class (parent).
+        Goal: Promote code reuse.
+        Benefit: Avoid duplication and build a hierarchy of classes.
+ 
+    4️⃣ Polymorphism
+        Meaning: One interface, many forms. Different classes can define the same method differently.
+        Goal: Allow methods to behave differently based on the object.
+        Benefit: Makes code flexible and scalable.
