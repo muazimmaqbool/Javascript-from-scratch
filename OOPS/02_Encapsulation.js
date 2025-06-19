@@ -1,4 +1,4 @@
-//This file contains example of Encapsulation
+//Encapsulation:
 /*
 The encapsulation principle states that all important information is contained inside an object and only select information is exposed. 
 The implementation and state of each object are privately held inside a defined class. Other objects do not have access to 
