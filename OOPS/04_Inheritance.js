@@ -23,4 +23,4 @@ d.speed();
 
 
 
-//Run this code in terminal via this command: node --watch OOPS\04_Inheritance.js
+//Run this code in terminal via this command: node OOPS\04_Inheritance.js
