@@ -29,3 +29,5 @@
         Meaning: One interface, many forms. Different classes can define the same method differently.
         Goal: Allow methods to behave differently based on the object.
         Benefit: Makes code flexible and scalable.
+
+        //https://chatgpt.com/share/68552d1d-8228-8010-b580-a7f164c3f19f
