@@ -8,16 +8,21 @@ This characteristic of data hiding provides greater program security and avoids 
 //Example of encapsulation:
 class Person {
   age; // private variable
+
+  //The constructor sets name and age when you create a new object.
+  //this.name and this.age become properties of the object.
   constructor(name, age) {
     this.name = name;
     this.age = age;
   }
+  //This is the key point of encapsulation — exposing data via a method instead of direct access.
   getAge() {
     return this.age;
   }
 }
 
 const p = new Person("John", 30);
+//You access age through the method getAge().
 console.log(p.getAge()); // 30
 
 //To run this code in terminal run this command: 
