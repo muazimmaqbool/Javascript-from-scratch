@@ -17,9 +17,20 @@ class Bike extends Car {
   }
 }
 
+class Cycle extends Bike{
+  stop(){
+    console.log("Cycle Stops...!")
+  }
+}
+
 const d = new Bike();
 d.Break(); // Inherited from Car class
 d.speed();
+
+const c=new Cycle();
+c.Break() // can access methods of car class as well
+c.speed()
+c.stop()
 
 
 
