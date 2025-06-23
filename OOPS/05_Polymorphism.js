@@ -7,12 +7,15 @@ If you have used inheritance correctly you can now reliably use parents like the
 When two types share an inheritance chain, they can be used interchangeably with no errors or assertions in your code.
 */
 //Example:
-class Animal {
+class Animal {  //base class
   speak() {
     console.log("Animal makes a sound");
   }
 }
-class Cat extends Animal {
+
+//Cat is a subclass of Animal Class.
+//It overrides the speak() method to provide specific behavior.
+class Cat extends Animal { 
   speak() {
     console.log("Cat meows");
   }
@@ -23,6 +26,11 @@ const c = new Cat();
 
 a.speak(); // Animal makes a sound
 c.speak(); // Cat meows
+/*
+Polymorphism means:
+"One function name, many forms."
+In this example, both Animal and Cat have a method called speak(), but they behave differently when called
+*/
 
 
 //To run this file in terminal hit this command: node OOPs/05_Polymorphism.js
