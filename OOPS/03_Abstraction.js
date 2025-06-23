@@ -8,12 +8,17 @@ changes or additions over time.
 //Example:
 class Car {
   startEngine() {
-    console.log("Engine started");
+    console.log("Engine started...");
+  }
+
+  stopEngine(){
+    console.log("Engine stopped...!")
   }
 }
 
 const myCar = new Car();
 myCar.startEngine(); // We don't need to know how it starts, just that it does
+myCar.stopEngine()
 
 
-//node --watch OOPS\03_Abstraction.js
+//node --watch OOPS\03_Abstraction.js or node OOPS\03_Abstraction.js
