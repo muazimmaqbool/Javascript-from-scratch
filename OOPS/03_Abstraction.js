@@ -17,8 +17,9 @@ class Car {
 }
 
 const myCar = new Car();
-myCar.startEngine(); // We don't need to know how it starts, just that it does
+// We don't need to know how it starts and stops, just need to know that it does
 myCar.stopEngine()
+myCar.startEngine(); 
 
 
 //node --watch OOPS\03_Abstraction.js or node OOPS\03_Abstraction.js
