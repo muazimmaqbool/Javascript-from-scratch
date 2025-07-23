@@ -13,13 +13,13 @@
 
           Note: An enumerable property is one that shows up when you loop over the object
 
-          -The Object.keys() method returns an array with the keys of an object.
-          -The Object.keys() method does not change the original object.
+          - The Object.keys() method returns an array with the keys of an object.
+          - The Object.keys() method does not change the original object.
 
-          ->Related Methods:
-            -Object.keys() returns the keys (properties) of any object type.
-            -Object.values() returns the values of all object keys (properties).
-            -Object.entries() returns the keys and values of any object types.
+          -> Related Methods:
+              -Object.keys() returns the keys (properties) of any object type.
+              -Object.values() returns the values of all object keys (properties).
+              -Object.entries() returns the keys and values of any object types.
     </pre>
     <script>
       //Example One:
@@ -28,8 +28,9 @@
         age: 25,
         city: "Kashmir",
       };
+      console.log("Person Object:", person);
 
-      console.log(Object.keys(person));
+      console.log("Person Object Keys:",Object.keys(person));
       // o/p:  ["name", "age", "city"]
 
       //Example Two: (Common Use Case: Looping over an object)
@@ -38,6 +39,7 @@
         console.log("key",obj[key])
       })
 
+     console.log("Obj Object:", obj);
      //Object.values(obj) → returns all the values in an array.
      console.log("Object.values(obj):",Object.values(obj))
 
