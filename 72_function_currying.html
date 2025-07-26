@@ -90,5 +90,17 @@
     }
     const section=getSection("CSE")(6655);
     console.log(section);
+
+
+    //Another Example:
+    function product(name){
+      return function(memory){
+        return function(processor){
+          return `You have selected ${name} with ${memory}GB RAM and ${processor} processor.`;
+        }
+      }
+    }
+    const selectedProduct = product("Dell Inspiron 15")("16 GB and 512 SSD")("Intel i7");
+    console.log(selectedProduct);
   </script>
 </html>
