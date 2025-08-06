@@ -22,8 +22,8 @@
     */
    //1) The new Map() Method: You can create a Map by passing an Array to the new Map() constructor:
     const fruits=new Map([
-        ["apple", 10],
-        ["banana", 20   ],
+        ["apples", 10],
+        ["banana", 2],
         ["orange", 13]
     ]);
     console.log("Fruits Map created using new Map():", fruits);
@@ -35,5 +35,14 @@
     vegetables.set("spinach", 12);
     console.log("Vegetables Map created using set():", vegetables);
 
+    //The set() method can also be used to change existing Map values:
+    vegetables.set("carrot", 10); // Update the value for "carrot"
+    console.log("Updated Vegetables Map:", vegetables);
+    fruits.set("banana", 25); // Update the value for "banana"
+    console.log("Updated Fruits Map:", fruits);
+
+    //The get() Method:
+    console.log("Count of apples:",fruits.get("apples"))  
+    console.log("Count of carrots:",vegetables.get("spinach"));
 </script>
 </html>
