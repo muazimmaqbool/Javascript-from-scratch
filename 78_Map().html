@@ -55,6 +55,18 @@
     console.log("type of fruits:", typeof fruits); // object
     console.log("Is fruits a Map?", fruits instanceof Map); // true
 
+    //Example of using Map with different data types:
+    const myMap = new Map();
+    myMap.set("name", "Laptop");
+    myMap.set(1, "one");
+    myMap.set(true, "yes");
+
+    console.log(myMap.get("name")); // "Laptop"
+    console.log(myMap.get(1));      // "one"
+    console.log(myMap.get(true));   // "yes"
+    console.log(myMap.size);        // 3
+
+
     /*
     JavaScript Objects vs Maps
     Object	                                        Map
