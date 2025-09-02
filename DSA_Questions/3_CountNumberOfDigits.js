@@ -18,5 +18,5 @@ function numDigits(num) {
   return count;
 }
 
-console.log("digits in 34252 are:", numDigits(34252));
+console.log("digits in 34252 are:", numDigits(34252)); 
 console.log("digits in -121 are:", numDigits(-121));
