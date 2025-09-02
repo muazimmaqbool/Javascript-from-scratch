@@ -2,7 +2,7 @@
 Q1: Find the sum of all natural number from 1 to n?
    say from 1 to 5 or 1 to 10
 */
-//Note: use this command to run this code: node --watch DSA_Questions\SumOfAllNaturalNmbers.js
+//Note: use this command to run this code: node --watch DSA_Questions\1_SumOfAllNaturalNmbers.js
 function sumOfAll(num){
     let sum=0;
     for(let i=1;i<=num;i++){
