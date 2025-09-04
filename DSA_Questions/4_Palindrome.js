@@ -9,4 +9,19 @@ example 1234 is not a palindrom because it is not read same on both fron and bac
 To solve first found reverse of a given number then check if the reverse of then umber is equal to the the original number
 if it is then its palindrome number and if not then it is not
 
+->How to find reverse of 1234:
+    i will divide it by 10
 */
+var isPalindrome=function(x){
+    let originalNum=x
+    //finding reverse of the number
+    let reverseNum=0
+    while(originalNum>0){
+        const lastDigit=originalNum%10; //gives
+        reverseNum=reverseNum*10+lastDigit
+        originalNum=Math.floor(originalNum/10)
+    }
+    return x===reverseNum
+}
+console.log(isPalindrome(141))// true
+console.log(isPalindrome(1245))// false
