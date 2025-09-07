@@ -16,11 +16,13 @@ const getNum=(arr)=>{
 }
 
 
-//also measuring how much time it takes
+//also measuring how much time it 
+//Note: the text/label of time and timeEnd should match
+
 console.time("executionTime");
 // console.log("result:", stopOnAny(randomArray));
 console.log("result without for loop:",getNum((randomArray)))
 console.timeEnd("executionTime");
 //check execution time for both the functions
 
-//Note: the text/label of time and timeEnd should match
+//Here the exection time of getNum function will be less the the stopOnAny function as inside stopOnAny we are using loops
