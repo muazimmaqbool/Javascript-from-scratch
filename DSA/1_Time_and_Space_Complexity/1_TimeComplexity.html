@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Complexity</title>
+</head>
+<body>
+    <pre>
+        ->Time Complexity?
+            It measures how the runtime of an algorithm grows as the input size(n) increases.
+            1) O(1) : Constent time.
+            2) O(n) : Linear time.
+            3) O(n^2) : Quadratic time.
+    </pre>
+    <script>
+        // -> O(1) : Constant Time (Here execution doesn't depend on input size):
+            function getFirst(arr){
+                return arr[0]
+            }
+           // Fast, no matter if arr has 10 elements or 10 million elements it always returns first only
+
+        // -> O(n) : Linear Time (Here execution/runtime grows directly with input size)
+        function printAll(arr){
+            arr.forEach((el)=>console.log(el))
+        } //If array size doubles the operation also doubles
+
+        // -> O(n^2) : Quadration time (Here we have nested loops over the same data which increases the runtime)
+        function printPairs(arr){
+            for(let i=0;i<arr.length;i++){
+                for(let j=0;k<arr.length;j++){
+                    console.log(aee[i],arr[j]) // n*n operations
+                }
+            }
+        } //Here if input is 100 elements i.e means 10000 elements
+
+        //More examples and info on next time 2_TimeComplexity.js
+        
+    </script>
+</body>
+</html>
