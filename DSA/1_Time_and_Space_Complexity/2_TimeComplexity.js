@@ -26,3 +26,9 @@ console.timeEnd("executionTime");
 //check execution time for both the functions
 
 //Here the exection time of getNum function will be less the the stopOnAny function as inside stopOnAny we are using loops
+/*
+->But this is not the better way to determine the performance of any alogrithm because it will also depend on the machine so we can use operations
+  to measure the effeciency of an alogrithm, so these operations means how many tasks an algorithm is performing
+  
+
+*/
