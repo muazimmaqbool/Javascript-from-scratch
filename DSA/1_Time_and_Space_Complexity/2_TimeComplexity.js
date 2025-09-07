@@ -1,6 +1,7 @@
 //To run this: node --watch DSA\1_Time_and_Space_Complexity\2_TimeComplexity.js
 // or go inside this folder via cd then run node --watch 2_TimeComplexity.js
 
+//checking using for loop
 const randomArray = [12, 56, 74, 85, 41, 26, 45, 88];
 //Example with print start time and end time
 const stopOnAny = (arr) => {
@@ -8,7 +9,18 @@ const stopOnAny = (arr) => {
     if (i === 3) return arr[i];
   }
 };
+
+//now without for loop
+const getNum=(arr)=>{
+  return arr[3]
+}
+
+
 //also measuring how much time it takes
-console.time("start");
-console.log("result:", stopOnAny(randomArray));
-console.timeEnd("end");;
+console.time("executionTime");
+// console.log("result:", stopOnAny(randomArray));
+console.log("result without for loop:",getNum((randomArray)))
+console.timeEnd("executionTime");
+//check execution time for both the functions
+
+//Note: the text/label of time and timeEnd should match
