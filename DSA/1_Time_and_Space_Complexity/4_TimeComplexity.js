@@ -12,6 +12,7 @@ const goingUpDown=(n)=>{
     }
     console.log("At the start") // 1 operation
 }
+//2n+3: 2 for loops n input and 3 console logs , operations depends on n so time complexity is O(n)
 console.log(goingUpDown(2)) 
 /* o/p: Going forward
         0
@@ -36,4 +37,5 @@ So here we have 9 operations
 */
 /*So number of operations depends on the n i.e input provided if n is 2 then 7 operations i.e 2*2+3
     Here 3 operations are console operation 2*2 i.e one 2 of 1 for loop and another 2 of another for loop so 2n+3
+    So number of operations depends on n so this algorithm have time complexity of O(n)
 */
