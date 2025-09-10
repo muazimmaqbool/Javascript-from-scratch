@@ -33,4 +33,7 @@ console.log(returnArray(5)) // o/p: [ 0, 5, 10, 15, 20 ]
 console.log(returnArray(7)) // o/p: [0,  5, 10, 15,20, 25, 30]
 /*
 ->Here returnArray's output depends on the input i.e higher the input more array size will be returned
+So, it has bad space complexity and it's output depends on n i.e O(n)
 */
+
+//Important:
