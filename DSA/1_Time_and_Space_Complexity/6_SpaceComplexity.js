@@ -54,7 +54,7 @@ function createMatrix(n) {
   return matrix;
 }
 console.log("createMatrix:",createMatrix(5));
-
+//first it creates an array [] then addes an array inside and loops on it it [ [0,1]], then creates another array and loops again so [[0,1],[1,2]]
 /*
 o/p for input 2: [ [ 0, 1 ], [ 1, 2 ] ]
 o/p for input 5: 
