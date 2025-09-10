@@ -54,6 +54,7 @@ function createMatrix(n) {
   return matrix;
 }
 console.log("createMatrix:",createMatrix(5));
+
 /*
 o/p for input 2: [ [ 0, 1 ], [ 1, 2 ] ]
 o/p for input 5: 
@@ -64,4 +65,7 @@ o/p for input 5:
   [ 3, 4, 5, 6, 7 ],
   [ 4, 5, 6, 7, 8 ]
 ]
+so for input 2 i got output of two arrays with 2 element in each i.e 4 elements and 
+for input 5 i got 5 arrays with 5 element in each i.e 25 elements so here output is n*n i.e n^2
+so it has space complexity of O(n^2)
 */
