@@ -36,4 +36,9 @@ console.log(returnArray(7)) // o/p: [0,  5, 10, 15,20, 25, 30]
 So, it has bad space complexity and it's output depends on n i.e O(n)
 */
 
-//Important:
+//Important: In js
+/*
+-> Boolean, undefined, num, null : have constent values i.e constant space complexity i.e O(1)
+-> Strings, arrays, object : have dynamic values i.e they have dynamic space complexity i.e space complexity here depends on 'n'
+
+*/
