@@ -34,6 +34,18 @@
     3️⃣ Tradeoff: Time vs Memory
         Sometimes you can reduce time but use more memory (e.g. caching results in React state, memoizing expensive computations).
         Sometimes you save memory but take more time (e.g. recomputing values instead of storing them).
+
+    ➡️Quick Summary (Frontend Angle)
+        Use Big-O to reason about scalability of your UI logic.
+        Nested loops (O(n²)) are expensive → avoid them when handling DOM updates or big lists.
+        Time vs Space tradeoff:
+        Memoization / caching in React → better time, more memory.
+        Recompute each time → saves memory, costs time.
+        for vs map: both O(n), but map uses more memory since it always creates a new array.
+        for vs map:
+            Both are O(n) in time complexity.
+             But map() internally creates a new array → uses extra O(n) space, while for gives you more control (you can modify in-place for O(1) space).
+             On very large arrays (say 10M items), a plain for loop can sometimes be slightly faster since it avoids some overhead of callbacks. But readability-wise, map is better.
     </pre>
     <script>
         // -> O(1) : Constant Time (Here execution doesn't depend on input size):
