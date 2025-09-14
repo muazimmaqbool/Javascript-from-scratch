@@ -10,3 +10,17 @@ Array introduction:
         Array Element: Elements are items stored in an array.
         Array Index: Elements are accessed by their indexes. Indexes in most of the programming languages start from 0.
 */
+
+let numArray=[1,2,3,4,5,6,7,8,9];
+
+//Reverse of array:
+const reverseArray=(arr)=>{
+    let start=0; end=arr.length-1
+    while(start<end){
+        [arr[start],arr[end]]=[arr[end],arr[start]]
+        start++;
+        end--;
+    }
+    return arr;
+}
+console.log("Reverse:",reverseArray(numArray))
