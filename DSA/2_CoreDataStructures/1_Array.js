@@ -32,8 +32,14 @@ console.log("Reverse:",reverseArray(numArray))
 //Rotation (rotate array by k steps)
 function rotateArray(arr, k) {
   k = k % arr.length; //this to make cure that rotation count doesn't exceed the array length
-//   console.log("k",k)
   return [...arr.slice(-k), ...arr.slice(0, -k)];
 }
+/*
+in return we first have ...arr.slice(-k)] : .slice returns part of the array and -ve index returns from end, so we have
+                                              [1,2,3,4,5].slice(-2) = [4,5] is returns here 2 is value of k 
+            second we have ...arr.slice(0,-k): here it starts from 0 so we take everything except from -k elements i.e last k here k is 2
+                                               so not last 2: [1,2,3,4,5].slice(0,-2) = [1,2,3]
+                    and then spread operator concates them: [4,5,1,2,3]
+*/
 
 console.log("rotateArray:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
