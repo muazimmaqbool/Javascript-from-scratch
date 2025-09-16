@@ -28,3 +28,12 @@ const reverseArray=(arr)=>{
     return arr;
 }
 console.log("Reverse:",reverseArray(numArray))
+
+//Rotation (rotate array by k steps)
+function rotateArray(arr, k) {
+  k = k % arr.length; //this to make cure that rotation count doesn't exceed the array length
+//   console.log("k",k)
+  return [...arr.slice(-k), ...arr.slice(0, -k)];
+}
+
+console.log("rotateArray:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
