@@ -43,3 +43,20 @@ Example with [1,2,3]:
     j=2 → temp=[3] → push [3]
 
 */
+
+//2: Two-Pointer Techniques
+//Example: Pair Sum (find if two numbers add to target)
+function hasPairSum(arr, target) {
+  arr.sort((a,b)=>a-b);
+  //
+  let left = 0, right = arr.length-1;
+  while(left < right){
+    let sum = arr[left] + arr[right];
+    if(sum === target) return true;
+    else if(sum < target) left++;
+    else right--;
+  }
+  return false;
+}
+
+console.log(hasPairSum([2,7,11,15], 9)); // true
