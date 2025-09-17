@@ -17,3 +17,29 @@ function subarrays(arr) {
 
 console.log(subarrays([1,2,3]));
 // o/p: [ [ 1 ], [ 1, 2 ], [ 1, 2, 3 ], [ 2 ], [ 2, 3 ], [ 3 ] ]
+
+/*
+Example with [1,2,3]:
+
+    i = 0
+    temp=[]
+
+    j=0 → temp=[1] → push [1]
+
+    j=1 → temp=[1,2] → push [1,2]
+
+    j=2 → temp=[1,2,3] → push [1,2,3]
+
+    i = 1
+    temp=[]
+
+    j=1 → temp=[2] → push [2]
+
+    j=2 → temp=[2,3] → push [2,3]
+
+    i = 2
+    temp=[]
+
+    j=2 → temp=[3] → push [3]
+
+*/
