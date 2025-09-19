@@ -47,8 +47,32 @@ using all the original letters exactly once. For example, "listen" and "silent" 
 */
 //2:Anagrams
 function isAnagram(str1, str2) {
+  //if two strings are not having same length they can't be anagrams so it returns false immediately.
   if(str1.length !== str2.length) return false;
   return str1.split("").sort().join("") === str2.split("").sort().join("");
+  /*
+  ->str1.split("") converts string to arrays: "listen".split("") → ["l","i","s","t","e","n"]
+                                              "silent".split("") → ["s","i","l","e","n","t"]
+
+    then .sort() Sorting arranges characters in lexicographic order:
+            ["l","i","s","t","e","n"].sort() → ["e","i","l","n","s","t"]
+            ["s","i","l","e","n","t"].sort() → ["e","i","l","n","s","t"]
+
+    then .join("") join back into string:
+         ["e","i","l","n","s","t"].join("") → "eilnst"
+        
+    then we compare the two : "eilnst" === "eilnst" → true, if they match → the words are anagram
+
+    In short:
+        "listen" vs "silent"
+        Both length 6.
+        Sort and join → "eilnst" for each.
+        Return true.
+
+    Complexity:
+        Sorting each string: O(n log n).
+        Extra space: O(n) for the arrays.
+  */
 }
 
 console.log("isAnagram:",isAnagram("listen", "silent")); // true
