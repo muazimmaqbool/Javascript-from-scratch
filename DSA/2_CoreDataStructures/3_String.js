@@ -34,4 +34,21 @@ Example with "hello":
 Why it works:
     A palindrome reads the same forward and backward.
     By comparing from the outside inward, you can detect mismatches early without reversing the string.
+
+Complexity:
+    Time: O(n) — checks at most n/2 character pairs.
+    Space: O(1) — only two pointers, no extra memory.
 */
+
+/*
+An anagram is a word, phrase, or sentence formed by rearranging the letters of a different word or phrase, 
+using all the original letters exactly once. For example, "listen" and "silent" are anagrams because they use the same letters,
+ just in a different order
+*/
+//2:Anagrams
+function isAnagram(str1, str2) {
+  if(str1.length !== str2.length) return false;
+  return str1.split("").sort().join("") === str2.split("").sort().join("");
+}
+
+console.log("isAnagram:",isAnagram("listen", "silent")); // true
