@@ -76,3 +76,15 @@ function isAnagram(str1, str2) {
 }
 
 console.log("isAnagram:",isAnagram("listen", "silent")); // true
+
+//3: Substring Search (naive approach)
+function substringSearch(text, pattern) {
+  for (let i = 0; i <= text.length - pattern.length; i++) {
+    let j = 0;
+    while (j < pattern.length && text[i+j] === pattern[j]) j++;
+    if (j === pattern.length) return i; 
+  }
+  return -1;
+}
+
+console.log(substringSearch("hello world", "world")); // 6
