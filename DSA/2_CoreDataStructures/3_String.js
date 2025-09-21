@@ -74,7 +74,6 @@ function isAnagram(str1, str2) {
         Extra space: O(n) for the arrays.
   */
 }
-
 console.log("isAnagram:",isAnagram("listen", "silent")); // true
 
 //3: Substring Search (naive approach)
