@@ -119,4 +119,18 @@ Explanation:
 -> if (j === pattern.length) return i;
       If j reached the pattern’s length, it means all characters matched.
       Return i = the starting index of the match.
+
+->Example with "hello world", "world":
+
+    text = "hello world", pattern = "world"
+      i=0: compare "hello" with "world" → mismatch
+      i=1: compare "ello " with "world" → mismatch
+      i=2: compare "llo w" with "world" → mismatch
+      …
+      i=6: compare "world" with "world" → all characters match (j=5) → return 6
+    Result: 6 (pattern starts at index 6 in the text).
+
+    Complexity:
+      Worst-case time: O(n*m) (n = text length, m = pattern length).
+      Space: O(1) extra.
 */
