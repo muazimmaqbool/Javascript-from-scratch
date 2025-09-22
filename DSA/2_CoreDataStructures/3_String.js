@@ -87,3 +87,6 @@ function substringSearch(text, pattern) {
 }
 
 console.log(substringSearch("hello world", "world")); // 6
+console.log(substringSearch("hello world","llo")) // 2
+console.log(substringSearch("javascript","java")) //0
+console.log(substringSearch("javascript","script")) //4
