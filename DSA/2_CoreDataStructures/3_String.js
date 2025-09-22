@@ -77,6 +77,7 @@ function isAnagram(str1, str2) {
 console.log("isAnagram:",isAnagram("listen", "silent")); // true
 
 //3: Substring Search (naive approach)
+//it looks for the first occurrence of pattern(second argument) inside text(first argument) and returns its starting index, or -1 if not found.
 function substringSearch(text, pattern) {
   for (let i = 0; i <= text.length - pattern.length; i++) {
     let j = 0;
@@ -90,3 +91,32 @@ console.log(substringSearch("hello world", "world")); // 6
 console.log(substringSearch("hello world","llo")) // 2
 console.log(substringSearch("javascript","java")) //0
 console.log(substringSearch("javascript","script")) //4
+console.log(substringSearch("python","java")) //-1
+/*
+Explanation:
+-> for (let i = 0; i <= text.length - pattern.length; i++) {...}
+      We only go up to text.length - pattern.length so the pattern has enough room to fit.
+      Example:
+      text = "hello world" (length 11)
+      pattern = "world" (length 5)
+      11 - 5 = 6 so i runs 0,1,2,3,4,5,6.
+    
+-> let j = 0;
+    j tracks the index of the current character in pattern we’re comparing.
+
+-> while (j < pattern.length && text[i+j] === pattern[j]) j++;
+    As long as:
+        We haven’t reached the end of the pattern, and
+        Characters match (text[i+j] === pattern[j])
+    …we increment j.
+
+    Effectively we’re checking:
+      text[i] vs pattern[0]
+      text[i+1] vs pattern[1]
+      and so on…
+    If a mismatch happens, the while stops.
+
+-> if (j === pattern.length) return i;
+      If j reached the pattern’s length, it means all characters matched.
+      Return i = the starting index of the match.
+*/
