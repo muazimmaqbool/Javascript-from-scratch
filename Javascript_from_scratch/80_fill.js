@@ -12,7 +12,7 @@ The fill() method modifies the original array and returns the modified array. Yo
 */
 // 1: Filling the Entire Array
 const numbers = [1, 2, 3, 4, 5];
-numbers.fill(0);
+numbers.fill(0); // if use like this: numbers.fill(); it will return undefined
 console.log(numbers); // Output: [0, 0, 0, 0, 0]
 
 // 2. Filling a Specific Segment 
