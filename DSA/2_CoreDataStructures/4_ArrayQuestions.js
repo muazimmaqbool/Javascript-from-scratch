@@ -26,5 +26,26 @@
 */
 
 const secondLargestNumber=(arr)=>{
-  const
+  const uniqueArrSet=new Set(arr) 
+  //console.log(uniqueArr) // Set(5) { 12, 35, 2, 1, 34 }
+
+  //converting this set to an array 
+  const uniqueArray=Array.from(uniqueArrSet)
+ //console.log(uniqueArray) //[ 12, 35, 2, 1, 34 ]
+
+  //now sorting array i.e from largest to smaller in descending element
+  uniqueArray.sort((a,b)=>{
+    return b-a
+  })  
+  //checking if unique array has 2 or more than 2 elements only then it will return otherwise -1 which indicates error
+  if(uniqueArray.length>=2){
+    return uniqueArray[1]
+  }else{
+    return -1
+  }
+
+  //console.log(uniqueArray) //[ 35, 34, 12, 2, 1 ]
 }
+
+console.log(secondLargestNumber([12,35,2,1,34])) //34
+console.log(secondLargestNumber([10,5,10]))
