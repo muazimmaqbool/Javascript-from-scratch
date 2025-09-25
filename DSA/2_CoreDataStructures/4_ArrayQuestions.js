@@ -69,7 +69,8 @@ function secondLargestOptimised(arr) {
     if (arr[i] > largest) {
       secondLargest = largest; //secondLargest will have previous value of largest
       largest = arr[i];
-    } else if (arr[i] !== largest && arr[i] > secondLargest) {
+    } else if (arr[i] !== largest && arr[i] > secondLargest) { 
+      //here it checks if i is not largest but greater then secondlargest
       secondLargest = arr[i];
     }
   }
@@ -77,3 +78,9 @@ function secondLargestOptimised(arr) {
 }
 console.log(secondLargestOptimised([12, 35, 2, 1, 34])) // o/p: 34
 console.log(secondLargestOptimised([10, 5, 10]))  // o/p: 5
+/*
+Time complexity of this algorithm and we calculate it with respect to the operations so here we have for loop and this for loop for once have
+one operation:
+  and the number of operations of for loop will depend if arr length i.e n so O(n) and that's a very good time complexity
+  ➡️ Time complexity is : O(n)
+*/
