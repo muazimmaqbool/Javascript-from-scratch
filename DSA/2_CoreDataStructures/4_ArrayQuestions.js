@@ -15,7 +15,7 @@
    -> input: [12,35,2,1,34] : o/p = 34
    -> input: [10,5,10] : o/p =5
 */
-//First solvingi it using brute force approach:
+//Method 1: First solvingi it using brute force approach:
 
 /*-> if we sort the array then return second last element it will be second largest element:
   [12,35,2,1,34] -- sort() ---> [1,2,12,34,35] -- > return second last i.e 34
@@ -34,7 +34,7 @@ const secondLargestNumber=(arr)=>{
  //console.log(uniqueArray) //[ 12, 35, 2, 1, 34 ]
 
   //now sorting array i.e from largest to smaller in descending element
-  uniqueArray.sort((a,b)=>{ // sort have time complexity of O(n log n)
+  uniqueArray.sort((a,b)=>{ // sort have time complexity of O(nlogn)
     return b-a
   })  
   //checking if unique array has 2 or more than 2 elements only then it will return otherwise -1 which indicates error
@@ -49,9 +49,13 @@ const secondLargestNumber=(arr)=>{
 
 console.log(secondLargestNumber([12,35,2,1,34])) // 34
 console.log(secondLargestNumber([10,5,10])) // 5
-//Note: this is not the ideal solution and we gonna know that by calculating time and space complexity of this algorithm
+//Note: this is not the ideal solution and we gonna know that by calculating time of this algorithm
 /*
 Note: you must know how much time and space complexity the inbuilt js functions have like:
-      Set have O(n), sort have O(n log n)
- So we will take the worst time complexity which is O(n log n)
+      Set have O(n), sort have O(nlogn)
+  So we will take the worst time complexity which is O(nlog n)
+  ➡️Time complexity is : O(nlogn)
 */
+
+//Method 2: Here we won't be using any inbuilt functions of js:
+
