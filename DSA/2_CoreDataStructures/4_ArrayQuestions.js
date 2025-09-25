@@ -63,16 +63,17 @@ function secondLargestOptimised(arr) {
   //initially largest and secondLargest is -1 because we will start checking from 0
   //or we can put Number.NEGATIVE_INFINITY : which will have least value that js can hold
   let largest = Number.NEGATIVE_INFINITY;
-  console.log(largest); // o/p : -infinity
+  //console.log(largest); // o/p : -infinity
   let secondLargest = -1; // or let secondLargest = Number.NEGATIVE_INFINITY
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > largest) {
-      largest = arr[i];
       secondLargest = largest; //secondLargest will have previous value of largest
+      largest = arr[i];
     } else if (arr[i] !== largest && arr[i] > secondLargest) {
       secondLargest = arr[i];
     }
   }
   return secondLargest
 }
-console.log(secondLargestOptimised([12, 35, 2, 1, 34]))
+console.log(secondLargestOptimised([12, 35, 2, 1, 34])) // o/p: 34
+console.log(secondLargestOptimised([10, 5, 10]))  // o/p: 5
