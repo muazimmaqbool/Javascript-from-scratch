@@ -8,7 +8,7 @@
   complex problems due to the sheer number of possibilities it must check.
 */
 
-// Q1: Second largest number
+// ➡️ Q1: Second largest number
 /*
 ->Given an array of size N, print second largest element from an array
   Example:
@@ -26,7 +26,7 @@
 */
 
 const secondLargestNumber=(arr)=>{
-  const uniqueArrSet=new Set(arr) 
+  const uniqueArrSet=new Set(arr) // Set have time complexity of O(n)
   //console.log(uniqueArr) // Set(5) { 12, 35, 2, 1, 34 }
 
   //converting this set to an array 
@@ -34,7 +34,7 @@ const secondLargestNumber=(arr)=>{
  //console.log(uniqueArray) //[ 12, 35, 2, 1, 34 ]
 
   //now sorting array i.e from largest to smaller in descending element
-  uniqueArray.sort((a,b)=>{
+  uniqueArray.sort((a,b)=>{ // sort have time complexity of O(n log n)
     return b-a
   })  
   //checking if unique array has 2 or more than 2 elements only then it will return otherwise -1 which indicates error
@@ -47,5 +47,11 @@ const secondLargestNumber=(arr)=>{
   //console.log(uniqueArray) //[ 35, 34, 12, 2, 1 ]
 }
 
-console.log(secondLargestNumber([12,35,2,1,34])) //34
-console.log(secondLargestNumber([10,5,10]))
+console.log(secondLargestNumber([12,35,2,1,34])) // 34
+console.log(secondLargestNumber([10,5,10])) // 5
+//Note: this is not the ideal solution and we gonna know that by calculating time and space complexity of this algorithm
+/*
+Note: you must know how much time and space complexity the inbuilt js functions have like:
+      Set have O(n), sort have O(n log n)
+ So we will take the worst time complexity which is O(n log n)
+*/
