@@ -56,6 +56,7 @@ Note: you must know how much time and space complexity the inbuilt js functions 
       Set have O(n), sort have O(nlogn)
   So we will take the worst time complexity which is O(nlog n)
   ➡️Time complexity is : O(nlogn)
+  ➡️ Space complexity is :O(1) as it returns only one value
 */
 console.log("Method 2 : Optimised Approach");
 //Method 2: Optimised Approach (here we won't be using any inbuilt functions of js):
@@ -83,4 +84,5 @@ Time complexity of this algorithm and we calculate it with respect to the operat
 one operation:
   and the number of operations of for loop will depend if arr length i.e n so O(n) and that's a very good time complexity
   ➡️ Time complexity is : O(n)
+  ➡️ Space complexity is :O(1) as it returns only one value
 */
