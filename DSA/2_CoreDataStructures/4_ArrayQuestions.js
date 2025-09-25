@@ -25,30 +25,31 @@
     second largest element.
 */
 
-const secondLargestNumber=(arr)=>{
-  const uniqueArrSet=new Set(arr) // Set have time complexity of O(n)
+const secondLargestNumber = (arr) => {
+  const uniqueArrSet = new Set(arr); // Set have time complexity of O(n)
   //console.log(uniqueArr) // Set(5) { 12, 35, 2, 1, 34 }
 
-  //converting this set to an array 
-  const uniqueArray=Array.from(uniqueArrSet)
- //console.log(uniqueArray) //[ 12, 35, 2, 1, 34 ]
+  //converting this set to an array
+  const uniqueArray = Array.from(uniqueArrSet);
+  //console.log(uniqueArray) //[ 12, 35, 2, 1, 34 ]
 
   //now sorting array i.e from largest to smaller in descending element
-  uniqueArray.sort((a,b)=>{ // sort have time complexity of O(nlogn)
-    return b-a
-  })  
+  uniqueArray.sort((a, b) => {
+    // sort have time complexity of O(nlogn)
+    return b - a;
+  });
   //checking if unique array has 2 or more than 2 elements only then it will return otherwise -1 which indicates error
-  if(uniqueArray.length>=2){
-    return uniqueArray[1]
-  }else{
-    return -1
+  if (uniqueArray.length >= 2) {
+    return uniqueArray[1];
+  } else {
+    return -1;
   }
 
   //console.log(uniqueArray) //[ 35, 34, 12, 2, 1 ]
-}
+};
 
-console.log(secondLargestNumber([12,35,2,1,34])) // 34
-console.log(secondLargestNumber([10,5,10])) // 5
+console.log(secondLargestNumber([12, 35, 2, 1, 34])); // 34
+console.log(secondLargestNumber([10, 5, 10])); // 5
 //Note: this is not the ideal solution and we gonna know that by calculating time of this algorithm
 /*
 Note: you must know how much time and space complexity the inbuilt js functions have like:
@@ -56,6 +57,22 @@ Note: you must know how much time and space complexity the inbuilt js functions 
   So we will take the worst time complexity which is O(nlog n)
   ➡️Time complexity is : O(nlogn)
 */
-
-//Method 2: Here we won't be using any inbuilt functions of js:
-
+console.log("Method 2 : Optimised Approach");
+//Method 2: Optimised Approach (here we won't be using any inbuilt functions of js):
+function secondLargestOptimised(arr) {
+  //initially largest and secondLargest is -1 because we will start checking from 0
+  //or we can put Number.NEGATIVE_INFINITY : which will have least value that js can hold
+  let largest = Number.NEGATIVE_INFINITY;
+  console.log(largest); // o/p : -infinity
+  let secondLargest = -1; // or let secondLargest = Number.NEGATIVE_INFINITY
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+      secondLargest = largest; //secondLargest will have previous value of largest
+    } else if (arr[i] !== largest && arr[i] > secondLargest) {
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest
+}
+console.log(secondLargestOptimised([12, 35, 2, 1, 34]))
