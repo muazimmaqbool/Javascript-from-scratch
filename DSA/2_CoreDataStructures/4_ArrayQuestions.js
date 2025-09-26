@@ -24,7 +24,8 @@
     so to resolve this issue we will first remove repeated elements from the array and then return second last element it will be 
     second largest element.
 */
-
+console.log("Q1: Second largest number")
+console.log("Method 1: Brute Force Approach:")
 const secondLargestNumber = (arr) => {
   const uniqueArrSet = new Set(arr); // Set have time complexity of O(n)
   //console.log(uniqueArr) // Set(5) { 12, 35, 2, 1, 34 }
@@ -58,7 +59,7 @@ Note: you must know how much time and space complexity the inbuilt js functions 
   ➡️Time complexity is : O(nlogn)
   ➡️ Space complexity is :O(1) as it returns only one value
 */
-console.log("Method 2 : Optimised Approach");
+console.log("Method 2 : Optimised Approach:");
 //Method 2: Optimised Approach (here we won't be using any inbuilt functions of js):
 function secondLargestOptimised(arr) {
   //initially largest and secondLargest is -1 because we will start checking from 0
@@ -86,3 +87,4 @@ one operation:
   ➡️ Time complexity is : O(n)
   ➡️ Space complexity is :O(1) as it returns only one value
 */
+
