@@ -1,4 +1,4 @@
-//To run go inside this folder via cd and enter: node --watch 4_ArrayQuestions.js
+//To run go inside this folder via cd and enter: node --watch 4_ArrayQuestionOne.js
 
 //Important:
 /*
