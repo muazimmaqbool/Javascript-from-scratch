@@ -11,7 +11,9 @@
     -> input: nums=[-1,-100,3,99], k=2 >>>>>> o/p = [3,99,-1,-100]
 
 */
+console.log("Rotate Array by K (important)")
 //Solution 1:
+console.log("Solution 1:")
 const rotateArray=(nums,k)=>{ //nums is array and k is no. of rotation
      let size=nums.length
     //  console.log(size)
@@ -31,3 +33,14 @@ const rotateArray=(nums,k)=>{ //nums is array and k is no. of rotation
 }
 console.log(rotateArray([1,2,3,4,5,6,7],3)) //[5,6,7,1,2,3,4]
 console.log(rotateArray([-1,-100,3,99],2)) //[5,6,7,1,2,3,4]
+/*
+Time and space complexity of this algorithm:
+    ->Time complexity: 
+        1) nums.splice is internally a loop which depends of array of size 'n' so its= O(n)
+        2) unshift have a time complexity of O(n) as well
+        ➡️ Time Complexity = O(n) 
+    ➡️ Space complexity: O(n)
+*/
+
+//Solution two: without using any inbuilt js function
+console.log("solution 2")
