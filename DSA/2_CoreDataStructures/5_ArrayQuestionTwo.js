@@ -32,7 +32,7 @@ const rotateArray=(nums,k)=>{ //nums is array and k is no. of rotation
      return nums
 }
 console.log(rotateArray([1,2,3,4,5,6,7],3)) //[5,6,7,1,2,3,4]
-console.log(rotateArray([-1,-100,3,99],2)) //[5,6,7,1,2,3,4]
+console.log(rotateArray([-1,-100,3,99],2)) //[3,99,-1,-100]
 /*
 Time and space complexity of this algorithm:
     ->Time complexity: 
@@ -44,3 +44,14 @@ Time and space complexity of this algorithm:
 
 //Solution two: without using any inbuilt js function
 console.log("solution 2")
+const rotateArrayOptimised=(nums,k)=>{
+    let size=nums.length;
+    if(size>k){
+        k=k%size
+    }
+    /*to solve this what we are going to do is that suppose we have this array : [1,2,3,4,5,6,7] and k=3
+      1)Reverse nums/array i.e [1,2,3,4,5,6,7] >>> [7,6,5,4,3,2,1]
+      2)Now reverse till k i.e til 3 index(0,1,2 index i.e reverse 7,6,5): [7,6,5,4,3,2,1] >>> [5,6,7,4,3,2,1]
+      3)Now reverse after k i.e  [5,6,7,4,3,2,1] >>> [5,6,7,1,2,3,4] and that's the answer*/
+
+}
