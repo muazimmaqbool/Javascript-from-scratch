@@ -52,6 +52,42 @@ const rotateArrayOptimised=(nums,k)=>{
     /*to solve this what we are going to do is that suppose we have this array : [1,2,3,4,5,6,7] and k=3
       1)Reverse nums/array i.e [1,2,3,4,5,6,7] >>> [7,6,5,4,3,2,1]
       2)Now reverse till k i.e til 3 index(0,1,2 index i.e reverse 7,6,5): [7,6,5,4,3,2,1] >>> [5,6,7,4,3,2,1]
-      3)Now reverse after k i.e  [5,6,7,4,3,2,1] >>> [5,6,7,1,2,3,4] and that's the answer*/
+      3)Now reverse after k i.e  [5,6,7,4,3,2,1] >>> [5,6,7,1,2,3,4] and that's the answer
+    
+    ->adding another function reverseNum which will take: array, left, right (left and right means from where to where we are going to revers)
+    */
+   reverseNum(nums,0,size-1)
+   reverseNum(nums,0,k-1) //if k is 3 i.e 0 to 3 that will be 4 elements but we want only three elements so 0 to 3-1 i.e 0 to 2 which is 3 elements
+   reverseNum(nums,k,nums.length-1)
+   return nums
+} 
+console.log(rotateArrayOptimised([1,2,3,4,5,6,7],3)) //[5,6,7,1,2,3,4]
+console.log(rotateArrayOptimised([-1,-100,3,99],2)) //[3,99,-1,-100]
+function reverseNum(array,left,right){
+    while(left < right){
+        const temp=array[left]
+        array[left]=array[right]
+        array[right]=temp
 
+        left++;
+        right--;
+    }
 }
+/*
+Explaining: 
+        const temp=array[left]
+        array[left]=array[right]
+        array[right]=temp
+    
+    suppose array is : [1,2,3,4] and left=0 and right is array.length-1 i.e 4-1=3
+    so left = 0 and right = 3
+    checks if left < right
+        1)temp= left[0] i.e 1 so temp =1
+        2)array[left]=array[right] i.e array[0]=array[3] >>> array[0] will have 4 
+        4)array[right]=temp i.e array[3]=1 >>> arr[3] will have 1
+            so we have [4,1]
+        >then we increment left++ and decrement right--
+            now we have [4,3,2,1]
+    so in next iteration left becomes 1 and right becomes 2 
+
+*/
