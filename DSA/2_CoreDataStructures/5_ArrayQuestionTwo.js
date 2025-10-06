@@ -56,13 +56,18 @@ const rotateArrayOptimised=(nums,k)=>{
     
     ->adding another function reverseNum which will take: array, left, right (left and right means from where to where we are going to revers)
     */
-   reverseNum(nums,0,size-1)
-   reverseNum(nums,0,k-1) //if k is 3 i.e 0 to 3 that will be 4 elements but we want only three elements so 0 to 3-1 i.e 0 to 2 which is 3 elements
-   reverseNum(nums,k,nums.length-1)
+   reverseNum(nums,0,size-1) // O(n)
+   reverseNum(nums,0,k-1) //if k is 3 i.e 0 to 3 that will be 4 elements but we want only three elements so 0 to 3-1 i.e 0 to 2 which is 3 elements , O(k)
+   reverseNum(nums,k,nums.length-1) // O(n-k)
+   //Note: we don't consider constants while calculating time complexity so we are removing k's 
    return nums
 } 
 console.log(rotateArrayOptimised([1,2,3,4,5,6,7],3)) //[5,6,7,1,2,3,4]
 console.log(rotateArrayOptimised([-1,-100,3,99],2)) //[3,99,-1,-100]
+/*
+-> Time complexity : O(n)
+-> Space complexity: O(1) , because we are creating any new array we are just reusing the existing array
+*/
 function reverseNum(array,left,right){
     while(left < right){
         const temp=array[left]
