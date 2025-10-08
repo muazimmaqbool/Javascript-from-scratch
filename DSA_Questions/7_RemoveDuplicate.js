@@ -1,4 +1,4 @@
-//To run go inside this folder via cd and enter: node --watch 6_ArrayQuestionThree.js
+//To run go inside this folder via cd and enter: node --watch 7_RemoveDuplicate.js
 
 //Q3: Remove duplicate from sorting array:
 /*

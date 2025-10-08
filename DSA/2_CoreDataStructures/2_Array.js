@@ -96,3 +96,4 @@ how will this work: arr.sort((a,b) => a - b);
         arr.sort((a,b)=>b-a);
         This would give [8,6,4,1].
 */
+//Note: check questions on Array in DSA_Questions folder: 5,6,7

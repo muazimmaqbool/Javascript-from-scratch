@@ -1,4 +1,4 @@
-//To run go inside this folder via cd and enter: node --watch 5_ArrayQuestionTwo.js
+//To run go inside this folder via cd and enter: node --watch 6_RotateArrayByK.js
 
 //Q2: Rotate Array by K (important)
 /*

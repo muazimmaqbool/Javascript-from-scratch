@@ -1,4 +1,4 @@
-//To run go inside this folder via cd and enter: node --watch 4_ArrayQuestionOne.js
+//To run go inside this folder via cd and enter: node --watch 5_Second LargestNumber.js
 
 //Important:
 /*
