@@ -19,13 +19,17 @@ Eg: nums=[0,0,1,1,2,2,3,3,4] : so we will compare first two elements i.e 0 and 0
 */
 console.log("Solution One:")
 const removeDuplicates=(nums)=>{
-    for(let i=0;i<nums.length-1;i++){
+    for(let i=0;i<nums.length-1;i++){ // O(n) 
         if(nums[i]===nums[i+1]){
-            nums.splice(i+1,1);
-            i--
+            nums.splice(i+1,1); // O(1) doing on one elemtn only
+            i-- //here if two elements are same then we will do i-- because what if another element is same
         }
     }
     return nums.length
 }
 console.log(removeDuplicates([0,0,1,1,2,2,3,3,4])) // 5
 console.log(removeDuplicates([1,1,2])) // 2
+/*
+Time complexity : O(n)
+Space complexity : O(1) because it is remaining only one
+*/
