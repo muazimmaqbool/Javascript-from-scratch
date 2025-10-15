@@ -33,3 +33,31 @@ console.log(removeDuplicates([1,1,2])) // 2
 Time complexity : O(n)
 Space complexity : O(1) because it is remaining only one
 */
+
+/*
+Two pointer approach:
+    The two-pointer approach is an algorithmic technique that utilizes two pointers or indices to efficiently traverse and manipulate data structures 
+    like arrays, linked lists, or strings. This method is often employed to optimize solutions for various problems, particularly those 
+    involving searching, sorting, or finding specific patterns.
+*/
+console.log("Solution Two")
+//without inbuiltin js function
+/*
+Here we will use two pointer approach:
+    one pointer will be i
+    second pointer will be for loop i.e j
+*/
+const removeDuplicatesTwo=(nums)=>{
+    if(nums.length===0) return 0
+    let i=0 //first pointer
+    for(let j=0;j<nums.length;j++){ //second pointer is j
+        if(nums[i]!==nums[j]){
+            i++;
+            nums[i]=nums[j]
+        }
+    }
+    return i+1
+}
+console.log(removeDuplicatesTwo([0,0,1,1,2,2,3,3,4])) // 5
+console.log(removeDuplicatesTwo([1,1,2])) // 2
+console.log(removeDuplicatesTwo([1,1,1,1,0,2,2,3,5,5,5])) // 5
