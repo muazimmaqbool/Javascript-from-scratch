@@ -60,4 +60,13 @@ const removeDuplicatesTwo=(nums)=>{
 }
 console.log(removeDuplicatesTwo([0,0,1,1,2,2,3,3,4])) // 5
 console.log(removeDuplicatesTwo([1,1,2])) // 2
-console.log(removeDuplicatesTwo([1,1,1,1,0,2,2,3,5,5,5])) // 5
+console.log(removeDuplicatesTwo([0,0,2,2,4,4,5,6,6])) // 5
+/*
+Exaplanation:
+    lets take this array: [0,0,2,2,4,4,5,6,6]
+    1: i=0, j=1 i.e comparing 0 and 0 and if they are equal we do nothing and if they are not equal we are we will increment i so
+                    i=1 and j=2 so comparing 0 and 2 and they are equal and so on
+
+Time complexity : O(n)
+Space complexity: O(1)
+*/
