@@ -13,6 +13,11 @@
     | `peek()`    | View the top item       |
     | `isEmpty()` | Check if stack is empty |
     | `size()`    | Get number of items     |
+
+->Real Browser Use Cases of Stack:
+    Undo / Redo feature
+    Every time you make a change, push it to the undo stack.
+    When you undo, pop from undoStack and push it to redoStack.
 */
 //->Implementing Stack with JavaScript Arrays
 class Stack{
@@ -62,3 +67,47 @@ console.log("size",stack.size())
 console.log("pop",stack.pop())
 stack.print()
 console.log("bottom element:",stack.bottomElement())
+
+//Real Browser Use Cases of Stack
+// Undo / Redo feature
+// Every time you make a change, push it to the undo stack.
+// When you undo, pop from undoStack and push it to redoStack.
+const undo=[]
+const redo=[]
+const makeChange=(action)=>{
+    undo.push(action)
+    redo.length=0; //clear redo when new change happens
+}
+const undoFun=()=>{
+    if(undo.length===0){
+        console.log("no action to undo")
+        return
+    };
+    const lastAction=undo.pop()
+    redo.push(lastAction)
+    console.log("undo:",lastAction)
+}
+const redoFun=()=>{
+    if(redo.length===0){
+        console.log("no action to redo");
+        return
+    }
+    const redoAction=redo.pop()
+    undo.push(redoAction)
+    console.log("redo:",redoAction)
+}
+makeChange("A")
+makeChange("B")
+makeChange("C")
+console.log("undo stack:",undo) //[A,B,C]
+console.log("redo stack:",redo) //[]
+undoFun()//C
+undoFun()//B
+console.log("undo stack:",undo)//[A]
+console.log("redo stack:",redo)//[C,B]
+redoFun()//B
+console.log("undo stack:",undo)//[A,B]
+console.log("redo stack:",redo)//[C]
+redoFun()//C
+console.log("undo stack:",undo)//[A,B,C]
+console.log("redo stack:",redo)//[]
