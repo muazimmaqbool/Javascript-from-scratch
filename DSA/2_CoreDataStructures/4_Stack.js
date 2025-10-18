@@ -40,6 +40,11 @@ class Stack{
          if(this.isEmpty()) return 'Stack is empty';
          console.log(this.items) // or console.log(this.items.joing(","))
     }
+    //extra
+    bottomElement(){
+        if(this.isEmpty()) return 'Stack is empty';
+        return this.items[0]
+    }
 }
 const stack=new Stack()
 stack.push(1)
@@ -53,3 +58,4 @@ console.log("peek:",stack.peek())
 console.log("size",stack.size())
 console.log("pop",stack.pop())
 stack.print()
+console.log("bottom element:",stack.bottomElement())
