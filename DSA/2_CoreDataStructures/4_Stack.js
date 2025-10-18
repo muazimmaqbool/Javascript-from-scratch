@@ -14,3 +14,42 @@
     | `isEmpty()` | Check if stack is empty |
     | `size()`    | Get number of items     |
 */
+//->Implementing Stack with JavaScript Arrays
+class Stack{
+    constructor(){
+        this.items=[]
+    }
+    push(el){
+        this.items.push(el)
+    }
+    pop(){
+        if(this.isEmpty()) return 'Stack is empty';
+        return this.items.pop()
+    }
+    peek(){
+         if(this.isEmpty()) return 'Stack is empty';
+         return this.items[this.items.length-1]
+    }
+    isEmpty(){
+        return this.items.length===0
+    }
+    size(){
+        return this.items.length;
+    }
+    print(){
+         if(this.isEmpty()) return 'Stack is empty';
+         console.log(this.items) // or console.log(this.items.joing(","))
+    }
+}
+const stack=new Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+stack.push(5)
+stack.print()
+console.log("isEmpty:",stack.isEmpty())
+console.log("peek:",stack.peek())
+console.log("size",stack.size())
+console.log("pop",stack.pop())
+stack.print()
