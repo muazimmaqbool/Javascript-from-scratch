@@ -16,6 +16,9 @@
 */
 //->Implementing Stack with JavaScript Arrays
 class Stack{
+    //constructor initializes the empty array this.items
+    //it's called automatically when an object is instantiated using 'new' keyword:  like const stack=new Stack()
+    //inside the constructor, the keyword this refers to the newly created object being initialized
     constructor(){
         this.items=[]
     }
