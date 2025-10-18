@@ -72,11 +72,12 @@ console.log("bottom element:",stack.bottomElement())
 // Undo / Redo feature
 // Every time you make a change, push it to the undo stack.
 // When you undo, pop from undoStack and push it to redoStack.
-const undo=[]
-const redo=[]
+
+const undo=[]; //stores latest actions performed that can be undo
+const redo=[] //stores the actions that were just undo and can be reapplied(redone), it basically temporary holds the actions popped from the undo stack
 const makeChange=(action)=>{
     undo.push(action)
-    redo.length=0; //clear redo when new change happens
+    redo.length=0; //clear redo when new change happens, this prevents the user from "redoing" old, now-irrelevant actions after making a new one.
 }
 const undoFun=()=>{
     if(undo.length===0){
