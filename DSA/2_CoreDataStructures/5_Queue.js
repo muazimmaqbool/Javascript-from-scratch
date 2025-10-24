@@ -14,5 +14,41 @@
     | `peek()`    | View front element     |
     | `isEmpty()` | Check if empty         |
     | `size()`    | Get number of elements |
-
 */
+
+//-> Implementing Queue with JavaScript Arrays:
+class Queue{
+    constructor(){
+        this.items=[]
+    }
+
+    enqueue(el){
+        this.items.push(el)
+    }
+    dequeue(){
+        if(this.isEmpty()) return "Queue is empty!"
+        return this.items.shift(); //remove from front
+    }
+    peek(){
+        if(this.isEmpty()) return "Queue is empty!"
+        return this.items[0]
+    }
+    isEmpty(){
+        return this.items.length===0;
+    }
+    size(){
+        return this.items.length;
+    }
+    showQueue(){
+        console.log("Queue Elements:",this.items.join(","))
+    }
+}
+
+const queue=new Queue()
+queue.enqueue("Task 1");
+queue.enqueue("Task 2");
+queue.enqueue("Task 3");
+queue.showQueue()
+console.log("peek:",queue.peek())
+queue.dequeue()
+queue.showQueue()
