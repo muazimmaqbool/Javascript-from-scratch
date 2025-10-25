@@ -7,7 +7,7 @@
 const mySet=new Set()
 //or
 const nums=new Set([1,2,3,4,4,5])
-console.log("nums:",nums); //[1,2,3,4,5], Duplicate values are automatically removed
+console.log("nums:",nums); // o/p: Set(5) { 1, 2, 3, 4, 5 } :  Duplicate values are automatically removed
 
 /*->Basic methods of Set():
     | Method          | Description                | Example                            |
@@ -59,6 +59,7 @@ console.log("unique arr:",uniqueArr) // o/p: Set(3) { 'a', 'b', 'c' }
 //->Common Use Cases
     //1) Remove duplicates from an array
     //2) Checks if any existing elements quickly
+    
 //->Important Notes
 // 1) Order of elements is insertion order.
 // 2) Unlike arrays, Sets do not support indexing (e.g. mySet[0] won’t work).
