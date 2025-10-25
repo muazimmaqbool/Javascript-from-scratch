@@ -27,7 +27,7 @@ class Queue{
     }
     dequeue(){
         if(this.isEmpty()) return "Queue is empty!"
-        return this.items.shift(); //remove from front
+        return this.items.shift(); //remove from front,  its first element of the array from left side
     }
     peek(){
         if(this.isEmpty()) return "Queue is empty!"
@@ -45,10 +45,55 @@ class Queue{
 }
 
 const queue=new Queue()
+console.log(queue.dequeue()) // o/p : Queue is empty!
 queue.enqueue("Task 1");
 queue.enqueue("Task 2");
 queue.enqueue("Task 3");
-queue.showQueue()
+queue.showQueue() // o/p: Task 1, Task 2, Task 3
 console.log("peek:",queue.peek())
-queue.dequeue()
-queue.showQueue()
+queue.dequeue() // o/p: Task 1
+queue.showQueue() // o/p: Task2, Task 3
+
+//Browser use case of queue
+console.log("Queue browser usecase:")
+//-> Browsers schedule tasks (like rendering, API callbacks, event handlers) in a task queue.
+const taskQueue=[]
+function addTask(task){
+    taskQueue.push(task)
+}
+function processTask(){
+    while(taskQueue.length>0){
+        const task=taskQueue.shift()
+        console.log("Processing:",task)
+    }
+}
+
+function taskToPerform(){
+    console.log("Task to perform is:",taskQueue[0])
+}
+
+addTask("Render UI")
+addTask("Handle Click")
+addTask("Fetch Data")
+addTask("Update Data")
+addTask("Save Data")
+
+processTask()
+/*
+o/p:
+    Processing: Render UI
+    Processing: Handle Click
+    Processing: Fetch Data
+    Processing: Update Data
+    Processing: Save Data
+*/
+
+/*
+->Stack Vs Queue:
+    | Feature | Stack      | Queue                   |
+    | ------- | ---------- | ----------------------- |
+    | Order   | LIFO       | FIFO                    |
+    | Add     | push (top) | enqueue (rear)          |
+    | Remove  | pop (top)  | dequeue (front)         |
+    | Example | Undo/Redo  | Task Queue, Print Queue |
+*/
