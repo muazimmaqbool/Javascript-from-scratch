@@ -1,3 +1,5 @@
+//To run go inside this folder via cd and enter: node --watch 6_BrowserTabHistorySystem.js
+
 //Browser Tab History System
 //you’ll understand how browsers manage navigation with Back and Forward just like Chrome.
 
@@ -46,8 +48,10 @@ class BrowserTabHistory{
     }
     
     //going forward
+    //Move current page to backStack
+    //Pop the last page from forwardStack to become new currentPage
     forward(){
-        if(this.forward.length===0){
+        if(this.forwardStack.length===0){
             console.log("No forward pages!")
             return
         }
@@ -61,4 +65,46 @@ class BrowserTabHistory{
     console.log("Forward Stack:", this.forwardStack);
     console.log("---------------------------");
     }
+
+    showCurrentPage(){
+        console.log("currently You are on page:",this.currentPage)
+    }
 }
+
+const browser=new BrowserTabHistory()
+
+browser.visit("Home")
+browser.visit("GeeksForGeeks")
+browser.visit("Programiz")
+browser.visit("Settings")
+
+browser.showHistory()
+/*
+o/p: 
+Back Stack: [ 'Home', 'GeeksForGeeks', 'Programiz' ]
+Current Page: Settings
+Forward Stack: []
+*/
+
+browser.back() //Programiz
+browser.forward() //Settings
+browser.back() //Programiz
+browser.back() //GeeksForGeeks
+browser.forward() //Programiz 
+browser.showCurrentPage() // Programiz
+browser.showHistory()
+/*
+browser.showHistory():
+o/p:
+Back Stack: [ 'Home', 'GeeksForGeeks' ]
+Current Page: Programiz
+Forward Stack: [ 'Settings' ]
+*/
+
+/*
+In browsers like Chrome:
+    When you visit a new page → it clears forward history (like our visit()).
+    When you go back → it moves the current page to forward history.
+    When you go forward → it moves it back again.
+    This is exactly what happens internally!
+*/
