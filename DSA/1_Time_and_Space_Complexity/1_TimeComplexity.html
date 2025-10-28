@@ -42,10 +42,13 @@
         Memoization / caching in React → better time, more memory.
         Recompute each time → saves memory, costs time.
         for vs map: both O(n), but map uses more memory since it always creates a new array.
+
         for vs map:
-            Both are O(n) in time complexity.
-             But map() internally creates a new array → uses extra O(n) space, while for gives you more control (you can modify in-place for O(1) space).
-             On very large arrays (say 10M items), a plain for loop can sometimes be slightly faster since it avoids some overhead of callbacks. But readability-wise, map is better.
+         Both are O(n) in time complexity.
+            But map() internally creates a new array → uses extra O(n) space, while for gives you more control 
+            (you can modify in-place for O(1) space).
+            On very large arrays (say 10M items), a plain for loop can sometimes be slightly faster since it avoids some overhead 
+            of callbacks. But readability-wise, map is better.
     </pre>
     <script>
         // -> O(1) : Constant Time (Here execution doesn't depend on input size):
