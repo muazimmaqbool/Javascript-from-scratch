@@ -15,20 +15,20 @@
 
     1️⃣ What They Are
         Concept	Meaning
-        Time Complexity	How the running time of an algorithm increases as the input size n grows.
-        Space Complexity	How the memory used by an algorithm increases as the input size n grows.
+        Time Complexity: How the running time of an algorithm increases as the input size n grows.
+        Space Complexity: How the memory used by an algorithm increases as the input size n grows.
 
     2️⃣ Time Complexity Basics
         We use Big-O notation to describe the upper bound (worst-case) growth.
         Common complexities:
-        Big-O	       Name	               Example
-        O(1)	     Constant	       Accessing an array index
-        O(log n)	 Logarithmic	   Binary search
-        O(n)	     Linear	           Iterating once over an array
-        O(n log n)	 Log-linear	       Merge sort
-        O(n²)	     Quadratic	       Nested loops over an array
-        O(2^n)	     Exponential	   Recursive subset generation
-        O(n!)	     Factorial	       Brute-force traveling salesman
+            Big-O	       Name	               Example
+            O(1)	     Constant	       Accessing an array index
+            O(log n)	 Logarithmic	   Binary search
+            O(n)	     Linear	           Iterating once over an array
+            O(n log n)	 Log-linear	       Merge sort
+            O(n²)	     Quadratic	       Nested loops over an array
+            O(2^n)	     Exponential	   Recursive subset generation
+            O(n!)	     Factorial	       Brute-force traveling salesman
 
 
     3️⃣ Tradeoff: Time vs Memory
@@ -62,7 +62,7 @@
         // -> O(n^2) : Quadration time (Here we have nested loops over the same data which increases the runtime)
         function printPairs(arr){
             for(let i=0;i<arr.length;i++){
-                for(let j=0;k<arr.length;j++){
+                for(let j=0;j<arr.length;j++){
                     console.log(aee[i],arr[j]) // n*n operations
                 }
             }
