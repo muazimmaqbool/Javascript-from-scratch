@@ -12,6 +12,7 @@ const goingUpDown=(n)=>{
     }
     console.log("At the start") // 1 operation
 }
+
 //2n+3: 2 for loops n input and 3 console logs , operations depends on n so time complexity is O(n)
 console.log(goingUpDown(2)) 
 /* o/p: Going forward
