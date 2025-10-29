@@ -2,8 +2,8 @@
 
 //Example PrintBoth O(n^2)
 const printBoth=(n)=>{
-    for(let i=0;i<n;i++){
-        for(let j=0;j<n;j++){
+    for(let i=0;i<n;i++){ // here operations depends on the size of n
+        for(let j=0;j<n;j++){ //here operations depends on the size of n
             console.log(i,j)
         }
     }
