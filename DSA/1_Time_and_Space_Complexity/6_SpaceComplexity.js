@@ -19,8 +19,8 @@ const funnyNumber = (array) => {
 };
 let nums = [12, 5, 6, 88, 7, 112, 52];
 console.log(funnyNumber(nums)); // 282
-/*Here no matter the length of array is the result is always going to be single value
-So, it has a good space complexity i.e O(1)
+/*Here no matter how long length of array is the result is always going to be single value
+So, it has a good space complexity i.e O(1) i.e constant
 */
 
 //Example two: O(n)
@@ -40,7 +40,7 @@ So, it has bad space complexity and it's output depends on n i.e O(n)
 
 //Important: In js
 /*
--> Boolean, undefined, num, null : have constent values i.e constant space complexity i.e O(1)
+-> Boolean, undefined, num, null : have constant values i.e constant space complexity i.e O(1)
 -> Strings, arrays, object : have dynamic values i.e they have dynamic space complexity i.e space complexity here depends on 'n'
 
 */
@@ -55,6 +55,7 @@ function createMatrix(n) {
   }
   return matrix;
 }
+console.log("createMatrix:",createMatrix(2));
 console.log("createMatrix:",createMatrix(5));
 //first it creates an array [] then addes an array inside and loops on it it [ [0,1]], then creates another array and loops again so [[0,1],[1,2]]
 /*
