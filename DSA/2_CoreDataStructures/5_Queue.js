@@ -22,6 +22,9 @@ class Queue{
         this.items=[]
     }
 
+    isEmpty(){
+        return this.items.length===0;
+    }
     enqueue(el){
         this.items.push(el)
     }
@@ -32,9 +35,6 @@ class Queue{
     peek(){
         if(this.isEmpty()) return "Queue is empty!"
         return this.items[0]
-    }
-    isEmpty(){
-        return this.items.length===0;
     }
     size(){
         return this.items.length;
@@ -51,7 +51,7 @@ queue.enqueue("Task 2");
 queue.enqueue("Task 3");
 queue.showQueue() // o/p: Task 1, Task 2, Task 3
 console.log("peek:",queue.peek())
-queue.dequeue() // o/p: Task 1
+console.log("dequeue:",queue.dequeue()) // o/p: Task 1
 queue.showQueue() // o/p: Task2, Task 3
 
 //Browser use case of queue
