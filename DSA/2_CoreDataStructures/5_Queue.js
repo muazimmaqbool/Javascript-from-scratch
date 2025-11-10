@@ -55,7 +55,7 @@ console.log("dequeue:",queue.dequeue()) // o/p: Task 1
 queue.showQueue() // o/p: Task2, Task 3
 
 //Browser use case of queue
-console.log("Queue browser usecase:")
+console.log("*************** Queue browser usecase ******************")
 //-> Browsers schedule tasks (like rendering, API callbacks, event handlers) in a task queue.
 const taskQueue=[]
 function addTask(task){
@@ -64,24 +64,23 @@ function addTask(task){
 function processTask(){
     while(taskQueue.length>0){
         const task=taskQueue.shift()
+        //shift() : it removes the element at index 0 from the array
         console.log("Processing:",task)
     }
 }
 
-function taskToPerform(){
-    console.log("Task to perform is:",taskQueue[0])
-}
 
 addTask("Render UI")
+addTask("Open Website")
 addTask("Handle Click")
 addTask("Fetch Data")
 addTask("Update Data")
 addTask("Save Data")
-
 processTask()
 /*
 o/p:
     Processing: Render UI
+    Processing: Open Website
     Processing: Handle Click
     Processing: Fetch Data
     Processing: Update Data
