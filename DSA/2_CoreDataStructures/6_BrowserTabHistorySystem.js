@@ -4,7 +4,7 @@
 //you’ll understand how browsers manage navigation with Back and Forward just like Chrome.
 
 /*
-We’ll maintain two stacks:
+We willl maintain two stacks to achieve this:
     backStack → keeps track of previously visited pages.
     forwardStack → keeps track of pages you moved forward to (after going back).
     currentPage → stores the page you’re currently on.
@@ -60,6 +60,7 @@ class BrowserTabHistory{
         console.log(`You went forward to: ${this.currentPage}`)
     }
     showHistory() {
+    console.log("---------------------------")
     console.log("Back Stack:", this.backStack);
     console.log("Current Page:", this.currentPage);
     console.log("Forward Stack:", this.forwardStack);
