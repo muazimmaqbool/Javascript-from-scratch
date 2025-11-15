@@ -31,3 +31,49 @@ Explanation:
     Interviewer always expects:
     "Always use === unless you specifically want type coercion."
 */
+console.log("***************")
+//c: Output?
+console.log('2' + 2);   // "22"
+console.log(10 + '20');   // "1020"
+console.log('2' - 2);   // 0
+console.log('10' - '5');   // 5
+console.log('2' * '3'); // 6
+console.log('A' - 1);   // NaN
+console.log(5 - 'M');   // NaN
+/*
+Explanation
+    + → string concatenation
+    - or * → numeric operations → convert to numbers
+    'A' - 1 → "A" becomes NaN
+
+->console.log('2' + 2); // "22"
+    Because + is the only operator that also works as string concatenation.
+    '2' is a string
+    2 is a number
+    With +, JavaScript converts the number to a string
+    Then joins them:
+    '2' + 2  = "2" + "2" = "22"
+
+->console.log('2' - 2); // 0
+    Because the - (minus) operator does NOT do concatenation.
+    It forces both values to become numbers:
+    '2' → 2
+    2 → 2
+    2 - 2 = 0
+    So the result is 0.
+
+->console.log('2' * '3'); // 6
+    The * operator only works with numbers.
+    So JS converts both strings to numbers:
+    '2' → 2
+    '3' → 3
+    2 * 3 = 6
+
+->console.log('A' - 1); // NaN
+JS tries to convert 'A' to a number — but 'A' is not numeric.
+    So:
+    'A' → NaN
+    NaN - 1 = NaN
+    NaN = Not a Number
+    (When JavaScript fails to convert the value into a number.)
+*/
