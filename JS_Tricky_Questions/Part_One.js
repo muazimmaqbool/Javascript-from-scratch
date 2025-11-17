@@ -1,9 +1,11 @@
 //Part One Of JS Tricky Questions:
 
-/*➡️ 1. Type Coercion & Comparisons:
+/*
+  Type Coercion & Comparisons:
   These test your understanding of JS’s weird equality rules.
 */
-//A: What will be the output?
+
+//➡️: What will be the output?
 console.log(0 == '');        // true
 console.log(false == '0');   // true
 console.log(null == undefined); // true
@@ -24,15 +26,18 @@ Explanation:
 ->Type coercion is the automatic or implicit conversion of values from one data type to another by a programming language during an operation
 */
 
-//B: What’s the difference between == and ===?
+
+//➡️: What’s the difference between == and ===?
 /*
     == → compares values, performs type conversion
     === → compares value + type, no conversion
     Interviewer always expects:
     "Always use === unless you specifically want type coercion."
 */
+
 console.log("***************")
-//c: Output?
+
+//➡️: what is the Output?
 console.log('2' + 2);   // "22"
 console.log(10 + '20');   // "1020"
 console.log('2' - 2);   // 0
@@ -77,3 +82,22 @@ JS tries to convert 'A' to a number — but 'A' is not numeric.
     NaN = Not a Number
     (When JavaScript fails to convert the value into a number.)
 */
+console.log("*****************")
+//➡️: Hoisting and scope
+//Tests if you understand how JS executes code line-by-line.
+
+    //1:What’s the output?
+    console.log(a); //undefined
+    var a = 5;
+
+    //2:What happens here?
+    //console.log(b); //Cannot access 'b' before initialization
+    let b = 10;
+
+    //3:What’s the output and why?
+    function test() {
+    console.log(x); //undefined
+    var x = 2;
+    console.log(x); //2
+    }
+    test();
