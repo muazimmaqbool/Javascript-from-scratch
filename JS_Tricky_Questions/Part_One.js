@@ -10,7 +10,8 @@ console.log(0 == '');        // true
 console.log(false == '0');   // true
 console.log(null == undefined); // true
 console.log([] == ![]);      // true
-//Because JS automatically converts types behind the scenes.
+//Note: if you replace '==' with '===' the all above 4 conditions will be false
+//Because JS with '==' automatically converts types behind the scenes.
 /*
 Explanation:
     == does type coercion.
@@ -27,11 +28,10 @@ Explanation:
 */
 
 
-//➡️: What’s the difference between == and ===?
+//➡️: What’s the difference between == and === ?
 /*
     == → compares values, performs type conversion
     === → compares value + type, no conversion
-    Interviewer always expects:
     "Always use === unless you specifically want type coercion."
 */
 
@@ -45,10 +45,12 @@ console.log('10' - '5');   // 5
 console.log('2' * '3'); // 6
 console.log('A' - 1);   // NaN
 console.log(5 - 'M');   // NaN
+console.log('10'/ 5); // 2
+console.log(20 % '4') // 0
 /*
 Explanation
     + → string concatenation
-    - or * → numeric operations → convert to numbers
+    -, /, % or * → numeric operations → convert to numbers
     'A' - 1 → "A" becomes NaN
 
 ->console.log('2' + 2); // "22"
@@ -73,9 +75,10 @@ Explanation
     '2' → 2
     '3' → 3
     2 * 3 = 6
+->same goes with / and %
 
 ->console.log('A' - 1); // NaN
-JS tries to convert 'A' to a number — but 'A' is not numeric.
+JS tries to convert 'A' to a number for — operations but 'A' is not numeric.
     So:
     'A' → NaN
     NaN - 1 = NaN
