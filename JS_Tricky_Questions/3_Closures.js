@@ -1,5 +1,10 @@
 //Tricky/interview questions on closures
 
+/*
+->A closure is the combination of a function and the lexical environment within which that function was declared. 
+  This means that an inner function "remembers" and has access to the variables and parameters of its outer (enclosing) function, 
+  even after the outer function has finished executing and its execution context has technically closed. 
+*/
 function outer() {
   let count = 0; // private variable
 
@@ -37,3 +42,27 @@ counter(); // 3
 */
 
 
+//2: How closures help with privacy?
+/* with the help of closures:
+    You can hide data inside a function. 
+    Only the inner function can access it.
+*/
+function secret() {
+  let password = "6655";   // private variable
+
+  return function(){
+    return password // inner function accessing password variable of parent function
+  }
+}
+
+const getPassword = secret();
+
+console.log(getPassword()); // "1234"
+//console.log(password);      // Error: password is not defined
+/*
+Why is this private?
+    password is inside secret()
+    No one outside can access password
+    Only the returned inner function can see it
+    This is called data privacy using closures.
+*/
