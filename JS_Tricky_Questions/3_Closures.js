@@ -94,3 +94,14 @@ triple(5)  → 3 × 5 = 15
 
 here what happens is that on first multiplier(2) i.e x=2 then when you call double(5) i.e y=5, here double remembers it's parent variable x so 2*5=10
 */
+
+//3: Closure with setTimeout Interview Trap
+function delayPrint(msg, delay) {
+  setTimeout(function () {
+    console.log(msg);
+  }, delay);
+}
+
+delayPrint("Hello", 2000); // ?
+//output after 2 seconds is: "hello"
+//Even after delayPrint finishes, msg is remembered via closure.
