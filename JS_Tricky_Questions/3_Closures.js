@@ -4,6 +4,12 @@
 ->A closure is the combination of a function and the lexical environment within which that function was declared. 
   This means that an inner function "remembers" and has access to the variables and parameters of its outer (enclosing) function, 
   even after the outer function has finished executing and its execution context has technically closed. 
+
+✅ SUPER INTERVIEW ONE-LINERS (Memorize):
+  ✅ A closure is formed whenever a function remembers its surrounding variables even after the outer function has finished executing.
+  ✅ Closures provide data privacy and state persistence.
+  ✅ Closures keep variables alive in memory.
+  ✅ var creates shared closures, let creates isolated closures.
 */
 function outer() {
   let count = 0; // private variable
