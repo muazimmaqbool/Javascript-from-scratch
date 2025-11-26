@@ -66,3 +66,25 @@ Why is this private?
     Only the returned inner function can see it
     This is called data privacy using closures.
 */
+
+//3: Closure with Parameter Memory (important)
+//What is output of this?
+function multiplier(x) {
+  return function (y) {
+    return x * y;
+  };
+}
+
+const double = multiplier(2);
+const triple = multiplier(3);
+
+console.log(double(5)); // ?
+console.log(triple(5)); // ?
+//o/p: is 10, 15
+/*
+explanation: 
+double(5)  → 2 × 5 = 10
+triple(5)  → 3 × 5 = 15
+
+here what happens is that on first multiplier(2) i.e x=2 then when you call double(5) i.e y=5, here double remembers it's parent variable x so 2*5=10
+*/
