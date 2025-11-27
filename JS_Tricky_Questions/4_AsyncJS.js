@@ -19,3 +19,10 @@ console.log('End');
 | MutationObserver | I/O events      |
 
 */
+console.log("**************")
+//2. What’s wrong?
+async function f() {
+  return await 10;
+}
+console.log("f()",f()); //prints promise, because: async functions always return a Promise.
+
