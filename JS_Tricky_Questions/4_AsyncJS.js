@@ -25,4 +25,14 @@ async function f() {
   return await 10;
 }
 console.log("f()",f()); //prints promise, because: async functions always return a Promise.
-
+/*
+Why does it log a Promise and not 10?
+Because:
+    All async functions ALWAYS return a Promise, no matter what you return inside them.
+    Even though you are returning a number (10), JavaScript wraps it inside a Promise automatically.
+    So internally, this becomes: return Promise.resolve(10);
+    That’s why:
+    console.log(f());   // logs a Promise, not the value
+*/
+//this will work:
+f().then(res => console.log("res",res)); 
