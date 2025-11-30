@@ -13,6 +13,8 @@ INTERVIEW ONE-LINERS (IMPORTANT)
 ✅ Object.entries() is great for looping
 */
 
+//Note-> Learn shallow and deep copy from javascript_from_scratch folder code number 71
+
 //1. What’s the output?
 const obj1 = { a: 1 };
 const obj2 = obj1;

@@ -29,7 +29,7 @@
     //How Currying Works
     //Here’s how a regular function is translated into a curried function:
 
-    // Regular function
+    //Regular function
     function simpleFunction(param1, param2, param3) {
       return param1 + param2 + param3;
     }
@@ -102,5 +102,17 @@
     }
     const selectedProduct = product("Dell Inspiron 15")("16 GB and 512 SSD")("Intel i7");
     console.log(selectedProduct);
+
+    //Another Example:
+    function greet(greetMsg){
+      return function(name){
+        return function(tool){
+          return function(language){
+            return `${greetMsg} ${name}, You are running ${language} using ${tool}.`;
+          }
+        }
+      }
+    }
+    console.log(greet("Hello")("Muazim")("VsCode")("JavaScript"));
   </script>
 </html>
