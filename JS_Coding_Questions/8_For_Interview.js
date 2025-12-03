@@ -39,3 +39,24 @@ apply(this, args)
 Preserves: original this and original arguments
 So debounce does not break function context
 */
+
+//using debounce for search
+function fetchResults(query) {
+  console.log("API call for:", query);
+}
+
+//calls api after 1 second when user stops typing for 1 second
+const debouncedSearch = debounce(fetchResults, 1000);
+
+document.getElementById("search").addEventListener("input", (e) => {
+  debouncedSearch(e.target.value);
+});
+
+//using debonce for window resize 
+const handleResize = debounce(() => {
+  console.log("Resized!");
+}, 1000);
+//Runs only once after resizing stops.
+window.addEventListener("resize", handleResize);
+
+
