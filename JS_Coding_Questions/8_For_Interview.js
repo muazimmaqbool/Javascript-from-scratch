@@ -65,3 +65,16 @@ const handleBtnClick = debounce(() => {
 }, 2000);
 
 document.getElementById("btn").addEventListener("click", handleBtnClick);
+
+/*
+Bonus Interview Questions
+Q: Difference between Throttle & Debounce?
+A:  Debounce → wait until stop
+    Throttle → run every X ms
+
+Q: Does debounce return a function?
+A: Yes — it returns a new wrapped function.
+
+Q: Why use apply?
+A: Keeps correct this and arguments.
+*/
