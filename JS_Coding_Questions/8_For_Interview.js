@@ -78,3 +78,4 @@ A: Yes — it returns a new wrapped function.
 Q: Why use apply?
 A: Keeps correct this and arguments.
 */
+
