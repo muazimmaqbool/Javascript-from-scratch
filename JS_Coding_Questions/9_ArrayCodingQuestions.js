@@ -98,4 +98,15 @@ const minEl=(arr)=>{
 console.log("Max Element:",maxEl(newNums))
 console.log("Min Element:",minEl(newNums))
 
-console.log("-------------- ")
+console.log("-------------- Rotate Array ------------")
+const arrNums=[1,2,3,4,5,6,7,8,9]
+const rotateArray=(arr)=>{
+    let newArray=[]
+    for(let i=arr.length-1;i>=0;i--){
+        // console.log(i)
+        newArray.push(arr[i])
+    }
+    return newArray;
+}
+console.log("Rotate Array:",rotateArray(arrNums))// o/p: [9,8,7,6,5,4,3,2,1]
+
