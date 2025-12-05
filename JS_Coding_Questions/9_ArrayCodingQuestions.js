@@ -1,7 +1,8 @@
 //Arrays interview questions:
 
+console.log("--------- Remove Duplicate -----------");
 //1. Remove duplicates:
-const nums = [1, 2, 3, 4, 4, 5];
+const nums = [1, 2, 3, 4, 4, 5,5,5];
 const unique = [...new Set(nums)];
 console.log("unique nums:", unique); // [1,2,3,4]
 /*
@@ -14,48 +15,58 @@ Explanation:
 */
 
 //remove duplicate without builtin function
-const removeDuplicate=(arr)=>{
-    let unique=[];
+const removeDuplicate = (arr) => {
+  let unique = [];
 
-    for(let i=0;i<arr.length;i++){
-        let found=false;
-        for(let j=0;j<unique.length;j++){
-            //checking if i exists inside unique array
-            if(arr[i]===unique[j]){
-                found=true;
-                break;
-            }
-        }
-        if(!found){
-            unique.push(arr[i])
-        }
+  for (let i = 0; i < arr.length; i++) {
+    let found = false;
+    for (let j = 0; j < unique.length; j++) {
+      //checking if i exists inside unique array
+      if (arr[i] === unique[j]) {
+        found = true;
+        break;
+      }
     }
-    return unique;
-}
-console.log("remove duplicate:",removeDuplicate(nums))
+    if (!found) {
+      unique.push(arr[i]);
+    }
+  }
+  return unique;
+};
+console.log("remove duplicate:", removeDuplicate(nums));
 
-console.log("************************")
+//another method of removing dulicate
+const removeDuplicateElement = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) result.push(arr[i]);
+  }
+  return result;
+};
+console.log("remove duplicate element:",removeDuplicateElement(nums))
+
+console.log("----------- Flatten Array ----------------");
 
 //2. Flatten Deep Array:
-const flatten=(arr)=>{
-    return arr.flat(Infinity)
-}
+const flatten = (arr) => {
+  return arr.flat(Infinity);
+};
 //without builtin function
-const flattenTwo=(arr)=>{
-    let result=[]
-    for(let i=0;i<arr.length;i++){
-        if(Array.isArray(arr[i])){
-            //Check if element is array, if it is the made recursive call
-            result=result.concat(flattenTwo(arr[i]))
-        }else{
-            result.push(arr[i])
-        }
+const flattenTwo = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      //Check if element is array, if it is the made recursive call
+      result = result.concat(flattenTwo(arr[i]));
+    } else {
+      result.push(arr[i]);
     }
-    return result
-}
+  }
+  return result;
+};
 const arr = [1, [2, [3, [4]]]];
-console.log("flatten arr:",flatten(arr))
-console.log("flatten arr Two:",flattenTwo(arr))
+console.log("flatten arr:", flatten(arr));
+console.log("flatten arr Two:", flattenTwo(arr));
 /*
 Explanation:
     .flat(level) flattens nested arrays
@@ -64,4 +75,4 @@ Explanation:
 ->.flat() is clean, but recursive solution preferred if flat() not supported.
 */
 
-console.log("********************************")
+console.log("********************************");
