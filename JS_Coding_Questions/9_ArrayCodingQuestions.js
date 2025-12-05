@@ -45,8 +45,8 @@ const removeDuplicateElement = (arr) => {
 };
 console.log("remove duplicate element:",removeDuplicateElement(nums))
 
-console.log("----------- Flatten Array ----------------");
 
+console.log("----------- Flatten Array ----------------");
 //2. Flatten Deep Array:
 const flatten = (arr) => {
   return arr.flat(Infinity);
@@ -75,4 +75,27 @@ Explanation:
 ->.flat() is clean, but recursive solution preferred if flat() not supported.
 */
 
-console.log("********************************");
+console.log("------- Max and Min ----------------");
+const newNums=[1,2,5,9,6,8,11]
+const maxEl=(arr)=>{
+    let max=1;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i]
+        }
+    }
+    return max
+}
+const minEl=(arr)=>{
+    let min=1;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]<min){
+            min=arr[i]
+        }
+    }
+    return min
+}
+console.log("Max Element:",maxEl(newNums))
+console.log("Min Element:",minEl(newNums))
+
+console.log("-------------- ")
