@@ -13,11 +13,34 @@ Explanation:
 ->This uses ES6 Set which automatically removes duplicates and converts back to array using spread operator.
 */
 
+//remove duplicate without builtin function
+const removeDuplicate=(arr)=>{
+    let unique=[];
+
+    for(let i=0;i<arr.length;i++){
+        let found=false;
+        for(let j=0;j<unique.length;j++){
+            //checking if i exists inside unique array
+            if(arr[i]===unique[j]){
+                found=true;
+                break;
+            }
+        }
+        if(!found){
+            unique.push(arr[i])
+        }
+    }
+    return unique;
+}
+console.log("remove duplicate:",removeDuplicate(nums))
+
+console.log("************************")
+
 //2. Flatten Deep Array:
 const flatten=(arr)=>{
     return arr.flat(Infinity)
 }
-//without builtin
+//without builtin function
 const flattenTwo=(arr)=>{
     let result=[]
     for(let i=0;i<arr.length;i++){
@@ -40,3 +63,5 @@ Explanation:
 
 ->.flat() is clean, but recursive solution preferred if flat() not supported.
 */
+
+console.log("********************************")
