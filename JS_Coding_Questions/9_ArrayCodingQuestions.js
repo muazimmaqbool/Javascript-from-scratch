@@ -110,3 +110,15 @@ const rotateArray=(arr)=>{
 }
 console.log("Rotate Array:",rotateArray(arrNums))// o/p: [9,8,7,6,5,4,3,2,1]
 
+console.log("--------- Check array if sorted -------------")
+const isSorted=(arr)=>{
+  for(let i=0;i<arr.length;i++){
+    // console.log("arr[i]",arr[i])
+    // console.log("arr[i-1]",arr[i-1])
+    if(arr[i]<arr[i-1]) return false
+  }
+  return true
+}
+console.log("isSorted:",isSorted([1,2,5,3,6,8])) //false
+console.log("isSorted:",isSorted([1,2,3,4,5])) //true
+
