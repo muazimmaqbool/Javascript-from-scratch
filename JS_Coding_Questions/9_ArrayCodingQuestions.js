@@ -122,3 +122,16 @@ const isSorted=(arr)=>{
 console.log("isSorted:",isSorted([1,2,5,3,6,8])) //false
 console.log("isSorted:",isSorted([1,2,3,4,5])) //true
 
+console.log("--------- Count Occurences ------------")
+const countOccurences=(arr,element)=>{
+  //checking how many times the element has occured in the array
+  let count=0;
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]===element){
+      count++
+    }
+  }
+  return count
+}
+console.log("countOccuences:",countOccurences([1,2,3,4,5,5,6,6,6],6)) //3
+console.log("countOccuences:",countOccurences(['A','B','C','B'],'B')) //2
