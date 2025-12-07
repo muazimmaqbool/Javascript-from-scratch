@@ -23,13 +23,35 @@ function myPromiseAll(promises) {
     let done = 0; //used to count resolved promises
 
     promises.forEach((p, i) => {
-      Promise.resolve(p).then(val => {
-        res[i] = val;
-        done++;
-        if (done === promises.length) resolve(res);
-      }).catch(reject);
+      Promise.resolve(p)
+        .then((val) => {
+          res[i] = val;
+          done++;
+          if (done === promises.length) resolve(res);
+        })
+        .catch(reject);
     });
   });
 }
 //Behave exactly like Promise.all()
 myPromiseAll([Promise.resolve(1), Promise.resolve(2)]).then(console.log); // [1,2]
+
+//3. Implement Promise.race
+//returns the result of the first promise that settles (resolve OR reject).
+const myPromiseRace = (promises) => { //accepts iteraable array of promises
+  return new Promise((res, rej) => { //returns new promise that will settle when the first input promise resolves/settles
+    // console.log("res:",res)
+    promises.forEach((p) => {
+        // Promise.resolve(p) — normalizes p so it’s a promise even if a non-promise value was passed.
+        // .then(resolve) — when this promise fulfills, call the outer resolve with the value (first fulfillment wins).
+      Promise.resolve(p).then(res).catch(rej);
+    });
+  });
+};
+const p1 = new Promise(res => setTimeout(() => res('resolve p1'), 300));
+const p2 = new Promise(res => setTimeout(() => res('resolve p2'), 100));
+const p3 = new Promise((_, rej) => setTimeout(() => rej('error p3'), 50));
+
+myPromiseRace([p1, p2]).then(console.log); // logs "resolve p2" after ~100ms
+myPromiseRace([p1, p3]).then(console.log).catch(console.error); // rejects with "error p3" after ~50ms
+
