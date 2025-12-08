@@ -62,17 +62,20 @@
     console.log("shallowCopy:",shallowCopy.hobbies); // output: ["Gym", "Coding", "CrshallowCopy
 
     //Deep Copy Example:
-    // const intro = {
-    //   name: "Muazim",
-    //   address: ["Sopore", "Kashmir"],
-    // };
-    // // deep copy using JSON methods (Explanation below)
-    // const deepCopy = JSON.parse(JSON.stringify(intro));
-    // // modify the nested array in the deep copy
-    // deepCopy.address.push("193201");
+    const intro = {
+      name: "Muazim",
+      address: ["Sopore", "Kashmir"],
+    };
+    // deep copy using JSON methods (Explanation below)
+    const deepCopy = JSON.parse(JSON.stringify(intro));
+    // console.log("deepCopy:",deepCopy)
+    // modify the nested array in the deep copy
+    deepCopy.address.push("193201");
+    deepCopy.name="Muazim Maqbool"
 
-    // console.log("intro",intro.address); // output: ['Sopore', 'Kashmir']
-    // console.log("deepCopy of intro",deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
+    console.log("intro",intro.address); // output: ['Sopore', 'Kashmir']
+    console.log("deepCopy of intro",deepCopy.address); // output: ['Sopore', 'Kashmir', '193201']
+    console.log("name:",deepCopy.name) // Muazim Maqbool
 
     /*
       Explanation: Here the new object is created using the JSON.parse() and JSON.stringify() methods of JavaScript.
