@@ -12,3 +12,6 @@ const numbersWithOdd = [2, 4, 6, 7, 10];
 
 const areAllEven2 = numbersWithOdd.every((e)=>e%2===0);
 console.log(areAllEven2); // Output: false
+
+const areAllOdd=numbersWithOdd.every((e)=>e%2!==0)
+console.log(areAllOdd)
