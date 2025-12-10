@@ -1,4 +1,4 @@
-//Command to run this code: node 82_Arrayfrom.js
+//Command to run this code: node --watch 82_Arrayfrom.js
 
 //-> Array.from()
 /*
@@ -21,11 +21,15 @@ const str="Hello";
 const arr=Array.from(str);
 console.log(arr); // o/p : ['H', 'e', 'l', 'l', 'o']
 
+//string to array of characters and also to lowercase
+const str2="REACT";
+console.log(Array.from(str2.toLowerCase())) // o/p: [r,e,a,c,t]
+
 //set to array:
-const mySet=new Set([1,2,3])
-console.log(mySet) // o/p: Set(3) { 1, 2, 3 }
+const mySet=new Set([1,2,3,4])
+console.log(mySet) // o/p: Set(4) { 1, 2, 3,4 }
 const arr1=Array.from(mySet)
-console.log(arr1) // o/p: [1,2,3]
+console.log(arr1) // o/p: [1,2,3,4]
 
 //map to array:
 const myMap=new Map([
