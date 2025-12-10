@@ -33,6 +33,7 @@
         ["orange", 13]
     ]);
     console.log("Fruits Map created using new Map():", fruits);
+    // o/p : Map(3) {'apples' => 10, 'banana' => 2, 'orange' => 13}
 
     //2) The set() Method: After creating map via new you can then add elements to it with the set() method:
     const vegetables = new Map();
@@ -40,6 +41,7 @@
     vegetables.set("broccoli", 8);
     vegetables.set("spinach", 12);
     console.log("Vegetables Map created using set():", vegetables);
+    // o/p : Map(3) {'carrot' => 5, 'broccoli' => 8, 'spinach' => 12}
 
     //The set() method can also be used to change existing Map values:
     vegetables.set("carrot", 10); // Update the value for "carrot"
@@ -48,8 +50,8 @@
     console.log("Updated Fruits Map:", fruits);
 
     //The get() Method:
-    console.log("Count of apples:",fruits.get("apples"))  
-    console.log("Count of carrots:",vegetables.get("spinach"));
+    console.log("Count of apples:",fruits.get("apples"))  // 10
+    console.log("Count of carrots:",vegetables.get("spinach")); // 12
 
     //Maps are Objects:
     console.log("type of fruits:", typeof fruits); // object
@@ -68,7 +70,7 @@
 
 
     /*
-    JavaScript Objects vs Maps
+    JavaScript Objects vs Maps:
     Object	                                        Map
     -------------------------------------------------------------
     Not directly iterable	            |        Directly iterable
