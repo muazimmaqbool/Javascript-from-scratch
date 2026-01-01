@@ -25,7 +25,7 @@ console.log("result without for loop:",getNum((randomArray)))
 console.timeEnd("executionTime");
 //check execution time for both the functions
 
-//Here the exection time of getNum function will be less the the stopOnAny function as inside stopOnAny we are using loops
+//Here the exection time of getNum function will be less the the stopOnAny function as inside stopOnAny function we are using loops
 /*
 ->But this is not the better way to determine the performance of any alogrithm because it will also depend on the machine, so we use operations
   to measure the effeciency of an alogrithm, these operations means how many tasks an algorithm is performing:
@@ -33,6 +33,4 @@ console.timeEnd("executionTime");
      so in our case for loop run from 0 till 3 i.e 4 times so we have 4 tasks in 'stopOnAny' function
 
   2: In 'getNum' function we are just returning the first element of any array so it was only task and it will only run once
-
-
 */
