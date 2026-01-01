@@ -7,18 +7,17 @@
 </head>
 <body>
     <pre>
-        ->Time Complexity?
-            It measures how the runtime of an algorithm grows as the input size(n) increases.
-            1) O(1) : Constent time.
-            2) O(n) : Linear time.
-            3) O(n^2) : Quadratic time.
+    ->Time Complexity?
+        It measures how the runtime of an algorithm grows as the input size(n) increases.
+        1) O(1)   : Constent time.
+        2) O(n)   : Linear time.
+        3) O(n^2) : Quadratic time.
 
-    1️⃣ What They Are
-        Concept	Meaning
-        Time Complexity: How the running time of an algorithm increases as the input size n grows.
-        Space Complexity: How the memory used by an algorithm increases as the input size n grows.
+    1️⃣ What They Are?
+        Time Complexity  : How the running time of an algorithm increases as the input size n grows.
+        Space Complexity : How the memory used by an algorithm increases as the input size n grows.
 
-    2️⃣ Time Complexity Basics
+    2️⃣ Time Complexity Basics:
         We use Big-O notation to describe the upper bound (worst-case) growth.
         Common complexities:
             Big-O	       Name	               Example
@@ -35,7 +34,7 @@
         Sometimes you can reduce time but use more memory (e.g. caching results in React state, memoizing expensive computations).
         Sometimes you save memory but take more time (e.g. recomputing values instead of storing them).
 
-    ➡️Quick Summary (Frontend Angle)
+    ➡️ Quick Summary (Frontend Angle):
         Use Big-O to reason about scalability of your UI logic.
         Nested loops (O(n²)) are expensive → avoid them when handling DOM updates or big lists.
         Time vs Space tradeoff:
