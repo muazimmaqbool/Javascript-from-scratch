@@ -1,7 +1,7 @@
 //To run this go inside this folder via cd and node --watch 6_SpaceComplexity.js
 
 /* 
-Space Complexity: it's basically an amount of memory an algorithm needs to run and it's also measured in big O notations
+Space Complexity: it's basically the amount of memory an algorithm needs to run and it's also measured in big O notations
 space and memory is basically the memory taken by the variables which are decalred like string, array, int etc and that's exactly
 what space compelxity is,
 So, basically as the input size increases so does the space complexity and keep in mind it's not always about the size of input but
@@ -19,6 +19,7 @@ const funnyNumber = (array) => {
 };
 let nums = [12, 5, 6, 88, 7, 112, 52];
 console.log(funnyNumber(nums)); // 282
+console.log(funnyNumber([1,2,3,4,5,6])) //21
 /*Here no matter how long length of array is the result is always going to be single value
 So, it has a good space complexity i.e O(1) i.e constant
 */
