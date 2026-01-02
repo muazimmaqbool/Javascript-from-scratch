@@ -9,6 +9,7 @@ const printBoth=(n)=>{
     }
 }
 //here the time complexity of this alogorithm is O(n^2) which is a bad time complexity
+
 console.log(printBoth(2))
 /*
 o/p:
@@ -18,6 +19,7 @@ o/p:
 1 1
 -> so here we have 4 operations for input 2 i.e 2*2
 */
+
 console.log(printBoth(3))
 /*
 0 0
