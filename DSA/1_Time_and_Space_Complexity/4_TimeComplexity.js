@@ -4,16 +4,16 @@
 const goingUpDown=(n)=>{
     console.log("Going forward.") // 1 operation
     for(let i=0;i<n;i++){ 
-        console.log(i)//here number of operation depends on n i.e n is 2 then 2 operations and so on
+        console.log(i)//here number of operation depends on 'n' i.e n is 2 then 2 operations and so on
     }
     console.log("At the end, going back!") // 1 operation
     for(let j=n-1;j>=0;j--){
-        console.log(j)//here number of operation depends on n i.e n is 2 then 2 operations and so on
+        console.log(j)//here number of operation depends on 'n' i.e n is 2 then 2 operations and so on
     }
     console.log("At the start") // 1 operation
 }
 
-//2n+3: 2 for loops n input and 3 console logs , operations depends on n so time complexity is O(n)
+//2n+3: 2 for loops for 'n' input and 3 console logs , operations depends on n so time complexity is O(n)
 console.log(goingUpDown(2)) 
 /* o/p: Going forward
         0
@@ -24,7 +24,7 @@ console.log(goingUpDown(2))
         At the start
  So here we have 7 operations
 */
-console.log(goingUpDown(3))
+// console.log(goingUpDown(3))
 /* o/p: Going forward.
         0
         1
