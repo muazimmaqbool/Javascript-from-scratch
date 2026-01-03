@@ -9,13 +9,15 @@ const func1 = (n) => {
     }
   }
 };
-//func1(0) // o/p: O(n), because here o/p depends on the input n
+// console.log(func1(1))
+// time complexity is O(n), because here o/p depends on the input n
 
 //2:
 function getFirstAndLast(arr) {
   return [arr[0], arr[arr.length - 1]];
 }
-//console.log(getFirstAndLast([1,2,5,4,6,7])) // O(1), here no matter how large the input is the output will always be first and last element
+//console.log(getFirstAndLast([1,2,5,4,6,7]))
+// O(1), here no matter how large the input is the output will always be first and last element
 
 //3:
 function sumOfArray(arr) {
@@ -25,7 +27,8 @@ function sumOfArray(arr) {
   }
   return sum;
 }
-//console.log(sumOfArray([1,2,5,4,6,3])) // here sum depends of the output so its time complexity will be O(n)
+//console.log(sumOfArray([1,2,5,4,6,3])) 
+// here sum depends of the output so its time complexity will be O(n)
 
 //4:
 function printPairs(arr) {
@@ -35,7 +38,8 @@ function printPairs(arr) {
     }
   }
 }
-//console.log(printPairs([1,2,5,4])) // O(n^2)
+//console.log(printPairs([1,2,5,4]))
+// O(n^2)
 
 //1: What’s the space complexity of:
 function reverseArray(arr) {
@@ -45,6 +49,7 @@ function reverseArray(arr) {
   }
   return newArr;
 }
-//console.log(reverseArray([1,2,3,4,5,6,7])) // O(n)
+//console.log(reverseArray([1,2,3,4,5,6,7])) 
+// O(n)
 
 
