@@ -32,7 +32,8 @@ console.log("Reverse:",reverseArray(numArray))
 
 //Rotation (rotate array by k steps)
 function rotateArray(arr, k) {
-  k = k % arr.length; //this to make cure that rotation count doesn't exceed the array length
+  k = k % arr.length; //this is to make sure that rotation count doesn't exceed the array length
+  console.log("k % arr.length:",k % arr.length)
   return [...arr.slice(-k), ...arr.slice(0, -k)];
 }
 /*
@@ -44,3 +45,4 @@ in return we first have ...arr.slice(-k)] : .slice returns part of the array and
 */
 
 console.log("rotateArray:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
+console.log("rotateArray 2:",rotateArray([1,2,3,4,5,6,7,8,9],3)) // [7, 8, 9, 1, 2,3, 4, 5, 6]
