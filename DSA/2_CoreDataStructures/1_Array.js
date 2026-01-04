@@ -20,13 +20,14 @@ const reverseArray=(arr)=>{
     while(start<end){
         [arr[start],arr[end]]=[arr[end],arr[start]]
         /*
-        first: arr[0],arr[8]=arr[8],arr[0] i.e arr[0] will be arr[8] so in index 0 will be index 8 i.e 0 replaced by 9 and so on...
+        first iteration: arr[0],arr[8]=arr[8],arr[0] i.e arr[0] will be arr[8] so in index 0 will be index 8 i.e 0 replaced by 9 and so on...
         */
         start++;
         end--;
     }
     return arr;
 }
+console.log("Original:",numArray)
 console.log("Reverse:",reverseArray(numArray))
 
 //Rotation (rotate array by k steps)
