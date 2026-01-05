@@ -48,11 +48,11 @@ Example with [1,2,3]:
 //Example: Pair Sum (find if two numbers add to target)
 //Note: two-pointer technique to find whether any pair of numbers in a sorted array adds up to a given target.
 function hasPairSum(arr, target) {
-  console.log("arr before sort:",arr) //[ 2, 15, 7, 11, 1 ]
-  arr.sort((a,b)=>a-b); //sort ascending (Explained below)
-  console.log("arr after sort:",arr)// [ 1, 2, 7, 11, 15 ]
+  console.log("array before sort:",arr) //[ 2, 15, 7, 11, 1 ]
+  arr.sort((a,b)=>a-b); //sorts in ascending order (Explained below)
+  console.log("array after sort:",arr)// [ 1, 2, 7, 11, 15 ]
 
-  //two pointers, left:first element and right last element
+  //two pointers, left:first element and right:last element
   let left = 0, right = arr.length-1;
   while(left < right){
     let sum = arr[left] + arr[right];
