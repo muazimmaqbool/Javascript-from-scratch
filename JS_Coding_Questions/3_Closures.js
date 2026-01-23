@@ -2,7 +2,7 @@
 
 /*
 ->A closure is the combination of a function and the lexical environment within which that function was declared. 
-  This means that an inner function "remembers" and has access to the variables and parameters of its outer (enclosing) function, 
+  This means that an inner function "remembers" and has 'access' to the variables and parameters of its outer (enclosing) function, 
   even after the outer function has finished executing and its execution context has technically closed. 
 
 ✅ SUPER INTERVIEW ONE-LINERS (Memorize):
@@ -63,12 +63,12 @@ function secret() {
 
 const getPassword = secret();
 
-console.log(getPassword()); // "1234"
+console.log(getPassword()); // "6655"
 //console.log(password);      // Error: password is not defined
 /*
 Why is this private?
     password is inside secret()
-    No one outside can access password
+    No one from outside can access password
     Only the returned inner function can see it
     This is called data privacy using closures.
 */
