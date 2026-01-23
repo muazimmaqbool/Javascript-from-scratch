@@ -13,7 +13,7 @@ for (var i = 0; i < 3; i++) {
 
     ->What setTimeout does:
         It schedules the callback (console.log(i)) to run after the loop finishes (1000ms later)
-        The loop completes in less than a millisecond, so by the time the timeouts run: i already became 3
+        The loop completes in less than a millisecond, so by the time the timeouts run: i has already became 3
         Therefore, all three callbacks print the same final value of i → 3.
 
     ->Timeline:
