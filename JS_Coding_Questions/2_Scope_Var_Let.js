@@ -36,8 +36,7 @@ for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 1000);
 }
 /*
- Here:
-    let creates a new separate i for each iteration.
+ Here: let creates a new separate i for each iteration.
 
  -> let i = <current value>   // new memory
     So each callback gets a different copy of i.
