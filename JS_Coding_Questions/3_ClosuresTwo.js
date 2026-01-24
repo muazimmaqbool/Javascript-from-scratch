@@ -1,4 +1,5 @@
-//more interview questions on closures (check previous code first)
+//more interview questions on closures 
+//(check previous code first)
 
 //4. Counter Interview Favorite
 function counter() {
