@@ -19,6 +19,7 @@ console.log('End');
 | MutationObserver | I/O events      |
 
 -> "JavaScript executes synchronous code first, then microtasks like Promises, and finally macrotasks like setTimeout."
+-> "macrotask queue" is commonly known as "callback queue"
 
 Q: Why do Promises execute before setTimeout?
 A: Because microtasks have higher priority than tasks/macro task.
@@ -32,14 +33,17 @@ A: Because microtasks have higher priority than tasks/macro task.
 | setTimeout   | Task       |
 | setInterval  | Task       |
 | DOM events   | Task       |
-  - task = macro task/callback queue
+->task = macro/task/callback queue
 */
+
 console.log("**************")
 //2. What’s wrong?
 async function f() {
   return await 10;
 }
-console.log("f()",f()); //prints promise, because: async functions always return a Promise.
+console.log("f()",f()); 
+//prints promise, because: async functions always return a Promise.
+
 /*
 Why does it log a Promise and not 10?
 Because:
