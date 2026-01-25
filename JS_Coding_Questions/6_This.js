@@ -4,8 +4,8 @@
 ->'this' refers to the object that is calling the function.
   It is decided by how a function is called, not where it is written.
   or
-the this keyword is a special identifier that refers to the current execution context. 
-Its value is dynamic and depends on how and where a function is called, rather than where it is defined.
+  the 'this' keyword is a special identifier that refers to the current execution context. 
+  Its value is dynamic and depends on how and where a function is called, rather than where it is defined.
 */
 
 //1. what is the ouput of this code?
@@ -22,14 +22,12 @@ const user = {
   }
 };
 
-console.log(user.getName())
-// o/p: muazim
-user.getBranch()
+console.log(user.getName())// o/p: Muazim
+user.getBranch() // o/p: CSE
 
 //calling getName seperately
 const g = user.getName;
-console.log(g()) 
-//o/p: 'undefined' 
+console.log(g()) //o/p: 'undefined' 
 /*
 because when you remove a method from an object and call it alone it loses its owner object,
 so: In strict mode → this is undefined
