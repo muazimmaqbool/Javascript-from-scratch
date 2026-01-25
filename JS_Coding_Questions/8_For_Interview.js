@@ -17,7 +17,8 @@ console.log(counter());
 console.log(counter());
 
 //Debounce (Very common!) (important)
-// debouce means calling a function only after the user has stopped triggering it for some time. (It delays execution until there’s a pause)
+// debouce means calling a function only after the user has stopped triggering it for some time.
+// (It delays execution until there’s a pause)
 /*
 Without debounce → API called on every keypress
 With debounce → API called only when typing stops
