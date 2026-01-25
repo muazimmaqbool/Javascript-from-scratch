@@ -17,7 +17,6 @@ Explanation:
 //remove duplicate without builtin function
 const removeDuplicate = (arr) => {
   let unique = [];
-
   for (let i = 0; i < arr.length; i++) {
     let found = false;
     for (let j = 0; j < unique.length; j++) {
