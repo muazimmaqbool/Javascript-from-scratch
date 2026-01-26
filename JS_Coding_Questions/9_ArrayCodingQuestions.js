@@ -153,3 +153,5 @@ const pagination = (arr, size) => {
 };
 console.log("pagination:",pagination([1,2,3,4,5,6,7,8,9,10],3))
 //o/p: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ], [ 10 ] ]
+console.log("pagination:",pagination([1,2,3,4,5,6],2))
+//p/p: [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ]
