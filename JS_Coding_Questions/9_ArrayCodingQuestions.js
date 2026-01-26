@@ -50,12 +50,12 @@ const flatten = (arr) => {
   return arr.flat(Infinity);
 };
 //without builtin function
-const flattenTwo = (arr) => {
+const flattenFunction = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
-      //Check if element is array, if it is the made recursive call
-      result = result.concat(flattenTwo(arr[i]));
+      //Check if element is array, if it is then made recursive call
+      result = result.concat(flattenFunction(arr[i]));
     } else {
       result.push(arr[i]);
     }
@@ -64,13 +64,13 @@ const flattenTwo = (arr) => {
 };
 const arr = [1, [2, [3, [4]]]];
 console.log("flatten arr:", flatten(arr));
-console.log("flatten arr Two:", flattenTwo(arr));
+console.log("flatten arr Two:", flattenFunction(arr));
 /*
 Explanation:
     .flat(level) flattens nested arrays
     Infinity → flattens any depth
 
-->.flat() is clean, but recursive solution preferred if flat() not supported.
+->.flat() is clean, but recursive solution preferred if flat() not supported/allowed (in the interview).
 */
 
 console.log("------- Max and Min ----------------");
