@@ -106,6 +106,7 @@ const rotateArray = (arr) => {
   }
   return newArray;
 };
+console.log("Original Array:",arrNums)
 console.log("Rotate Array:", rotateArray(arrNums)); // o/p: [9,8,7,6,5,4,3,2,1]
 
 console.log("--------- Check array if sorted -------------");
