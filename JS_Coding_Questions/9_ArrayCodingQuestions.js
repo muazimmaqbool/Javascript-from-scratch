@@ -114,12 +114,14 @@ const isSorted = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     // console.log("arr[i]",arr[i])
     // console.log("arr[i-1]",arr[i-1])
+    //if arr[i] is lesser then previous element i.e arr[i-1] then it's not sorted
     if (arr[i] < arr[i - 1]) return false;
   }
   return true;
 };
 console.log("isSorted:", isSorted([1, 2, 5, 3, 6, 8])); //false
 console.log("isSorted:", isSorted([1, 2, 3, 4, 5])); //true
+console.log("isSorted:",isSorted([-5,-2,0,1,2])); //true
 
 console.log("--------- Count Occurences ------------");
 const countOccurences = (arr, element) => {
