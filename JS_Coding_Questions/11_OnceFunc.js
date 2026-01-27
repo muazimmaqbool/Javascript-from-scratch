@@ -3,8 +3,7 @@ Problem Statement:
 ->You want a function once() that:
     Accepts a function as input
     Returns a new function
-    That returned function:
-    Executes the original function only once
+    That returned function: Executes the original function(passed as argument) only once
     Ignores all future calls
 */
 
@@ -33,7 +32,7 @@ const initialize=once(fn)
 
 initialize(); // First call → hasRun is false → fn() executes -> hasRun becomes true
 initialize(); // Second call → hasRun is true → fn() is skipped
-initialize(); // Third call → still true → nothing happens
+initialize(); // Third call → hasRun isstill true → nothing happens
 
 /*
 o/p: Initialized
