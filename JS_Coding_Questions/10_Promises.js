@@ -19,7 +19,7 @@ retry(() => fetch("data/api/")) // replace api inside fetch with this: https://j
 //2. Implement Promise.all (Explained)
 function myPromiseAll(promises) {
   return new Promise((resolve, reject) => {
-    const res = []; //stores resolved resul
+    const res = []; //stores resolved result
     let done = 0; //used to count resolved promises
 
     promises.forEach((p, i) => {
