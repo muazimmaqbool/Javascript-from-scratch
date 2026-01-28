@@ -46,3 +46,13 @@ o/p:
   subject: [ 'English', 'Math', 'Urdu' ]
 }
 */
+
+//Core Concepts Used (Interview Gold):
+/*
+| Concept              | Why It Matters         |
+| -------------------- | ---------------------- |
+| Recursion            | Traverse unknown depth |
+| Closure of parentKey | Track key path         |
+| Spread operator      | Merge results cleanly  |
+| Base case            | Stops recursion        |
+*/
