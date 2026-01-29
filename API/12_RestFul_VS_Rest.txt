@@ -63,5 +63,41 @@
     RESTful = compliance level
     That’s it.
 
+->Interview Questions:
+    1. What is REST?
 
+    Answer:
+    REST is an architectural style for designing web services based on resources, stateless communication, and standard HTTP methods.
+
+    2. What is a RESTful API?
+
+    Answer:
+    A RESTful API is an API that follows REST principles like using proper HTTP methods, resource-based URLs, and stateless requests.
+
+    3. What is the difference between REST and RESTful?
+
+    Answer:
+    REST is the concept or architecture style, while RESTful means an API that correctly follows REST rules.
+
+    4. Why is statelessness important in REST?
+
+    Answer:
+    Because each request contains all necessary data, making the system scalable, reliable, and easier to debug.
+
+    5. What are common HTTP methods used in REST?
+
+    Answer:
+
+    GET → Read
+
+    POST → Create
+
+    PUT/PATCH → Update
+
+    DELETE → Remove
+    
+    6. Is REST tied to JSON? (often asked)
+
+    Answer:
+    No. REST can use any format like JSON, XML, or plain text. JSON is just the most common.
 
