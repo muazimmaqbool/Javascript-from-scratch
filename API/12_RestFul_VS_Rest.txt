@@ -10,6 +10,58 @@
     REST is not an API, it’s a way of thinking about how APIs should be built.
 
 ->REST API:
+    A REST API is an actual implementation of those REST principles.
+
+    In simple words:
+    A REST API is an API that follows REST rules.
+
+    Example:
+        GET /users/1
+        POST /users
+        PUT /users/1
+        DELETE /users/1
+
+->RESTFul:
+    RESTful is just an adjective.
+
+    It means:
+    "This API follows REST principles properly."
+
+    So when someone says:
+    “This is a RESTful API”
+
+    They mean:
+    “This API is designed according to REST.”
+
+->Real difference (one-liner):
+    | Term     | Meaning                                        |
+    | -------- | ---------------------------------------------- |
+    | REST     | The **theory / architecture style**            |
+    | REST API | The **actual API built using REST**            |
+    | RESTful  | A **quality label** (how well it follows REST) |
+
+->Practical developer view:
+    REST → Rulebook
+    REST API → Your backend endpoints
+    RESTful → How clean/well-designed your API is
+
+->Common mistake (important)
+    Many so-called “REST APIs” are actually not fully RESTful.
+
+    ->Example (not RESTful):
+        POST /getUser
+        POST /deleteUser
+
+    ->Proper RESTful version:
+        GET /users/1
+        DELETE /users/1
+
+->In short:
+    There is no real technical difference between RESTful API and REST API in daily usage.
+    REST = concept
+    REST API = implementation
+    RESTful = compliance level
+    That’s it.
 
 
 
