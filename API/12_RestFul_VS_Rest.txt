@@ -9,6 +9,8 @@
 
     REST is not an API, it’s a way of thinking about how APIs should be built.
 
+    ->Stateless: The server does not store any client session data between requests, each request is treated as completely independent.
+
 ->REST API:
     A REST API is an actual implementation of those REST principles.
 
@@ -86,4 +88,11 @@
     6. Is REST tied to JSON? (often asked)
     Answer:
     No. REST can use any format like JSON, XML, or plain text. JSON is just the most common.
+
+    7.Why stateless is powerful?
+    Answer:
+        Scalable → any server can handle any request
+        Reliable → no session loss issues
+        Easy to cache
+        Easier debugging
 
