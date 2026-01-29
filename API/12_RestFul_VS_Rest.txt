@@ -1,0 +1,15 @@
+->REST:
+    REST (Representational State Transfer) is an architecture style — a set of principles/rules for designing networked systems.
+    It defines concepts like:
+        Client–Server
+        Statelessness
+        Resources
+        Uniform interface
+        Cacheability
+
+    REST is not an API, it’s a way of thinking about how APIs should be built.
+
+->REST API:
+
+
+
