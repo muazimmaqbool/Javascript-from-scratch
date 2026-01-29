@@ -23,14 +23,11 @@
 ->RESTFul:
     RESTful is just an adjective.
 
-    It means:
-    "This API follows REST principles properly."
+    It means: "This API follows REST principles properly."
 
-    So when someone says:
-    “This is a RESTful API”
+    So when someone says: “This is a RESTful API”
 
-    They mean:
-    “This API is designed according to REST.”
+    They mean: “This API is designed according to REST.”
 
 ->Real difference (one-liner):
     | Term     | Meaning                                        |
