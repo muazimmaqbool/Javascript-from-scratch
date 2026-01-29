@@ -31,6 +31,11 @@
 
     They mean: “This API is designed according to REST.”
 
+->Simple Terms (important):
+    A RESTful API strictly adheres to all the architectural constraints of REST (Representational State Transfer), 
+    a set of rules for designing networked applications, while a non-RESTful API (often referred to simply as a "REST API" in a less strict sense)
+    may only follow some of these principles or use entirely different architectural styles (e.g., SOAP, RPC, GraphQL)
+
 ->Real difference (one-liner):
     | Term     | Meaning                                        |
     | -------- | ---------------------------------------------- |
