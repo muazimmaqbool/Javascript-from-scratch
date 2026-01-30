@@ -12,11 +12,11 @@ Key characteristics:
 
     Example:
         <soap:Envelope>
-        <soap:Body>
-            <GetUser>
-            <id>1</id>
-            </GetUser>
-        </soap:Body>
+            <soap:Body>
+                <GetUser>
+                <id>1</id>
+                </GetUser>
+            </soap:Body>
         </soap:Envelope>
     No JSON, no flexibility.
 
@@ -56,13 +56,37 @@ Key characteristics:
     | Learning curve | Easy               | Steep            |
 
 ->When SOAP is used (real world):
-SOAP is still common in:
-    Banking systems
-    Payment gateways
-    Enterprise systems
-    Government services
+    SOAP is still common in:
+        Banking systems
+        Payment gateways
+        Enterprise systems
+        Government services
 
-Because they need:
-    Strong security
-    Formal contracts
-    Guaranteed delivery
+    Because they need:
+        Strong security
+        Formal contracts
+        Guaranteed delivery
+
+->Typical interview Q&A:
+
+    Q: Why is SOAP considered heavy?
+    Answer:
+    Because it uses verbose XML, strict schemas, and large message sizes.
+
+    Q: Can SOAP use JSON?
+    Answer:
+    No. SOAP strictly uses XML.
+
+    Q: Does SOAP support REST principles?
+    Answer:
+    No. SOAP is completely different and does not follow REST concepts.
+
+    Mental model (easy to remember)
+        REST = Casual conversation
+        SOAP = Legal contract meeting
+
+    REST is flexible.
+    SOAP is formal and strict.
+
+    In short (perfect summary):
+    SOAP is a strict, XML-based protocol with built-in standards for security and reliability, mainly used in enterprise-level systems.
