@@ -44,3 +44,25 @@ Key characteristics:
         Transactions
         Reliability
         Error handling
+
+->REST vs SOAP (core differences):
+    | Feature        | REST               | SOAP             |
+    | -------------- | ------------------ | ---------------- |
+    | Nature         | Architecture style | Protocol         |
+    | Data format    | Usually JSON       | Always XML       |
+    | Contract       | Optional           | Mandatory (WSDL) |
+    | Flexibility    | High               | Low (strict)     |
+    | Performance    | Fast, lightweight  | Slower, heavy    |
+    | Learning curve | Easy               | Steep            |
+
+->When SOAP is used (real world):
+SOAP is still common in:
+    Banking systems
+    Payment gateways
+    Enterprise systems
+    Government services
+
+Because they need:
+    Strong security
+    Formal contracts
+    Guaranteed delivery
