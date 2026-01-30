@@ -5,3 +5,27 @@
     SOAP is a protocol that uses XML for communication and follows strict rules defined by a formal specification.
 
 
+Key characteristics:
+
+1. Uses only XML:
+    SOAP messages are always XML.
+
+    Example:
+        <soap:Envelope>
+        <soap:Body>
+            <GetUser>
+            <id>1</id>
+            </GetUser>
+        </soap:Body>
+        </soap:Envelope>
+    No JSON, no flexibility.
+
+2. Has a WSDL (contract):
+    SOAP APIs come with a WSDL file:
+    Web Services Description Language
+    
+    It defines:
+        Available methods
+        Input/output types
+        Endpoint URLs
+        So client and server are strongly typed.
