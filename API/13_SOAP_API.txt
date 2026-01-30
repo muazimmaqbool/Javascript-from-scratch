@@ -1,0 +1,7 @@
+->What is SOAP?
+    SOAP (Simple Object Access Protocol) is a protocol for exchanging structured data between systems.
+    Unlike REST (which is a style), SOAP is a strict standard.
+    One-liner (interview)
+    SOAP is a protocol that uses XML for communication and follows strict rules defined by a formal specification.
+
+
