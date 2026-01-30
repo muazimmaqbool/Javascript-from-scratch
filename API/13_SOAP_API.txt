@@ -23,9 +23,24 @@ Key characteristics:
 2. Has a WSDL (contract):
     SOAP APIs come with a WSDL file:
     Web Services Description Language
-    
+
     It defines:
         Available methods
         Input/output types
         Endpoint URLs
         So client and server are strongly typed.
+
+3. Transport independent:
+    SOAP can work over:
+        HTTP
+        SMTP
+        TCP
+        JMS
+    (Not limited to HTTP like REST usually is)
+
+4. Built-in standards:
+    SOAP supports:
+        Security (WS-Security)
+        Transactions
+        Reliability
+        Error handling
