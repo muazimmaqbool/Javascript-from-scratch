@@ -1,4 +1,5 @@
 ➡️ What is OOP (Object-Oriented Programming)?
+
     OOP is a programming paradigm based on the concept of "objects", which can contain data (properties) and methods (functions).
     Instead of writing code with just functions and variables, you bundle data and behavior together into objects.
 
