@@ -12,7 +12,7 @@
         4️⃣ Polymorphism
 
     1️⃣ Encapsulation:
-        Meaning: Wrapping up data (variables) and methods (functions) into a single unit — a class.
+        Meaning: Wrapping up data (variables/properties) and methods (functions) into a single unit — a class.
         Goal: Hide the internal details of how an object works and only expose what’s necessary.
         Benefit: Makes code more secure and easier to maintain
 
