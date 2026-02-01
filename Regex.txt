@@ -1,0 +1,5 @@
+->What is Regex?
+    In JavaScript, a Regular Expression (Regex or RegExp) is a powerful, built-in object used to define a search pattern for matching, searching, and manipulating text strings. 
+    These patterns, which use a combination of literal and special characters, are used for tasks like input validation, data extraction, and text replacement. 
+
+->
