@@ -2,4 +2,32 @@
     In JavaScript, a Regular Expression (Regex or RegExp) is a powerful, built-in object used to define a search pattern for matching, searching, and manipulating text strings. 
     These patterns, which use a combination of literal and special characters, are used for tasks like input validation, data extraction, and text replacement. 
 
-->
+->How to READ regex (the real skill)?
+    Always follow this mental process:
+
+    Step 1: Ignore slashes
+    /\s+/ → \s+
+
+    Step 2: Translate left to right
+    Ask:
+    What does this match?
+    How many times?
+
+->The 12 Regex Symbols You Actually Need: (Learn these and you're set for 95% of use cases)
+            | Symbol | Meaning         |
+            | ------ | --------------- |
+            | `\s`   | whitespace      |
+            | `\d`   | digit           |
+            | `\w`   | letter/number/_ |
+            | `+`    | one or more     |
+            | `*`    | zero or more    |
+            | `?`    | optional        |
+            | `.`    | any char        |
+            | `[]`   | group           |
+            | `[^ ]` | NOT             |
+            | `^`    | start           |
+            | `$`    | end             |
+            | `g`    | global          |
+
+
+
