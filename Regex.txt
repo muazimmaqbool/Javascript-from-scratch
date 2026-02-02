@@ -51,3 +51,29 @@
         Why it matches
         Step-by-step
         Every senior dev uses this.
+
+->How Seniors Actually Use Regex (Reality):
+    No one memorizes all of it.
+    Real workflow:
+        Describe in English
+        Google: “regex remove non letters”
+        Test on regex101
+        Adjust
+    That’s it.
+
+->Two Examples in Plain English:
+    /\s+/ Match one or more spaces
+    /[^a-z]/g  Match everything that is not a letter, globally
+
+->Interview One-Liner (Gold):
+    Regex is a pattern-matching language; I read it left to right by translating each symbol into plain English.
+
+->Final Mindset Shift (Important)
+    Don't think:
+    ❌ "I need to memorize regex"
+
+    Think:
+    ✅ "I need to learn how to read regex"
+
+->Once you can read:
+    Writing becomes trivial.
