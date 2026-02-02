@@ -77,3 +77,12 @@
 
 ->Once you can read:
     Writing becomes trivial.
+
+->How to Memorize Without Memorizing:
+    | You want | Think English | Regex  |
+    | -------- | ------------- | ------ |
+    | spaces   | whitespace    | `\s`   |
+    | numbers  | digits        | `\d`   |
+    | many     | one or more   | `+`    |
+    | only     | start & end   | `^ $`  |
+    | not      | exclude       | `[^ ]` |
