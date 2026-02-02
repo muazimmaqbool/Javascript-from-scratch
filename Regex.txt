@@ -29,5 +29,25 @@
             | `$`    | end             |
             | `g`    | global          |
 
+->How to WRITE regex (simple method):
+    Method: Write in English first:
+      1. Goal: “Split by spaces” 
+            English → “One or more spaces”
+            Regex → \s+
 
+      2. Goal: “Remove everything except letters”:
+            English → “NOT a-z”
+            Regex → [^a-z]
 
+      3. Goal: “Only digits”:
+            English → “One or more digits”
+            Regex → \d+
+
+->Debugging Trick (Very Powerful):
+    Use this site: 👉 https://regex101.com
+    After visting the above mentioned website type this: /[^a-z]/g
+    It visually shows:
+        What matches
+        Why it matches
+        Step-by-step
+        Every senior dev uses this.
