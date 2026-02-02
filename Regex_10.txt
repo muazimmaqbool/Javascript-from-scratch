@@ -1,0 +1,54 @@
+->Here are the 10 most commonly used regex patterns you’ll see in real JavaScript projects (and interviews).
+    (You don’t need more than these for 90% of work.)
+
+1. One or more spaces:
+    \s+
+    Use: split by any whitespace
+    Eg: "hello   world".split(/\s+/)
+
+2. Only digits:
+    ^\d+$
+    Use: validate numbers
+    Eg: /^\d+$/.test("12345") // true
+
+3. Only letters (a–z):
+    ^[a-zA-Z]+$
+    Use: name validation
+    Eg:/^[a-zA-Z]+$/.test("Muazim")
+
+4. Remove non-letters:
+    /[^a-zA-Z]/g
+    Use: clean strings
+    Eg: "Hi@123".replace(/[^a-zA-Z]/g, "")
+
+5. Email (basic):
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    Use: simple email check
+    Eg: 
+
+6. Starts with something:
+    ^Hello
+    Use: prefix match
+    Eg: /^Hello/.test("Hello world")
+
+7. Ends with something:
+    world$
+    Use: suffix match
+    Eg: /world$/.test("Hello world")
+
+8. Contains word (case-insensitive):
+    /react/i
+    Use: search
+    Eg: /react/i.test("I love React")
+
+9. Multiple digits groups:
+    \d{4}
+    Use: OTP / year
+    Eg: /\d{4}/.test("2024")
+
+10. Strong password (common interview)
+    /^(?=.*[A-Z])(?=.*\d).{8,}$/
+    Means:
+    At least 1 uppercase
+    At least 1 number
+    Minimum 8 characters
