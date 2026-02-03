@@ -24,7 +24,8 @@ function memoize(fn) {
           return JSON.stringify(Object.entries(arg).sort());
         }
         return JSON.stringify(arg);
-      }).join("|");
+      })
+      .join("|");
 
     //If already computed → return instantly.
     if (cache.has(key)) {
@@ -43,9 +44,23 @@ const slowAdd = (a, b) => {
   console.log("Calculating...");
   return a + b;
 };
-const memoAdd=memoize(slowAdd)
-memoAdd(5,6);//Calculating...
-memoAdd(2,3);//Calculating...
-memoAdd(5,6)//no log, just 11 fom cache
-const sum=memoAdd(2,3) //no log
-console.log(sum) // 5 from cache
+const memoAdd = memoize(slowAdd);
+memoAdd(5, 6); //Calculating...
+memoAdd(2, 3); //Calculating...
+memoAdd(5, 6); //no log, just 11 fom cache
+const sum = memoAdd(2, 3); //no log
+console.log(sum); // 5 from cache
+
+//Example 2 – Expensive computation
+const slowSquare = (n) => {
+    console.log("running...")
+  for (let i = 0; i < 1e9; i++) {
+    return n * n;
+  }
+};
+
+const memoSquare = memoize(slowSquare);
+
+console.log(memoSquare(5)) // slow, o/p: running... then 25
+console.log(memoSquare(5))// instant o/p: 25
+console.log(memoSquare(6)) // slow (new input) o/p: running... then 36
