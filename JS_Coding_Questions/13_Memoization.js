@@ -25,6 +25,13 @@ function memoize(fn) {
       .map((arg) => {
         if (typeof arg === "object" && arg !== null) {
           //For objects: {a:1, b:2} → sorted → [["a",1],["b",2]]
+          /*
+          ->1. Object.entries(arg): Converts object to array of key-value pairs:
+          ->2. sort(): Sorts alphabetically by key
+          ->3. JSON.stringify(...): Converts it to a string: '[["a",1],["b",2]]' , This becomes your cache key.
+
+
+          */
           return JSON.stringify(Object.entries(arg).sort());
         }
         return JSON.stringify(arg);
