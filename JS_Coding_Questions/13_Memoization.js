@@ -13,6 +13,10 @@
 function memoize(fn) {
   //cache stores: key → unique representation of arguments,  value → result of the function
   const cache = new Map();
+  /*Map is used because Map is a real hash map data structure, while {} is just an object pretending to be one.
+  Map is made for key-value caching
+  So for caching, Map is the professional choice.
+  */
 
   return (...args) => {
     //Returned function (closure)
@@ -38,6 +42,16 @@ function memoize(fn) {
     return result;
   };
 }
+/*
+->How cache stores data
+->for input 5,6 i.e memoAdd(2, 3);
+    Step 1: args = [2, 3], key = "2|3"
+    Step 2: cache.set("2|3", 5)
+    so map looks like this: Map {
+                            "2|3" → 5
+                            }
+*/
+
 
 //Example 1 - Simple numbers
 const slowAdd = (a, b) => {
