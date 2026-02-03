@@ -64,3 +64,16 @@ const memoSquare = memoize(slowSquare);
 console.log(memoSquare(5)) // slow, o/p: running... then 25
 console.log(memoSquare(5))// instant o/p: 25
 console.log(memoSquare(6)) // slow (new input) o/p: running... then 36
+
+//Example 3 – With objects
+const getUser=(user)=>{
+    console.log("Fetching user...")
+    return user.name
+}
+const memoUser=memoize(getUser);
+console.log(memoUser({ id: 1, name: "Muazim" }));
+// o/p Fetching user... then Muazim
+
+console.log(memoUser({ name: "Muazim", id: 1 }));
+// No fetch (same object content)
+// o/p: Muazim
