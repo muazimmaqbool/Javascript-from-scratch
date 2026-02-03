@@ -24,8 +24,7 @@ function memoize(fn) {
           return JSON.stringify(Object.entries(arg).sort());
         }
         return JSON.stringify(arg);
-      })
-      .json("|");
+      }).join("|");
 
     //If already computed → return instantly.
     if (cache.has(key)) {
@@ -38,3 +37,15 @@ function memoize(fn) {
     return result;
   };
 }
+
+//Example 1 - Simple numbers
+const slowAdd = (a, b) => {
+  console.log("Calculating...");
+  return a + b;
+};
+const memoAdd=memoize(slowAdd)
+memoAdd(5,6);//Calculating...
+memoAdd(2,3);//Calculating...
+memoAdd(5,6)//no log, just 11 fom cache
+const sum=memoAdd(2,3) //no log
+console.log(sum) // 5 from cache
