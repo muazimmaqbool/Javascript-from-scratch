@@ -10,3 +10,31 @@
     Memoization = "Don’t repeat expensive work if you already did it once."
     If a function is called again with the same inputs, return the stored result instead of recalculating.
 */
+function memoize(fn) {
+  //cache stores: key → unique representation of arguments,  value → result of the function
+  const cache = new Map();
+
+  return (...args) => {
+    //Returned function (closure)
+    //It converts arguments into a string key like: add(2, 3) → "2|3"
+    const key = args
+      .map((arg) => {
+        if (typeof arg === "object" && arg !== null) {
+          //For objects: {a:1, b:2} → sorted → [["a",1],["b",2]]
+          return JSON.stringify(Object.entries(arg).sort());
+        }
+        return JSON.stringify(arg);
+      })
+      .json("|");
+
+    //If already computed → return instantly.
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+
+    //Otherwise compute and store
+    const result = fn(...args);
+    cache.set(key, result);
+    return result;
+  };
+}
