@@ -23,7 +23,19 @@
         console.log("arr nums:", arr); // [10, 20, 30]
       });
 
-      //
+      //Real-world use of 3rd argument:
+        
+      //1. Compare with full array:
+      const numsEven=[2,4,6,8]
+      const percentage=numsEven.map((el,i,arr)=>{
+        const total=arr.reduce((a,b)=>a+b,0)
+        // console.log("total:",total)
+        return (el/total)*100;
+      })
+      console.log("percentage:",percentage) // [10, 20, 30, 40]
+
+      
+
     </script>
   </body>
 </html>
