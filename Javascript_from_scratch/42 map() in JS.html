@@ -66,6 +66,20 @@
             const result3=arrnum.map(x=>x*x);
             console.log(result3);
 
+            console.log("******** the third argument of map() **********")
+            //Important (extra) The third argument of map():
+            /*
+            1. element (or el) → current item
+            2. index → position of that item
+            3. array → the original array being mapped
+            */
+           const nums = [10, 20, 30];
+            nums.map((el, index, arr) => {
+            console.log(el);     // 10, 20, 30
+            console.log(index); // 0, 1, 2
+            console.log("arr nums:",arr);   // [10, 20, 30]
+            });
+
         </script>
     </body>
 </html>
