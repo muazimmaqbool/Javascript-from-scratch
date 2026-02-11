@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third argument of map()</title>
+  </head>
+  <body>
+    <script>
+      //See previous code 42
+
+      //Important (extra) The third argument of map():
+      /*
+        1. element (or el) → current item
+        2. index → position of that item
+        3. array → the original array being mapped
+        */
+      //Example:
+      const nums = [10, 20, 30];
+      nums.map((el, index, arr) => {
+        console.log(el); // 10, 20, 30
+        console.log(index); // 0, 1, 2
+        console.log("arr nums:", arr); // [10, 20, 30]
+      });
+
+      //
+    </script>
+  </body>
+</html>
