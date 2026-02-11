@@ -34,7 +34,12 @@
       })
       console.log("percentage:",percentage) // [10, 20, 30, 40]
 
-      
+      //2. Detect last element:
+      const lastEl=nums.map((el,i,arr)=>{
+        if(i==arr.length-1){
+            console.log("last element is:",el) // 30
+        }
+      })
 
     </script>
   </body>
