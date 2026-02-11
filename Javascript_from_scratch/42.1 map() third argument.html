@@ -41,6 +41,23 @@
         }
       })
 
+      //3. Avoid extra closures:
+      //Instead of:nums.map(el => el * nums.length)
+      //You can: nums.map((el, i, arr) => el * arr.length)
+
+      //Important note (interview favorite)
+      //The third argument is always the original array, even if you mutate things inside.
+
+      /*
+      ->Same applies to:
+        These also have (el, index, array):
+        forEach
+        filter
+        some
+        every
+        find
+*/
+
     </script>
   </body>
 </html>
