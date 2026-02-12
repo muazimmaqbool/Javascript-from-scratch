@@ -9,9 +9,10 @@
     <script>
         //1. for loop (classic)
         /*
-        for (let i = 0; i < arr.length; i++) {
-          console.log(arr[i]);
-        }
+        ->Syntax:
+            for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+            }
         
         ->Characteristics:
             Old-school, exists in all languages
@@ -27,9 +28,44 @@
             return
 
         ->Works with anything (arrays, objects via keys, custom logic)
-        */
 
-        
+        ->Use when:
+            You need index control
+            You need to skip, reverse, jump steps
+            You need to break early
+        */
+        //Example of for loop: find first even number
+       const arr=[1,7,3,5,6,9,11,13]
+        for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            console.log(arr[i]); // 6
+            break;
+            }
+        }
+
+
+        //2. forEach (array method)
+        /*
+        ->Syntax:
+            arr.forEach((el, index) => {
+                console.log(el);
+            });
+
+        ->Features:
+            Cleaner, functional style
+            No return value
+            Cannot break or continue
+            Only for arrays
+
+        ->Use when:
+            You want to perform an action on every item
+            No need to stop early
+            For side effects (logging, DOM, API calls)
+        */
+       //Example of forEach: multiple every element by 2
+       arr.forEach(el=>{
+        console.log(el*2)
+       })
     </script>
 </body>
 </html>
