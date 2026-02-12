@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For vs For Each Loops</title>
+    <title>For vs For Each vs for...of Loops</title>
 </head>
 <body>
     <script>
@@ -66,6 +66,29 @@
        arr.forEach(el=>{
         console.log(el*2)
        })
+
+       //3. for...of :
+       /*
+       ->Syntax:
+            for (const el of arr) {
+                console.log(el);
+            }
+
+        ->Features:
+            Modern and clean
+            Works on any iterable (Array, String, Map, Set)
+            Can break and continue
+            No index by default
+        
+        ->Use when:
+            You only care about values
+            You want clean readable loops
+            You need early exit
+        */
+        //Example of for...of: Printing every char from string
+        for(const char of "Javascript"){
+            console.log(char)
+        }
     </script>
 </body>
 </html>
