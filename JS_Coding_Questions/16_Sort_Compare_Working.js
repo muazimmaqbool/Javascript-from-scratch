@@ -43,3 +43,14 @@ Not: "Which individual number is bigger?"
 | 0      | no change          |
 
 */
+
+//6. Why (b + a) is on the left: (important)
+/*
+Because: return positive → swap → b comes first
+So we want:
+    If "ba" is better → return positive → b first.
+Which is exactly what: (b + a).localeCompare(a + b)
+
+*/
+//one-liner explanation (perfect for interviews):
+    //We sort elements by comparing their concatenated strings in both possible orders and keep the order that produces the larger combined value.
