@@ -28,3 +28,18 @@ Not: "Which individual number is bigger?"
 ->Which is bigger? 
   a+b i.e 330, So "3" must come before "30" i.e a comes before b
 */
+
+//important:
+//5. What localeCompare returns:
+/*
+-> "95".localeCompare("59") → positive
+-> "303".localeCompare("330") → negative
+
+->Return meaning in sort:
+| Return | Meaning            |
+| ------ | ------------------ |
+| > 0    | put `b` before `a` |
+| < 0    | put `a` before `b` |
+| 0      | no change          |
+
+*/
