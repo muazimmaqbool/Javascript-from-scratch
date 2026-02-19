@@ -54,3 +54,17 @@ Which is exactly what: (b + a).localeCompare(a + b)
 */
 //one-liner explanation (perfect for interviews):
     //We sort elements by comparing their concatenated strings in both possible orders and keep the order that produces the larger combined value.
+
+//Example largest number formed:
+//input=[3,30,34,5,9] the output should be: 9534330
+
+const largestNumberFormed=(arr)=>{
+    let nums=arr.map(el=>el.toString())
+    // console.log("nums:",nums)
+    nums.sort((a,b)=>(b+a).localeCompare(a+b))
+    if(nums[0]==='0') return '0'
+    return nums.join('')
+}
+
+const arr=[3,30,34,5,9]
+console.log(largestNumberFormed(arr))
