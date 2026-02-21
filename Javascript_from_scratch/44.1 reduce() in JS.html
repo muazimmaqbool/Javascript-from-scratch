@@ -18,7 +18,7 @@
                 }
                 return max;
             }
-           console.log(MaxValue(arr)) // o/p: 8
+           console.log("Max Value:",MaxValue(arr)) // o/p: 8
            
            //with reduce() function(watch at 21:25)
            const output=arr.reduce(function(max,currElement){ 
@@ -28,7 +28,7 @@
                 }
                 return max;
            },0);
-           console.log(output); // o/p: 8
+           console.log("Max Value with reduce():",output); // o/p: 8
 
            //find minimum value in an array using reduce
            const arr2=[5,1,8,4,5,-6,0];
@@ -46,6 +46,15 @@
             return acc*currVal;
            },1)
            console.log(multiple) // o/p: 120
+
+           //find total even number in the array
+           const arr4=[1,2,3,4,5,6,7,8,9,10];
+           const totalEven=arr4.reduce((totalEven,curr)=>{
+            if(curr%2===0) totalEven++
+            return totalEven
+           },0)
+           console.log("Total even numbers:",totalEven) //5
+
         </script>
     </body>
 </html>
