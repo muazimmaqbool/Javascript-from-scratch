@@ -1,63 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head><title>Example of reduce() in JS</title>
-    </head>
-    <body>
-        <!--See previous code 44 
+  <head>
+    <title>Example of reduce() in JS</title>
+  </head>
+  <body>
+    <!--See previous code 44 
         -->
-        <script>
-            const arr=[5,4,2,8,7,6]; 
-            //find max value inside arr array
-            //without reduce() function
-            function MaxValue(arr){
-                let max=0; 
-                for(var i=0;i<arr.length;i++){
-                    if(arr[i]>max){ //if arr[i] i.e current element is greater then max then remove max's value with arr[i]
-                        max=arr[i];
-                    }
-                }
-                return max;
-            }
-           console.log("Max Value:",MaxValue(arr)) // o/p: 8
-           
-           //with reduce() function(watch at 21:25)
-           const output=arr.reduce(function(max,currElement){ 
-                //we can use any name for accumulator and also for current
-                if(currElement > max){ //i.e if current value is greater then max value/acc the max becomes currElement  
-                    max=currElement;
-                }
-                return max;
-           },0);
-           console.log("Max Value with reduce():",output); // o/p: 8
+    <script>
+      const arr = [5, 4, 2, 8, 7, 6];
+      //find max value inside arr array
+      //without reduce() function
+      function MaxValue(arr) {
+        let max = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] > max) {
+            //if arr[i] i.e current element is greater then max then remove max's value with arr[i]
+            max = arr[i];
+          }
+        }
+        return max;
+      }
+      console.log("Max Value:", MaxValue(arr)); // o/p: 8
 
-           //find minimum value in an array using reduce
-           const arr2=[5,1,8,4,5,-6,0];
-           const minVal=arr2.reduce((min,currVal)=>{
-            if(currVal < min){
-                min=currVal;
-            }
-            return min;
-           },0)
-           console.log(minVal)
+      //with reduce() function(watch at 21:25)
+      const output = arr.reduce(function (max, currElement) {
+        //we can use any name for accumulator and also for current
+        if (currElement > max) {
+          //i.e if current value is greater then max value/acc the max becomes currElement
+          max = currElement;
+        }
+        return max;
+      }, 0);
+      console.log("Max Value with reduce():", output); // o/p: 8
 
-           //find multiple of all values in the array
-           const arr3=[1,2,3,4,5];
-           const multiple=arr3.reduce((acc,currVal)=>{
-            return acc*currVal;
-           },1)
-           console.log(multiple) // o/p: 120
+      //find minimum value in an array using reduce
+      const arr2 = [5, 1, 8, 4, 5, -6, 0];
+      const minVal = arr2.reduce((min, currVal) => {
+        if (currVal < min) {
+          min = currVal;
+        }
+        return min;
+      }, 0);
+      console.log(minVal);
 
-           //find total even number in the array
-           const arr4=[1,2,3,4,5,6,7,8,9,10];
-           const totalEven=arr4.reduce((acc,curr)=>{
-            //acc is counting how many even numbers exist.
-            if(curr%2===0) acc++ //Every time we find an even number → acc++
-            return acc
-           },0) //initial value as 0 because counting → start with 0
-           console.log("Total even numbers:",totalEven) //5
-           /*
+      //find multiple of all values in the array
+      const arr3 = [1, 2, 3, 4, 5];
+      const multiple = arr3.reduce((acc, currVal) => {
+        return acc * currVal;
+      }, 1);
+      console.log(multiple); // o/p: 120
+
+      //find total even number in the array
+      const arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const totalEven = arr4.reduce((acc, curr) => {
+        //acc is counting how many even numbers exist.
+        if (curr % 2 === 0) acc++; //Every time we find an even number → acc++
+        return acc;
+      }, 0); //initial value as 0 because counting → start with 0
+      console.log("Total even numbers:", totalEven); //5
+      /*
            ->acc is the running result that gets updated after every iteration.
            */
-        </script>
-    </body>
+
+      //Example:
+      const people = [
+        { name: "Ali", age: 17 },
+        { name: "Sara", age: 22 },
+        { name: "Ahmed", age: 15 },
+        { name: "Zoya", age: 18 },
+        { name: "Bilal", age: 19 },
+      ];
+      /*Goal: Group them into:
+        {
+        minor: [...],
+        adult: [...]
+        }
+        */
+       const grouped=people.reduce((acc,person)=>{
+        if(person.age<18){
+            acc.minor.push(person)
+        }
+        if(person.age>=18){
+            acc.adult.push(person)
+        }
+        return acc
+       },{minor:[],adult:[]})
+       console.log("grouped:",grouped)
+    </script>
+  </body>
 </html>
