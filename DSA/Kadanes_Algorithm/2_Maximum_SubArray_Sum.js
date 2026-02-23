@@ -10,12 +10,14 @@ input; [5,4,-1,7,8] ->>> o/p: 23, [5,4,-1,7,8]
 //A brute force approach is a straightforward, exhaustive problem-solving technique that tries every possible solution until the correct one is found
 //Solution 1:
 function maxSubArray(nums) {
-  let maxSum = 0;
+  let maxSum = nums[0];
 
   for (let i = 0; i < nums.length; i++) {
     let currentSum = 0;
     for (let j = i; j < nums.length; j++) {
+        // console.log(i,j)
       currentSum = currentSum + nums[j];
+    //   console.log(currentSum)
       if (currentSum > maxSum) {
         maxSum = currentSum;
       }
@@ -25,3 +27,30 @@ function maxSubArray(nums) {
 }
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); //6
 console.log(maxSubArray([5, 4, -1, 7, 8])); //23
+/*
+Explanation: 
+(taking first array as example, i.e:  [-2,1,-3,4,-1,2,1,-5,4])
+ Step 1: to get the subarray with maximum value we need to compare all of the subarray that the array can create and calculate 
+         the sum for all of them so we know which has largest value.
+        
+ Step 2: so we start with first element i.e -2, so maxSum=nums[0], so we consider the first element is the largest/
+
+ Setp 3: now we are going to loop through the nums array so this loop will be going through -2 to 4 i.e start to end
+ Step 4: now another loop that will start from 'i' i.e the current index, so basically we compare first element with all other like this:
+         [-2,1] calculate its sum
+         [-2,1,-3] calculate its sum
+         [-2,1,-3,4] calculate its sum
+         [-2,1,-3,4,-1] calculate its sum
+         etc....
+
+         then i becomes 1 then 1 will be compare with other like this:
+         [1,-3] calculate its sum, [1,-3,4] calculate its sum, [1,-3,4,-1] calculate its sum etc...
+         the simlarly i will be -3 then inside j 3 will be compared with other etc...
+
+Step 5: adding currentSum=0, will hold the sum of sub array
+Step 4: currentSum=currentSum+nums[j]: i.e in first iteration it will be 0+(-2), then -2 + 1 = -1, then -1 + (-3)=-4, etc...
+Step 6: if (currentSum > maxSum) {
+            maxSum = currentSum;
+        }
+            it currentSum is greater the maxSum then maxSum will be currentSum and we return its value
+*/
