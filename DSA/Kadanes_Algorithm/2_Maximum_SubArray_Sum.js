@@ -54,3 +54,13 @@ Step 6: if (currentSum > maxSum) {
         }
             it currentSum is greater the maxSum then maxSum will be currentSum and we return its value
 */
+
+//Time Complexity and Space Complexity:
+/*
+Note: every iteration of for loop is considered as one operation so for first 'for' loop iterations depend on nums i.e n
+      in second for loop as well the iterations depend on n i.e n, n-1, n-2,... so again depends on n
+
+so time complexity isL O(n*n) -> O(n^2)
+
+-> Space complexity is: O(1) as it returns only single value 
+ */
