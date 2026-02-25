@@ -31,4 +31,10 @@ Step 3: The Golden Formula:
     Meaning:
         If previous sum is hurting us → restart
         If it’s helping → continue
+
+Step 4: Dry Run (VERY IMPORTANT):
+    Array: [-2,1,-3,4,-1,2,1,-5,4]
+    Initialize:
+        currentSum = -2
+        maxSum = -2
 */
