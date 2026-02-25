@@ -64,3 +64,30 @@ so time complexity isL O(n*n) -> O(n^2)
 
 -> Space complexity is: O(1) as it returns only single value 
  */
+
+console.log("*****************")
+//Question on about algorith, also return the sub array which has the maximum sum
+function maxSubArrayTwo(nums) {
+  let maxSum = nums[0];
+  let startIndex=0;
+  let endIndex=0;
+  for (let i = 0; i < nums.length; i++) {
+    let currentSum = 0;
+    for (let j = i; j < nums.length; j++) {
+        // console.log(i,j)
+      currentSum = currentSum + nums[j];
+    //   console.log(currentSum)
+      if (currentSum > maxSum) {
+        maxSum = currentSum;
+        startIndex=i;
+        endIndex=j
+      }
+    }
+  }
+  return {
+    sum:maxSum,
+    subArray:nums.slice(startIndex,endIndex+1), //endIndex+1 because it will slice till endIndex -1 i.e why we write endIndex+1
+  };
+}
+console.log(maxSubArrayTwo([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // { sum: 6, subArray: [ 4, -1, 2, 1 ] }
+console.log(maxSubArrayTwo([5, 4, -1, 7, 8])); // { sum: 23, subArray: [ 5, 4, -1, 7, 8 ] }
