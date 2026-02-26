@@ -14,4 +14,15 @@ It is often an elegant alternative to using loops, particularly useful for probl
  
 ->Note: If a base case is missing or incorrect, the function will continue calling itself indefinitely, leading to a "RangeError: Maximum call stack size exceeded" error,
         as each call consumes memory on the call stack
+
+
+->Common Use Cases: (important)
+    Recursion is particularly useful for certain types of problems: 
+    1) Tree and Graph Traversal: Navigating hierarchical data structures, such as the HTML DOM or file systems.
+    2) Nested Data Structures: Processing objects with varying levels of nesting.
+    3) Divide and Conquer Algorithms: Sorting algorithms like quicksort and mergesort.
+    4) Mathematical Problems: Calculating Fibonacci sequences or factorials.
+    5) Backtracking Algorithms: Solving problems like mazes or Sudoku puzzles. 
 */
+
+//Example
