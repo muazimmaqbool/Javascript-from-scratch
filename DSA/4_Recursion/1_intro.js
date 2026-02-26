@@ -25,4 +25,10 @@ It is often an elegant alternative to using loops, particularly useful for probl
     5) Backtracking Algorithms: Solving problems like mazes or Sudoku puzzles. 
 */
 
-//Example
+//Example: (Count the numbers and stop when count reaches 5)
+function count(num){
+    if(num===5) return 'reached 5' // base case
+    console.log("num",num)
+    return count(num+1) // recursive case
+}
+console.log("output:",count(1))
