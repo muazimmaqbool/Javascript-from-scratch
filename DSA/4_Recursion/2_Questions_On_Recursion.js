@@ -72,3 +72,9 @@ console.log("121:",isPalindrom(121)) //true
 console.log("6656:",isPalindrom(6656)) //false
 console.log("19:",isPalindrom(19))  //false
 console.log("101:",isPalindrom(101)) //true
+
+//const numReverse=num.toString().split('').reverse().join(''):
+//here we convert num to string
+//then we convert string to array
+//then perform reverse operation
+//then back to array using join()
