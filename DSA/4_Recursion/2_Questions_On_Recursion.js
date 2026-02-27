@@ -9,3 +9,19 @@ function factorial(n){
 }
 console.log("5:",factorial(5)) // 120
 console.log("3:",factorial(3)) // 6
+
+console.log("Create array with range of number:")
+//2: Create an array with range of numbers.
+//input: start=1, end=5 : output: [1,2,3,4,5]
+function rangeOfNumbers(startNum,endNum){
+    if(endNum<startNum){
+        return []
+    }
+    else{
+        const numbers=rangeOfNumbers(startNum,endNum-1);
+        numbers.push(endNum)
+        return numbers
+    }
+}
+console.log(rangeOfNumbers(1,5)) // [1,2,3,4,5]
+console.log(rangeOfNumbers(-1,3)) // [-1,0,1,2,3]
