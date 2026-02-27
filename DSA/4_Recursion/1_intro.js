@@ -32,3 +32,35 @@ function count(num){
     return count(num+1) // recursive case
 }
 console.log("output:",count(1))
+
+//Loops vs Recursion Example: (Multiply function which multiplies all the elements of an array)
+console.log("Multiply using loops:")
+function multiply(arr){
+    let product=1;
+    for(let i=0;i<arr.length;i++){
+        product*=arr[i]
+    }
+    return product
+}
+console.log(multiply([1,2,3,4,5])) // 120
+
+console.log("Multiply using recursion")
+function multiplyUsingRecursion(arr){
+    console.log(arr)// [1,2,3,4], [1,2,3], [1,2], [1], []
+    if(arr.length<=0){
+        return 1
+    }else return arr[arr.length-1]* multiplyUsingRecursion(arr.slice(0,arr.length-1));
+}
+console.log(multiplyUsingRecursion([1,2,3,4])) // 24
+//Explanation:
+/*
+->return arr[arr.length-1]* multiplyUsingRecursion(arr.slice(0,arr.length-1))
+ we start from the last element of the array i.e arr[arr.length-1] i.e length is 4 so arr[4] i.e 4 
+ -> so: 4 * arr.slice(0,arr.length-1) i.e arr.slice(0,3) so arr[1,2,3]
+
+ ->First:  4 * arr[1,2,3]
+ ->second: 3 * arr[1,2]
+ ->third: 2 * arr[1]
+ ->fourth 1* arr[]
+ so we have 4*3*2*1=24
+*/
