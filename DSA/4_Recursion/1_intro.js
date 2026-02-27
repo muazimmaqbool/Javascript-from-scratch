@@ -64,3 +64,5 @@ console.log(multiplyUsingRecursion([1,2,3,4])) // 24
  ->fourth 1* arr[]
  so we have 4*3*2*1=24
 */
+
+//Note: It's upto to you whether you will use looping or recursion, just make sure code is always simple to read, somtimes based on problem loops is better sometimes recursion
