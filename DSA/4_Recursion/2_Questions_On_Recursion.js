@@ -50,3 +50,25 @@ start filling endNum from bottom
 ->rangeOfNumbers(1,0) => []
 
 */
+
+console.log("Palindrome example:")
+//3. Palindrome.
+//Given an integer x, return true if x is palindrome and false otherwise:
+//Note: An integer is palindrome when it is read same from backward and forward
+//input x=121 >> true
+//input x=6656 >> false
+//input  x= 101 >> true
+function isPalindrom(num){
+    const numReverse=num.toString().split('').reverse().join('')
+    // console.log(typeof numReverse) //string
+    // console.log(typeof num) //number
+    return Number(numReverse)===num
+
+    //here typeof numReverse is String and typeof num is number 
+    //so: numReverse===num returns false for all even if num is palindrom because we are comparing string and num
+    //so before doing the comparsion we convert string to number then the result is as expected
+}
+console.log("121:",isPalindrom(121)) //true
+console.log("6656:",isPalindrom(6656)) //false
+console.log("19:",isPalindrom(19))  //false
+console.log("101:",isPalindrom(101)) //true
