@@ -97,3 +97,14 @@ const fib=function(n){
     // return result[n]
 }
 console.log(fib(3))//[ 0, 1, 1, 2 ]
+console.log(fib(5))//[ 0, 1, 1, 2,3,5 ]
+
+//solution two using recursion:
+function fibRecursion(n){
+    if(n<=1) return n
+    let fibSeries=[0,1]
+    return fibRecursion(n-1)+fibRecursion(n-2); // it will return fibonacci number of n i.e if n=3 it returns 2 i.e [0,1,1,2]
+}
+console.log(fibRecursion(3)) // 2
+console.log(fibRecursion(6))// 8
+
