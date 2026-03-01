@@ -99,7 +99,7 @@ const fib=function(n){
 console.log(fib(3))//[ 0, 1, 1, 2 ]
 console.log(fib(5))//[ 0, 1, 1, 2,3,5 ]
 
-//solution two using recursion:
+//solution two using recursion: (Return nth Fibonacci)
 function fibRecursion(n){
     if(n<=1) return n
     let fibSeries=[0,1]
@@ -107,4 +107,29 @@ function fibRecursion(n){
 }
 console.log(fibRecursion(3)) // 2
 console.log(fibRecursion(6))// 8
+//Note: in order to generate fibonacci series used first solution
 
+//->Why do we keep first two numbers as 0 and 1?
+/*
+Because Fibonacci is defined that way mathematically:
+    F(0) = 0
+    F(1) = 1
+    F(n) = F(n-1) + F(n-2)
+ Note: Without two starting values, the formula cannot work.
+*/
+
+//->Why do we start calculating from n = 2?
+/*
+Because:
+    F(0) → already known (0)
+    F(1) → already known (1)
+
+The first time we actually calculate using the formula is:
+    F(2) = F(1) + F(0)
+
+->Imagine building a wall:
+    You already have first brick → 0
+    You already have second brick → 1
+    Every next brick = sum of last two bricks
+    You cannot build brick 3 without bricks 1 and 2.
+*/
