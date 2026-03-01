@@ -1,6 +1,6 @@
 //Most Asked Recursion Questions For DSA Interviews:
 
-console.log("Factorial of n:")
+console.log("1. Factorial of n:")
 //1: Factorial of number (n).
     //Example of n =5 the factorial of 5 is: 5*4*3*2*1
 function factorial(n){
@@ -10,7 +10,7 @@ function factorial(n){
 console.log("5:",factorial(5)) // 120
 console.log("3:",factorial(3)) // 6
 
-console.log("Create array with range of number:")
+console.log("2. Create array with range of number:")
 //2: Create an array with range of numbers.
 //input: start=1, end=5 : output: [1,2,3,4,5]
 function rangeOfNumbers(startNum,endNum){
@@ -51,7 +51,7 @@ start filling endNum from bottom
 
 */
 
-console.log("Palindrome example:")
+console.log("3. Palindrome example:")
 //3. Palindrome.
 //Given an integer x, return true if x is palindrome and false otherwise:
 //Note: An integer is palindrome when it is read same from backward and forward
@@ -78,3 +78,22 @@ console.log("101:",isPalindrom(101)) //true
 //then we convert string to array
 //then perform reverse operation
 //then back to array using join()
+
+console.log("4. Fibonacci number:")
+/*
+->Fibonacci series: 0,1,1,2,3,5,8,13,21,34,55,89,144,233...
+for f(0)=0, f(1)=1
+i.e f(n)=>f(n-1)+f(n+2), for n>2
+input 3=>0,1,2
+*/
+//Solution one without recursion:
+const fib=function(n){
+    let result=[0,1]
+    for(let i=2;i<=n;i++){
+        result.push(result[i-2]+result[i-1])
+    }
+    return result;
+    //when need to return fib number of n then return this:
+    // return result[n]
+}
+console.log(fib(3))//[ 0, 1, 1, 2 ]
