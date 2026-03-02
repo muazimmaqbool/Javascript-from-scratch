@@ -33,3 +33,5 @@ function subsets(nums){
 }
 console.log(subsets([1,2,3])) // [[ 1, 2, 3 ], [ 1, 2 ],[ 1, 3 ],    [ 1 ],[ 2, 3 ],    [ 2 ],[ 3 ], []]
 console.log(subsets([0])) // [[0],[]]
+
+//Explanation:
