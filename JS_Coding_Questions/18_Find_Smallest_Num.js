@@ -8,7 +8,7 @@ function getSmallest(arr){
     //if array is empty
     if(arr.length===0) return null
 
-    let smallest;
+    let smallest; //if i set smallest =0 as its initial value then 0 will be always smallest unless we have an -ve number
     for(let i=0;i<arr.length;i++){
         let el=arr[i]
         //checking if element is not a number or if its infinity or -infinity
