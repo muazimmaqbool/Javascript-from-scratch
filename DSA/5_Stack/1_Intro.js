@@ -53,6 +53,18 @@ class Stack {
   size() {
     return this.stack.length;
   }
+  //returns all the elements of the stack:
+  printStack(){
+    if(this.isEmpty()){
+        return "Stack is empty!"
+    }else{
+        let stack=this.stack
+        // console.log("stack:",stack)
+       for(const el of stack){
+        console.log("el:",el)
+       }
+    }
+  }
 }
 
 const stackObj=new Stack(); //stackObj is the object of the class, now this stackObj can access all its function
@@ -69,3 +81,8 @@ console.log(stackObj.pop()) // 4
 console.log(stackObj.peek()) // 3
 stackObj.pop()
 console.log(stackObj.size()) // 2
+stackObj.push(10);
+stackObj.push(20);
+stackObj.push(30);
+stackObj.push(40);
+stackObj.printStack()
