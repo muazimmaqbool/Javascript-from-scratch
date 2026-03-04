@@ -1,5 +1,7 @@
 //Stack:
 /*
+Note: More on stacks inside 'CoreDataStructures' folder
+
 ->A stack is a linear data structure that follows the Last-In, First-Out (LIFO) principle, 
     much like a physical stack of plates where the last plate added to the top is the first one removed. 
     In JavaScript, stacks are commonly implemented using arrays, leveraging the built-in push() and pop() methods. 
