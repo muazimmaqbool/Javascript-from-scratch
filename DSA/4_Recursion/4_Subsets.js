@@ -15,18 +15,26 @@ Q: Subets (Backtracking algorithm using recursion)
 
 //Solution:
 function subsets(nums){
-    let result=[]
-    let temp=[]
+    let result=[] //will store the final subsets
+    let temp=[] //will store current subset being built
 
     function recursiveSubsets(nums,i){
-        if(i===nums.length){
+        // if index reaches end of array,
+        // we have formed one complete subset
+        if(i===nums.length){ //base case
             return result.push([...temp])
         }
-        temp.push(nums[i])
-        recursiveSubsets(nums,i+1)
-        temp.pop(nums[i])
-        recursiveSubsets(nums,i+1)
+        //choice 1 : include current element num[i]
+        temp.push(nums[i]) //choose the current element
+        recursiveSubsets(nums,i+1) //move to next element
+
+        //BACKTRACK (Undo the previous choice)
+        temp.pop(nums[i]) //remove the last element before exploring the next choice
+
+        //choice 2: EXCLUDE current element nums[i]
+        recursiveSubsets(nums,i+1) // skip the element
     }
+    
     recursiveSubsets(nums,0)
     return result
 
