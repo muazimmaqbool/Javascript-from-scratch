@@ -16,8 +16,19 @@ const reverseWords=(s)=>{
 
     const stack=[]
     for(let i of splitStr){
-        
+        stack.push(i)
     }
+    let finals=""
+    while(stack.length){
+        const current=stack.pop()
+        
+        if(current){
+            finals +=" "+current
+        }
+    }
+    return finals.trim()
 }
 
-console.log(reverseWords("the sky is blue"))
+console.log(reverseWords("the sky is blue")) // blue is key the
+console.log(reverseWords("       hello world  ")) // world hello
+console.log(reverseWords("a good                boy")) //  boy good a 
