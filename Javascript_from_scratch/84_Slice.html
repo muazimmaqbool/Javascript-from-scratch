@@ -73,6 +73,17 @@
         //Example 3: Negative Index with Strings
         console.log("last 5 chars:",text.slice(-6)) // Script
 
+
+        //Real World Example (Common in Coding Interviews):
+        //1. Remove first and last element:
+        const input=[1,2,3,4,5]
+        const middle=input.slice(1,-1)
+        console.log("middle",middle) // [2,3,4]
+
+        //2. Does NOT modify original array/string:
+        const orginal=[10,20,30]
+        console.log(orginal.slice(1))
+        console.log("orginal:",orginal)
     </script>
 </body>
 </html>
