@@ -84,6 +84,29 @@
         const orginal=[10,20,30]
         console.log(orginal.slice(1))
         console.log("orginal:",orginal)
+
+        //slice() vs splice() (Important Interview Question):
+        /*
+        | Feature                | slice           | splice        |
+        | ---------------------- | --------------  | ------------- |
+        | Changes original array | ❌ No           | ✅ Yes        |
+        | Returns extracted part | ✅ Yes          | ✅ Yes        |
+        | Used for               | Copy / Extract  | Insert/Delete |
+
+        Example:
+        */
+       const arr2=[1,2,3,4]
+       arr2.splice(1,2) // means at index 1 i.e from index 1 remove 2 elements i.e 2 and 3 (2 is at index 1 and 3 at index 2)
+       console.log(arr2); // [1,4] and also Original array changed.
+
+       /*
+       slice() is used everywhere in React, Node, and DSA problems.
+        Examples:
+            pagination
+            copying arrays
+            removing first/last element
+            substring extraction
+       */
     </script>
 </body>
 </html>
