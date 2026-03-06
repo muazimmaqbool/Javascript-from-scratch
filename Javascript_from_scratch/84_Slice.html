@@ -36,7 +36,13 @@
         //Example 2: Slice Without End (If you don't provide end, it slices till the end.)
         console.log("slice till end:",nums.slice(2)); //[30, 40, 50, 60]
 
-        
+        //Example 3: Copy an Array (Very common trick developers use)
+        const arr=[1,2,3]
+        const copyArr=arr.slice() //Original array stays safe.
+        copyArr.push(4)
+        console.log(copyArr) // [1,2,3,4]
+        console.log(arr) // [1,2,3]
+
     </script>
 </body>
 </html>
