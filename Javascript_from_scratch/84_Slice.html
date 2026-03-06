@@ -22,9 +22,19 @@
     </pre>
     <script>
         //Example 1: Basic Array Slice
-        const nums=[10,20,30,40,50]
+        const nums=[10,20,30,40,50,60]
         const result=nums.slice(1,4)
         console.log(result) // [20, 30, 40]
+        /*
+        Explanation:
+            Index:   0   1   2   3   4   5
+            Array: [10, 20, 30, 40, 50, 60]
+                        ^-----------^
+                        slice(1,4)
+        */
+
+        //Example 2: Slice Without End (If you don't provide end, it slices till the end.)
+        console.log("slice till end:",nums.slice(2)); //[30, 40, 50, 60]
 
         
     </script>
