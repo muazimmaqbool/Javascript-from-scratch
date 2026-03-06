@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice in js</title>
+</head>
+<body>
+    <pre>
+    ->Slice():
+        In JavaScript, slice() is used to extract a portion of an array or string without modifying the original value.
+        It returns a new array or string.
+        Think of it like cutting a piece from something but leaving the original untouched ✂️
+    
+    ->Syntax:
+        For Arrays: array.slice(start, end)
+        For Strings: string.slice(start, end)
+
+    ->Parameters:
+        start: The index at which to begin extraction. (inclusive)  
+        end: The index at which to end extraction. (exclusive) i.e not included
+    </pre>
+    <script>
+        //Example 1: Basic Array Slice
+        const nums=[10,20,30,40,50]
+        const result=nums.slice(1,4)
+        console.log(result) // [20, 30, 40]
+
+        
+    </script>
+</body>
+</html>
