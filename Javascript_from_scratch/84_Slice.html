@@ -21,6 +21,7 @@
         end: The index at which to end extraction. (exclusive) i.e not included
     </pre>
     <script>
+        
         //Example 1: Basic Array Slice
         const nums=[10,20,30,40,50,60]
         const result=nums.slice(1,4)
@@ -42,6 +43,29 @@
         copyArr.push(4)
         console.log(copyArr) // [1,2,3,4]
         console.log(arr) // [1,2,3]
+
+        //Example 4: Negative Index (Negative numbers start from the end.)
+        console.log("last 3 nums:",nums.slice(-3)) // [40,50,60]
+        /*
+        Explanation:
+            Index:   0   1   2   3   4  5
+            Array: [10, 20, 30, 40, 50, 60]
+                                ^------^
+                                slice(-3)
+        */
+
+        //slice() with Strings (it returns a new string)
+        //Example 1: Basic String Slice
+        const text="JavaScript"
+        const output=text.slice(0,4)
+        console.log(output) // Java
+        /*
+        Explanation:
+            J  a  v  a  S  c  r  i  p  t
+            0  1  2  3  4  5  6  7  8  9
+            ^-----------^
+            slice(0,4)
+        */
 
     </script>
 </body>
