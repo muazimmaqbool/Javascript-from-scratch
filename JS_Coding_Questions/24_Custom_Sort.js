@@ -25,3 +25,29 @@ Q: Write a function that takes an array containing a mix of characters and numbe
         Input: [3, 'z', 'b', 10, 'a', 1, 'd']
         Output: ['a', 'b', 'd', 'z', 1, 3, 10]
 */
+
+function customSort(arr){
+
+    if(arr.length===0) return []
+    
+    //getting characters and nums from the array
+    const chars=[]
+    const nums=[]
+
+    for(let item of arr){
+        if(typeof item==="string" && item.length===1){
+            chars.push(item)
+        }else if(typeof item==="number"){
+            nums.push(item)
+        }
+    }
+    // console.log("chars:",chars)
+    // console.log("nums:",nums)
+
+    //method one using sort() builtin method 
+    chars.sort()
+    nums.sort
+    return [...chars,...nums] 
+    // or return [...chars.sort(),...nums.sort()]
+}
+console.log(customSort(['g', 's', 5, 2, 'c', 'e', 6, 1, 'a']))
