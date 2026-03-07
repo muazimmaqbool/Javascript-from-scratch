@@ -24,3 +24,12 @@
     When the data is unsorted and sorting it would be more time-consuming than the search itself.
     When using data structures that only support sequential access, such as a linked list. 
 */
+
+/*
+->Question : Implement Linear Search in js
+    Write a function to search "target" in nums array. if the target exists inside nums, then return its index and if the target is not present return -1.
+    You must write an algorithm with O(n) runtime complexity
+    Examples:
+    input= [4,5,6,7,0,1,2], target = 0 ---> output = 4
+    input= [4,5,6,7,0,1,2], target = 3 ---> output = -1
+*/
