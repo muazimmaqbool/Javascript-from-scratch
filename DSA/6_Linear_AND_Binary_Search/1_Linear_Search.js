@@ -35,7 +35,7 @@
 */
 //Solution:
 const linearSearch=(nums,target)=>{
-    for(let i=0;i<nums.length;i++){
+    for(let i=0;i<nums.length;i++){ // nums n times (i.e number of elements inside nums so time complexity = 0(n))
         if(target===nums[i]){
             return i
         }
@@ -45,3 +45,6 @@ const linearSearch=(nums,target)=>{
 console.log(linearSearch([4,5,6,7,0,1,2],0)) // 4
 console.log(linearSearch([4,5,6,7,0,1,2],3)) // -1
 console.log(linearSearch([4,5,6,7,0,1,2],2)) // 6
+
+//time complexity = 0(n)
+//space complexity = o(1) // because we are not created any new variable etc we are just returning 1 single value 
