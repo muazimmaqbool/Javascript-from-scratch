@@ -14,7 +14,7 @@ Q: Reverse Words:
 */
 
 function reverseWords(str){
-    const seperate=str.split(" ")
+    const seperate=str.split(" ") //str.split(" ") : if str has multiple spaces it creates an empty element, reverseWords("Hello   World") ---> ["Hello", "", "", "World"]
     // console.log(seperate)
     const reverse=seperate.map((word)=>word.trim()?word.split('').reverse().join(''):word) 
     // or const reverse=seperate.map((word)=>word.split('').reverse().join(''))
@@ -23,9 +23,9 @@ function reverseWords(str){
     // return reverse.join(' ')
     //or
     return str.split(" ").map((word)=>word.trim()?word.split('').reverse().join(''):word).join(" ")
-
-    
 }
+//Note: word.trim() is used to check if the item is an actual word or just spaces before reversing it
+
 console.log(reverseWords("Hello World")) // olleH dlroW
 console.log(reverseWords("Javascript is fun")) // tpircsavaJ si nuf
 console.log(reverseWords("")) // ""
