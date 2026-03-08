@@ -8,9 +8,9 @@
         //String Length:
             //The length property returns the length of a string
             let str1="Muazim Maqbool";
-            console.log(str1.length);
+            console.log(str1.length); //14
 
-        //Converting to Upper and Lower Case
+        //Converting to Upper and Lower Case:
             //A string is converted to upper case with toUpperCase()
             let text="computer";
             console.log(text.toUpperCase());
@@ -22,10 +22,10 @@
             //concat() joins two or more strings
             let txt1="Jio";
             let txt2="fiber"
-            let txt3=txt1.concat(" ",txt2);
-            console.log(txt3);
+            let txt3=txt1.concat(" ",txt2); // or let txt3=txt1.concat(txt2); // jiofiber
+            console.log(txt3); // jio fiber
             txt4="wi-fi";
-            console.log(txt1.concat(" ",txt2," ",txt4));
+            console.log(txt1.concat(" ",txt2," ",txt4)); // jio fiber wi-fi
             /*
             The concat() method can be used instead of the plus operator. These two lines do the same:
                 Example
@@ -42,12 +42,12 @@
                 //The replace() method replaces a specified value with another value in a string:
                 let day="Today is Monday!"; 
                 console.log("Replacing Monday with Friday:",day)
-                console.log(day.replace("Monday","Friday"));
+                console.log(day.replace("Monday","Friday")); // Today is Friday!
                 // this will replace only first Monday , like below
                 let day1="Today is Monday! Monday"; 
+                console.log(day1.replace("Monday","Friday")); // Today is Friday! Monday
 
-                console.log(day1.replace("Monday","Friday"));
-            //String ReplaceAll():
+               //String ReplaceAll():
                 //In 2021, JavaScript introduced the string method called replaceAll()
                 //replaceAll() is an ES2021 feature.
                 //replaceAll() does not work in Internet Explorer.
@@ -83,10 +83,9 @@
                 // UTF= Unicode Transformation Format
                 let y="Computer Science";
                 console.log(y.charCodeAt(1)); // UTF-16 code of o is : 111
-                console.log(y.charCodeAt(0));
-                // C and c will have different UTF-16 code
-                console.log(y.charCodeAt(9));
-                console.log(y.charCodeAt(5));
+                console.log(y.charCodeAt(0)); // 67 is UTF-16 code of C
+                console.log(y.charCodeAt(5)); // 116 is UTF-16 code of t  
+                console.log(y.charCodeAt(9)); // 83 is UTF-16 code of S
                 
                 //Property Access:
                 //ECMAScript 5 (2009) allows property access using [ ] on strings:
@@ -108,7 +107,7 @@
                 //JavaScript String split(): - used to convert string to array
                 let str2="Smart,Phone";
                 console.log("str2 before converting to array:",str2)
-                let myarray=str2.split(",");
+                let myarray=str2.split("");
                 console.log("str2 after converting to string",myarray); //o/p: ["Smart","Phone"]
                 console.log(myarray[0]); // o/p: smart
                 /* text.split(",")    // Split on commas
@@ -127,7 +126,7 @@
                 for(let i=0;i<array2.length;i++){
                     text5+=array2[i]+" ";
                 }
-                console.log(text5);
+                console.log(text5); // H o m e W o r k
 
             // visit this page: https://www.w3schools.com/jsref/jsref_obj_string.asp
 
