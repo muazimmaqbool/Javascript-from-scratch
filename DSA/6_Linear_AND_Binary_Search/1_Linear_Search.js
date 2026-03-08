@@ -72,3 +72,5 @@ const globalLinearSearch=(nums,target)=>{
 console.log(globalLinearSearch([4,0,5,6,7,0,1,2],0)) // [1,5] as 0 is present at index 1 and 5
 console.log(globalLinearSearch([4,0,5,6,7,0,1,2],7)) // [4] as 7 is present at index 4
 console.log(globalLinearSearch([4,0,5,6,7,0,1,2,6],6)) // [3,8] as 6 is present at index 3 and 8
+//Time complexity is: O(n)
+//Space complexity is: O(n) (because it returns the array and length of array can be anything i.e n so space complexity is O(n))
