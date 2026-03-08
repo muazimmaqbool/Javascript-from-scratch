@@ -23,12 +23,13 @@
             let answer2 = "He is called 'Hacker'";
             console.log(answer2);
 
-            //String Length
+            //String Length:
             let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             let length = text.length;
-            console.log(length);
+            console.log(length); // 26
+
             let words="Hey how are you! doing today" //space and special characters are also counted
-            console.log(words.length);
+            console.log(words.length); //28
 
             //Escape Character
             /*The backslash (\) escape character turns special characters into string characters:
@@ -37,7 +38,7 @@
                     \"	   "	    Double quote
                     \\	   \	    Backslash    */
             //let text1="I am using "Hp" laptop with 8GB of RAM"; //error
-            let text1="I am using \"Hp\" laptop with 8GB of RAM";
+            let text1="I am using \"Hp\" laptop with \'8GB\' of RAM";
             console.log(text1);
 
             //Six other escape sequences are valid in JavaScript:
@@ -52,7 +53,7 @@
                  teletypes, and fax machines. They do not make any sense in HTML.
                 */
 
-            //JavaScript Strings as Objects
+            //JavaScript Strings as Objects:
           /*  Normally, JavaScript strings are primitive values, created from literals:
                     let x = "John";
                     But strings can also be defined as objects with the keyword new:
@@ -62,9 +63,12 @@
                     // x is a string
                     let x = "NoteBook";
                     console.log(x);
+                    console.log(typeof x); // string
+
                     // y is an object
                     let y = new String("TextBook");
                     console.log(y);
+                    console.log(typeof y); // object
  
                   /* Do not create Strings objects.
                         The new keyword complicates the code and slows down execution speed.
