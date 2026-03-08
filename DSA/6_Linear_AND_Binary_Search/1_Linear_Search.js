@@ -46,5 +46,27 @@ console.log(linearSearch([4,5,6,7,0,1,2],0)) // 4
 console.log(linearSearch([4,5,6,7,0,1,2],3)) // -1
 console.log(linearSearch([4,5,6,7,0,1,2],2)) // 6
 
+
 //time complexity = 0(n)
 //space complexity = o(1) // because we are not created any new variable etc we are just returning 1 single value 
+
+console.log("********************")
+//Global linear search:
+/*
+Global linear search" is a variation of the standard linear search algorithm used to find all occurrences of a target element within a list or array,
+ rather than stopping after the first match,
+ Basically it will resturn index of all the positions where the target value is present
+*/
+const globalLinearSearch=(nums,target)=>{
+    let result=[]
+    for(let i=0;i<nums.length;i++){
+        if(target===nums[i]){
+            result.push(i)
+        }
+    }
+    if(result.length===0) return -1
+    return result
+}
+console.log(globalLinearSearch([4,0,5,6,7,0,1,2],0)) // [1,5] as 0 is present at index 1 and 5
+console.log(globalLinearSearch([4,0,5,6,7,0,1,2],7)) // [4] as 7 is present at index 4
+console.log(globalLinearSearch([4,0,5,6,7,0,1,2,6],6)) // [3,8] as 6 is present at index 3 and 8
