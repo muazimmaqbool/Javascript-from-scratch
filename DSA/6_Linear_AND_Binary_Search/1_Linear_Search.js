@@ -45,7 +45,8 @@ const linearSearch=(nums,target)=>{
 console.log(linearSearch([4,5,6,7,0,1,2],0)) // 4
 console.log(linearSearch([4,5,6,7,0,1,2],3)) // -1
 console.log(linearSearch([4,5,6,7,0,1,2],2)) // 6
-
+//if the target is present many times it will return the first index found:
+console.log(linearSearch([4,5,6,7,0,1,2,6],6)) // 2 , 6 is present at index 2 and 7 but it returns only at index 2 (for this we have global linear search)
 
 //time complexity = 0(n)
 //space complexity = o(1) // because we are not created any new variable etc we are just returning 1 single value 
@@ -64,6 +65,7 @@ const globalLinearSearch=(nums,target)=>{
             result.push(i)
         }
     }
+    //when we don't found the target it returns -1
     if(result.length===0) return -1
     return result
 }
