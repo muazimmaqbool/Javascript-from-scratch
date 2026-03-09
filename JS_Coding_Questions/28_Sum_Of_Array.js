@@ -22,9 +22,12 @@ console.log(sumArray([1, 2, 3, 4, 5])); // 15
 console.log(sumArray([])); // []
 console.log(sumArray([-1, 5, -4])); // 0
 
-console.log("*********************")
+console.log("*********************");
 //Method 2 using recursion:
 function sum(arr) {
+  if (!Array.isArray(arr)) return false;
+  if (arr.length === 0) return [];
+
   function helper(i) {
     if (i === arr?.length) return 0;
     return arr[i] + helper(i + 1);
@@ -33,5 +36,5 @@ function sum(arr) {
 }
 console.log(sum([1, 3])); // 4
 console.log(sum([1, 2, 3, 4, 5])); // 15
-// console.log(sum([])); // []
+console.log(sum([])); // []
 console.log(sum([-1, 5, -4])); // 0
