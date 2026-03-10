@@ -13,19 +13,19 @@
             myarray[1]="Choclate";
             myarray[2]="Milk Shake";
             myarray[3]="Burger";
-            // also try with this myarray[5]="briyani"; and console.log(myarray[8]); then see 0/p
-            //if you use above var "myarray=new Array(4);" then use this (myarray[5]="briyani";) it won't work
+            
+            //Note: also try with this:
+           // myarray[5]="briyani"; //o/p:  ['Pizza', 'Choclate', 'Milk Shake', 'Burger', empty, 'briyani']
+
+            //Note: trye this als console.log(myarray[8]); then see 0/p erroor
+            //Note:if you use above var "myarray=new Array(4);" then use this (myarray[5]="briyani";) it won't work
            
-            alert(myarray[1]); // diplaying array value in popup
-           //alert(myarray); // displays whole array
-            // alert(myarray.length); // displays array length in popup
-           console.log(myarray); // displays array in console , it will also show you array length
-           // or use this to get array length in console
-           console.log(myarray.length); 
+           console.log("myarray:",myarray); // displays array in console , it will also show you array length
+           //use this to get array length in console
+           console.log("myarray length:",myarray.length); 
 
            //another way of creating array
            var products=["Camera","Laptop","SmartPhone"];
-           //alert(products[2]); // will display item of products which is at index 2
            console.log("Products array: "+products);
            // adding another item to the product array using push
            products.push("Monitor"); 
