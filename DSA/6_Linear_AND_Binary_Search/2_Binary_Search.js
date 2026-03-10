@@ -3,6 +3,8 @@
 Binary Search:
     The binary search algorithm is an efficient searching method that works on a sorted array by repeatedly dividing the search interval in half. 
     It leverages the "divide and conquer" approach to quickly narrow down the possible location of a target value.
+    
+    Time complexity: O(log n)
 
     ->Key Concepts:
         Prerequisite: The data structure (typically an array) must be sorted in a specific order (ascending or descending).
@@ -29,4 +31,16 @@ Binary Search:
         3) Standard Libraries: Many programming languages, such as C++, Java, and Python, provide built-in functions that 
                                utilize the binary search algorithm (e.g., Arrays.binarySearch() in Java or the bisect module in Python).
         4)Optimization Problems: Used to find optimal solutions in problems where the search space is monotonic
+*/
+
+/*
+Q: Implement binary search:
+
+    Given an array of integers nums which is sorted in ascending order, and an integer target,
+    Write a function to search target in nums array. If the target exists return its index, otherwise return -1
+    You must write an algorithm with time complexity of O(log n)
+
+    Example:
+    input= [4,5,6,7,0,1,2], target = 0 ---> output = 4
+    input= [4,5,6,7,0,1,2], target = 3 ---> output = -1
 */
