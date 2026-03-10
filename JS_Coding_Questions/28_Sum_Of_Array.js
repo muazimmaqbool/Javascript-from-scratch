@@ -29,6 +29,7 @@ function sum(arr) {
   if (arr.length === 0) return [];
 
   function helper(i) {
+    //basically on every helper call we increase the value of i so when i react size of arr i.e we have reached it's end then it stops i.e it's the base case
     if (i === arr?.length) return 0;
     return arr[i] + helper(i + 1);
   }
