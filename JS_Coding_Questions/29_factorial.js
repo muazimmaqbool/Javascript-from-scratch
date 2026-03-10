@@ -20,3 +20,14 @@ console.log(factorial(0)); // 1
 console.log(factorial(2)); // 2
 console.log(factorial(4)); // 24
 console.log(factorial(6)); // 720
+
+console.log("***************************")
+//solution two using recursion: better solution using recursion
+function factorialUsingRecursion(n){
+    if(n===0) return 1
+    return n* factorial(n-1)
+}
+console.log(factorialUsingRecursion(0)); // 1
+console.log(factorialUsingRecursion(2)); // 2
+console.log(factorialUsingRecursion(4)); // 24
+console.log(factorialUsingRecursion(6)); // 720
