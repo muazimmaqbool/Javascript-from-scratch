@@ -49,30 +49,31 @@ Q: Implement binary search:
 */
 
 function binarySearch(nums, target) {
-  if (nums.length === 0) return [];
+  if (nums.length === 0) return -1; //if array is empty, return -1 because target cannot exist
 
   let start = 0;
-  let end = nums.length - 1;
+  let end = nums.length - 1; // end is last index of the array
 
+ //searching till start has not crossed end
   while (start <= end) {
-    let middle = Math.floor((start + end) / 2);
+    let middle = Math.floor((start + end) / 2); // it will return middle index of the search range, if it return 3.5 that will be 3 because of Math.floor
     // console.log("middle:",middle,", start:",start,", end:",end)
 
     if (nums[middle] === target) {
       return middle;
-    } else if (nums[middle] < target) {
+    } else if (nums[middle] < target) { // If middle element is smaller than target, search in right half of array
       start = middle + 1;
-    } else {
-      end = middle - 1;
+    } else { // If middle element is greater than target, search in left half of array
+      end = middle - 1; 
     }
   }
-  return -1; // in case target is not found
+  return -1; // in case target is not found after loop finishes
 }
 console.log(binarySearch([-1,0,1,2,4,5,9,12], 1)); // 2
 console.log(binarySearch([-1,0,1,2,4,5,9,12], 0)); // 1
 console.log(binarySearch([-1,0,1,2,4,5,9,12], 9)); // 6
 console.log(binarySearch([-1,0,1,2,4,5,9,12], 15)); // -1
-console.log(binarySearch([])) // []
+console.log(binarySearch([],5)) // -1
 
 //->Time complexity = O(log n) 
 //(Because in each iteration we are doing an exponentation reduction i.e we are turing the area of search to half and when exponentation reduction happens the time complexity is O(log n))
