@@ -5,6 +5,7 @@ Binary Search:
     It leverages the "divide and conquer" approach to quickly narrow down the possible location of a target value.
     
     Time complexity: O(log n)
+    Note: O(log n) is more efficient than O(n)
 
     ->Key Concepts:
         Prerequisite: The data structure (typically an array) must be sorted in a specific order (ascending or descending).

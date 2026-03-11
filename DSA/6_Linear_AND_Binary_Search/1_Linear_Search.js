@@ -3,6 +3,8 @@
     linear search (also known as sequential search) is a straightforward algorithm for finding a specific target element within a list or array. 
     It works by sequentially checking each element of the data structure, one by one, until a match for the target value is found or the entire list has been searched.
 
+    Time complexity = O(n)
+
 ->How it works: The process is a simple, step-by-step comparison:
     The algorithm starts at the first element of the list (usually index 0).
     It compares the current element with the target value it's looking for.
