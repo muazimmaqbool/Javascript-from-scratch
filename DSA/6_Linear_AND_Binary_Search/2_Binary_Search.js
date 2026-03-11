@@ -5,7 +5,9 @@ Binary Search:
     It leverages the "divide and conquer" approach to quickly narrow down the possible location of a target value.
     
     Time complexity: O(log n)
-    Note: O(log n) is more efficient than O(n)
+    Note: O(log n) is more efficient than O(n) and O(log n) is an amazing timecomplexity
+
+    So Binary Search is prefered over linear search
 
     ->Key Concepts:
         Prerequisite: The data structure (typically an array) must be sorted in a specific order (ascending or descending).
@@ -42,6 +44,32 @@ Q: Implement binary search:
     You must write an algorithm with time complexity of O(log n)
 
     Example:
-    input= [4,5,6,7,0,1,2], target = 0 ---> output = 4
-    input= [4,5,6,7,0,1,2], target = 3 ---> output = -1
+    input= [-1,0,1,2,3,5,9,12], target = 1 ---> output = 2
+    input= [-1,0,1,2,3,5,9,12], target = 15 ---> output = -1
 */
+
+function binarySearch(nums, target) {
+  if (nums.length === 0) return [];
+
+  let start = 0;
+  let end = nums.length - 1;
+
+  while (start <= end) {
+    let middle = Math.floor((start + end) / 2);
+    // console.log("middle:",middle,", start:",start,", end:",end)
+
+    if (nums[middle] === target) {
+      return middle;
+    } else if (nums[middle] < target) {
+      start = middle + 1;
+    } else {
+      end = middle - 1;
+    }
+  }
+  return -1; // in case target is not found
+}
+console.log(binarySearch([-1,0,1,2,4,5,9,12], 1)); // 2
+console.log(binarySearch([-1,0,1,2,4,5,9,12], 0)); // 1
+console.log(binarySearch([-1,0,1,2,4,5,9,12], 9)); // 6
+console.log(binarySearch([-1,0,1,2,4,5,9,12], 15)); // -1
+console.log(binarySearch([])) // []
