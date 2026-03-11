@@ -30,3 +30,22 @@ Q: Remove duplicates from an array:
             removeDuplicates([true, false, true]);
             Output: [true, false]
 */
+
+function removeDuplicates(arr){
+    if(!Array.isArray(arr)) return false
+    if(arr.length===0) return [];
+
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        if(!result.includes(arr[i])){
+            result.push(arr[i])
+        }
+    }
+    return result;
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4])) // [1, 2, 3, 4]
+console.log(removeDuplicates(["a", "b", "a", "c"])) // ["a", "b", "c"]
+console.log(removeDuplicates([1, "1", 1])) // [1, "1"]
+console.log(removeDuplicates([])) // []
+console.log(removeDuplicates([true,false,false,true])) // [true,false]
+console.log(removeDuplicates("hello")) // false
