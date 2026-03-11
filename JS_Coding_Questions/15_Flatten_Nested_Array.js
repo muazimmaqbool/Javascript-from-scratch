@@ -9,10 +9,8 @@ Example:
 const flattenArrayOne=(arr)=>{
     return arr.flat(Infinity)
 }
-console.log(flattenArrayOne([1, [2, [3, 4], 5], 6]))
-//o/p: [1,2,3,4,5,6]
-console.log(flattenArrayOne(['a','b',['c','d'],['e',['f','g']],'i']))
-//o/p: ['a', 'b', 'c','d', 'e', 'f','g', 'i']
+console.log(flattenArrayOne([1, [2, [3, 4], 5], 6])) // [1,2,3,4,5,6]
+console.log(flattenArrayOne(['a','b',['c','d'],['e',['f','g']],'i'])) // ['a', 'b', 'c','d', 'e', 'f','g', 'i']
 
 console.log("*****************")
 //Solution Two:
@@ -29,7 +27,5 @@ const flattenArrayTwo=(arr)=>{
     }
     return result
 }
-console.log(flattenArrayOne([1, [2, [3, 4], 5], 6]))
-//o/p: [1,2,3,4,5,6]
-console.log(flattenArrayOne(['a','b',['c','d'],['e',['f','g']],'i']))
-//o/p: ['a', 'b', 'c','d', 'e', 'f','g', 'i']
+console.log(flattenArrayOne([1, [2, [3, 4], 5], 6])) // [1,2,3,4,5,6]
+console.log(flattenArrayOne(['a','b',['c','d'],['e',['f','g']],'i'])) // ['a', 'b', 'c','d', 'e', 'f','g', 'i']
