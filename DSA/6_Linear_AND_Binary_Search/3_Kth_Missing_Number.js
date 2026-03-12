@@ -15,6 +15,7 @@ function findKthPositive(arr, k) {
   for (let i = 0; i < arr.length; i++) {
     console.log("i=", i, "count:", count, " : k+count:", k + count);
     console.log(`arr[${i}] = `,arr[i])
+    // check if this number appears before the current k-th missing position
     if (arr[i] <= k + count) {
       count++;
     }
