@@ -10,18 +10,20 @@ The 5th missing positive integer is 9.
 */
 
 //Solution: (We will be using linear search to solve this question)
-function findKthPositive(arr,k){
-    let count=0;
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]<=k+count){
-            count++
-        }
+function findKthPositive(arr, k) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    console.log("i=", i, "count:", count, " : k+count:", k + count);
+    console.log(`arr[${i}] = `,arr[i])
+    if (arr[i] <= k + count) {
+      count++;
     }
-    return k+count
+  }
+  return k + count;
 }
-console.log(findKthPositive([2,3,4,7,11],5)) // 9
-console.log(findKthPositive([2,3,4,7,11],1)) // 1
-console.log(findKthPositive([2,3,4,7,11],2)) // 5
+console.log(findKthPositive([2, 3, 4, 7, 11], 5)); // 9
+// console.log(findKthPositive([2, 3, 4, 7, 11], 1)); // 1
+// console.log(findKthPositive([2, 3, 4, 7, 11], 2)); // 5
 //Time Complexity = O(n)
 //Space Complexity = O(1)
 
