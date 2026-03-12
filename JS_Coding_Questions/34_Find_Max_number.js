@@ -12,6 +12,7 @@ Example Inputs & Outputs:
 function findMaxNumber(nums){
     if(nums.length===0) return null
     let max=nums[0];
+    //Note: if i use max=0 as initial value then when comparing with -ve numbers 0>-1 and if i use let max; means max is undefined that will result in undefined
     for(let i=0;i<nums.length;i++){
         if(nums[i]>max){
             max=nums[i]
