@@ -47,25 +47,43 @@ function decodeSecretCode(str){
     if(!str || str.length===0 || str.length % 2!==0) return 'Invalid input';
 
     let result='';
+    //we move 2 steps: Because every pair is: letter+number
     for(let i=0;i<str.length;i+=2){
         const letter=str[i]
         //shift will hold number which is after letter
         const shift=parseInt(str[i+1]); // if parseInt is not used then type of shift will be string which will given unexpected output
+        //parseInt() converts string → number.
         // console.log("shift:",shift)
 
         //if input is like this "abc2" it will check is second value after first is NaN or not is it's not then wrong input is provided
+        //i.e if second character is not a number loop stops
         if(isNaN(shift)) return "Invalid input"
 
-        //checking if the current character is a letter
+        //ensures we only process lowercase letters.
         if(letter>='a' && letter<='z'){
             // letter.charCodeAt(0) will return charcode of letter eg: a -> 97 then adds shift(number to it) so 97+2=99
-            const newCharCode=letter.charCodeAt(0)+shift;
+            const newCharCode=letter.charCodeAt(0)+shift; //charCodeAt() converts a letter to its ASCII code
+
             //String.fromCharCode(newCharCode)) will convert this 99 to its character
-            result+=String.fromCharCode(newCharCode)
+            result+=String.fromCharCode(newCharCode) //fromCharCode() converts ASCII → letter.
         }
     }
     return result
 }
+/*
+Important:
+    ->Why String.fromCharCode() has String before it: Because fromCharCode() is a static method of the String object.
+    ->Why letter.charCodeAt(0) uses 0: 
+        charCodeAt() returns the ASCII/Unicode code of a character at a specific index of a string.
+        Example:
+            const str = "hello";
+            console.log(str.charCodeAt(0)) // h
+            console.log(str.charCodeAt(1)) // e
+            console.log(str.charCodeAt(2)) // l
+
+        In our code letter is already a single character.
+        But "a" is still technically a string of length 1 i.e letter = "a", so its index is 0
+*/
 console.log(decodeSecretCode("a2b3c1")) // ced
 console.log(decodeSecretCode("x1y2z3")) // y{}
 console.log(decodeSecretCode("a0b0c0")) // abc
