@@ -51,6 +51,19 @@ const bubbleSort = (arr) => {
   return arr;
 };
 console.log(bubbleSort([29, 10, 14, 37, 14])); // [10,14,14,29,37]
+
+/*
+Key Idea:
+  Each pass moves the largest unsorted element to the end of the array.
+  That's why the inner loop runs only till (n - i - 1).
+
+  ->Time Complexity: O(n^2) : this is worst case time complexity (when array is unsorted)
+  ->Best time complexity: if the input is already sort say input is this: [10,14,14,29,37] then time complexity is O(n)
+  ->Average time complexity: is also O(n^2)
+
+  ->Space Complexity: O(1) : as we are not creating any new array
+
+*/
 /*
 Step-by-step execution on: [29, 10, 14, 37, 14]
 
@@ -105,11 +118,4 @@ j=0 → compare 10 and 14 → no swap
 Array is now sorted.
 
 ------------------------------------------------
-
-Key Idea:
-Each pass moves the largest unsorted element to the end of the array.
-That's why the inner loop runs only till (n - i - 1).
-
-Time Complexity: O(n²)
-Space Complexity: O(1)
 */
