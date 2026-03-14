@@ -35,8 +35,15 @@
 const bubbleSort = (arr) => {
   const n = arr.length;
   for (let i = 0; i < n; i++) {
+
+    // after every pass, the largest element moves to the end
+    // so we reduce the comparison range by i, So j must stop one position before the last element, otherwise arr[j+1] would go out of bounds.
     for (let j = 0; j < n - i - 1; j++) {
+
+      // compare adjacent elements
       if (arr[j] > arr[j + 1]) {
+
+        // swap them if they are in the wrong order
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
       }
     }
@@ -44,3 +51,65 @@ const bubbleSort = (arr) => {
   return arr;
 };
 console.log(bubbleSort([29, 10, 14, 37, 14])); // [10,14,14,29,37]
+/*
+Step-by-step execution on: [29, 10, 14, 37, 14]
+
+PASS 1 (i = 0)
+
+j=0 → compare 29 and 10 → swap
+[10, 29, 14, 37, 14]
+
+j=1 → compare 29 and 14 → swap
+[10, 14, 29, 37, 14]
+
+j=2 → compare 29 and 37 → no swap
+[10, 14, 29, 37, 14]
+
+j=3 → compare 37 and 14 → swap
+[10, 14, 29, 14, 37]
+
+Largest element (37) is now fixed at the end.
+
+------------------------------------------------
+
+PASS 2 (i = 1)
+
+j=0 → compare 10 and 14 → no swap
+[10, 14, 29, 14, 37]
+
+j=1 → compare 14 and 29 → no swap
+[10, 14, 29, 14, 37]
+
+j=2 → compare 29 and 14 → swap
+[10, 14, 14, 29, 37]
+
+Second largest (29) moves to correct place.
+
+------------------------------------------------
+
+PASS 3 (i = 2)
+
+j=0 → compare 10 and 14 → no swap
+[10, 14, 14, 29, 37]
+
+j=1 → compare 14 and 14 → no swap
+[10, 14, 14, 29, 37]
+
+------------------------------------------------
+
+PASS 4 (i = 3)
+
+j=0 → compare 10 and 14 → no swap
+[10, 14, 14, 29, 37]
+
+Array is now sorted.
+
+------------------------------------------------
+
+Key Idea:
+Each pass moves the largest unsorted element to the end of the array.
+That's why the inner loop runs only till (n - i - 1).
+
+Time Complexity: O(n²)
+Space Complexity: O(1)
+*/
