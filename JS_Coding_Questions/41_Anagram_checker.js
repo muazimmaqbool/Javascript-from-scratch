@@ -34,7 +34,7 @@
 */
 
 function anagramChecker(str1,str2){
-    const formatter=(str)=>str.toLowerCase().replace('/[^a-z]/g','').split('').sort().join('')
+    const formatter=(str)=>str.toLowerCase().replace(/[^a-z]/g,'').split('').sort().join('')
     return formatter(str1)===formatter(str2)
 }
 console.log(anagramChecker("listen","silent")) // true
@@ -42,4 +42,5 @@ console.log(anagramChecker("Hello","world")) // false
 console.log(anagramChecker("Traingle","Integral")) // true
 console.log(anagramChecker("rat","car")) // false
 console.log(anagramChecker("a","A")) // true
+console.log(anagramChecker("dormitory! !","dirty room")) // true
 console.log(anagramChecker("1234","2341")) // true
