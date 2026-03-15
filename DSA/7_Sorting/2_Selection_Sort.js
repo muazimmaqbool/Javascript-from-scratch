@@ -18,3 +18,27 @@
 
 ->Due to its simplicity and inefficiency with large datasets,
 */
+
+//Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
+
+//Q: Implement Selection Sort:
+//Write a function to sort the given array nums in ascending order.
+//Input= [29,10,14,37,14] ---> output= [10,14,14,29,37]
+//Solution:
+const selectionSort=(arr)=>{
+    const len=arr.length;
+    for(let i=0;i<len-1;i++){
+        let minIndex=i;
+        for(let j=i+1;j<len;j++){
+          if(arr[j]<arr[minIndex]){
+            minIndex=j
+          }
+        }
+        if(minIndex!==i){
+            [arr[i],arr[minIndex]]=[arr[minIndex],arr[i]]
+        }
+    }
+    return arr
+}
+console.log(selectionSort([29,10,14,37,14])) // [10,14,14,29,37]
+console.log(selectionSort([1,11,2,22,3,33])) // [1,2,3,11,22,33]

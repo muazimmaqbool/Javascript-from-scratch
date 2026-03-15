@@ -26,11 +26,11 @@
         nested loops, and algorithm analysis. 
         It can be suitable for very small datasets or data that is already nearly sorted
 */
+//Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
+
 //Question: Implement bubble sort in js.
 //Write a function to sort the given array nums in ascending order.
-
 //Input= [29,10,14,37,14] ---> output= [10,14,14,29,37]
-
 //Solution:
 const bubbleSort = (arr) => {
   const n = arr.length;
