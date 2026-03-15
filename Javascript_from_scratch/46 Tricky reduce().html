@@ -46,7 +46,7 @@
       ];
       const output1 = mobiles.reduce((result, currRAM) => {
         if (result[currRAM.Ram]) {
-          console.log("result[currRAM.Ram]:", result[currRAM.Ram]);
+          // console.log("result[currRAM.Ram]:", result[currRAM.Ram]);
           result[currRAM.Ram]++;
         } else {
           result[currRAM.Ram] = 1;
@@ -82,10 +82,10 @@
       }, {});
       console.log("world Cups winners count:", cupsCount);
 
-      //example : find name of all the people who marks are less than 40
+      //example : find name of all the people whose marks are less than 40
       const marks = students.reduce(function (acc, curr) {
         if (curr.marks < 40) {
-          acc.push(curr.name + " : " + curr.enroll);
+          acc.push(curr.name + " : " + curr.enroll+" : "+curr.marks);
         }
         return acc;
       }, []); // using {} here will show error, because if we use {} then we can't use acc.push so we use []
