@@ -14,7 +14,7 @@
         let max = 0;
         for (var i = 0; i < arr.length; i++) {
           if (arr[i] > max) {
-            //if arr[i] i.e current element is greater then max then remove max's value with arr[i]
+            //if arr[i] i.e current element is greater then max then update max's value with arr[i]
             max = arr[i];
           }
         }
@@ -26,7 +26,7 @@
       const output = arr.reduce(function (max, currElement) {
         //we can use any name for accumulator and also for current
         if (currElement > max) {
-          //i.e if current value is greater then max value/acc the max becomes currElement
+          //i.e if current value is greater then max value/acc then the max becomes currElement
           max = currElement;
         }
         return max;
@@ -58,9 +58,7 @@
         return acc;
       }, 0); //initial value as 0 because counting → start with 0
       console.log("Total even numbers:", totalEven); //5
-      /*
-           ->acc is the running result that gets updated after every iteration.
-           */
+      //->acc is the running result that gets updated after every iteration.
 
       //Example:
       const people = [
@@ -91,6 +89,32 @@
        const nums=[10,20,30,40,50]
        const sum=nums.reduce((acc,curr)=>acc+curr,0)
        console.log(`Sum of ${nums} is: ${sum}`)
+
+       //Example:
+       const students=[
+        {name:"Ali",score:85},
+        {name:"Sara",score:92},
+        {name:"Ahmed",score:78},
+        {name:"Zoya",score:88},
+        {name:"Bilal",score:95},
+        {name:"Aisha",score:62},
+        {name:"Omar",score:90},
+        {name:"Mona",score:60},
+        {name:"Hassan",score:70},
+       ]
+       //Goal: Group the students into: Topes, Average, Below Average
+       const groupedStudents=students.reduce((acc,student)=>{
+        if(student.score>=90){
+          acc.toppers.push(student)
+        }
+        if(student.score>=80 && student.score<90){
+          acc.average.push(student)
+        }else if(student.score<80){
+          acc.belowAverage.push(student)
+        }
+        return acc
+       },{toppers:[],average:[],belowAverage:[]})
+       console.log("groupedStudents:",groupedStudents)
     </script>
   </body>
 </html>
