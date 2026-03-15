@@ -24,21 +24,33 @@
 //Q: Implement Selection Sort:
 //Write a function to sort the given array nums in ascending order.
 //Input= [29,10,14,37,14] ---> output= [10,14,14,29,37]
+
 //Solution:
-const selectionSort=(arr)=>{
-    const len=arr.length;
-    for(let i=0;i<len-1;i++){
-        let minIndex=i;
-        for(let j=i+1;j<len;j++){
-          if(arr[j]<arr[minIndex]){
-            minIndex=j
-          }
-        }
-        if(minIndex!==i){
-            [arr[i],arr[minIndex]]=[arr[minIndex],arr[i]]
-        }
+const selectionSort = (arr) => {
+  const len = arr.length;
+
+  //Note: we use len-1 because when the second last element is placed correctly, the last element will automatically be in the correct position
+  for (let i = 0; i < len - 1; i++) {
+    let minIndex = i; // assume current index has the minimum value
+
+    // inner loop finds the actual minimum element in the remaining array
+    //Note: j starts from i+1 because elements before i are already sorted and we only search the remaining unsorted part of the array
+    for (let j = i + 1; j < len; j++) {
+      // if a smaller element is found, update minIndex
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
     }
-    return arr
-}
-console.log(selectionSort([29,10,14,37,14])) // [10,14,14,29,37]
-console.log(selectionSort([1,11,2,22,3,33])) // [1,2,3,11,22,33]
+
+    // if the smallest element is not already at position i, swap it
+    if (minIndex !== i) {
+      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+    }
+  }
+  return arr;
+};
+console.log(selectionSort([29, 10, 14, 37, 14])); // [10,14,14,29,37]
+console.log(selectionSort([1, 11, 2, 22, 3, 33])); // [1,2,3,11,22,33]
+
+//Time Complexity: O(n^2) for all best, worst, and average
+//Space Complexity: O(1) (as we are not creating any new array)
