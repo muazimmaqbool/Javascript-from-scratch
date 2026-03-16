@@ -40,21 +40,21 @@ obj: {
 Output: undefined
 */
 //Solution
-function getResultByPath(path, obj){
-    const normalizedPath=path.replace(/\[(\d+)\]/g,'.$1');
-    // console.log("normalizedPath:",normalizedPath)
-    
-    const keys=normalizedPath.split('.')
-    // console.log("keys:",keys)
+function getResultByPath(path, obj) {
+  const normalizedPath = path.replace(/\[(\d+)\]/g, ".$1");
+  // console.log("normalizedPath:",normalizedPath)
 
-    let result=obj;
-    // console.log("result:",result)
-    for(let key of keys){
-        if(result===undefined || result===null) break;
-        // console.log(result[key])
-        result=result[key]
-    }
-    return result
+  const keys = normalizedPath.split(".");
+  // console.log("keys:",keys)
+
+  let result = obj;
+  // console.log("result:",result)
+  for (let key of keys) {
+    if (result === undefined || result === null) break;
+    // console.log(result[key])
+    result = result[key];
+  }
+  return result;
 }
 /*
 ->Explanation:
@@ -63,14 +63,62 @@ function getResultByPath(path, obj){
     . We loop through each key, updating result step-by-step. If  at any point the key doesn't exist, undefined is returned.
     . This approach works for both objects and arrays seamlessly.
 */
+//Example 1:
 const path = "data.results.status";
 const obj = {
   data: {
-    results:
-    {
+    results: {
       status: "completed",
       error: "",
-    }
+    },
   },
-}
-console.log(getResultByPath(path,obj))
+};
+console.log(getResultByPath(path, obj)); // Complete
+
+//Example 2:
+const path2 = "user. address.city";
+const obj2 = {
+  user: {
+    profile: {
+      name: "Alice",
+    },
+  },
+};
+console.log(getResultByPath(path2, obj2)); //undefined
+
+//Example 3:
+const path3 = "data.results[1].status[0].type";
+const obj3 = {
+  data: {
+    results: [
+      {
+        status: "completed",
+        error: "",
+      },
+      {
+        status: [{ type: "done" }, { type: "start" }],
+        error: "",
+      },
+    ],
+  },
+};
+console.log(getResultByPath(path3, obj3)); // done
+
+// Example 4
+const pat4 = "config.settings.mode";
+const obj4 = {
+  config: {
+    settings: null,
+  },
+};
+console.log(getResultByPath(pat4,obj4)) // null
+
+// Example 5
+const pat5 = "items[1]";
+const obj5 = {
+  items: [
+    { id: 1, name: "Pen" },
+    { id: 2, name: "Pencil" },
+  ],
+};
+console.log(getResultByPath(pat5,obj5)) // { id: 2, name: 'Pencil' }
