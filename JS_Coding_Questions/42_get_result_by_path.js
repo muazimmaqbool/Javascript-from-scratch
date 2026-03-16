@@ -48,24 +48,20 @@ function getResultByPath(path, obj){
     // console.log("keys:",keys)
 
     let result=obj;
+    // console.log("result:",result)
     for(let key of keys){
         if(result===undefined || result===null) break;
+        // console.log(result[key])
         result=result[key]
     }
     return result
 }
 /*
 ->Explanation:
-
-. We use path.replace(/\[(\d+)\]/g, '.$1') to convert
-paths like data.results[1].status[0] into
-data.results.1.status.0.
-. Splitting this by . gives an array of keys: ['data',
-'results', '1', 'status', '0'].
-. We loop through each key, updating result step-by-step. If
-at any point the key doesn't exist, undefined is returned.
-. This approach works for both objects and arrays
-seamlessly.
+    . We use path.replace(/\[(\d+)\]/g, '.$1') to convert paths like data.results[1].status[0] into data.results.1.status.0.
+    . Splitting this by . gives an array of keys: ['data','results', '1', 'status', '0'].
+    . We loop through each key, updating result step-by-step. If  at any point the key doesn't exist, undefined is returned.
+    . This approach works for both objects and arrays seamlessly.
 */
 const path = "data.results.status";
 const obj = {
