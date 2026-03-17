@@ -65,11 +65,11 @@ function insertionSort(arr) {
     // key contains current value and it will be compare to its previous elements and 
     // first element it will be compared to will be 1 less then i so j =i-1
     const key = arr[i]; 
-    // console.log("i:",i,"key:",key)
+    console.log("i:",i,"key:",key)
 
     // when i is 1 i.e arr[i] will be compare with arr[i-1] i.e in first iteration 29 will be compared with 10, then 14 with 29 and will be placed in place 29 as it's less than it
     let j = i - 1; 
-    // console.log("j:",j)
+    console.log("j:",j)
     
     //arr[j] has to be less the key, because their is no point of comparing them then (exampple comparing 29 and 37 already sorted)
     while (j >= 0 && arr[j] > key) {
@@ -84,7 +84,8 @@ function insertionSort(arr) {
 }
 console.log(insertionSort([29, 10, 14, 37, 14, 33, 8, 11])); // [8,10,11,14,14,29,33,37]
 
-
+// Time Complexity: O(n²) [as array is not sorted so we need to run two loops which depend on n]
+// Space Complexity: O(1)
 /*
 Step-by-step Explanation:
 
@@ -142,6 +143,4 @@ Key Idea:
 
 Pick an element → shift bigger elements → insert at correct position
 
-Time Complexity: O(n²)
-Space Complexity: O(1)
 */
