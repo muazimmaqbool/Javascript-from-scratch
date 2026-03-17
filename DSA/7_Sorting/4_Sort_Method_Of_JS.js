@@ -5,6 +5,7 @@
   which often produces incorrect results for numbers.
 */
 //Watch from 20:00 - https://www.youtube.com/watch?v=neKqXUyIq2M&list=PLKhlp2qtUcSZtJefDThsXcsAbRBCSTgW4&index=14
+//Note also check this file: 16_Sort_Compare_Working.js (in side js coding questions folder)
 
 //Example 1:
 const fruits = ["dragon fruit", "apple", "date", "cherry", "banana"];
