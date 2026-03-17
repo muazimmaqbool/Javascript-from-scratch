@@ -54,17 +54,94 @@
 //   Write a function to sort the given array nums in ascending order.
 //   Input: [29,10,14,37,14,33,8,11] --> output: [8,10,11,14,14,29,33,37]
 
+//We will use two: first loop will go from start to end
+//                 second loop will go in reverse manner, example we are at 14 now this loop will run in reverse and compare 14 with its previous two i.e 20 and 29 to place it in proper position
 function insertionSort(arr) {
   const n = arr.length;
+
+  //starting with 1 because then it will be compared to 0, we can start with 0 also but that will not make any sense (although it will work)
   for (let i = 1; i < n; i++) {
-    const key = arr[i];
-    let j = i - 1;
+
+    // key contains current value and it will be compare to its previous elements and 
+    // first element it will be compared to will be 1 less then i so j =i-1
+    const key = arr[i]; 
+    // console.log("i:",i,"key:",key)
+
+    // when i is 1 i.e arr[i] will be compare with arr[i-1] i.e in first iteration 29 will be compared with 10, then 14 with 29 and will be placed in place 29 as it's less than it
+    let j = i - 1; 
+    // console.log("j:",j)
+    
+    //arr[j] has to be less the key, because their is no point of comparing them then (exampple comparing 29 and 37 already sorted)
     while (j >= 0 && arr[j] > key) {
+      //i.e arr[j]> key i.e 29>14 then we change their position so 14 comes before 29, so this process will happen until 14 is sorted properly in the array
       arr[j + 1] = arr[j];
       j--;
     }
-    arr[j + 1] = key;
+    // insert the key at its correct position after shifting
+    arr[j + 1] = key; // place key where it fits in sorted part
   }
   return arr;
 }
 console.log(insertionSort([29, 10, 14, 37, 14, 33, 8, 11])); // [8,10,11,14,14,29,33,37]
+
+
+/*
+Step-by-step Explanation:
+
+We divide array into:
+[sorted part | unsorted part]
+
+Initially:
+[29 | 10, 14, 37, 14, 33, 8, 11]
+
+------------------------------------------------
+
+i = 1 → key = 10
+Compare with 29 → shift 29 → insert 10
+[10, 29 | 14, 37, 14, 33, 8, 11]
+
+------------------------------------------------
+
+i = 2 → key = 14
+Compare with 29 → shift → insert before 29
+[10, 14, 29 | 37, 14, 33, 8, 11]
+
+------------------------------------------------
+
+i = 3 → key = 37
+Already in correct place
+[10, 14, 29, 37 | 14, 33, 8, 11]
+
+------------------------------------------------
+
+i = 4 → key = 14
+Shift 37, shift 29 → insert at correct spot
+[10, 14, 14, 29, 37 | 33, 8, 11]
+
+------------------------------------------------
+
+i = 5 → key = 33
+Shift 37 → insert before it
+[10, 14, 14, 29, 33, 37 | 8, 11]
+
+------------------------------------------------
+
+i = 6 → key = 8
+Shift all bigger elements → insert at start
+[8, 10, 14, 14, 29, 33, 37 | 11]
+
+------------------------------------------------
+
+i = 7 → key = 11
+Shift 37,33,29,14,14 → insert after 10
+[8, 10, 11, 14, 14, 29, 33, 37]
+
+------------------------------------------------
+
+Key Idea:
+
+Pick an element → shift bigger elements → insert at correct position
+
+Time Complexity: O(n²)
+Space Complexity: O(1)
+*/
