@@ -1,4 +1,4 @@
-//Merge Sort (Important)
+//Merge Sort (Important and asked mostly in DSA interviews)
 /*
 ->The Merge Sort algorithm is an efficient, general-purpose, and stable sorting algorithm that uses the divide-and-conquer approach. 
   It works by recursively breaking down an array into smaller sub-arrays and then merging those sub-arrays back together in sorted order.
