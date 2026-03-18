@@ -17,6 +17,8 @@
         Each key is unique.
         Keys can be any data type (not just strings like in objects).
         The order of elements is preserved (insertion order).
+
+    ->Maps cannot have duplicate keys (example below)
     </pre>
   </body>
   <script>
@@ -81,6 +83,13 @@
         Have default keys	                |        Do not have default keys
     */
 
+    // ->Map cannot have duplicate keys.
+    const map = new Map();
+    map.set("desktop", 1);
+    map.set("desktop", 5);
+
+    console.log(map.get("desktop")); // 5
+
     const products = new Map([
       ["laptop", { units: 5, price: 50000 }],
       ["phone", { units: 10, price: 7000 }],
@@ -123,12 +132,12 @@
     // }
 
     //Important: Find product with highest price:
-    let maxProductPrice=null;
-    products.forEach((value,key)=>{
-        if(!maxProductPrice || value.price>maxProductPrice.price){
-            maxProductPrice={name:key,...value}
-        }
-    })
-    console.log("maximum product price:",maxProductPrice) //{name: 'laptop', units: 5, price: 50000}
+    let maxProductPrice = null;
+    products.forEach((value, key) => {
+      if (!maxProductPrice || value.price > maxProductPrice.price) {
+        maxProductPrice = { name: key, ...value };
+      }
+    });
+    console.log("maximum product price:", maxProductPrice); //{name: 'laptop', units: 5, price: 50000}
   </script>
 </html>
