@@ -35,17 +35,18 @@
     console.log("Fruits Map created using new Map():", fruits);
     // o/p : Map(3) {'apples' => 10, 'banana' => 2, 'orange' => 13}
 
-    //2) The set() Method: After creating map via new you can then add elements to it with the set() method:
+    //2) The set() Method: After creating map, you can then add elements to it with the set() method:
     const vegetables = new Map();
     vegetables.set("carrot", 5);    
     vegetables.set("broccoli", 8);
     vegetables.set("spinach", 12);
-    console.log("Vegetables Map created using set():", vegetables);
+    console.log("Vegetables Map:", vegetables);
     // o/p : Map(3) {'carrot' => 5, 'broccoli' => 8, 'spinach' => 12}
 
     //The set() method can also be used to change existing Map values:
     vegetables.set("carrot", 10); // Update the value for "carrot"
     console.log("Updated Vegetables Map:", vegetables);
+    
     fruits.set("banana", 25); // Update the value for "banana"
     console.log("Updated Fruits Map:", fruits);
 
@@ -67,17 +68,18 @@
     console.log(myMap.get(1));      // "one"
     console.log(myMap.get(true));   // "yes"
     console.log(myMap.size);        // 3
+    console.log(myMap.values()) // MapIterator {'Laptop', 'one', 'yes'} only prints values of map
 
 
     /*
-    JavaScript Objects vs Maps:
-    Object	                                        Map
-    -------------------------------------------------------------
-    Not directly iterable	            |        Directly iterable
-    Do not have a size property	        |        Have a size property
-    Keys must be Strings (or Symbols)	|        Keys can be any datatype
-    Keys are not well ordered	        |        Keys are ordered by insertion
-    Have default keys	                |        Do not have default keys
-*/
+    Imporant Differences Between JavaScript Objects vs Maps:
+        Object	                                        Map
+        -------------------------------------------------------------
+        Not directly iterable	            |        Directly iterable
+        Do not have a size property	        |        Have a size property
+        Keys must be Strings (or Symbols)	|        Keys can be any datatype
+        Keys are not well ordered	        |        Keys are ordered by insertion
+        Have default keys	                |        Do not have default keys
+    */
 </script>
 </html>
