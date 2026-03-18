@@ -39,14 +39,14 @@ Algorithm:
 
 Code:
 */
-console.log("solution one:")
-function solutionOne(n){
-    if(n<0) return false;
-    return (n & (n-1))===0
+console.log("solution one:");
+function solutionOne(n) {
+  if (n < 0) return false;
+  return (n & (n - 1)) === 0;
 }
-console.log(solutionOne(16)) // true
-console.log(solutionOne(1)) // true
-console.log(solutionOne(3)) // false
+console.log(solutionOne(16)); // true
+console.log(solutionOne(1)); // true
+console.log(solutionOne(3)); // false
 /*
 Explanation:
     Binary representation of powers of 2:
@@ -64,4 +64,37 @@ Time Complexity: O(1)
 Space Complexity: O(1)
 */
 
-console.log("solution two:")
+console.log("solution two:");
+//Solution 2: Loop Method
+//Repeatedly divide by 2 until we can't divide evenly anymore. if the result is 1, it's  power of 2:
+//Code:
+function solutionTwo(n) {
+  if (n < 0) return false;
+  while (n % 2 === 0) {
+   // console.log("A n:",n)
+    n = n / 2;
+   // console.log("B n:",n)
+  }
+  return n===1
+}
+console.log(solutionTwo(16)); // true
+console.log(solutionTwo(7)); // false
+console.log(solutionTwo(3)); // false
+/*
+Explanation
+. Keep dividing by 2 as long as the number is even
+. If we end up with 1, it was a power of 2
+. If we end up with any other number, it wasn't a power of 2
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
+
+% is the modulo operator — it returns the remainder after division.
+So n % 2 asks: "what's left over when you divide n by 2?"
+Examples:
+    4 % 2 → 0 (4 divides evenly, no remainder)
+    5 % 2 → 1 (5 = 2×2 + 1)
+    7 % 3 → 1 (7 = 2×3 + 1)
+    9 % 4 → 1 (9 = 2×4 + 1)
+    10 % 4 → 2 (10 = 2×4 + 2)
+*/
