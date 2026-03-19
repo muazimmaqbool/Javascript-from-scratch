@@ -48,6 +48,11 @@ for(const i of fruits){
 //or
 fruits.forEach((val)=>console.log(val))
 
+
+//type of set is object
+console.log("type of fruits:",typeof fruits) //object
+console.log("Is fruits a Set?", fruits instanceof Set); // true
+
 //->Convert Between Set and Array
 //set to array
 console.log("fruits:",fruits) // o/p: Set(3) {'mango', 'watermellon', 'grapes' }
@@ -65,3 +70,4 @@ console.log("unique arr:",uniqueArr) // o/p: Set(3) { 'a', 'b', 'c' }
 // 1) Order of elements is insertion order.
 // 2) Unlike arrays, Sets do not support indexing (e.g. mySet[0] won’t work).
 // 3) Each value in a Set must be unique.
+
