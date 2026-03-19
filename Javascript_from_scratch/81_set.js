@@ -1,15 +1,15 @@
-//Command to run this code: node --watch 81_set.js
-
 //Set(): In JavaScript, a Set is a built-in object that let's you store unique values of any type,
-          //This means that each value can only appear once within a Set.
+        //This means that each value can only appear once within a Set.
 
 //Example:
 const mySet=new Set()
 //or
 const nums=new Set([1,2,3,4,4,5])
-console.log("nums:",nums); // o/p: Set(5) { 1, 2, 3, 4, 5 } :  Duplicate values are automatically removed
+console.log("nums:",nums); 
+// o/p: Set(5) { 1, 2, 3, 4, 5 } :  Duplicate values are automatically removed
 
-/*->Basic methods of Set():
+/*
+->Basic methods of Set():
     | Method          | Description                | Example                            |
     | --------------- | -------------------------- | ---------------------------------- |
     | `add(value)`    | Adds a value to the Set    | `mySet.add(5)`                     |
@@ -31,10 +31,10 @@ console.log('has mango:',fruits.has("mango")) // false
 console.log("has banana:",fruits.has("banana")) // fase (because b is small)
 
 console.log("deleting banana...")
-fruits.delete("Banana")
+fruits.delete("Banana") // or console.log(fruits.delete("Banana")) : returns true when delete is successfully otherwise false
 console.log("fruits set afte deletion:",fruits)
-console.log("clear all")
 
+console.log("clear all")
 fruits.clear()
 console.log("fruits cleared:",fruits) // o/p: Set(0) {} //checkout this after fruits.clear()
 
@@ -52,7 +52,7 @@ fruits.forEach((val)=>console.log(val))
 //set to array
 console.log("fruits:",fruits) // o/p: Set(3) {'mango', 'watermellon', 'grapes' }
 const arr=[...fruits] // or const arr = Array.from(fruits)
-console.log("arr:",arr) // o/p:  ['mango', 'watermellon', 'grapes']
+console.log("fruits set to arr:",arr) // o/p:  ['mango', 'watermellon', 'grapes']
 //Array to set
 const uniqueArr=new Set(['a','b','a','c']) //it will also remove duplicate
 console.log("unique arr:",uniqueArr) // o/p: Set(3) { 'a', 'b', 'c' }
