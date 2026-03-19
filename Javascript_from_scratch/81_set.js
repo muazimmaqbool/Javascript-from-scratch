@@ -71,3 +71,14 @@ console.log("unique arr:",uniqueArr) // o/p: Set(3) { 'a', 'b', 'c' }
 // 2) Unlike arrays, Sets do not support indexing (e.g. mySet[0] won’t work).
 // 3) Each value in a Set must be unique.
 
+console.log("************")
+//Another example
+const setMix=new Set([123,"Banana",true,{Apple:12},false])
+console.log("setMix:",setMix)
+
+console.log("Has banana:",setMix.has("Banana")) // true
+console.log("Has banana:",setMix.has(false)) // true
+
+setMix.add("Hello")
+setMix.add({Mango:"20"})
+console.log("setMix:",setMix)
