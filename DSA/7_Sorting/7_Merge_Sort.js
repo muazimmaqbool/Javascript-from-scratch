@@ -12,7 +12,7 @@
 
 ->Complexity Analysis:
     Merge sort's performance is highly predictable, regardless of the initial state of the input data
-    1)Time Complexity: O(n log n) in best, average, and worst cases. This consistent performance makes it faster for large datasets compared to algorithms 
+    1)Time Complexity: O(n log n) in best, average, and worst cases. This consistent performance makes it faster for large data sets compared to algorithms 
                        like Quick Sort in its worst case (O(n²)).
     2)Space Complexity: O(n), as it typically requires additional temporary memory proportional to the input size to store the sub-arrays during the merging process. 
 
@@ -41,6 +41,7 @@
 
         [8] + [3] → [3, 8]
         [5] + [4] → [4, 5]
+
         [7] + [6] → [6, 7]
         [1] + [2] → [1, 2]
 
@@ -49,14 +50,14 @@
     Step 3: Merge again
 
         [3, 8] + [4, 5] → [3, 4, 5, 8]
+        
         [6, 7] + [1, 2] → [1, 2, 6, 7]
 
     ------------------------------------------------
 
     Step 4: Final merge
 
-        [3, 4, 5, 8] + [1, 2, 6, 7]
-        → [1, 2, 3, 4, 5, 6, 7, 8]
+        [3, 4, 5, 8] + [1, 2, 6, 7] → [1, 2, 3, 4, 5, 6, 7, 8]
 
     ------------------------------------------------
 
