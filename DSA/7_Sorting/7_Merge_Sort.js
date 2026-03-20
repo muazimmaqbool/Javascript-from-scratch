@@ -50,7 +50,7 @@
     Step 3: Merge again
 
         [3, 8] + [4, 5] → [3, 4, 5, 8]
-        
+
         [6, 7] + [1, 2] → [1, 2, 6, 7]
 
     ------------------------------------------------
@@ -67,3 +67,18 @@
     Time Complexity: O(n log n)
     Space Complexity: O(n)
 */
+//Code for merge sort:
+function mergeSort(arr){
+    //base case if array length is 1 or less then 1 then their is no need to sort
+    if(arr.length<=1) return arr;
+
+    //getting mid element of the array
+    const mid=Math.floor(arr.length/2);
+    // console.log("mid:",mid," and mid value is:",arr[mid])
+
+    let left=mergeSort(arr.slice(0,mid))
+    let right=mergeSort(arr.slice(mid))
+
+    return merge(left,right)
+}
+console.log(mergeSort([8, 3, 5, 4, 7, 6, 1, 2]))
