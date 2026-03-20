@@ -81,7 +81,7 @@ function mergeSort(arr){
 
     // recursively sort right half (from mid to end)
     let right=mergeSort(arr.slice(mid))
-    // console.log("left:",left)
+    // console.log("right:",right)
 
     // merge the two sorted halves after sorting them inside merge function
     return merge(left,right)
