@@ -29,9 +29,9 @@
         /*
         Explanation:
             Index:   0   1   2   3   4   5
-            Array: [10, 20, 30, 40, 50, 60]
+            Array: [10, 20, 30, 40, 50, 60]`
                         ^-----------^
-                        slice(1,4)
+                        slice(1,4) (will include index 1,2,3 but not 4)
         */
 
         //Example 2: Slice Without End (If you don't provide end, it slices till the end.)
@@ -41,8 +41,8 @@
         const arr=[1,2,3]
         const copyArr=arr.slice() //Original array stays safe.
         copyArr.push(4)
-        console.log(copyArr) // [1,2,3,4]
-        console.log(arr) // [1,2,3]
+        console.log("copyArr",copyArr) // [1,2,3,4]
+        console.log("arr",arr) // [1,2,3]
 
         //Example 4: Negative Index (Negative numbers start from the end.)
         console.log("last 3 nums:",nums.slice(-3)) // [40,50,60]
@@ -50,6 +50,7 @@
         Explanation:
             Index:   0   1   2   3   4  5
             Array: [10, 20, 30, 40, 50, 60]
+
                                 ^------^
                                 slice(-3)
         */
@@ -78,7 +79,7 @@
         //1. Remove first and last element:
         const input=[1,2,3,4,5]
         const middle=input.slice(1,-1)
-        console.log("middle",middle) // [2,3,4]
+        console.log("middle",middle) // [2,3,4] 
 
         //2. Does NOT modify original array/string:
         const orginal=[10,20,30]
