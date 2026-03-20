@@ -76,24 +76,37 @@ function mergeSort(arr){
     const mid=Math.floor(arr.length/2);
     // console.log("mid:",mid," and mid value is:",arr[mid])
 
-    let left=mergeSort(arr.slice(0,mid))
+    // recursively sort left half (from index 0 to mid-1)
+    let left = mergeSort(arr.slice(0, mid)) 
+
+    // recursively sort right half (from mid to end)
     let right=mergeSort(arr.slice(mid))
     // console.log("left:",left)
 
+    // merge the two sorted halves after sorting them inside merge function
     return merge(left,right)
 }
 console.log(mergeSort([8, 3, 5, 4, 7, 6, 1, 2])) // [1,2,3,4,5,6,7,8]
+
 //this function will combine to arrays:
 function merge(left,right){
     let sortedArr=[]
 
+    // compare elements from both arrays until one becomes empty
     while(left.length && right.length){
+
+        // compare first elements of both arrays
         if(left[0]<right[0]){
-            sortedArr.push(left.shift())
+            // if left is smaller, add it to result
+            sortedArr.push(left.shift()) 
+            // shift() removes first element (already used)
         }else{
+            // if right is smaller or equal, add it
             sortedArr.push(right.shift())
         }
     }
+    // after loop, one array may still have elements left
+    // add remaining elements directly (already sorted)
     return [...sortedArr,...left,...right]
 }
 //Time Complexity: the first function mergeSort is dividing array every single time so O(log n) and merg function its comparing every single element inside the array so O(n) = O(n log n)
