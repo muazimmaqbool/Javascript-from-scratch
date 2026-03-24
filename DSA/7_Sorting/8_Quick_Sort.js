@@ -17,4 +17,60 @@
                          which reduces space complexity compared to algorithms like Merge Sort.
     4) Worst Case: While generally efficient, Quick Sort has a slow worst-case running time of O(n^2), which typically occurs with poor pivot selection on certain input data. 
                   Using a random pivot can help mitigate this risk
+
+->QUICK SORT DIAGRAM:
+
+Example: [8, 3, 5, 4, 7, 6, 1, 2]
+
+Step 1: Choose a pivot (let’s take last element)
+Pivot = 2
+
+Partition:
+    Elements < 2 → [1]
+    Pivot → [2]
+    Elements > 2 → [8, 3, 5, 4, 7, 6]
+
+    So: [1] + [2] + [8, 3, 5, 4, 7, 6]
+
+------------------------------------------------
+
+Step 2: Apply Quick Sort on left & right
+
+Left: [1] → already sorted
+
+Right: [8, 3, 5, 4, 7, 6]
+Pivot = 6
+
+Partition: [3, 5, 4] + [6] + [8, 7]
+
+------------------------------------------------
+
+Step 3: Continue recursively
+
+[3, 5, 4]
+Pivot = 4 → [3] + [4] + [5]
+
+[8, 7]
+Pivot = 7 → [] + [7] + [8]
+
+------------------------------------------------
+
+Step 4: Combine all
+
+[1] + [2] + [3,4,5] + [6] + [7,8]
+
+Final Sorted Array:
+[1,2,3,4,5,6,7,8]
+
+------------------------------------------------
+
+Key Idea:
+Pick pivot → partition into smaller & larger → repeat
+
+Time Complexity:
+Best/Average → O(n log n)
+Worst → O(n²)
+
+Space Complexity:
+O(log n) (recursion stack)
 */
