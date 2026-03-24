@@ -1,4 +1,4 @@
-//Quick Sort:
+//Quick Sort: (This algorithm is used very often in day to day work)
 /*
 ->Quick Sort is an efficient, widely used sorting algorithm that operates on the divide-and-conquer principle. 
     It works by repeatedly partitioning a given array around a chosen element called a pivot.
@@ -17,6 +17,8 @@
                          which reduces space complexity compared to algorithms like Merge Sort.
     4) Worst Case: While generally efficient, Quick Sort has a slow worst-case running time of O(n^2), which typically occurs with poor pivot selection on certain input data. 
                   Using a random pivot can help mitigate this risk
+
+->Pivot can be any element ususally people take either first, middle or last element as pivot
 
 ->QUICK SORT DIAGRAM:
 
