@@ -22,52 +22,84 @@
 
 ->QUICK SORT DIAGRAM:
 
-Example: [8, 3, 5, 4, 7, 6, 1, 2]
+QUICK SORT DIAGRAM
 
-Step 1: Choose a pivot (let’s take last element)
-Pivot = 2
+Example: [8, 3, 5, 4, 7, 6, 1, 2]
+Taking pivot as first element i.e arr[0] => 8
+----------------------------------------------------------------
+Step 1: Pick first element as pivot
+Pivot = 8
 
 Partition:
-    Elements < 2 → [1]
-    Pivot → [2]
-    Elements > 2 → [8, 3, 5, 4, 7, 6]
+Left  (<8)  → [3, 5, 4, 7, 6, 1, 2]
+Right (>8)  → []
 
-    So: [1] + [2] + [8, 3, 5, 4, 7, 6]
+So:
+[3,5,4,7,6,1,2] + [8] + []
 
-------------------------------------------------
+----------------------------------------------------------------
+Step 2: Sort left part [3,5,4,7,6,1,2]
 
-Step 2: Apply Quick Sort on left & right
+Pivot = 3
 
-Left: [1] → already sorted
+Left  (<3) → [1, 2]
+Right (>3) → [5, 4, 7, 6]
 
-Right: [8, 3, 5, 4, 7, 6]
-Pivot = 6
+So:
+[1,2] + [3] + [5,4,7,6]
 
-Partition: [3, 5, 4] + [6] + [8, 7]
+----------------------------------------------------------------
+Step 3: Sort [1,2]
 
-------------------------------------------------
+Pivot = 1
 
-Step 3: Continue recursively
+Left  → []
+Right → [2]
 
-[3, 5, 4]
-Pivot = 4 → [3] + [4] + [5]
+Result:
+[] + [1] + [2] → [1,2]
 
-[8, 7]
-Pivot = 7 → [] + [7] + [8]
+----------------------------------------------------------------
+Step 4: Sort [5,4,7,6]
 
-------------------------------------------------
+Pivot = 5
 
-Step 4: Combine all
+Left  (<5) → [4]
+Right (>5) → [7, 6]
 
-[1] + [2] + [3,4,5] + [6] + [7,8]
+So:
+[4] + [5] + [7,6]
 
-Final Sorted Array:
+----------------------------------------------------------------
+Step 5: Sort [7,6]
+
+Pivot = 7
+
+Left  (<7) → [6]
+Right (>7) → []
+
+Result:
+[6] + [7] + []
+
+----------------------------------------------------------------
+Step 6: Combine everything
+
+From bottom:
+
+[1,2] + [3] + [4,5,6,7]
+→ [1,2,3,4,5,6,7]
+
+Now add pivot 8:
+
+[1,2,3,4,5,6,7] + [8]
+
+----------------------------------------------------------------
+FINAL SORTED ARRAY:
 [1,2,3,4,5,6,7,8]
 
-------------------------------------------------
-
+----------------------------------------------------------------
 Key Idea:
-Pick pivot → partition into smaller & larger → repeat
+Pick pivot → divide into smaller & larger → recursively sort → combine
 
 Time Complexity:
 Best/Average → O(n log n)
@@ -101,4 +133,4 @@ function quickSort(arr) {
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
 console.log(quickSort([8, 3, 5, 4, 7, 6, 1, 2])); // [1,2,3,4,5,6,7,8]
-console.log(quickSort([1,5,0,3-9,6-5,1,2,99,101])) // [-6,0,1,1,1,2,5,99,101]
+console.log(quickSort([1, 5, 0, 3 - 9, 6 - 5, 1, 2, 99, 101])); // [-6,0,1,1,1,2,5,99,101]
