@@ -76,3 +76,28 @@ Worst → O(n²)
 Space Complexity:
 O(log n) (recursion stack)
 */
+//Quick Sort implementation:
+//Write a function to sort the given array in ascending order
+//Input: [8,3,5,4,7,6,1,2] --->>> output: [1,2,3,4,5,6,7,8]
+
+function quickSort(arr){
+    //edge case when arr contains only one element
+    if(arr.length===1){
+        return arr
+    }
+    //taking pivot as first element
+    const pivot=arr[0];
+    const left=[];
+    const right=[];
+
+    //starting from 1 index as we have taking pivot as first index i.e 0 index
+    for(let i =1;i<arr.length;i++){
+        if(arr[i]<pivot){
+            left.push(arr[i])
+        }else{
+            right.push(arr[i])
+        }
+    }
+    return [...quickSort(left),pivot,...quickSort(right)]
+}
+console.log(quickSort([8,3,5,4,7,6,1,2]))
