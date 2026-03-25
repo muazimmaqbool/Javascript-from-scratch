@@ -100,5 +100,5 @@ function quickSort(arr) {
   }
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
-console.log(quickSort([8, 3, 5, 4, 7, 6, 1, 2]));
-//[1,2,3,4,5,6,7,8]
+console.log(quickSort([8, 3, 5, 4, 7, 6, 1, 2])); // [1,2,3,4,5,6,7,8]
+console.log(quickSort([1,5,0,3-9,6-5,1,2,99,101])) // [-6,0,1,1,1,2,5,99,101]
