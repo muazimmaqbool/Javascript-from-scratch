@@ -142,3 +142,12 @@ function quickSort(arr) {
 }
 console.log(quickSort([8, 3, 5, 4, 7, 6, 1, 2])); // [1,2,3,4,5,6,7,8]
 console.log(quickSort([1, 5, 0, 3 - 9, 6 - 5, 1, 2, 99, 101])); // [-6,0,1,1,1,2,5,99,101]
+
+/*
+Note: Important
+If pivot was the last element then:
+    -> const pivot = arr[arr.length - 1];
+    and loop till second last element (exclude pivot)
+    ->for (let i = 0 ; i < arr.length-1; i++) { ... }
+
+*/
