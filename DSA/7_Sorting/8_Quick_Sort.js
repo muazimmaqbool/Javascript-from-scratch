@@ -107,10 +107,15 @@ Worst → O(n²)
 
 Space Complexity:
 O(log n) (recursion stack)
+
+Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
 */
+
+
 //Quick Sort implementation:
 //Write a function to sort the given array in ascending order
 //Input: [8,3,5,4,7,6,1,2] --->>> output: [1,2,3,4,5,6,7,8]
+
 
 function quickSort(arr) {
   //edge case when arr contains only one element
@@ -119,17 +124,20 @@ function quickSort(arr) {
   }
   //taking pivot as first element
   const pivot = arr[0];
-  const left = [];
-  const right = [];
+
+  const left = []; // will hold element less then pivot
+  const right = []; // will hold elements greater than pivot
 
   //starting from 1 index as we have taking pivot as first index i.e 0 index
   for (let i = 1; i < arr.length; i++) {
+    //if element is smaller then pivot pushing the element to the left array and else push to right array
     if (arr[i] < pivot) {
       left.push(arr[i]);
     } else {
       right.push(arr[i]);
     }
   }
+    // recursively sort left (smaller elements) + place pivot in middle + recursively sort right (greater elements)
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
 console.log(quickSort([8, 3, 5, 4, 7, 6, 1, 2])); // [1,2,3,4,5,6,7,8]

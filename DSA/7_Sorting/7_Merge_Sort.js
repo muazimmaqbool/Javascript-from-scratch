@@ -67,6 +67,7 @@
     Time Complexity: O(n log n)
     Space Complexity: O(n)
 */
+//Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
 //Code for merge sort:
 function mergeSort(arr){
     //base case if array length is 1 or less then 1 then their is no need to sort
