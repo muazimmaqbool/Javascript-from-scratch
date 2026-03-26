@@ -151,3 +151,12 @@ If pivot was the last element then:
     ->for (let i = 0 ; i < arr.length-1; i++) { ... }
 
 */
+//Time Complexity: O(n log n)
+//Here we are dividing the array into two sections and we are doing it for n number of times, here we have a for loop whose t.c is O(n) and then we divide it so it will have O(log n)
+// i.e O(n log n)
+
+//Note: Quick sort have O(n log n) of best and average Time complexity and O(n^2) in worst case
+
+//Space complexity is O(log n), because we are making recursive calls and quick sort does use some memory to store the data of recursive calls
+
+//Note: Average and best case is O(log n) and worst case is O(n)
