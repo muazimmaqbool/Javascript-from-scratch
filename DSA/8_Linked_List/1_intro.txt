@@ -6,8 +6,19 @@
     The first node in a linked list is called the head, which serves as the starting point for traversing the list.
     The last node points to a NULL value to indicate the end of the list. 
 
-    Key Concepts:
-        Node: The fundamental building block of a linked list, consisting of two parts: data and a pointer to the next node.
-        Head: A pointer to the very first node of the list.
-        Dynamic Size: Linked lists can grow or shrink in size during runtime, making memory management efficient.
-        Sequential Access: Elements must be accessed sequentially starting from the head, as random access (like in arrays) is not possible. 
+    -> Key Concepts:
+            Node: The fundamental building block of a linked list, consisting of two parts: data and a pointer to the next node.
+            Head: A pointer to the very first node of the list.
+            Dynamic Size: Linked lists can grow or shrink in size during runtime, making memory management efficient.
+            Sequential Access: Elements must be accessed sequentially starting from the head, as random access (like in arrays) is not possible. 
+
+    -> Types of Linked Lists: (Linked lists are classified based on how the nodes are linked) 
+            Singly Linked List: Each node has a pointer only to the next node in the sequence. This is the simplest type.
+            Doubly Linked List: Each node contains pointers to both the next node and the previous node. This allows for traversal in both forward and backward directions.
+            Circular Linked List: The last node's pointer points back to the first node (head), forming a continuous loop.
+
+    -> Operations: (Common operations performed on a linked list include)
+            Traversal: Visiting each node in the list, typically to search for an element or display all data.
+            Insertion: Adding a new node at a specific position (e.g., at the beginning, end, or middle).
+            Deletion: Removing an existing node from the list. 
+
