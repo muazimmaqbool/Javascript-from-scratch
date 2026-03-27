@@ -44,3 +44,17 @@
         Head → starting point of the list
         Last node → points to NULL (end of list)
 
+->DOUBLY LINKED LIST (Simple Diagram):
+
+    NULL ← [ • | 10 | • ] ⇄ [ • | 20 | • ] ⇄ [ • | 30 | • ] ⇄ [ • | 40 | • ] → NULL
+
+    Explanation:
+        [Prev | Data | Next]
+        Prev = pointer to previous node
+        Data = value stored in node
+        Next = pointer to next node
+
+        Head → first node (Prev = NULL)
+        Tail → last node (Next = NULL)
+
+    Note: ⇄ means nodes are connected in both directions (forward & backward)
