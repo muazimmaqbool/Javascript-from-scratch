@@ -22,9 +22,25 @@
             Insertion: Adding a new node at a specific position (e.g., at the beginning, end, or middle).
             Deletion: Removing an existing node from the list. 
 
-    ->Applications: 
+    -> Applications: 
             Linked lists are used in various applications due to their dynamic nature and efficient insertion/deletion operations:
             1) Implementation of other data structures: Stacks and queues are commonly implemented using linked lists.
             2) Memory Management: Used in dynamic memory allocation processes.
             3) Music/Video Playlists: Playback order can be easily managed as a linked list, where adding or removing a song only requires adjusting links, not shifting data.
             4) Web Browsers: Used to manage the browsing history, allowing navigation between previous and next pages.
+
+    
+->SINGLY LINKED LIST (Simple Diagram):
+
+    Head
+    ↓
+    [10 | • ] → [20 | • ] → [30 | • ] → [40 | NULL]
+
+    Explanation:
+        [Data | Next]
+        Data = value stored in node
+        Next = pointer/reference to next node
+
+        Head → starting point of the list
+        Last node → points to NULL (end of list)
+
