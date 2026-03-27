@@ -58,3 +58,21 @@
         Tail → last node (Next = NULL)
 
     Note: ⇄ means nodes are connected in both directions (forward & backward)
+
+->CIRCULAR LINKED LIST (Simple Diagram):
+
+          ┌────────────────────────────────────┐
+          ↓                                    │
+    [10 | • ] → [20 | • ] → [30 | • ] → [40 | • ]
+     ↑                                         │
+     └─────────────────────────────────────────┘
+
+    Explanation:
+        [Data | Next]
+        Data = value stored in node
+        Next = pointer to next node
+
+        ✔ Last node does NOT point to NULL  
+        ✔ Instead, it points back to the Head (first node)
+
+        So the list forms a loop (circle)
