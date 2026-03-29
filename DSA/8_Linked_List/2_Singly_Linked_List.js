@@ -185,8 +185,47 @@ class LinkedList {
 
     // traverse the list until we reach null
     while (current) {
-      console.log(current.data); // print current node's data
+     console.log(current.data); // print current node's data
+      //also try with these:
+    //   console.log(current.next);
+    //   console.log(current)
       current = current.next; // move to next node
     }
   }
 }
+
+//runinng linkedList:
+//creating instance of the linkedlist class
+const list=new LinkedList();
+
+list.addFirst(10)
+list.addFirst(20)
+list.addFirst(30)
+// list.print() // 30,20,10
+
+list.addLast(40)
+list.print() // 30,20,10,40
+
+console.log("size = ",list.size()) // 4
+
+list.removeTop();
+console.log("top removed! now size=:",list.size());
+list.print() // 20,10,40
+
+list.removeEnd();
+console.log("end removed! now size=",list.size());
+list.print(); //20,10
+
+console.log("adding 15 at index 1:")
+list.addAt(1,15)
+list.print() // 20,15,10
+
+console.log("adding 25 index at 0:")
+list.addAt(0,25)
+list.print() // 25,20,15,10
+
+console.log("removing data at index 1:")
+list.removeAt(1);
+list.print() //25,15,10
+
+console.log("final size:",list.size()) // 3
