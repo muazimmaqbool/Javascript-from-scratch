@@ -39,14 +39,15 @@ class DoublyLinkedList{
     //1)adding element at Top (Inserting something at the top of the list i.e at the head)
     addFirst(data){
         const newNode=new Node(data);
-        //now newNode will point to the head
+        //now newNode will point to the current head
         newNode.next=this.head;
 
-        //if head already as something then connecting that node i.e (current head) to the newNode
+        //if head already has something(i.e list is not empty) 
+        //then connecting that node i.e (current head) to the newNode, by updating previous pointer of the current head to newNode
         if(this.head){
             this.head.prev=newNode
         }
-        //Now updating head which is now the newNode
+        //Now updating head to newNode
         this.head=newNode
     }
 }
