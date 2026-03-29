@@ -128,7 +128,7 @@ class LinkedList {
       return;
     }
 
-    // edge case: only one node present
+    // edge case: only one node present (optional but a good practice)
     if (!this.head.next) {
       this.head = null; // remove the only node
       return;
@@ -137,11 +137,40 @@ class LinkedList {
     let current = this.head;
 
     // move until we reach the second last node node before the last node
-    //current.next means points to next node and current.next.next will check next node's next, so if next node's next is null means tail we will make 
+    //current.next means points to next node and current.next.next will check next node's next, so if next node's next is null means tail we will make
     //current.next = null so current becomes tail as it's next is now null via current.next=null
-    while (current.next.next) { 
+    while (current.next.next) {
       current = current.next;
     }
     current.next = null;
+  }
+
+  //-> 7)Remove at the given index;
+  removeAt(index) {
+    if (index < 0 || index >= this.size()) {
+      console.error("Invalid index provided.");
+      return;
+    }
+
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+
+    //this will work for middle and end node as well;
+    let current = this.head;
+    //suppose we need to remove index 3, so when i reach index-1 i.e at index 2 which currently points to index 3, what we will do we will point index 2 to index 4 directly
+    //which will remove index 3 automatically
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
+    }
+    //after reaching index-1, checking whether it has something in the next or not, then we will point current node's next which to its next's next
+    // skip the node at 'index'
+    // current → node before target
+    // current.next → node to delete
+    // current.next.next → node after target
+    if (current.next) {
+      current.next = current.next.next;
+    }
   }
 }
