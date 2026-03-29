@@ -35,7 +35,23 @@ class LinkedList{
     constructor(){
         this.head=null; // start of the list - initially it's empty
     }
-    //different methods of linked list:
+    
+    // adding element at the beginning (head of the list)
+    addFirst(data){
+        const newNode=new Node(data); // create a new node with given data
+        newNode.next=this.head;  // pointing new node's next to current head
+        this.head=newNode; // update head to new node (new node becomes first element)
+    }
+    // create node → point it to current head → make it new head
 
-    //1) Adding element to the top of LL or adding to the head
 }
+//Explanation:
+/*
+->addFirst() function:
+    1) Create a new node with the given data
+    2) Link new node to current head (so list doesn't break)
+    3) Update head to this new node
+
+    So the new node is now at the beginning of the list
+
+*/
