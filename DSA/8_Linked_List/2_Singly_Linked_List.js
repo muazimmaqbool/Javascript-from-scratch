@@ -36,7 +36,7 @@ class LinkedList {
     this.head = null; // start of the list - initially it's empty
   }
 
-  //1) adding element at the beginning (head of the list)
+  //-> 1) adding element at the beginning (head of the list)
   addFirst(data) {
     const newNode = new Node(data); // create a new node with given data
     newNode.next = this.head; // pointing new node's next to current head
@@ -44,37 +44,29 @@ class LinkedList {
   }
   // create node → point it to current head → make it new head
 
-  //2)Adding element at then end of the list (at the tail of the linked list)
+  //-> 2)Adding element at then end of the list (at the tail of the linked list)
   addLast(data) {
     const newNode = new Node(data);
 
     //checking if their is something in the LL or not, i.e if head is null means LL is empty
     //then we need put it in the head position i.e as first element
+    //i.e make newNode as head
     if (this.head === null) {
       this.head = newNode;
       return;
     }
 
     //and if LL is not empty, we will traverse through the LL until we reach the node whose next is null, means we have reached the tail/end of the LL
-    let current = this.head; //current by default will be first element of the LL.
+    let current = this.head; //current by default will be first element of the LL. i.e Head
 
-    // while loop will run until current.next is not null
+    // move until we reach the last node (where next is null)
     while (current.next) {
-        //everytime we go inside this loop it will assign the next node  to this current variable
-      current=current.next
+      current = current.next; // move to next node
     }
-    //when we have reached end, i.e current.next is null, now we will add new node
-    current.next=newNode;
-    newNode.next=null
+
+    // attach new node at the end
+    current.next = newNode;
+    //newNode.next=null; (optional) newNode.next is already null by default
   }
 }
-//Explanation:
-/*
-->addFirst() function:
-    1) Create a new node with the given data
-    2) Link new node to current head (so list doesn't break)
-    3) Update head to this new node
 
-    So the new node is now at the beginning of the list
-
-*/
