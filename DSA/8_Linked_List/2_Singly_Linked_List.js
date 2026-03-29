@@ -39,7 +39,7 @@ class LinkedList {
     this.head = null; // start of the list - initially it's empty
   }
 
-  //-> 1) adding element at the beginning (head of the list)
+  //-> 1) adding element at the beginning/top/head (head of the list)
   addFirst(data) {
     const newNode = new Node(data); // create a new node with given data
     newNode.next = this.head; // pointing new node's next to current head
