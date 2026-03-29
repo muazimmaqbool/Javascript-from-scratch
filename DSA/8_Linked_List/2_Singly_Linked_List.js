@@ -63,7 +63,7 @@ class LinkedList {
     let current = this.head; //current by default will be first element of the LL. i.e Head
 
     // move until we reach the last node (where next is null)
-    while (current.next) {
+    while (current.next) { //it will run until current.next is not null
       current = current.next; // move to next node
     }
 

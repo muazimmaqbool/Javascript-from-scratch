@@ -50,4 +50,23 @@ class DoublyLinkedList{
         //Now updating head to newNode
         this.head=newNode
     }
+
+    //2) adding element at the end i.e at the tail of the DLL
+    addLast(data){
+        const newNode=new Node(data)
+        
+        //if list is empty then adding element at the head i.e at the top/beginning
+        if(this.head===null){
+            this.head=newNode
+            return
+        }
+        //If list is not empty we will start from head and traverse till end when current.next is null 
+        let current=this.head;
+        while(current.next){ //it will run until current.next is not null
+            current=current.next
+        }
+        //Now after reaching tail, we will assign newNode's prev to current and current's next to new node
+        newNode.prev=current;
+        current.next=newNode
+    }
 }
