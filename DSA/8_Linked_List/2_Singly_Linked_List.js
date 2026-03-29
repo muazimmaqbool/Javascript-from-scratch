@@ -175,14 +175,18 @@ class LinkedList {
   }
 
   // ->8)Printing the Linked List:
-  print(){
+  print() {
+    // if list is empty, nothing to print
     if (!this.head) {
       return;
     }
-    let current=this.head;
-    while(current){
-        console.log(current.data);
-        current=current.next
+
+    let current = this.head; // start from head
+
+    // traverse the list until we reach null
+    while (current) {
+      console.log(current.data); // print current node's data
+      current = current.next; // move to next node
     }
   }
 }
