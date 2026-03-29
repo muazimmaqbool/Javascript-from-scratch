@@ -298,3 +298,7 @@ list.printAt(0); // 30
 list.printAt(2); // 15
 list.printAt(4); // 5
 list.printAt(10); // Invalid index
+
+//Note: In real life we will get question based on the linked list
+//Watch: https://www.youtube.com/watch?v=TjeTc1f3ebY&list=PLKhlp2qtUcSZtJefDThsXcsAbRBCSTgW4&index=18
+//from: 21:30 to see questions based on linked list
