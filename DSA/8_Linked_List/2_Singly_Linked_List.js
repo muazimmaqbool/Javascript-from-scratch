@@ -81,5 +81,30 @@ class LinkedList {
     return count;
   }
 
+  //-> 4)Adding element inside LL at the given index
+  addAt(index, data) {
+    //First We will check whether the index is valid of not:
+    if (index < 0 || index > this.size()) {
+      console.error("Invalid index provided.");
+      return;
+    }
+    const newNode = new Node(data);
 
+    //Edge case: if index===0, means addig at the start/head;
+    if (index === 0) {
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    //if index!==0, then we will traverse through the LL, until we found the index, Bu we will go till index-1.
+    //Suppose the provided index is 3, so we will go till index 2, because index 2's next is pointing to 3 index. So we will point 2's next to newNode's next, 
+    // which means newNode's next and 2's next to newNode. which means node at index 2 is now pointing to newNode at index 3 and newNode is pointint to index 4 (which was earlier at index 3)
+    let current=this.head;
+    for(let i=0;i<index-1;i++){
+        current=current.next;
+    }
+    newNode.next=current.next;
+    current.next=newNode;
+  }
 }
