@@ -173,4 +173,16 @@ class LinkedList {
       current.next = current.next.next;
     }
   }
+
+  // ->8)Printing the Linked List:
+  print(){
+    if (!this.head) {
+      return;
+    }
+    let current=this.head;
+    while(current){
+        console.log(current.data);
+        current=current.next
+    }
+  }
 }
