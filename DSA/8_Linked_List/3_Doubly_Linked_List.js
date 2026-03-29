@@ -102,7 +102,7 @@ class DoublyLinkedList {
 
     let current = this.head;
     //we will go till index-1. Suppose the provided index is 3, so we will go till index 2, because index 2's next is pointing to 3 index. So we will point 2's next to newNode's next,
-    for (let i = 0; i < index-1; i++) {
+    for (let i = 0; i < index - 1; i++) {
       current = current.next;
     }
     // new node will point forward to the next node (current.next is point to next node after current)
@@ -112,11 +112,11 @@ class DoublyLinkedList {
 
     // if next node exists, update its prev to point to new node
     //means current.next is not null means it's not tail we have another node after current, so we will point that node's previous to newNode
-    if(current.next){
-        current.next.prev=newNode;
+    if (current.next) {
+      current.next.prev = newNode;
     }
     // finally, link current node to the new node
-    current.next=newNode
+    current.next = newNode;
     /*
     ->Visual:
     Before:
@@ -130,11 +130,36 @@ class DoublyLinkedList {
   }
 
   //5) remove first/top element/head of the DLL:
-  removeFirst(){
-    if(!this.head){
-        return;
+  removeFirst() {
+    if (!this.head) {
+      return;
     }
-     //here head's next points to the next node, so what we will do we will point head to that
-    this.head=this.head.next;// this automatically removes the first node
+    //here head's next points to the next node, so what we will do we will point head to that
+    this.head = this.head.next; // this automatically removes the first node
+
+    if (this.head) {
+      // after moving head forward, remove backward link to old node
+      // making new head's prev = null (since it is now the first node)
+      this.head.prev = null;
+    }
+  }
+
+  //6)Removing tail/end of the DLL:
+  removeEnd() {
+    if (!this.head) {
+      return;
+    }
+    //edge case: only one node present (optional but good practice)
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
+    // move until we reach the second last node i.e node before the last node
+    //current.next points to next node and current.next.next will check next node's next, so if next node's next is null means tail we will make
+    //current.next = null so current becomes tail as it's next is now null via current.next=null
+    while (current.next.next) {
+      current = current.next;
+    }
+    current.next = null;
   }
 }
