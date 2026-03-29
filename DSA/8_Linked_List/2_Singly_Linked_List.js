@@ -201,25 +201,52 @@ class LinkedList {
     if (!this.head) {
       return;
     }
-    console.log("Head of the LL:", this.head.data)
+    console.log("Head of the LL:", this.head.data);
   }
 
   //print tail of the linkedList:
-  printTail(){
+  printTail() {
     // if list is empty, nothing to print
     if (!this.head) {
       return;
     }
 
-    let current=this.head;
-     // move until we reach the last node (where next is null)
-    while(current.next){
-        current=current.next
+    let current = this.head;
+    // move until we reach the last node (where next is null)
+    while (current.next) {
+      current = current.next;
     }
-    console.log("Tail of the LL:",current.data)
+    console.log("Tail of the LL:", current.data);
   }
 
+  //print data at specific index
+  printAt(index) {
+    if (!this.head) {
+      return;
+    }
 
+    // invalid index check
+    if (index < 0 || index >= this.size()) {
+      console.error("Invalid index");
+      return;
+    }
+
+    //if index is 0 means head
+    if (index === 0) {
+      console.log(`Data at index ${index} is = ${this.head.data}`);
+      // or call printHead()
+      // this.printHead();
+      return;
+    }
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+        //when i=0;current moves to 1, when i is 1 current moves to 2, that's why we check i<index 
+      current = current.next;
+    }
+    if (current) {
+      console.log(`Data at index ${index} is = ${current.data}`);
+    }
+  }
 }
 
 //runinng linkedList:
@@ -230,6 +257,8 @@ list.addFirst(10);
 list.addFirst(20);
 list.addFirst(30);
 // list.print() // 30,20,10
+
+list.addAt(6) // Invalid index provided.
 
 list.addLast(40);
 list.print(); // 30,20,10,40
@@ -256,11 +285,16 @@ console.log("removing data at index 1:");
 list.removeAt(1);
 list.print(); //25,15,10
 
-console.log("adding more...")
+console.log("adding more...");
 list.addFirst(30);
-list.addLast(5)
-list.print() // 30,25,15,10,5
+list.addLast(5);
+
+list.print(); // 30,25,15,10,5
 console.log("final size:", list.size()); // 5
 
 list.printHead(); // 30
 list.printTail(); // 5
+list.printAt(0); // 30
+list.printAt(2); // 15
+list.printAt(4); // 5
+list.printAt(10); // Invalid index
