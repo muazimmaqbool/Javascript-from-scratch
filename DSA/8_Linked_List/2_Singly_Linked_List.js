@@ -247,6 +247,9 @@ class LinkedList {
       console.log(`Data at index ${index} is = ${current.data}`);
     }
   }
+  clearLL(){
+    this.head=null;
+  }
 }
 
 //runinng linkedList:
@@ -299,6 +302,19 @@ list.printAt(2); // 15
 list.printAt(4); // 5
 list.printAt(10); // Invalid index
 
+list.clearLL();
+console.log("size after clearing linked list:",list.size()) // 0
+
 //Note: In real life we will get question based on the linked list
 //Watch: https://www.youtube.com/watch?v=TjeTc1f3ebY&list=PLKhlp2qtUcSZtJefDThsXcsAbRBCSTgW4&index=18
 //from: 21:30 to see questions based on linked list
+
+//Common question asked on linked (these all are from above video link)
+//1)Given head of singly LL, we have to return true if LL is palindrome.
+//2)Given head of the singly LL, we have to reverse the list and return the reversed list.
+//3)Given a node of the singly LL, we have to delete the given node
+//4)Remove Nth node from end of the list (important);
+//5)Add two numbers
+
+//Extra: when are you are asked to clear the linkedlist, you can point the head to null and that's it
+         //this.head=null
