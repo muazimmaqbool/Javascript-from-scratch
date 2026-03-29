@@ -107,4 +107,14 @@ class LinkedList {
     newNode.next=current.next; //newNode points to nextNode 
     current.next=newNode; //Previous node points to newNode
   }
+
+  //-> 5) Removing element from top/start of the linked list:
+  removeTop(){
+    //checking if LL is empty or not
+    if(this.head===null){
+        return;
+    }
+    //here head's next points to the next node, so what we will do we will point head to that
+    this.head=this.head.next; // this automatically removes the first node
+  }
 }
