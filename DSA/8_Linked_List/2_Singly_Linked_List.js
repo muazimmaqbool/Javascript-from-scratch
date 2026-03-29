@@ -22,6 +22,9 @@
 
 //Visit this website to understand it properly: https://visualgo.net/en/list
 
+// Note: Head is also called (Start / Beginning / Top) of the Linked List
+// Note: Tail is also called (End / Last Node) of the Linked List
+
 // Node class → represents a single element in the list
 class Node {
   constructor(data) {
@@ -98,23 +101,47 @@ class LinkedList {
     }
 
     //if index!==0, then we will traverse through the LL, until we found the index, Bu we will go till index-1.
-    //Suppose the provided index is 3, so we will go till index 2, because index 2's next is pointing to 3 index. So we will point 2's next to newNode's next, 
+    //Suppose the provided index is 3, so we will go till index 2, because index 2's next is pointing to 3 index. So we will point 2's next to newNode's next,
     // which means newNode's next and 2's next to newNode. which means node at index 2 is now pointing to newNode at index 3 and newNode is pointint to index 4 (which was earlier at index 3)
-    let current=this.head;
-    for(let i=0;i<index-1;i++){
-        current=current.next;
+    let current = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
     }
-    newNode.next=current.next; //newNode points to nextNode 
-    current.next=newNode; //Previous node points to newNode
+    newNode.next = current.next; //newNode points to nextNode
+    current.next = newNode; //Previous node points to newNode
   }
 
   //-> 5) Removing element from top/start of the linked list:
-  removeTop(){
+  removeTop() {
     //checking if LL is empty or not
-    if(this.head===null){
-        return;
+    if (this.head === null) {
+      return;
     }
     //here head's next points to the next node, so what we will do we will point head to that
-    this.head=this.head.next; // this automatically removes the first node
+    this.head = this.head.next; // this automatically removes the first node
+  }
+
+  //-> 6)Removing element at the end/tail of the linked list:
+  removeEnd() {
+    //checking if LL is empty or not
+    if (!this.head) {
+      return;
+    }
+
+    // edge case: only one node present
+    if (!this.head.next) {
+      this.head = null; // remove the only node
+      return;
+    }
+
+    let current = this.head;
+
+    // move until we reach the second last node node before the last node
+    //current.next means points to next node and current.next.next will check next node's next, so if next node's next is null means tail we will make 
+    //current.next = null so current becomes tail as it's next is now null via current.next=null
+    while (current.next.next) { 
+      current = current.next;
+    }
+    current.next = null;
   }
 }
