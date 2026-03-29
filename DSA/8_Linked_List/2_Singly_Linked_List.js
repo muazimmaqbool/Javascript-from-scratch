@@ -68,5 +68,18 @@ class LinkedList {
     current.next = newNode;
     //newNode.next=null; (optional) newNode.next is already null by default
   }
-}
 
+  //-> 3) This function will return size of the LL
+  size() {
+    let count = 0;
+    let current = this.head;
+    //starting from head, we will traverse list until we react end, i.e until current is present
+    while (current) {
+      count++;
+      current = current.next;
+    }
+    return count;
+  }
+
+
+}
