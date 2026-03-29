@@ -128,4 +128,13 @@ class DoublyLinkedList {
     [10] ⇄ [20] ⇄ [25] ⇄ [30]
     */
   }
+
+  //5) remove first/top element/head of the DLL:
+  removeFirst(){
+    if(!this.head){
+        return;
+    }
+     //here head's next points to the next node, so what we will do we will point head to that
+    this.head=this.head.next;// this automatically removes the first node
+  }
 }
