@@ -83,17 +83,17 @@ class LinkedList {
 
   //-> 4)Adding element inside LL at the given index
   addAt(index, data) {
-    //First We will check whether the index is valid of not:
+    //checking if index is valid or not
     if (index < 0 || index > this.size()) {
       console.error("Invalid index provided.");
       return;
     }
     const newNode = new Node(data);
 
-    //Edge case: if index===0, means addig at the start/head;
+    //Edge case: if index===0, means adding at the beginning/head;
     if (index === 0) {
-      newNode.next = this.head;
-      this.head = newNode;
+      newNode.next = this.head; // pointing newNode to current head
+      this.head = newNode; //Updating head to newNode
       return;
     }
 
@@ -104,7 +104,7 @@ class LinkedList {
     for(let i=0;i<index-1;i++){
         current=current.next;
     }
-    newNode.next=current.next;
-    current.next=newNode;
+    newNode.next=current.next; //newNode points to nextNode 
+    current.next=newNode; //Previous node points to newNode
   }
 }
