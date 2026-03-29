@@ -1,8 +1,8 @@
 //Note: First checkout previous file 1_intro.txt
 
-//Singly Linked List: Each node has a pointer only to the next node in the sequence. This is the simplest type.
 /*
-    
+->Singly Linked List: Each node has a pointer only to the next node in the sequence. This is the simplest type.
+
 ->SINGLY LINKED LIST (Simple Diagram):
 
     Head
@@ -18,12 +18,12 @@
         Last node → points to NULL (end of list)
 */
 
-//Implementation of singly linked list in js:
-
 //Visit this website to understand it properly: https://visualgo.net/en/list
 
 // Note: Head is also called (Start / Beginning / Top) of the Linked List
 // Note: Tail is also called (End / Last Node) of the Linked List
+
+//->Implementation of singly linked list in js:
 
 // Node class → represents a single element in the list
 class Node {
