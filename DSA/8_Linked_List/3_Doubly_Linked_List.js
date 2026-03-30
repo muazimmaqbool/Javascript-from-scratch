@@ -171,20 +171,32 @@ class DoublyLinkedList {
     }
 
     if (index === 0) {
+      //updating head to next node
       this.head = this.head.next;
+
+      //if list is not empty after removal
       if (this.head) {
+        //remove the backward link to the old node
         this.head.prev = null;
       }
+      return;
     }
 
-    let current=this.head;
-    for(let i=0;i<index-1;i++){
-      current=current.next
+    let current = this.head;
+    // traverse to (index - 1), i.e., node just before the target
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
     }
-    if(current.next){
-      current.next=current.next.next;
-      if(current.next){
-        current.next.prev=current
+    // current → node before target
+    // current.next → node to be deleted
+    // current.next.next → node after target
+    if (current.next) {
+      // skip the target node by linking to next of next (i.e node after target)
+      current.next = current.next.next;
+      // if next node exists (i.e., not deleting last node)
+      if (current.next) {
+          // update its prev pointer to maintain backward link
+        current.next.prev = current;
       }
     }
   }
