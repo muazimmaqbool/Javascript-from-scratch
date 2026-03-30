@@ -145,7 +145,7 @@ class DoublyLinkedList {
   }
 
   //6)Removing tail/end of the DLL:
-  removeEnd() {
+   removeEnd() {
     if (!this.head) {
       return;
     }
@@ -157,6 +157,7 @@ class DoublyLinkedList {
     // move until we reach the second last node i.e node before the last node
     //current.next points to next node and current.next.next will check next node's next, so if next node's next is null means tail we will make
     //current.next = null so current becomes tail as it's next is now null via current.next=null
+    let current=this.head
     while (current.next.next) {
       current = current.next;
     }
@@ -226,7 +227,6 @@ class DoublyLinkedList {
     }
     let current = this.head;
     while (current) {
-      console.log(current.data);
       console.log(current.data); // print current node's data
       //also try with these:
       //console.log(current.next);
@@ -238,3 +238,46 @@ class DoublyLinkedList {
 
   //Other optional methods:
 }
+
+
+//running doubly linked list:
+const list=new DoublyLinkedList();
+
+list.addFirst(10);
+list.addFirst(20);
+list.addFirst(30);
+// list.print() // 30,20,10
+
+list.addAt(6) // Invalid index provided.
+
+list.addLast(40);
+// list.print(); // 30,20,10,40
+
+console.log("size = ", list.size()); // 4
+
+list.removeFirst();
+console.log("top removed! now size=:", list.size());
+list.print(); // 20,10,40
+
+list.removeEnd();
+console.log("end removed! now size=", list.size());
+list.print(); //20,10
+
+console.log("adding 15 at index 1:");
+list.addAt(1, 15);
+list.print(); // 20,15,10
+
+console.log("adding 25 index at 0:");
+list.addAt(0, 25);
+list.print(); // 25,20,15,10
+
+console.log("removing data at index 1:");
+list.removeAt(1);
+list.print(); //25,15,10
+
+console.log("adding more...");
+list.addFirst(30);
+list.addLast(5);
+
+list.print(); // 30,25,15,10,5
+console.log("final size:", list.size()); // 5
