@@ -195,7 +195,7 @@ class DoublyLinkedList {
       current.next = current.next.next;
       // if next node exists (i.e., not deleting last node)
       if (current.next) {
-          // update its prev pointer to maintain backward link
+        // update its prev pointer to maintain backward link
         current.next.prev = current;
       }
     }
@@ -217,5 +217,24 @@ class DoublyLinkedList {
     // first if → ensures node to delete exists
     // second if → ensures next node exists to fix backward link
   }
-  
+
+  //8)Printing the DLL:
+  print() {
+    if (!this.head) {
+      console.log("DLL is empty!");
+      return;
+    }
+    let current = this.head;
+    while (current) {
+      console.log(current.data);
+      console.log(current.data); // print current node's data
+      //also try with these:
+      //console.log(current.next);
+      //console.log(current)
+      //console.log(current.prev)
+      current=current.next
+    }
+  }
+
+  //Other optional methods:
 }
