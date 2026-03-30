@@ -237,6 +237,23 @@ class DoublyLinkedList {
   }
 
   //Other optional methods:
+  printHead(){
+    if(!this.head){
+      return;
+    }
+    console.log("Head of the DLL :",this.head.data)
+  }
+
+  printTail(){
+    if(!this.head){
+      return;
+    }
+    let current=this.head;
+    while(current.next){
+      current=current.next
+    }
+    console.log("Tail of the DLL :",current.data)
+  }
 }
 
 
@@ -281,3 +298,6 @@ list.addLast(5);
 
 list.print(); // 30,25,15,10,5
 console.log("final size:", list.size()); // 5
+
+list.printHead(); // 30
+list.printTail(); // 5
