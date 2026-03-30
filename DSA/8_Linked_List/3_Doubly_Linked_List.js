@@ -162,4 +162,30 @@ class DoublyLinkedList {
     }
     current.next = null;
   }
+
+  //7)Removing at the given index:
+  removeAt(index) {
+    if (index < 0 || index >= this.size()) {
+      console.error("Invalid index provided.");
+      return;
+    }
+
+    if (index === 0) {
+      this.head = this.head.next;
+      if (this.head) {
+        this.head.prev = null;
+      }
+    }
+
+    let current=this.head;
+    for(let i=0;i<index-1;i++){
+      current=current.next
+    }
+    if(current.next){
+      current.next=current.next.next;
+      if(current.next){
+        current.next.prev=current
+      }
+    }
+  }
 }
