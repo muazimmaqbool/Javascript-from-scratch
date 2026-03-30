@@ -145,7 +145,7 @@ class DoublyLinkedList {
   }
 
   //6)Removing tail/end of the DLL:
-   removeEnd() {
+  removeEnd() {
     if (!this.head) {
       return;
     }
@@ -157,7 +157,7 @@ class DoublyLinkedList {
     // move until we reach the second last node i.e node before the last node
     //current.next points to next node and current.next.next will check next node's next, so if next node's next is null means tail we will make
     //current.next = null so current becomes tail as it's next is now null via current.next=null
-    let current=this.head
+    let current = this.head;
     while (current.next.next) {
       current = current.next;
     }
@@ -232,40 +232,67 @@ class DoublyLinkedList {
       //console.log(current.next);
       //console.log(current)
       //console.log(current.prev)
-      current=current.next
+      current = current.next;
     }
   }
 
   //Other optional methods:
-  printHead(){
-    if(!this.head){
+  printHead() {
+    if (!this.head) {
       return;
     }
-    console.log("Head of the DLL :",this.head.data)
+    console.log("Head of the DLL :", this.head.data);
   }
 
-  printTail(){
-    if(!this.head){
+  printTail() {
+    if (!this.head) {
       return;
     }
-    let current=this.head;
-    while(current.next){
-      current=current.next
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
     }
-    console.log("Tail of the DLL :",current.data)
+    console.log("Tail of the DLL :", current.data);
+  }
+
+  printAt(index) {
+    if (!this.head) {
+      return;
+    }
+    // invalid index check
+    if (index < 0 || index >= this.size()) {
+      console.error("Invalid index");
+      return;
+    }
+    if (index === 0) {
+      console.log(`Data at index ${index} is = ${this.head.data}`);
+      // or call printHead()
+      // this.printHead();
+      return;
+    }
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+      //when i=0;current moves to 1, when i is 1 current moves to 2, that's why we check i<index
+      current = current.next;
+    }
+    if (current) {
+      console.log(`Data at index ${index} is = ${current.data}`);
+    }
+  }
+  clearLL() {
+    this.head = null;
   }
 }
 
-
 //running doubly linked list:
-const list=new DoublyLinkedList();
+const list = new DoublyLinkedList();
 
 list.addFirst(10);
 list.addFirst(20);
 list.addFirst(30);
 // list.print() // 30,20,10
 
-list.addAt(6) // Invalid index provided.
+list.addAt(6); // Invalid index provided.
 
 list.addLast(40);
 // list.print(); // 30,20,10,40
@@ -301,3 +328,10 @@ console.log("final size:", list.size()); // 5
 
 list.printHead(); // 30
 list.printTail(); // 5
+list.printAt(0); // 30
+list.printAt(2); // 15
+list.printAt(4); // 5
+list.printAt(10); // Invalid index
+
+list.clearLL();
+console.log("size after clearing doubly linked list:", list.size()); // 0
