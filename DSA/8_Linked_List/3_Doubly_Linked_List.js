@@ -199,5 +199,23 @@ class DoublyLinkedList {
         current.next.prev = current;
       }
     }
+    //Important:
+    // first if (current.next):
+    // checks if the node to be deleted exists
+    // here, current.next refers to the node we want to remove
+
+    // after this line:
+    // current.next = current.next.next;
+
+    // current.next now refers to the node AFTER the deleted node
+
+    // second if (current.next):
+    // checks if there is a node after deletion (i.e., not deleting the last node)
+    // this is needed to safely update the prev pointer
+
+    // in short:
+    // first if → ensures node to delete exists
+    // second if → ensures next node exists to fix backward link
   }
+  
 }
