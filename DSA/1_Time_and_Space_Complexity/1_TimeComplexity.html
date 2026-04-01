@@ -54,12 +54,13 @@
             function getFirst(arr){
                 return arr[0]
             }
-           // Fast, no matter if arr has 10 elements or 10 million elements it always returns first only
+        // Fast, no matter if arr has 10 elements or 10 million elements it always returns first only
 
         // -> O(n) : Linear Time (Here execution/runtime grows directly with input size)
         function printAll(arr){
             arr.forEach((el)=>console.log(el))
-        } //If array size doubles the operation also doubles
+        } 
+        //If array size doubles the operation also doubles
 
         // -> O(n^2) : Quadration time (Here we have nested loops over the same data which increases the runtime)
         function printPairs(arr){
@@ -68,11 +69,10 @@
                     console.log(arr[i],arr[j]) // n*n operations
                 }
             }
-        } //Here if input is 100 elements i.e means 10000 elements
+        }
+        //Here if input is 100 elements i.e means 10000 elements
 
-        //More examples and info on next time 2_TimeComplexity.js
-        
-        
+        //More examples and info on next time 2_TimeComplexity.js 
     </script>
 </body>
 </html>
