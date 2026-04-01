@@ -1,6 +1,3 @@
-//To run this: node --watch DSA\1_Time_and_Space_Complexity\2_TimeComplexity.js
-// or go inside this folder via cd then run node --watch 2_TimeComplexity.js
-
 //checking using for loop
 const randomArray = [12, 56, 74, 85, 41, 26, 45, 88];
 //Example with print start time and end time
