@@ -11,5 +11,5 @@ Here this function/algorithm have timeComlexity of O(1) because it has only one 
  it doesn't matter the number of input i.e n
  Here the 'someOperations' function have 3 operations i.e n*  is one, n+5 is two and /2 is third operation
 
- So this algorithm will take same amount of time with each and every call
+ So this algorithm will take same amount of time with each and on every call
 */
