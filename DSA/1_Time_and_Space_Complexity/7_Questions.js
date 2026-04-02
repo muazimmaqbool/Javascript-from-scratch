@@ -1,7 +1,5 @@
-//To run this go inside this folder via cd and node --watch 7_Questions.js
-
 //Time complexity questions:
-//1: What’s the time complexity of:
+//1: What’s the time and space complexity of:
 const func1 = (n) => {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < 10; j++) {
@@ -9,8 +7,15 @@ const func1 = (n) => {
     }
   }
 };
-// console.log(func1(1))
+//console.log(func1(1))
 // time complexity is O(n), because here o/p depends on the input n
+/*
+Outer loop runs n times
+Inner loop runs 10 times (constant)
+so: n*10 drop constants so O(n)
+
+->No extra space used (only variables i, j) so space complexity is O(1)
+*/
 
 //2:
 function getFirstAndLast(arr) {
@@ -27,8 +32,9 @@ function sumOfArray(arr) {
   }
   return sum;
 }
-//console.log(sumOfArray([1,2,5,4,6,3])) 
+console.log(sumOfArray([1,2,5,4,6,3])) 
 // here sum depends of the output so its time complexity will be O(n)
+//space complexity is O(1)
 
 //4:
 function printPairs(arr) {
@@ -41,7 +47,7 @@ function printPairs(arr) {
 //console.log(printPairs([1,2,5,4]))
 // O(n^2)
 
-//1: What’s the space complexity of:
+//5:
 function reverseArray(arr) {
   const newArr = [];
   for (let i = arr.length - 1; i >= 0; i--) {
@@ -50,6 +56,12 @@ function reverseArray(arr) {
   return newArr;
 }
 //console.log(reverseArray([1,2,3,4,5,6,7])) 
-// O(n)
+// time complexity is O(n)
+// space complexity is O(n)
 
 
+
+//Loop inside loop ≠ always O(n²)
+// → if inner loop is constant → overall is O(n)
+
+//Whenever you traverse entire array once → O(n)
