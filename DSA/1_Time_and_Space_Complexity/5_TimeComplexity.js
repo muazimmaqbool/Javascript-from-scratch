@@ -1,9 +1,9 @@
-//To run this go inside this folder via cd and node --watch 5_TimeComplexity.js
-
 //Example PrintBoth O(n^2)
 const printBoth=(n)=>{
-    for(let i=0;i<n;i++){ // here operations depends on the size of n
-        for(let j=0;j<n;j++){ //here operations depends on the size of n
+    // here operations depends on the size of n
+    for(let i=0;i<n;i++){ 
+        //here operations depends on the size of n
+        for(let j=0;j<n;j++){ 
             console.log(i,j)
         }
     }
