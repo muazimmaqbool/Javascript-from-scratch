@@ -1,4 +1,3 @@
-//To run go inside this folder via cd and enter: node --watch 1_Array.js (--watch is optional)
 /*
 Array introduction:
     An array is a collection of items of same data type that are stored at contiguous memory locations. 
