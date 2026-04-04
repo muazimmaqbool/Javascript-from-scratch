@@ -1,5 +1,4 @@
-//To run go inside this folder via cd and enter: node --watch 4_Stack.js
-/*
+0/*
 ->Stack Data Structure:
     A stack is a linear data structure that follows the Last-In, First-Out (LIFO) principle. 
     This means the last element added to the stack is the first one to be removed. 
@@ -15,7 +14,7 @@
     | `size()`    | Get number of items     |
 
 ->Real Browser Use Cases of Stack:
-    Undo / Redo feature
+    Undo / Redo feature:
     Every time you make a change, push it to the undo stack.
     When you undo, pop from undoStack and push it to redoStack.
 */
@@ -72,7 +71,7 @@ console.log("bottom element:", stack.bottomElement());
 // Undo / Redo feature
 // Every time you make a change, push it to the undo stack.
 // When you do undo, pop from undoStack and push it to redoStack.
-console.log("***************************")
+console.log("**** Undo/Redo Feature Code ****")
 const undo = []; //stores latest actions performed that can be undo
 const redo = []; //stores the actions that were just undo and can be reapplied(redone), it basically temporary holds the actions popped from the undo stack
 const makeChange = (action) => {
