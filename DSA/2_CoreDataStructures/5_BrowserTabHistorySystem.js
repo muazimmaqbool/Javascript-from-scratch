@@ -1,5 +1,3 @@
-//To run go inside this folder via cd and enter: node --watch 6_BrowserTabHistorySystem.js
-
 //Browser Tab History System
 //you’ll understand how browsers manage navigation with Back and Forward just like Chrome.
 
