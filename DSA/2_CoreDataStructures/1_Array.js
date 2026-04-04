@@ -29,6 +29,9 @@ const reverseArray=(arr)=>{
 console.log("Original:",numArray)
 console.log("Reverse:",reverseArray(numArray))
 
+//we also have a reverse method which will reverse array in js
+console.log("Reverse using reverse():",numArray.reverse())
+
 //Rotation (rotate array by k steps)
 function rotateArray(arr, k) {
   k = k % arr.length; //this is to make sure that rotation count doesn't exceed the array length
