@@ -1,4 +1,3 @@
-//To run go inside this folder via cd and enter: node --watch 5_Queue.js
 /*
 ->Queue Data Structure:
  A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. 
@@ -94,5 +93,5 @@ o/p:
     | Order   | LIFO       | FIFO                    |
     | Add     | push (top) | enqueue (rear)          |
     | Remove  | pop (top)  | dequeue (front)         |
-    | Example | Undo/Redo  | Task Queue, Print Queue |
+    | Example | Undo/Redo  | Task Queue              |
 */
