@@ -9,6 +9,11 @@ const reverseArray=(array)=>{
     //use th result when in question it's mentioned don't mutate original array
     // let result=[...array]
 
+    //method 1 using reverse:
+    // return array.reverse()
+
+    //method 2 without reverse: (Important)
+
     let start=0; end=array.length-1
     //end will have value less then array length and that will be index of last element in array
     while(start<end){
@@ -22,5 +27,7 @@ const reverseArray=(array)=>{
     return array
 
 }
-console.log("Original:",array)
-console.log("Reverse:",reverseArray(array))
+console.log("Original:",array) // [ 1, 2, 3, 4, 5 ]
+console.log("Reverse:",reverseArray(array)) // [5,4,3,2,1]
+console.log(reverseArray())// false
+console.log(reverseArray([])) // []
