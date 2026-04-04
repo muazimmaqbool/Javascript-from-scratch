@@ -46,5 +46,5 @@ in return we first have ...arr.slice(-k)] : .slice returns part of the array and
                     and then spread operator concates them: [4,5,1,2,3]
 */
 
-console.log("rotateArray:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
-console.log("rotateArray 2:",rotateArray([1,2,3,4,5,6,7,8,9],3)) // [7, 8, 9, 1, 2,3, 4, 5, 6]
+console.log("rotateArray:",rotateArray([1,2,3,4,5], 3)); // [4,5,1,2,3]
+console.log("rotateArray 2:",rotateArray([1,2,3,4,5,6,7,8,9],5)) // [7, 8, 9, 1, 2,3, 4, 5, 6]
