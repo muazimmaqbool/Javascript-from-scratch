@@ -40,6 +40,22 @@ Complexity:
     Space: O(1) — only two pointers, no extra memory.
 */
 
+console.log("**************")
+//Another method of checking for palindrome:
+function isValidPalindrome(str){
+    const clean=str.replace(/[^a-zA-Z0-9]/g,'').toLowerCase();
+    // console.log("clean:",clean)
+    const reverse=clean.split("").reverse().join('')
+    // console.log("reverse:",reverse)
+    return clean===reverse
+}
+console.log(isValidPalindrome("A man, a plan, a canal: Panama")) // true
+console.log(isValidPalindrome("race a car")) // false
+console.log(isValidPalindrome(" ")) // true
+console.log(isValidPalindrome("1234")) // false
+console.log(isValidPalindrome("!!!@@@###"))
+
+console.log("**************")
 /*
 An anagram is a word, phrase, or sentence formed by rearranging the letters of a different word or phrase, 
 using all the original letters exactly once. For example, "listen" and "silent" are anagrams because they use the same letters,
