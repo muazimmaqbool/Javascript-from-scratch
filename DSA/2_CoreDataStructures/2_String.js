@@ -59,7 +59,7 @@ console.log("**************")
 /*
 An anagram is a word, phrase, or sentence formed by rearranging the letters of a different word or phrase, 
 using all the original letters exactly once. For example, "listen" and "silent" are anagrams because they use the same letters,
- just in a different order
+just in a different order
 */
 //2:Anagrams
 function isAnagram(str1, str2) {
@@ -91,6 +91,22 @@ function isAnagram(str1, str2) {
   */
 }
 console.log("isAnagram:",isAnagram("listen", "silent")); // true
+
+console.log("*******************")
+//Another method of checking for anagram:
+function anagramChecker(str1,str2){
+    const formatter=(str)=>str.toLowerCase().replace(/[^a-z]/g,'').split('').sort().join('')
+    return formatter(str1)===formatter(str2)
+}
+console.log(anagramChecker("listen","silent")) // true
+console.log(anagramChecker("Hello","world")) // false
+console.log(anagramChecker("Traingle","Integral")) // true
+console.log(anagramChecker("rat","car")) // false
+console.log(anagramChecker("a","A")) // true
+console.log(anagramChecker("dormitory! !","dirty room")) // true
+console.log(anagramChecker("1234","2341")) // true
+
+console.log("**********************")
 
 //3: Substring Search (naive approach)
 //it looks for the first occurrence of pattern(second argument) inside text(first argument) and returns its starting index, or -1 if not found.
