@@ -4,8 +4,6 @@
     <title>Example of reduce() in JS</title>
   </head>
   <body>
-    <!--See previous code 44 
-        -->
     <script>
       const arr = [5, 4, 2, 8, 7, 6];
       //find max value inside arr array
@@ -22,7 +20,7 @@
       }
       console.log("Max Value:", MaxValue(arr)); // o/p: 8
 
-      //with reduce() function(watch at 21:25)
+      //with reduce() function
       const output = arr.reduce(function (max, currElement) {
         //we can use any name for accumulator and also for current
         if (currElement > max) {
@@ -102,7 +100,7 @@
         {name:"Mona",score:60},
         {name:"Hassan",score:70},
        ]
-       //Goal: Group the students into: Topes, Average, Below Average
+       //Goal: Group the students into: Toppers, Average, Below Average
        const groupedStudents=students.reduce((acc,student)=>{
         if(student.score>=90){
           acc.toppers.push(student)
