@@ -124,3 +124,76 @@ function test(arr) {
     Sort → O(n log n)
     Biggest dominates → O(n log n)
 */
+
+//Hard:
+//11:
+function test(n) {
+  for(let i = 0; i < n; i++) {
+    for(let j = 0; j < i; j++) {
+      console.log(i, j);
+    }
+  }
+}
+//12:
+function test(n) {
+  for(let i = 0; i < n; i++) {
+    for(let j = 1; j < n; j = j * 2) {
+      console.log(i, j);
+    }
+  }
+}
+//13:
+function test(n) {
+  while(n > 1) {
+    n = n / 2;
+    console.log(n);
+  }
+}
+//14:
+function test(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+
+  for(let j = 1; j < arr.length; j = j * 2) {
+    console.log(j);
+  }
+}
+//15:
+function test(n) {
+  for(let i = 0; i < n; i++) {
+    for(let j = 0; j < n; j = j * 2) {
+      console.log(i, j);
+    }
+  }
+}
+
+//Answers:
+/*
+11: O(n²)
+    Explanation:
+    Inner loop runs: 1 + 2 + 3 + ... + n = n²/2 → O(n²)
+    
+12: O(n log n)
+    Explanation:
+    Outer loop → n
+    Inner loop → log n
+    Total = n × log n = O(n log n)
+
+13: O(log n)
+    (Closest allowed: log n — but not in your list)
+    Explanation:
+    n halves every iteration → logarithmic.
+
+14: O(n)
+    Explanation:
+    First loop → O(n)
+    Second loop → O(log n)
+    Total: O(n + log n) = O(n)
+
+15: O(n log n)
+    Explanation:
+    Outer loop → n
+    Inner loop → log n
+    Total: n × log n = O(n log n)
+*/
