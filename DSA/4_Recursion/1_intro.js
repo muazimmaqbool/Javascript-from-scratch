@@ -55,7 +55,7 @@ console.log(multiplyUsingRecursion([1,2,3,4])) // 24
 //Explanation:
 /*
 ->return arr[arr.length-1]* multiplyUsingRecursion(arr.slice(0,arr.length-1))
- we start from the last element of the array i.e arr[arr.length-1] i.e length is 4 so arr[4] i.e 4 
+ we start from the last element of the array i.e arr[arr.length-1] i.e length is 4 so arr[4-1] > arr[3] i.e 4 (as 4 element is at index 3]
  -> so: 4 * arr.slice(0,arr.length-1) i.e arr.slice(0,3) so arr[1,2,3]
 
  ->First:  4 * arr[1,2,3]
