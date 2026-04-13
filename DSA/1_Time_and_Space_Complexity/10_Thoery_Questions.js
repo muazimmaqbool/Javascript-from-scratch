@@ -43,27 +43,19 @@
 🟡 Medium:
 
 6. What is the time complexity of accessing an array element?
-
-✅ Answer: O(1)
-👉 Because arrays use index-based access
+   Answer: O(1) : Because arrays use index-based access
 
 7. What is the time complexity of searching in an unsorted array?
-
-✅ Answer: O(n)
-👉 You may need to check every element
+   Answer: O(n) : You may need to check every element
 
 8. What is the time complexity of binary search?
-
-✅ Answer: O(log n)
-👉 Because input is halved each step
+   Answer: O(log n) : Because input is halved each step
 
 9. What happens to time complexity when loops are nested?
-for(...) {
-  for(...) {}
-}
-
-✅ Answer:
-Multiply complexities → O(n × n) = O(n²)
+  for(...) {
+    for(...) {}
+  }
+  Answer: Multiply complexities → O(n × n) = O(n²)
 
 10. What happens when loops are separate?
 for(...) {}
@@ -90,6 +82,7 @@ An algorithm that uses O(1) extra space
 Swapping elements in same array
 
 🔴 Hard / Interview Level:
+
 13. Difference between worst-case and average-case complexity?
 
 ✅ Answer:
