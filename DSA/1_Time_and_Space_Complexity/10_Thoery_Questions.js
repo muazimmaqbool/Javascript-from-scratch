@@ -4,42 +4,33 @@
 🟢 Basics:
 
 1. What is Time Complexity?
-
 ✅ Answer:
 Time complexity measures how the execution time of an algorithm grows as the input size increases.
-
 👉 It doesn’t measure actual time (seconds), but growth rate.
 
 2. What is Space Complexity?
-
 ✅ Answer:
 Space complexity measures how much extra memory (space) an algorithm uses relative to input size.
-
 👉 Includes:
-
 Variables
 Data structures
 Recursive call stack
-3. What is Big-O Notation?
 
+3. What is Big-O Notation?
 ✅ Answer:
 Big-O describes the upper bound (worst-case) growth rate of an algorithm.
-
 👉 Example:
-
 O(1) → constant
 O(n) → linear
 O(n²) → quadratic
+
 4. Why do we ignore constants in Big-O?
 O(2n + 5) → O(n)
-
 ✅ Answer:
 Because Big-O focuses on growth trend, not exact values.
-
 👉 For large inputs:
-
-2n ≈ n
-+5 becomes irrelevant
+  2n ≈ n
+  +5 becomes irrelevant
 
 5. Difference between O(n) and O(n²)?
 ✅ Answer:
