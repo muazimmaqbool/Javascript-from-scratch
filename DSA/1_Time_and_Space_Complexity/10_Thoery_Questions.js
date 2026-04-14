@@ -40,33 +40,27 @@ Because Big-O focuses on growth trend, not exact values.
 
 2n ≈ n
 +5 becomes irrelevant
+
 5. Difference between O(n) and O(n²)?
-
 ✅ Answer:
-
 O(n) → grows linearly
 O(n²) → grows much faster (nested loops)
-
 👉 Example:
-
-n = 100
-O(n) → 100 operations
-O(n²) → 10,000 operations 🚨
+  n = 100
+  O(n) → 100 operations
+  O(n²) → 10,000 operations 🚨
 
 🟡 Medium:
 
 6. What is the time complexity of accessing an array element?
-
 ✅ Answer: O(1)
 👉 Because arrays use index-based access
 
 7. What is the time complexity of searching in an unsorted array?
-
 ✅ Answer: O(n)
 👉 You may need to check every element
 
 8. What is the time complexity of binary search?
-
 ✅ Answer: O(log n)
 👉 Because input is halved each step
 
@@ -75,21 +69,17 @@ for(...) {
   for(...) {}
 }
 
-✅ Answer:
-Multiply complexities → O(n × n) = O(n²)
+✅ Answer: Multiply complexities → O(n × n) = O(n²)
 
 10. What happens when loops are separate?
 for(...) {}
 for(...) {}
 
-✅ Answer:
-Add complexities → O(n + n) => O(2n) => O(n)
+✅ Answer: Add complexities → O(n + n) => O(2n) => O(n)
 
 11. What is auxiliary space?
-
 ✅ Answer:
 Extra space used by algorithm excluding input
-
 👉 Example: let arr = new Array(n); // auxiliary space = O(n)
 
 12. What is in-place algorithm?
