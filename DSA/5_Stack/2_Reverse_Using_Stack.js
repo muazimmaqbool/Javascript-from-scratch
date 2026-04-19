@@ -7,7 +7,7 @@
 
 //Approach:
 // "the sky is blue" => [the, sky, is, blue]
-// [] => [the, sky, is, blue] => [blue, is, sky, the]
+// [the, sky, is, blue] => [blue, is, sky, the]
 
 //Solution
 const reverseWords=(s)=>{
