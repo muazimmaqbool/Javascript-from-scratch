@@ -50,3 +50,6 @@ const reverseStr=(str)=>{
 console.log(reverseStr("the sky is blue")) // blue is key the
 console.log(reverseStr("       hello world  ")) // world hello
 console.log(reverseStr("a good                boy")) //  boy good a 
+
+//Time complexity is : O(n)  , Traverses the string from both ends to find non-whitespace characters. In the worst case, it scans the entire string
+//Space complexity is : O(n) , to store the array of words and the final output string
