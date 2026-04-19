@@ -4,6 +4,7 @@ Note: More on stacks inside 'CoreDataStructures' folder
 
 ->A stack is a linear data structure that follows the Last-In, First-Out (LIFO) principle, 
     much like a physical stack of plates where the last plate added to the top is the first one removed. 
+
     In JavaScript, stacks are commonly implemented using arrays, leveraging the built-in push() and pop() methods. 
 
 ->Core Principles:
@@ -22,17 +23,17 @@ Note: More on stacks inside 'CoreDataStructures' folder
 class Stack {
   //Class is basically a template that is used to create objects in js
 
-  //when we create the new instance of the stack class this constructor will be the one to run first
+  //when we create the new instance of the 'Stack' class this constructor will be the one to run first
   constructor() {
     this.stack = []; //declaring a local variable stack with initial value as empty array []
-    //so whenever we initialize new object of class stack the will create a stack variable for that object via the constructor
+    //so whenever we initialize new object of class Stack, it will create a stack variable for that object via the constructor which will initially be []
   }
 
   //adding element to the stack:
   push(el) {
     this.stack.push(el);
   }
-  //removing top element of the stack
+  //removing top element of the stack and also returing it
   pop() {
     if (this.isEmpty()) {
       return "Stack is empty!";
@@ -42,10 +43,11 @@ class Stack {
 
   isEmpty() {
     // return this.stack.length===0 ? true : false
+    //or
     return this.stack.length === 0;
   }
 
-  //returning top element of the stack
+  //returning top element of the stack without removing it
   peek() {
     if (this.isEmpty()) {
       return "Stack is empty!";
