@@ -54,6 +54,7 @@ console.log(linearSearch([4,5,6,7,0,1,2,6],6)) // 2 , 6 is present at index 2 an
 //space complexity = o(1) // because we are not created any new variable etc we are just returning 1 single value 
 
 console.log("********************")
+
 //Global linear search:
 /*
 Global linear search" is a variation of the standard linear search algorithm used to find all occurrences of a target element within a list or array,
