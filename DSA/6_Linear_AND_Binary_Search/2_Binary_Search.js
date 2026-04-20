@@ -7,7 +7,7 @@ Binary Search:
     Time complexity: O(log n)
     Note: O(log n) is more efficient than O(n) and O(log n) is an amazing timecomplexity
 
-    So Binary Search is prefered over linear search
+    ->So Binary Search is prefered over linear search
 
     ->Key Concepts:
         Prerequisite: The data structure (typically an array) must be sorted in a specific order (ascending or descending).
