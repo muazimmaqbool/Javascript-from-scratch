@@ -19,12 +19,12 @@ Binary Search:
         The process uses two pointers, low and high, to track the boundaries of the search space. 
 
         1) Initialize Pointers: Set low to the first index (0) and high to the last index of the array (n - 1).
-        2) Calculate Middle: While low is less than or equal to high, calculate the middle index mid (e.g., mid = (low + high) // 2 using integer division).
+        2) Calculate Middle: While low is less than or equal to high, calculate the middle index mid (e.g., mid = (low + high) / 2 )using integer division).
         3) Compare: Compare the element at arr[mid] with the target value:
             If arr[mid] equals the target, the search is successful, and the index mid is returned.
             If the target is less than arr[mid], the target must be in the left half, so the high pointer is updated to mid - 1.
             If the target is greater than arr[mid], the target must be in the right half, so the low pointer is updated to mid + 1.
-        4_Repeat: Repeat steps 2 and 3 until the target is found or the search space is exhausted (when low becomes greater than high), 
+        4)Repeat: Repeat steps 2 and 3 until the target is found or the search space is exhausted (when low becomes greater than high), 
                   in this case the algorithm returns -1 or a similar indicator. 
 
     ->Applications Of Binary Search:
@@ -33,7 +33,7 @@ Binary Search:
         2) Version Control: Tools like Git use binary search (git bisect) to quickly find the specific commit that introduced a bug.
         3) Standard Libraries: Many programming languages, such as C++, Java, and Python, provide built-in functions that 
                                utilize the binary search algorithm (e.g., Arrays.binarySearch() in Java or the bisect module in Python).
-        4)Optimization Problems: Used to find optimal solutions in problems where the search space is monotonic
+        4) Optimization Problems: Used to find optimal solutions in problems where the search space is monotonic
 */
 
 /*
