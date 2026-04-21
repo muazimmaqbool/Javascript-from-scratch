@@ -28,5 +28,5 @@ console.log(newArray); // Output: [7, 7, 7, 7, 7]
 
 //4. Filling a from a start index to end
 const charArray=['a','b','c','d','e','f','g']
-console.log(charArray.fill('m',3)) // the array is filled with character 'm' from index '3' to end i.e from char 'd' to end
+console.log(charArray.fill('m',3)) // the array is filled with character 'm' from index '3' till end i.e from char 'd' to end
 // Output: ['a', 'b', 'c','m', 'm', 'm','m']
