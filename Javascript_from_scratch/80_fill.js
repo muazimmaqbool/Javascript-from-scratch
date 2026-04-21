@@ -1,7 +1,5 @@
-//to run this go to inside this folder via cd and run: node --watch 80_fill.js
-
 /*
-The Array.prototype.fill() method in JavaScript is used to change all elements in an array to a static value, 
+The Array.prototype.fill() method in JavaScript is used to change elements in an array to a static value, 
     from a start index to an end index.
 
 The fill() method modifies the original array and returns the modified array.
