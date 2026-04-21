@@ -1,12 +1,12 @@
 //Set(): In JavaScript, a Set is a built-in object that let's you store unique values of any type,
-        //This means that each value can only appear once within a Set.
+         //This means that each value can only appear once within a Set.
 
 //Example:
 const mySet=new Set()
 //or
 const nums=new Set([1,2,3,4,4,5])
 console.log("nums:",nums); 
-// o/p: Set(5) { 1, 2, 3, 4, 5 } :  Duplicate values are automatically removed
+// o/p: Set(5) { 1, 2, 3, 4, 5 } :  Duplicate values are automatically removed (4 appears only once)
 
 /*
 ->Basic methods of Set():
@@ -22,7 +22,7 @@ const fruits=new Set()
 fruits.add("Apple");
 fruits.add("Orange");
 fruits.add("Banana");
-fruits.add("Apple"); // ignored as its duplicate
+fruits.add("Apple"); // ignored as it's a duplicate
 console.log("Fruits set:",fruits) // o/p : { 'Apple', 'Orange', 'Banana' }
 
 console.log("fruits set size:",fruits.size) // 3
@@ -64,7 +64,7 @@ console.log("unique arr:",uniqueArr) // o/p: Set(3) { 'a', 'b', 'c' }
 
 //->Common Use Cases
     //1) Remove duplicates from an array
-    //2) Checks if any existing elements quickly
+    //2) Checks if any existing element quickly
     
 //->Important Notes
 // 1) Order of elements is insertion order.
