@@ -82,3 +82,20 @@ console.log("Has banana:",setMix.has(false)) // true
 setMix.add("Hello")
 setMix.add({Mango:"20"})
 console.log("setMix:",setMix)
+
+/*
+Map vs Set (JavaScript):
+    Map:
+        → Stores key–value pairs
+        → Keys can be of any type (object, function, primitive)
+        → Used when you need to associate data with keys
+        
+    Set:
+        → Stores only unique values (no key–value)
+        → Automatically removes duplicates
+        → Used when you need a collection of unique items
+
+    In short:
+    👉 Map = key → value
+    👉 Set = unique values only
+*/
