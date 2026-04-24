@@ -17,7 +17,11 @@ Example:
 */
 function findSingleElement(arr){
     //Soltuon 1 (Original solution with time complexity O(log n))
-    
+    //we will use binary search algorithm
+    let low=0;
+    let high=arr.length-1
+
+    while(low )
 
     //_>solution two (when it's not mentioned in question what will be the efficiency of algorithm)
     // const map=new Map();
