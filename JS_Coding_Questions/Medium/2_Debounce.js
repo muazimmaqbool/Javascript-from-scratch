@@ -19,6 +19,7 @@ function debounce(fn,delay){
     return function(...args){
         clearTimeout(timer);
         timer=setTimeout(()=>{
+            //apply is used to invoke a function with a specific this context and arguments provided as an array.
             fn.apply(this,args)
         },delay)
     }
