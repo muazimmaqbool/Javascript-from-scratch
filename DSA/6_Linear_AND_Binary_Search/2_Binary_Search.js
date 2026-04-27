@@ -49,7 +49,8 @@ Q: Implement binary search:
 */
 
 function binarySearch(nums, target) {
-  if (nums.length === 0) return -1; //if array is empty, return -1 because target cannot exist
+  //if array is empty, return -1 because target cannot exist
+  if (nums.length === 0) return -1; 
 
   let start = 0; //first element of the array
   let end = nums.length - 1; // end is last element of the array
@@ -79,7 +80,6 @@ console.log(binarySearch([],5)) // -1
 /*Because in each iteration we are doing an exponentation reduction i.e we are turning the area of search to half and 
   when exponentation reduction happens the time complexity is O(log n)
 */
-
 //->Space complexity = O(1)
 
 //Important: (extra explnanation)
