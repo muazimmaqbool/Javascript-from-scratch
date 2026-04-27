@@ -19,4 +19,4 @@ console.log(formatList([])) // []
 console.log(formatList(["Apple"])) // Apple
 console.log(formatList(["Apple","Banana"])) // Apple and Banana
 console.log(formatList(["Apple","Banana","Grapes","Orange"])) // Apple, Banana, Grapes and Orange
-console.log(formatList(["","Spaces"])) //   and Spaces
+console.log(formatList([" ","Spaces"," "])) //   and Spaces
