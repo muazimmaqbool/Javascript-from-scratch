@@ -92,3 +92,15 @@ console.log("Example 2:", mergeArray(arr3, arr4));
 
 ->Final Time Complexity: O(n) + O(m) + O(n + m) = O(n + m)
 */
+//Space Complexity is O(n+m)
+/*
+->Map storage: const map = new Map();
+    Stores up to n + m unique ids
+    Worst case: O(n + m)
+
+->Result array:
+    Array.from(map.values()): Also stores up to n + m elements
+    so O(n+m)
+
+->Final Space Complexity: O(n+m)
+*/
