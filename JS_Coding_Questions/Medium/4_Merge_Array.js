@@ -21,3 +21,43 @@ Output :
     { id: 2, name: "Bob", age: 30 },
     { id: 3, name: "Charlie" }
 */
+function mergeArray(arr1, arr2) {
+  const map = new Map();
+  for (let el of arr1) {
+    map.set(el.id, { ...el });
+  }
+  for (let el of arr2) {
+    if (map.has(el.id)) {
+      map.set(el.id, { ...map.get(el.id), ...el });
+    } else {
+      map.set(el.id, { ...el });
+    }
+  }
+  return Array.from(map.values());
+}
+arr1 = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+];
+arr2 = [
+  { id: 2, age: 30 },
+  { id: 3, name: "Charlie" },
+];
+console.log("Example 1:",mergeArray(arr1, arr2));
+/*
+    o/p; [
+            { id: 1, name: 'Alice' },
+            { id: 2, name: 'Bob', age: 30 },
+            { id: 3, name: 'Charlie' }
+        ]
+*/
+const arr3 = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "John" }
+]
+
+const arr4 = [
+  { id: 1,age: 20 },
+  { id: 3, name: "Sara" }
+]
+console.log("Example 2:",mergeArray(arr3,arr4))
