@@ -21,9 +21,13 @@ function findSingleElement(arr){
     let low=0;
     let high=arr.length-1
 
-    while(low )
+    while(low ){
 
-    //_>solution two (when it's not mentioned in question what will be the efficiency of algorithm)
+    }
+
+    //Note: when it's not mentioned in question what will be the efficiency of algorithm you use below solutions then
+    
+    // Solution 2 
     // const map=new Map();
     // for(let el of arr){
     //     map.set(el,(map.get(el)||0)+1)
@@ -33,6 +37,8 @@ function findSingleElement(arr){
     // }
     //Time complexity is O(n) {extra: Each operation (map.get, map.set) is O(1)}
     //Space complexity is O(n)
+
+    // Solution 3 
 }
 console.log(findSingleElement([1, 1, 2, 3, 3, 4])) // 2 as 2 appears only once
 console.log(findSingleElement([1, 1,2,2,3,4,5,5])) // 3 as it 3 appears only once and it's first element that's why 4 was not returned
