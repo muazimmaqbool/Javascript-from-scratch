@@ -39,8 +39,8 @@ function findSingleElement(arr) {
   //Space complexity is O(n)
 
   // Solution 3 : Using filter (Simple but slower)
-//   return arr.find((num) => arr.filter((n) => n === num).length === 1);
-//Time complexity= O(n) * O(n) = O(n²) 
+//return arr.find((num) => arr.filter((n) => n === num).length === 1);
+//Time complexity= O(n) * O(n) = O(n²)  (arr.find(...) runs on every element so O(n) and then arr.filter(...) also run for every element so O(n))
 //space complexity= O(n)
 
 }
