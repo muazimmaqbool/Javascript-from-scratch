@@ -15,31 +15,35 @@ Example:
     Input: [7]
     Output: 7
 */
-function findSingleElement(arr){
-    //Soltuon 1 (Original solution with time complexity O(log n))
-    //we will use binary search algorithm
-    let low=0;
-    let high=arr.length-1
+function findSingleElement(arr) {
+  //Soltuon 1 (Original solution with time complexity O(log n))
+  //we will use binary search algorithm
+  // let low=0;
+  // let high=arr.length-1
 
-    while(low ){
+  // while(low ){
 
-    }
+  // }
 
-    //Note: when it's not mentioned in question what will be the efficiency of algorithm you use below solutions then
-    
-    // Solution 2 
-    // const map=new Map();
-    // for(let el of arr){
-    //     map.set(el,(map.get(el)||0)+1)
-    // }
-    // for(let [key,value] of map){
-    //     if(value===1) return key
-    // }
-    //Time complexity is O(n) {extra: Each operation (map.get, map.set) is O(1)}
-    //Space complexity is O(n)
+  //Note: when it's not mentioned in question what will be the efficiency of algorithm you use below solutions then
 
-    // Solution 3 
+  // Solution 2
+  // const map=new Map();
+  // for(let el of arr){
+  //     map.set(el,(map.get(el)||0)+1)
+  // }
+  // for(let [key,value] of map){
+  //     if(value===1) return key
+  // }
+  //Time complexity is O(n) {extra: Each operation (map.get, map.set) is O(1)}
+  //Space complexity is O(n)
+
+  // Solution 3 : Using filter (Simple but slower)
+//   return arr.find((num) => arr.filter((n) => n === num).length === 1);
+//Time complexity= O(n) * O(n) = O(n²) 
+//space complexity= O(n)
+
 }
-console.log(findSingleElement([1, 1, 2, 3, 3, 4])) // 2 as 2 appears only once
-console.log(findSingleElement([1, 1,2,2,3,4,5,5])) // 3 as it 3 appears only once and it's first element that's why 4 was not returned
-console.log(findSingleElement([1])) // 1
+console.log(findSingleElement([1, 1, 2, 3, 3, 4])); // 2 as 2 appears only once
+console.log(findSingleElement([1, 1, 2, 2, 3, 4, 5, 5])); // 3 as it 3 appears only once and it's first element that's why 4 was not returned
+console.log(findSingleElement([1])); // 1
