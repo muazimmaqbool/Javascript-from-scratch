@@ -30,9 +30,16 @@ Constraints & Edge Cases:
     . Multiple spaces between words should be reduced to a single space in the output.
  */
 function reverseWords(s){
+    //spliting the string into words and filtering empty strings(spaces)
     const words=s.split(/\s+/).filter((word)=>word.length>0)
     return words.reverse().join(" ")
 }
 console.log(reverseWords("the sky is blue")) // blue is sky the
 console.log(reverseWords(" hello world  ")) // world hello
 console.log(reverseWords("a good    example")) // example good a
+/*
+Time & Space Complexity:
+    Time: O(n), where n is the length of the string, due to splitting, reversing, and joining operations. 
+
+    Space: O(n), to store the array of words.
+*/
