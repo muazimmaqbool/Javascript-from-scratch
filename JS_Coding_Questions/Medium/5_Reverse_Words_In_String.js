@@ -12,12 +12,27 @@ Example Inputs & Outputs:
     Output: "blue is sky the"
 
     Example 2:
-    Input: s = " hello world
+    Input: s = " hello world  "
     Output: "world hello"
     Explanation: Your reversed string should not contain leading or trailing spaces.
 
     Example 3:
-    Input: s = "a good
+    Input: s = "a good    example"
     Output: "example good a"
     Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+
+Constraints & Edge Cases:
+    · 1 <= s.length <= 10^4
+    · s contains English letters (upper-case and lower-case), digits, and spaces ''.
+    . There is at least one word in s.
+    . Empty string or string with only spaces should return an empty string.
+    · Single word should return the word itself.
+    . Multiple spaces between words should be reduced to a single space in the output.
  */
+function reverseWords(s){
+    const words=s.split(/\s+/).filter((word)=>word.length>0)
+    return words.reverse().join(" ")
+}
+console.log(reverseWords("the sky is blue")) // blue is sky the
+console.log(reverseWords(" hello world  ")) // world hello
+console.log(reverseWords("a good    example")) // example good a
