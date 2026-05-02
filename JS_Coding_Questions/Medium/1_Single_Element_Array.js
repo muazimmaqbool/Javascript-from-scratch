@@ -24,22 +24,26 @@ function findSingleElement(arr) {
     . Ensure mid is even so that we always compare a full pair (mid and mid+1).
     . Depending on whether arr[mid] equals arr[mid+1], we eliminate half the search space.
   */
- // This works because the array is SORTED and every element appears twice except one
+  // This works because the array is SORTED and every element appears twice except one
   let low = 0;
   let high = arr.length - 1;
 
   while (low <= high) {
     let mid = Math.floor((low + high) / 2);
+
+    // We want mid to always point to the FIRST element of a pair, So if mid is odd, move it back by 1 to make it even
     if (mid % 2 !== 0) {
       mid--;
     }
-    if(arr[mid]===arr[mid+1]){
-        low=mid+2;
-    }else{
-        high=mid-1
+    if (arr[mid] === arr[mid + 1]) {
+        //Pair is valid → unique element must be on the RIGHT side, So we skip this pair and move forward
+      low = mid + 2;
+    } else {
+      high = mid - 1;
     }
   }
-  return arr[low]
+  // At the end, low will point to the unique element
+  return arr[low];
 
   //Note: when it's not mentioned in question what will be the efficiency of algorithm you use below solutions then
 
