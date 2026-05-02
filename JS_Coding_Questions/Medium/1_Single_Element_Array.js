@@ -48,6 +48,8 @@ function findSingleElement(arr) {
   }
   // At the end, low will point to the unique element
   return arr[low];
+   //Time complexity is O(log n)
+  //Space complexity is O(1)
 
   //Note: when it's not mentioned in question what will be the efficiency of algorithm you use below solutions then
 
@@ -60,12 +62,12 @@ function findSingleElement(arr) {
   //     if(value===1) return key
   // }
   //Time complexity is O(n) {extra: Each operation (map.get, map.set) is O(1)}
-  //Space complexity is O(n)
+  //Space complexity is O(1)
 
   // Solution 3 : Using filter (Simple but slower)
   //return arr.find((num) => arr.filter((n) => n === num).length === 1);
   //Time complexity= O(n) * O(n) = O(n²)  (arr.find(...) runs on every element so O(n) and then arr.filter(...) also run for every element so O(n))
-  //space complexity= O(n)
+  //space complexity= O(1)
 }
 console.log(findSingleElement([1, 1, 2, 3, 3, 4])); // 2 as 2 appears only once
 console.log(findSingleElement([1, 1, 2, 2, 3, 4, 5, 5])); // 3 as it 3 appears only once and it's first element that's why 4 was not returned
