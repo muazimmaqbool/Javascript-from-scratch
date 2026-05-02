@@ -17,13 +17,29 @@ Example:
 */
 function findSingleElement(arr) {
   //Soltuon 1 (Original solution with time complexity O(log n))
-  //we will use binary search algorithm
-  // let low=0;
-  // let high=arr.length-1
+  /*
+  ->We use a binary search approach that leverages the sorted structure and the duplication pattern of the array.
+    . Maintain low and high pointers.
+    . At each step, compute mid.
+    . Ensure mid is even so that we always compare a full pair (mid and mid+1).
+    . Depending on whether arr[mid] equals arr[mid+1], we eliminate half the search space.
+  */
+ // This works because the array is SORTED and every element appears twice except one
+  let low = 0;
+  let high = arr.length - 1;
 
-  // while(low ){
-
-  // }
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+    if (mid % 2 !== 0) {
+      mid--;
+    }
+    if(arr[mid]===arr[mid+1]){
+        low=mid+2;
+    }else{
+        high=mid-1
+    }
+  }
+  return arr[low]
 
   //Note: when it's not mentioned in question what will be the efficiency of algorithm you use below solutions then
 
@@ -39,10 +55,9 @@ function findSingleElement(arr) {
   //Space complexity is O(n)
 
   // Solution 3 : Using filter (Simple but slower)
-//return arr.find((num) => arr.filter((n) => n === num).length === 1);
-//Time complexity= O(n) * O(n) = O(n²)  (arr.find(...) runs on every element so O(n) and then arr.filter(...) also run for every element so O(n))
-//space complexity= O(n)
-
+  //return arr.find((num) => arr.filter((n) => n === num).length === 1);
+  //Time complexity= O(n) * O(n) = O(n²)  (arr.find(...) runs on every element so O(n) and then arr.filter(...) also run for every element so O(n))
+  //space complexity= O(n)
 }
 console.log(findSingleElement([1, 1, 2, 3, 3, 4])); // 2 as 2 appears only once
 console.log(findSingleElement([1, 1, 2, 2, 3, 4, 5, 5])); // 3 as it 3 appears only once and it's first element that's why 4 was not returned
