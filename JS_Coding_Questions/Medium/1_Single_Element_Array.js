@@ -17,6 +17,10 @@ Example:
 */
 function findSingleElement(arr) {
   //Soltuon 1 (Original solution with time complexity O(log n))
+    //   When to Use This
+    // Use this ONLY when:
+    //Array is sorted
+    //Every element appears twice except one
   /*
   ->We use a binary search approach that leverages the sorted structure and the duplication pattern of the array.
     . Maintain low and high pointers.
