@@ -1,6 +1,7 @@
 //Bubble Sort:
 /*
-    ->The Bubble Sort algorithm is a simple, comparison-based method that repeatedly steps through a list, compares adjacent elements, 
+    ->Intro:
+      The Bubble Sort algorithm is a simple, comparison-based method that repeatedly steps through a list, compares adjacent elements, 
       and swaps them if they are in the wrong order. 
       This process continues, allowing larger elements to "bubble up" to the end, until the entire list is sorted
       That’s why it's called Bubble Sort.
