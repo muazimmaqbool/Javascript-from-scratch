@@ -10,7 +10,7 @@
        1. Start from the first element of the array.
        2. Compare the current element with the next element in the array.
        3. Swap the elements if the current element is greater than the next one.
-       4. Move to the next pair and repeat the comparison and potential swap process until the end of the array is reached.
+       4. Move to the next pair and repeat the comparison and do potential swap process until the end of the array is reached.
        5. Repeat the entire process (passes) for the remaining unsorted portion of the list. After each pass, one element is guaranteed to be in its correct, final place.
        6. Stop when a full pass is completed without performing any swaps, which means the array is sorted.
 
