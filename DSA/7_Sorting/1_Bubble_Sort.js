@@ -23,8 +23,7 @@
 
     ->Use Cases
         Due to its inefficiency, Bubble Sort is rarely used in real-world production applications. 
-        Its primary use is as an educational tool in computer science courses to introduce fundamental sorting concepts, such as comparison-based sorting, 
-        nested loops, and algorithm analysis. 
+        It's primary use is as an educational tool in computer science courses to introduce fundamental sorting concepts, such as comparison-based sorting, nested loops, and algorithm analysis. 
         It can be suitable for very small datasets or data that is already nearly sorted
 */
 //Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
