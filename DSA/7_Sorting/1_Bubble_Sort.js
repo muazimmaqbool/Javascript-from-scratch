@@ -44,7 +44,7 @@ const bubbleSort = (arr) => {
       // compare adjacent elements
       if (arr[j] > arr[j + 1]) {
 
-        // swap them if they are in the wrong order
+        // swap them if they are in the wrong order (i.e we swap if current element is greater then next element)
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
       }
     }
