@@ -116,7 +116,7 @@ PASS 4 (i = 3)
 j=0 → compare 10 and 14 → no swap
 [10, 14, 14, 29, 37]
 
-Array is now sorted.
+Now array is sorted in ascending order
 
 ------------------------------------------------
 */
