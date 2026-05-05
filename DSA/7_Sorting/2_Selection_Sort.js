@@ -32,7 +32,7 @@ const selectionSort = (arr) => {
   for (let i = 0; i < len - 1; i++) {
     let minIndex = i; // assume current index has the minimum value
 
-    // inner loop finds the actual minimum element in the remaining array
+    //inner loop finds the actual minimum element in the remaining array
     //Note: j starts from i+1 because elements before i are already sorted and we only search the remaining unsorted part of the array
     for (let j = i + 1; j < len; j++) {
       // if a smaller element is found, update minIndex
@@ -41,7 +41,7 @@ const selectionSort = (arr) => {
       }
     }
 
-    // if the smallest element is not already at position i, swap it
+    //if the smallest element is not already at position i, swap it
     if (minIndex !== i) {
       [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
     }
