@@ -42,6 +42,13 @@
                 Normal functions → hoisted
                 Arrow functions → not hoisted (treated like variables)
                 //Example in code:
+
+            ->I use arrow functions mostly for callbacks and inside React components, especially where I want to preserve this context.
+                For example, in event handlers or array methods like map.
+                But I use normal functions when I need methods on objects, constructors, or when this should be dynamic.”
+
+            ->If interviewer asks “which one should we use?”
+                “It depends on the use case — arrow functions for simplicity and lexical scope, normal functions when we need flexibility with this.”
     </pre>
     <script>
       //This in normal function and arrow function example:
