@@ -18,7 +18,18 @@
                 //Example in code:
     </pre>
     <script>
-        
+        //This in normal function and arrow function example:
+        const obj={
+            name:"Muazim",
+            normalFun:function(){
+                console.log("Normal Function this:",this.name); //this refers to obj
+            },
+            arrowFunc:()=>{
+                console.log("Arrow Function this:",this.name); //this refers to global scope (undefined in strict mode)
+            }
+        }
+        obj.normalFun(); //Output: Normal Function this: Muazim
+        obj.arrowFunc(); //Output: Arrow Function this: undefined
     </script>
 </body>
 </html>
