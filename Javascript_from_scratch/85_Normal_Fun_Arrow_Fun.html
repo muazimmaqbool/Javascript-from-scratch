@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Normal function vs arrow function</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Normal Function vs Arrow Function:
         ->The main difference is that arrow functions don’t have their own this, arguments, or prototype, while normal functions do. 
@@ -16,20 +16,49 @@
                 Normal function → this depends on how it’s called
                 Arrow function → inherits this from surrounding scope (lexical)
                 //Example in code:
+
+            2)Syntax:
+                Arrow → shorter
+                Normal → more verbose
+                // Arrow
+                const add = (a, b) => a + b;
+
+                // Normal
+                function add(a, b) {
+                return a + b;
+                }
+
+            3)arguments object:
+                Normal function → has arguments
+                Arrow → does NOT have it
+                //Example in code:
     </pre>
     <script>
-        //This in normal function and arrow function example:
-        const obj={
-            name:"Muazim",
-            normalFun:function(){
-                console.log("Normal Function this:",this.name); //this refers to obj
-            },
-            arrowFunc:()=>{
-                console.log("Arrow Function this:",this.name); //this refers to global scope (undefined in strict mode)
-            }
-        }
-        obj.normalFun(); //Output: Normal Function this: Muazim
-        obj.arrowFunc(); //Output: Arrow Function this: undefined
+      //This in normal function and arrow function example:
+      const obj = {
+        name: "Muazim",
+        normalFun: function () {
+          console.log("Normal Function this:", this.name); //this refers to obj
+        },
+        arrowFunc: () => {
+          console.log("Arrow Function this:", this.name); //this refers to global scope (undefined in strict mode)
+        },
+      };
+      obj.normalFun(); //Output: Normal Function this: Muazim
+      obj.arrowFunc(); //Output: Arrow Function this: undefined
+
+      //Arguments object example:
+      function test() {
+        console.log(arguments);
+      }
+      test(); //Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]
+      test(1, 2, 3); //Arguments [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+      test("hello"); //Arguments ['hello', callee: ƒ, Symbol(Symbol.iterator): ƒ]
+
+      const testArrow=()=>{
+        console.log(arguments);
+      }
+      testArrow(); //ReferenceError: arguments is not defined
     </script>
-</body>
+  </body>
 </html>
