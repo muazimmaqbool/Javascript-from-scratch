@@ -65,24 +65,32 @@
       test(1, 2, 3); //Arguments [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
       test("hello"); //Arguments ['hello', callee: ƒ, Symbol(Symbol.iterator): ƒ]
 
-      const testArrow=()=>{
+      const testArrow = () => {
         console.log(arguments);
-      }
-    //   testArrow(); //ReferenceError: arguments is not defined
+      };
+      //   testArrow(); //ReferenceError: arguments is not defined
 
       //Constructor usage example:
-      function Person(name){
-        this.name=name
+      function Person(name) {
+        this.name = name;
       }
-      const p1=new Person("ABC");
+      const p1 = new Person("ABC");
       console.log(p1.name); //Output: ABC
 
-      const PersonArrow=(name)=>{
-        this.name=name
-      }
-    //   const p2=new PersonArrow("XYZ"); //TypeError: PersonArrow is not a constructor
+      const PersonArrow = (name) => {
+        this.name = name;
+      };
+        // const p2=new PersonArrow("XYZ"); //TypeError: PersonArrow is not a constructor
 
-    
+      //Hoisting example:
+      normalFuncHoisted(); //Output: This is a normal function
+      function normalFuncHoisted(){
+        console.log("This is a normal function");
+      }
+      arrowFuncHoisted(); //ReferenceError: Cannot access 'arrowFuncHoisted' before initialization
+      const arrowFuncHoisted=()=>{
+        console.log("This is an arrow function");
+      }
     </script>
   </body>
 </html>
