@@ -32,6 +32,16 @@
                 Normal function → has arguments
                 Arrow → does NOT have it
                 //Example in code:
+
+            4)Constructor usage:
+                Normal → can be used with new ✅
+                Arrow → cannot ❌
+                //Example in code:
+            
+            5)Hoisting
+                Normal functions → hoisted
+                Arrow functions → not hoisted (treated like variables)
+                //Example in code:
     </pre>
     <script>
       //This in normal function and arrow function example:
@@ -58,7 +68,21 @@
       const testArrow=()=>{
         console.log(arguments);
       }
-      testArrow(); //ReferenceError: arguments is not defined
+    //   testArrow(); //ReferenceError: arguments is not defined
+
+      //Constructor usage example:
+      function Person(name){
+        this.name=name
+      }
+      const p1=new Person("ABC");
+      console.log(p1.name); //Output: ABC
+
+      const PersonArrow=(name)=>{
+        this.name=name
+      }
+    //   const p2=new PersonArrow("XYZ"); //TypeError: PersonArrow is not a constructor
+
+    
     </script>
   </body>
 </html>
