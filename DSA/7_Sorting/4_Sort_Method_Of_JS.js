@@ -5,14 +5,14 @@
   which often produces incorrect results for numbers.
 */
 //Watch from 20:00 - https://www.youtube.com/watch?v=neKqXUyIq2M&list=PLKhlp2qtUcSZtJefDThsXcsAbRBCSTgW4&index=14
-//Note also check this file: 16_Sort_Compare_Working.js (in side js coding questions folder)
+//Note also check this file: 16_Sort_Compare_Working.js (inside js coding questions folder > easy)
 
 //Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
 
 //Example 1:
 const fruits = ["dragon fruit", "apple", "date", "cherry", "banana"];
 console.log(fruits.sort());
-//[ 'apple', 'banana', 'cherry', 'date', 'dragon fruit' ] sorted them properly based on their first char, then second char
+//[ 'apple', 'banana', 'cherry', 'date', 'dragon fruit' ] sorted them properly based on their first char, then second charm,...
 
 console.log("**********");
 //Example 2: (Important)
@@ -21,14 +21,14 @@ console.log(nums.sort());
 //Expected output: [1,5,10,18,27]
 //Actual output: [1,10,18,27,5]
 /*
-->This is happening because 'js tries to convert' it into 'string' first then tries to 'sort' it
+->This is happening because 'js tries to convert' then into 'string' first then tries to 'sort' it
 
 So in order to fix it we have compare function:
 */
 const compareFunction = (a, b) => {
-  //1. <0 a comes first
+  //1. < 0 a comes first
   //2. 0 nothing
-  //3. >0 b comes first
+  //3. > 0 b comes first
   return a - b; //for sorting in ascending order
   //return b-a // for sorting in descending order
 };
@@ -46,8 +46,8 @@ const students = [
 //sort the students based on age i.e large age comes first and so on...
 console.log(
   students.sort((a, b) => {
-    //return a.age - b.age; // student with lowest age comes firs,...
-    return b.age - a.age; // student with highest age comes firs,...
+    //return a.age - b.age; // student with lowest age comes first,...
+    return b.age - a.age; // student with highest age comes first,...
   }),
 );
 /*
