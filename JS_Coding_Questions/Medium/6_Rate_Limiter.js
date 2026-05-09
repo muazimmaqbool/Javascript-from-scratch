@@ -21,6 +21,7 @@ Examples:
     - At timestamp 4: Request 0 expires (1 + 2 = 3), allow request 3
     - At timestamp 5: Request 1 expires (2 + 2 = 4), allow request 4
 */
+//windowSize means for how much time we keep requestss, if it's 2 it means: Only keep requests from the last 2 seconds.
 function rateLimiter(requests,limit,windowSize){
     //checking for valid inputs
     if(!requests || requests.length===0) return []
@@ -29,11 +30,18 @@ function rateLimiter(requests,limit,windowSize){
     const allowed=[]; // stores indices of allowed requests
 
     for(let i=0;i<requests.length;i++){
+        //Timestamp of the current API request we are processing.
+        /* requests = [1, 2, 3, 4, 5]
+        i = 0 → currentTime = 1
+        i = 1 → currentTime = 2
+        i = 2 → currentTime = 3
+        ....
+         */
         const currentTime=requests[i]
 
         // Remove expired requests
         while(queue.length>0 &&queue[0]<=currentTime-windowSize)[
-            queue.shift()
+            queue.shift() //shift() removes the FIRST element from an array.
         ]
          // Allow request if limit not reached
         if(queue.length<limit){
@@ -45,6 +53,28 @@ function rateLimiter(requests,limit,windowSize){
 }
 const requests = [1, 2, 3, 4, 5];
 console.log(rateLimiter(requests, 3, 2));  //[ 0, 1, 2, 3, 4 ]
+/*
+->Why This Is Sliding Window:
+    The window “slides” over time:
+    [1,2]
+    → [2,3]
+    → [3,4]
+    → [4,5]
+
+    Old requests leave the window automatically.
+
+->Complexity:
+    Time Complexity:
+        Each request:
+        added once
+        removed once
+        Total: O(n)
+
+    Space Complexity
+        Worst case: all requests inside window -> O(limit)
+        or worst-case -> O(n)
+        depending on input.
+*/
 
 // Dry Run:
 // requests = [1, 2, 3, 4, 5]
