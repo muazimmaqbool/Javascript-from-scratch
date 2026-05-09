@@ -41,7 +41,128 @@ function rateLimiter(requests,limit,windowSize){
             queue.push(currentTime)
         }
     }
+    return allowed
 }
 const requests = [1, 2, 3, 4, 5];
+console.log(rateLimiter(requests, 3, 2));  //[ 0, 1, 2, 3, 4 ]
 
-console.log(rateLimiter(requests, 3, 2));
+// Dry Run:
+// requests = [1, 2, 3, 4, 5]
+// limit = 3
+// windowSize = 2
+
+// queue = active requests inside current window
+// allowed = indices of allowed requests
+
+// --------------------------------------------------
+// i = 0
+// currentTime = 1
+
+// queue before removing expired requests:
+// []
+
+// no expired requests
+
+// queue.length = 0 < limit(3)
+// allow request
+
+// queue = [1]
+// allowed = [0]
+
+// --------------------------------------------------
+// i = 1
+// currentTime = 2
+
+// queue before removing expired requests:
+// [1]
+
+// check expiry:
+// 1 <= (2 - 2)
+// 1 <= 0 -> false
+
+// no request expired
+
+// queue.length = 1 < limit(3)
+// allow request
+
+// queue = [1, 2]
+// allowed = [0, 1]
+
+// --------------------------------------------------
+// i = 2
+// currentTime = 3
+
+// queue before removing expired requests:
+// [1, 2]
+
+// check expiry:
+// 1 <= (3 - 2)
+// 1 <= 1 -> true
+
+// remove expired request 1
+
+// queue becomes:
+// [2]
+
+// next check:
+// 2 <= 1 -> false
+
+// queue.length = 1 < limit(3)
+// allow request
+
+// queue = [2, 3]
+// allowed = [0, 1, 2]
+
+// --------------------------------------------------
+// i = 3
+// currentTime = 4
+
+// queue before removing expired requests:
+// [2, 3]
+
+// check expiry:
+// 2 <= (4 - 2)
+// 2 <= 2 -> true
+
+// remove expired request 2
+
+// queue becomes:
+// [3]
+
+// next check:
+// 3 <= 2 -> false
+
+// queue.length = 1 < limit(3)
+// allow request
+
+// queue = [3, 4]
+// allowed = [0, 1, 2, 3]
+
+// --------------------------------------------------
+// i = 4
+// currentTime = 5
+
+// queue before removing expired requests:
+// [3, 4]
+
+// check expiry:
+// 3 <= (5 - 2)
+// 3 <= 3 -> true
+
+// remove expired request 3
+
+// queue becomes:
+// [4]
+
+// next check:
+// 4 <= 3 -> false
+
+// queue.length = 1 < limit(3)
+// allow request
+
+// queue = [4, 5]
+// allowed = [0, 1, 2, 3, 4]
+
+// --------------------------------------------------
+// Final Output:
+// [0, 1, 2, 3, 4]
