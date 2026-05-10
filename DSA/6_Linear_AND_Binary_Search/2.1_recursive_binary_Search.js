@@ -16,7 +16,7 @@ Note: In real-world frontend/backend: iterative version is usually preferred bec
 */
 // Recursive Binary Search Code
 function recursiveBinarySearch(arr, target, left, right) {
-  //base case
+  //base case: without this base case infinite recursion happens
   if (left > right) return -1;
   let mid = Math.floor((left + right) / 2);
 
@@ -55,4 +55,15 @@ Recursive Binary Search is often used to teach:
 
 Important:
 Note:But in real-world frontend/backend: iterative version is usually preferred because it uses less memory.
+*/
+
+//Extra:
+// What Makes It Recursive?
+/*
+This line: return recursiveBinarySearch(...)
+
+The function is literally calling itself.
+Each call gets:
+    smaller search space
+    new left/right values
 */
