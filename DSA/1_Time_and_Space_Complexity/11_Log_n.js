@@ -77,3 +77,30 @@ function recursiveBinarySearch(arr,target,left,right){
 // Because recursion creates function calls in stack memory. and Each call reduces array size into half.
 //16 → 8 → 4 → 2 → 1 i.e Only log n recursive calls exist.
 console.log(recursiveBinarySearch([1,2,3,4,5,6,7,8,9], 5)); // 4 i.e 5 is at index 4
+
+//sort note:
+/*
+O(log n)
+
+Problem size becomes HALF every step.
+
+Examples:
+- Binary Search
+- Trees
+- Heaps
+
+Why fast?
+Because data reduces quickly.
+
+Example:
+16 → 8 → 4 → 2 → 1
+
+Iterative Binary Search:
+Time = O(log n)
+Space = O(1)
+
+Recursive Binary Search:
+Time = O(log n)
+Space = O(log n)
+(due to recursion stack)
+*/
