@@ -32,4 +32,4 @@ countByHalf(16); // 16, 8, 4, 2
 console.log("********")
 countByHalf(20); // 20, 10, 5, 2
 //Every iteration divides by 2. So time complexity = O(log n).
-//here space complexity is O(n)
+//here space complexity is O(1) (you are only using: one variable n and No arrays, objects, or recursion stack. So memory usage stays constant. i.e Space Complexity = O(1))
