@@ -95,7 +95,7 @@ function loop(n) {
     }
   }
 }
-console.log(loop(3));
+console.log(loop(3)); // 2 4 2 4 2 4 undefined
 //time complexity= O(n)+O(log n) = O(n log n)
 
 
@@ -120,4 +120,15 @@ O(n log n)
 Merge Sort:
 Time = O(n log n)
 Space = O(n)
+*/
+//Important Comparison:
+/*
+| Complexity | Speed                 |
+| ---------- | --------------------- |
+| O(1)       | fastest               |
+| O(log n)   | very fast             |
+| O(n)       | good                  |
+| O(n log n) | efficient for sorting |
+| O(n²)      | slow for large data   |
+
 */

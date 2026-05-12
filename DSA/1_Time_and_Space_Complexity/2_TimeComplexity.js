@@ -31,3 +31,15 @@ console.timeEnd("executionTime");
 
   2: In 'getNum' function we are just returning the first element of any array so it was only task and it will only run once
 */
+
+//Important Comparison:
+/*
+| Complexity | Speed                 |
+| ---------- | --------------------- |
+| O(1)       | fastest               |
+| O(log n)   | very fast             |
+| O(n)       | good                  |
+| O(n log n) | efficient for sorting |
+| O(n²)      | slow for large data   |
+
+*/
