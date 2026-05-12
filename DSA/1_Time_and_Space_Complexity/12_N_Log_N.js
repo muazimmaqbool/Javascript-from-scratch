@@ -61,5 +61,27 @@ function merge(left, right) {
     .concat(left.slice(i))
     .concat(right.slice(j));
 }
-
 console.log(mergeSort([8,3,5,1,9,6])); //[1,3,5,6,8,9]
+/*
+->How Merge Sort Works: [8,3,5,1,9,6]
+    Split: [8,3,5]     [1,9,6]
+    Split again: [8] [3,5] [1] [9,6]
+    Keep dividing until single elements.
+    Then merge sorted arrays back.
+*/
+/*
+Time complexity = O(n log n)
+->Why O(n log n)?
+    Two parts happen:
+    1. Dividing → O(log n) :8 → 4 → 2 → 1
+        Array halves repeatedly.
+
+    2. Merging → O(n)
+        At every level we process ALL elements.
+
+    So: O(n) × O(log n) = O(n log n)
+*/
+/*
+Space complexity= O(n)
+    Merge sort creates new arrays. because extra array is used
+*/
