@@ -1,5 +1,3 @@
-//Part One Of JS Tricky Questions:
-
 /*
   Type Coercion & Comparisons:
   These test your understanding of JS’s weird equality rules.
@@ -16,7 +14,7 @@ console.log([] == ![]);      // true
 Explanation:
     == does type coercion.
     0 == '' → both converted to number → 0 == 0
-    false == '0' → '0' → 0, false → 0
+    false == '0' : '0' → 0, false → 0
     null == undefined → special rule → always true
     [] == ![]
     ![] → false
@@ -59,14 +57,13 @@ Explanation
     2 is a number
     With +, JavaScript converts the number to a string
     Then joins them:
-    '2' + 2  = "2" + "2" = "22"
+    '2' + 2  => "2" + "2" = "22"
 
 ->console.log('2' - 2); // 0
     Because the - (minus) operator does NOT do concatenation.
     It forces both values to become numbers:
     '2' → 2
-    2 → 2
-    2 - 2 = 0
+    => 2 - 2 = 0
     So the result is 0.
 
 ->console.log('2' * '3'); // 6
