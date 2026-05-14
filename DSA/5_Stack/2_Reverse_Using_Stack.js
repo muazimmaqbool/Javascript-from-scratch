@@ -31,8 +31,8 @@ const reverseWords=(s)=>{
     return finals.trim()
 }
 
-// console.log(reverseWords("the sky is blue")) // blue is key the
-// console.log(reverseWords("       hello world  ")) // world hello
+console.log(reverseWords("the sky is blue")) // blue is key the
+console.log(reverseWords("       hello world  ")) // world hello
 console.log(reverseWords("a good                boy")) //  boy good a 
 
 //for-loop O(n) and while-loop O(n)
