@@ -48,9 +48,7 @@ counter(); // 3
 
 
 //2: How closures help with privacy?
-/* with the help of closures:
-    You can hide data inside a function. 
-    Only the inner function can access it.
+/* with the help of closures: You can hide data inside a function, Only the inner function can access it.
 */
 function secret() {
   let password = "6655";   // private variable
