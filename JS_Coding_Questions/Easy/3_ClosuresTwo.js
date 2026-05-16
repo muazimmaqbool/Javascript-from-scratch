@@ -36,6 +36,24 @@ console.log(result[0]()); // 3
   result[2] ---> i
   i = 3
 */
+//Now if you use let:
+console.log("###")
+var resultTwo = [];
+for (let i = 0; i < 3; i++) {
+  resultTwo.push(() => i);
+}
+console.log(resultTwo[0]());//0
+console.log(resultTwo[1]());//1
+console.log(resultTwo[2]());//2
+/*
+->Why?
+  Because: let is block-scoped.
+  For every loop iteration, JavaScript creates a new separate i variable.
+*/
+// Easy Rule to Remember:
+// var → one shared variable
+// let → new variable for every loop iteration
+
 
 console.log("************")
 
