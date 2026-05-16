@@ -37,7 +37,7 @@ console.log(result[0]()); // 3
   i = 3
 */
 //Now if you use let:
-console.log("###")
+console.log("************")
 var resultTwo = [];
 for (let i = 0; i < 3; i++) {
   resultTwo.push(() => i);
@@ -53,17 +53,3 @@ console.log(resultTwo[2]());//2
 // Easy Rule to Remember:
 // var → one shared variable
 // let → new variable for every loop iteration
-
-
-console.log("************")
-
-//6. Closure + let (Correct Output)
-var result = [];
-for (let i = 0; i < 3; i++) {
-  result.push(() => i);
-}
-console.log(result[0]());
-console.log(result[1]());
-console.log(result[2]());
-//output: 0,1,2
-//let creates a new i each iteration.
