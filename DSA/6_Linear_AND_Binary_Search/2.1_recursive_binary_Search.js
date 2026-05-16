@@ -18,6 +18,7 @@ Note: In real-world frontend/backend: iterative version is usually preferred bec
 function recursiveBinarySearch(arr, target, left, right) {
   //base case: without this base case infinite recursion happens
   if (left > right) return -1;
+  //Note: If you initially set left = right, the algorithm still works perfectly but will only check that single element.
   let mid = Math.floor((left + right) / 2);
 
   if (arr[mid] === target) return mid;
