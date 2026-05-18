@@ -1,11 +1,11 @@
-//Question on 'This' keyword
+//Question on 'This' keyword:
 
 /*
 ->'this' refers to the object that is calling the function.
   It is decided by how a function is called, not where it is written.
-  or
+                    or
   the 'this' keyword is a special identifier that refers to the current execution context. 
-  Its value is dynamic and depends on how and where a function is called, rather than where it is defined.
+  It's value is dynamic and depends on how and where a function is called, rather than where it is defined.
 */
 
 //1. what is the ouput of this code?
@@ -35,7 +35,7 @@ so: In strict mode → this is undefined
     this.name doesn’t exist → undefined
 */
 
-//fix it with with bind():
+//fix it with bind():
 const h=user.getName.bind(user)
 console.log(h()) // Muazim
 /*

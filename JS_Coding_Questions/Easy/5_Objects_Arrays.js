@@ -38,14 +38,13 @@ console.log("arr",arr); // o/p: []
 const obj={ a: 1, b: 2 }
 console.log("Object.keys() :",Object.keys(obj))   // ['a','b']
 console.log("Object.values() :",Object.values(obj)) // [1,2]
-console.log("Object.entries() :",Object.entries(obj))// [['a',1],['b',2]]
+console.log("Object.entries() :",Object.entries(obj)) // [['a',1],['b',2]]
 /*
 | Method             | Returns         |
 | ------------------ | --------------- |
 | `Object.keys()`    | Array of keys   |
 | `Object.values()`  | Array of values |
 | `Object.entries()` | Key-value pairs |
-
 */
 
 
