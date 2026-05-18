@@ -13,7 +13,7 @@ INTERVIEW ONE-LINERS (IMPORTANT)
 ✅ Object.entries() is great for looping
 */
 
-//Note-> Learn shallow and deep copy from 'javascript_from_scratch' folder 'code number 71'
+//Note-> Learn shallow copy and deep copy from 'javascript_from_scratch' folder 'code number 71'
 
 //1. What’s the output?
 const obj1 = { a: 1 };
@@ -23,7 +23,7 @@ obj2.a = 2;
 console.log("obj1.a",obj1.a);
 /*
 Objects are stored by reference, not by value.
-obj2 = obj1 → both point to the SAME object in memory
+obj2 = obj1 :→ both point to the SAME object in memory
 Changing obj2.a also changes obj1.a
 
 In JavaScript, assigning an object copies the reference, not the object.
