@@ -36,9 +36,9 @@ console.log("arr",arr); // o/p: []
 
 //3. What is the output?
 const obj={ a: 1, b: 2 }
-console.log(Object.keys(obj))   // ['a','b']
-console.log(Object.values(obj)) // [1,2]
-console.log(Object.entries(obj))// [['a',1],['b',2]]
+console.log("Object.keys() :",Object.keys(obj))   // ['a','b']
+console.log("Object.values() :",Object.values(obj)) // [1,2]
+console.log("Object.entries() :",Object.entries(obj))// [['a',1],['b',2]]
 /*
 | Method             | Returns         |
 | ------------------ | --------------- |
