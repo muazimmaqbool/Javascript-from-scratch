@@ -52,11 +52,10 @@ Why does this work?
 | Constructor       | ❌ No           | ✅ Yes            |
 | `arguments`       | ❌ None         | ✅ Yes            |
 | `call/apply/bind` | ❌ Ignored      | ✅ Works          |
-
 */
 
 //2. Arrow Function this
-const arrow=()=>console.log(this);
+const arrow=()=>console.log("this inside arrow function():",this);
 arrow() // o/p: window (or {} in Node)
 /*
 Why?
