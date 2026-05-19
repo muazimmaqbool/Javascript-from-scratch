@@ -15,7 +15,7 @@ Explanation:
 */
 
 //remove duplicate without builtin function
-console.log("------------ Custom Function To Remove Duplicate -------------")
+console.log("------------ Custom Method -------------")
 const removeDuplicate = (arr) => {
   let unique = [];
   for (let i = 0; i < arr.length; i++) {
@@ -36,7 +36,7 @@ const removeDuplicate = (arr) => {
 console.log("remove duplicate:", removeDuplicate(nums));
 
 //another method of removing dulicate
-console.log("------------ ANother Custom Function To Remove Duplicate -----------")
+console.log("------------ Another Custom Method -----------")
 const removeDuplicateElement = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
