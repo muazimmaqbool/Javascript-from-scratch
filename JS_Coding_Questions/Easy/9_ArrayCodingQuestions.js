@@ -98,7 +98,7 @@ const minEl = (arr) => {
 console.log("Max Element:", maxEl(newNums));
 console.log("Min Element:", minEl(newNums));
 
-console.log("-------------- Rotate Array ------------");
+console.log("-------------- Rotate Array/Reverse Array ------------");
 const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const rotateArray = (arr) => {
   let newArray = [];
@@ -108,8 +108,9 @@ const rotateArray = (arr) => {
   }
   return newArray;
 };
-console.log("Original Array:",arrNums)
-console.log("Rotate Array:", rotateArray(arrNums)); // o/p: [9,8,7,6,5,4,3,2,1]
+console.log("Original Array:",arrNums) // o/p: [1,2,3,4,5,6,7,8,9]
+console.log("Reverse/Rotate Array:", rotateArray(arrNums)); // o/p: [9,8,7,6,5,4,3,2,1]
+console.log("using reverse() method:",arrNums.reverse()) // o/p: [9,8,7,6,5,4,3,2,1]
 
 console.log("--------- Check array if sorted -------------");
 const isSorted = (arr) => {
