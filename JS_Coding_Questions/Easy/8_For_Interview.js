@@ -1,5 +1,6 @@
 //Closures:
 //1. Create a counter
+console.log("****************")
 function createCounter() {
   let count = 0;
   return () => {
@@ -16,14 +17,15 @@ console.log(counter());
 console.log(counter());
 console.log(counter());
 
-//Debounce (Very common!) (important)
+//Debounce (Very common) (important)
 // debouce means calling a function only after the user has stopped triggering it for some time.
 // (It delays execution until there’s a pause)
 /*
 Without debounce → API called on every keypress
 With debounce → API called only when typing stops
 */
-//2. implement debounce
+//2. implement debounce:
+console.log("***************")
 const debounce = (fn, delay) => {
   let timer;
   return (...args) => {
