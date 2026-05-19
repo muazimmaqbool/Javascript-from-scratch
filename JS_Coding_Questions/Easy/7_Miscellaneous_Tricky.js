@@ -1,5 +1,6 @@
 //1. Output?
 console.log("typeof NaN:",typeof NaN)    // "number"
+console.log("typeof !NaN:",typeof !NaN)    // "boolean"
 console.log("NaN === NaN:",NaN === NaN)    // false
 /*
 Explanation:
