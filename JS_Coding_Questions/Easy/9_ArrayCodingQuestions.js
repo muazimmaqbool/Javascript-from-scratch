@@ -1,6 +1,6 @@
 //Arrays interview questions:
 
-console.log("--------- Remove Duplicate -----------");
+console.log("--------- Remove Duplicate Using Set() -----------");
 //1. Remove duplicates:
 const nums = [1, 2, 3, 4, 4, 5, 5, 5];
 const unique = [...new Set(nums)];
@@ -15,6 +15,7 @@ Explanation:
 */
 
 //remove duplicate without builtin function
+console.log("------------ Custom Function To Remove Duplicate -------------")
 const removeDuplicate = (arr) => {
   let unique = [];
   for (let i = 0; i < arr.length; i++) {
@@ -35,6 +36,7 @@ const removeDuplicate = (arr) => {
 console.log("remove duplicate:", removeDuplicate(nums));
 
 //another method of removing dulicate
+console.log("------------ ANother Custom Function To Remove Duplicate -----------")
 const removeDuplicateElement = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
