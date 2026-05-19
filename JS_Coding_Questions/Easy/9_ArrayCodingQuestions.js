@@ -51,7 +51,7 @@ console.log("----------- Flatten Array ----------------");
 const flatten = (arr) => {
   return arr.flat(Infinity);
 };
-//without builtin function
+//without built-in function
 const flattenFunction = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
@@ -65,8 +65,8 @@ const flattenFunction = (arr) => {
   return result;
 };
 const arr = [1, [2, [3, [4]]]];
-console.log("flatten arr:", flatten(arr));
-console.log("flatten arr Two:", flattenFunction(arr));
+console.log("flatten arr using flat():", flatten(arr));
+console.log("flatten array using built-in method:", flattenFunction(arr));
 /*
 Explanation:
     .flat(level) flattens nested arrays
