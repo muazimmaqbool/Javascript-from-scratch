@@ -3,7 +3,7 @@
 function createCounter() {
   let count = 0;
   return () => {
-    //first increment the count then returns, if you do like this count++ (o/p: 1,2,3) then it will first return the increment then o/p will be 0,1,2
+    //first increment the count then returns, if you do like this count++ (o/p: 0,1,2) Here it will first return then increment
     return ++count;
   };
   //or
