@@ -3,7 +3,7 @@ Problem Statement:
 ->You want a function once() that:
     Accepts a function as input
     Returns a new function
-    That returned function: Executes the original function(passed as argument) only once
+    That returned function: Executes the original function(passed as an argument) only once
     Ignores all future calls
 */
 
@@ -26,7 +26,7 @@ const once=(fn)=>{
 //function that we want to execute only once
 const fn = () => console.log("Initialized");
 
-//initialize now holds the returned function with a closure over hasRun
+//initialize variable now holds the returned function with a closure over hasRun
 const initialize=once(fn)
 // console.log("intializeL",initialize) 
 
