@@ -1,4 +1,4 @@
-//Flatten nested objects
+//Flatten nested objects:
 function flattenObject(obj = {}, parentKey = "") {
     //parentKey → keeps track of the key path (address.education)
     //Default values prevent errors if nothing is passed
