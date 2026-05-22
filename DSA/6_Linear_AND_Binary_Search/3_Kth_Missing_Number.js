@@ -1,7 +1,7 @@
 //Imporatnt:
 /*
 Ques 3: Kth Missing Positive Number:
-Given an array arr of positive integers sorted in a strictly increasing order, and an integer k. 
+Given an array 'arr' of positive integers sorted in a strictly increasing order, and an integer 'k'. 
 Return the kth positive integer that is missing from this array.
 
 Input: arr = [2,3,4,7,11], k = 5 ---------- > output= 9
@@ -272,4 +272,56 @@ Algorithm idea:
 4. After loop return k + count
 
 =====================================================================
+*/
+/*
+In short:
+
+Kth Missing Positive Number
+
+Example:
+arr = [2,3,4,7,11]
+k = 5
+
+Missing numbers:
+1,5,6,8,9...
+
+5th missing number = 9
+Idea:
+
+Normally answer should be k.
+
+But numbers present in array before the
+k-th missing position shift the answer forward.
+
+So:
+if arr[i] <= k + count
+increase count
+
+Finally return:
+k + count
+
+------------------------------------------------
+
+Dry Run:
+
+k = 5
+count = 0
+
+2 <= 5 -> count = 1
+3 <= 6 -> count = 2
+4 <= 7 -> count = 3
+7 <= 8 -> count = 4
+11 <= 9 -> false
+
+Answer:
+5 + 4 = 9
+
+------------------------------------------------
+
+Steps:
+1. Loop through array
+2. Check arr[i] <= k + count
+3. If true -> count++
+4. Return k + count
+
 */
