@@ -34,9 +34,7 @@ console.log(reverseWords("the sky is blue")) // blue is key the
 console.log(reverseWords("       hello world  ")) // world hello
 console.log(reverseWords("a good                boy")) //  boy good a 
 
-//for-loop O(n) and while-loop O(n)
-//Time complexity : O(2n) here we don't take constant so : O(n)
-
+//Time complexity : for-loop O(n) and while-loop O(n) --> O(2n) here we don't take constant so : O(n)
 //Space complexity : O(n)
 
 console.log("****************")
