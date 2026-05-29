@@ -8,7 +8,7 @@
 // "the sky is blue" => [the, sky, is, blue]
 // [the, sky, is, blue] => [blue, is, sky, the]
 
-//solution 1 using stack (important for interview)
+//solution 1 using stack: (important for interview)
 const reverseWords=(str)=>{
     const splitStr=str.split(" ")
     // console.log(splitStr)
@@ -21,7 +21,8 @@ const reverseWords=(str)=>{
     while(stack.length){
         const current=stack.pop()
         
-        if(current){ // current when have value empty sapce will not pass this condition
+        //if current is empty (empty space) the condition will fail and we will not add-up empty space to the result
+        if(current){ 
             // console.log("current:",current)
             result+=" "+current
         }
