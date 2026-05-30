@@ -13,7 +13,7 @@ in return we first have ...arr.slice(-k)] : .slice returns part of the array and
                                               [1,2,3,4,5].slice(-2) = [4,5] is returns here 2 is value of k 
             second we have ...arr.slice(0,-k): here it starts from 0 so we take everything except from -k elements i.e last k here k is 2
                                                so not last 2: [1,2,3,4,5].slice(0,-2) = [1,2,3]
-                    and then spread operator concates them: [4,5,1,2,3]
+            and then spread operator concates them: [4,5,1,2,3]
 */
 
 console.log("rotateArray by 2:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
