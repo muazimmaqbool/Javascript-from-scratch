@@ -32,8 +32,7 @@ const reverseWords=(str)=>{
 }
 console.log(reverseWords("the sky is blue")) // blue is key the
 console.log(reverseWords("       hello world  ")) // world hello
-console.log(reverseWords("a good                boy")) //  boy good a 
-
+console.log(reverseWords("a good                boy")) //  boy good a       
 //Time complexity : for-loop O(n) and while-loop O(n) --> O(2n) here we don't take constant so : O(n)
 //Space complexity : O(n)
 
