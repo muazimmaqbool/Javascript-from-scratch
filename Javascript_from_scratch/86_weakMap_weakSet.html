@@ -26,6 +26,12 @@
             Because it doesn't strongly own the object.
             It says: "I'll use this object if it exists, but I won't keep it alive."
 
+        ->WeakMap Methods:
+            weakMap.set(obj, value);
+            weakMap.get(obj);
+            weakMap.has(obj);
+            weakMap.delete(obj);
+
         ->No Iteration
             You cannot do:
                 weakMap.keys();
@@ -53,7 +59,12 @@
       }
       const weakMap=new WeakMap();
       weakMap.set(user2,"Admin");
-      console.log("weakMap:",weakMap);
+      //method on weakMap:
+      console.log("weakMap.get(user2):",weakMap.get(user2));
+      console.log("weakMap.has(user2):",weakMap.has(user2));
+    //   console.log("weakMap.delete(user2):",weakMap.delete(user2));
+    //   console.log("weakMap:",weakMap);
+
       user2 = null;
       //Now JS can remove the object from memory because WeakMap doesn't prevent garbage collection.
     </script>
