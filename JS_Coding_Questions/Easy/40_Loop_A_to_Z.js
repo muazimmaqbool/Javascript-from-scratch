@@ -7,11 +7,13 @@ Test Cases:
     . First element is "A", last element is "Z"
     . All elements are single uppercase letters -Letters are strictly in ascending order without duplicates
 */
-console.log("a".charCodeAt(0)) // 65
-console.log("z".charCodeAt(0)) // 90
+console.log("A:","A".charCodeAt(0)) // 65
+console.log("Z:","Z".charCodeAt(0)) // 90
 //here we get ASCII codes of A and Z so we will be looping in between them
 
 //Note: When asked to generate lowercase letter i.e ['a','b','c',....'z'], use range between 97 and 122 as 97 is a and 122 is z
+console.log("a:","a".charCodeAt(0)) // 65
+console.log("z:","z".charCodeAt(0)) // 90
 
 function generateAtoZ(){
     let letters=[]
@@ -23,6 +25,19 @@ function generateAtoZ(){
     return letters
 }   
 console.log(generateAtoZ())
+/*
+['A', 'B', 'C', 'D', 'E', 'F','G', 'H', 'I', 'J', 'K', 'L','M', 'N', 'O', 'P', 'Q', 'R','S', 'T', 'U', 'V', 'W', 'X','Y', 'Z']
+*/
+
+//Another method:
+console.log("**** Another Method ******")
+let resultNew=[]
+let ch="A".charCodeAt(0);
+while(ch<="Z".charCodeAt(0)){
+    resultNew.push(String.fromCharCode(ch))
+    ch++;
+}
+console.log("From another method:",resultNew)
 /*
 ['A', 'B', 'C', 'D', 'E', 'F','G', 'H', 'I', 'J', 'K', 'L','M', 'N', 'O', 'P', 'Q', 'R','S', 'T', 'U', 'V', 'W', 'X','Y', 'Z']
 */
