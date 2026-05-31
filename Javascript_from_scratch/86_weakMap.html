@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>weakMap and weakSet</title>
+    <title>weakMap()</title>
   </head>
   <body>
     <pre>
@@ -39,6 +39,9 @@
                 weakMap.entries();
                 for (let item of weakMap)
             All are invalid.
+
+        ->Why can't WeakMap be iterated?
+          Answer: "Because keys can disappear at any time due to garbage collection. JavaScript cannot guarantee a stable list of entries."
     </pre>
     <script>
       //Normal Map:
