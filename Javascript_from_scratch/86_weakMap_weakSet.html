@@ -15,7 +15,47 @@
             1) Objects Only: Keys in a WeakMap and values in a WeakSet must strictly be objects (or non-registered symbols). Primitives like strings, numbers, or booleans are not allowed.
             2) Not Iterable: You cannot loop over them using forEach, for...of, or access keys/values using methods like .keys() or .values().
             3) No Size Property: You cannot check how many items are inside because the size depends dynamically on the state of the garbage collector.
+
+        ->In short:
+            WeakMap : A WeakMap is a special Map where:
+                        Keys must be objects
+                        Keys are weakly referenced
+                        When no other references exist, the object can be garbage collected automatically
+
+        ->Why Is It Called "Weak"?
+            Because it doesn't strongly own the object.
+            It says: "I'll use this object if it exists, but I won't keep it alive."
+
+        ->No Iteration
+            You cannot do:
+                weakMap.keys();
+                weakMap.values();
+                weakMap.entries();
+                for (let item of weakMap)
+            All are invalid.
     </pre>
-    <script></script>
+    <script>
+      //Normal Map:
+      let user = {
+        name: "Muazim",
+      };
+      const map = new Map();
+      map.set(user, "Admin");
+      //console.log("map:",map)
+      user = null;
+      /* After making the user variable null, can JavaScript free the memory occupied by that object?
+      No: Because the Map still has a reference to the object.The object cannot be garbage collected.
+      */
+
+      //Now: WeakMap:
+      let user2={
+        name:"Basit"
+      }
+      const weakMap=new WeakMap();
+      weakMap.set(user2,"Admin");
+      console.log("weakMap:",weakMap);
+      user2 = null;
+      //Now JS can remove the object from memory because WeakMap doesn't prevent garbage collection.
+    </script>
   </body>
 </html>
