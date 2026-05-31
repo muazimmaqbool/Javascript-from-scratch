@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weakSet()</title>
+</head>
+<body>
+    <pre>
+        "WeakMap and WeakSet are similar to Map and Set, but they hold weak references to objects.
+         If an object is no longer referenced elsewhere in the application, it can be garbage collected automatically, helping prevent memory leaks."
+
+        ->Core Characteristics & Restrictions:
+            Because these collections feature weak references, they come with a few strict architectural constraints:
+            1) Objects Only: Keys in a WeakMap and values in a WeakSet must strictly be objects (or non-registered symbols). Primitives like strings, numbers, or booleans are not allowed.
+            2) Not Iterable: You cannot loop over them using forEach, for...of, or access keys/values using methods like .keys() or .values().
+            3) No Size Property: You cannot check how many items are inside because the size depends dynamically on the state of the garbage collector.
+
+        ->In short:
+            WeakSet : A WeakSet is a special Set where:
+                        Values must be objects
+                        Values are weakly referenced
+                        When no other references exist, the object can be garbage collected automatically
+        ->Why Is It Called "Weak"?
+            Because it doesn't strongly own the object.
+        
+        ->WeakSet Methods:
+            weakSet.add(obj);   
+            weakSet.has(obj);
+            weakSet.delete(obj);
+
+        ->No Iteration:
+            You cannot do:
+                weakSet.keys();
+                weakSet.values();
+                weakSet.entries();
+                for (let item of weakSet)
+            All are invalid.
+    </pre>
+    <script>
+        //Normal Set:
+        const set=new Set();
+        const user={
+            name:"Muazim"
+        }
+        set.add(user); //Set keeps the object alive.
+        //now:
+        user=null;
+
+        //Now: WeakSet:
+        const weakSet=new WeakSet();
+        const user2={
+            name:"Muazim"
+        }
+        weakSet.add(user2); //WeakSet does not keep the object alive.
+        //now:
+        user2=null; //Object can be garbage collected.
+    </script>
+</body>
+</html>
