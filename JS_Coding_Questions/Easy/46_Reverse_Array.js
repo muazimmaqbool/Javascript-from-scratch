@@ -6,13 +6,13 @@ const reverseArray=(array)=>{
     if(!Array.isArray(array)) return false;
     if(array.length===0)return []
 
-    //use th result when in question it's mentioned don't mutate original array
+    //use the 'result' when in question it's mentioned don't mutate original array
     // let result=[...array]
 
-    //method 1 using reverse:
+    //method 1 using reverse():
     // return array.reverse()
 
-    //method 2 without reverse: (Important)
+    //method 2 without reverse(): (Important)
 
     let start=0; end=array.length-1
     //end will have value less then array length and that will be index of last element in array
