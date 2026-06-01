@@ -17,5 +17,5 @@ in return we first have ...arr.slice(-k)] : .slice returns part of the array and
 */
 
 console.log("rotateArray by 2:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
-console.log("rotateArray by 5:",rotateArray([1,2,3,4,5,6,7,8,9],5)) // [7, 8, 9, 1, 2,3, 4, 5, 6]
+console.log("rotateArray by 5:",rotateArray([1,2,3,4,5,6,7,8,9],5)) // [5, 6, 7, 8, 9,1, 2, 3, 4]
 
