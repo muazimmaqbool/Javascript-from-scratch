@@ -28,7 +28,7 @@ function capitalized(str){
     // console.log("wordsArr:",wordsArr)
 
     //converting first letter of each word in wordsArr to uppercase and rest to lowercase
-    const cap=wordsArr.map(word=>word.charAt(0).toUpperCase()+word.slice(1).toLowerCase())
+    const cap=wordsArr.map(word=>word.charAt(0).toUpperCase()+word.slice(1).toLowerCase()) // or we can do join here as well: ...+w.slice(1).toLowerCase()).join(" ")
     // console.log("cap:",cap)
     
     return cap.join(" ") //converting array cap to string
