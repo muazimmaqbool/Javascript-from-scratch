@@ -50,7 +50,6 @@ const users = [
   { name: "Bob", age: 30 },
   { name: "Charlie", age: 25 },
 ];
-
 console.log(groupBy(users, "age"));
 /*
 o/p:
