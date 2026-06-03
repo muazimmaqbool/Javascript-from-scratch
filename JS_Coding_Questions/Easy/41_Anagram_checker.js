@@ -4,8 +4,7 @@
   An anagram is a word formed by rearranging the letters of another word, using all original letters exactly once.
 
 ->Input: Two strings str1 and str2
-->Output: A boolean value - true if the strings are anagrams,
-          false otherwise.
+->Output: A boolean value - true if the strings are anagrams, false otherwise.
 
 ->Example Inputs & Outputs:
     Example 1:
