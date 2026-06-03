@@ -41,8 +41,8 @@ So, it has bad space complexity and it's output depends on n i.e O(n)
 
 //Important: In js
 /*
--> Boolean, undefined, num, null : have constant values i.e constant space complexity i.e O(1)
--> Strings, arrays, object : have dynamic values i.e they have dynamic space complexity i.e space complexity here depends on 'n'
+-> Boolean, undefined, num, null : have constant values i.e constant space complexity of O(1)
+-> Strings, arrays, object : have dynamic values i.e they have dynamic space complexity i.e space complexity here depends on 'n' i,e O(n)
 
 */
 //Example third O(n^2):
