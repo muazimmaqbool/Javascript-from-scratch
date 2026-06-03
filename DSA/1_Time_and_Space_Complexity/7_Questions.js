@@ -7,9 +7,22 @@ const func1 = (n) => {
     }
   }
 };
-//console.log(func1(1))
-// time complexity is O(n), because here o/p depends on the input n
+// console.log(func1(1))
 /*
+o/p:
+    0 0
+    0 1
+    0 2
+    0 3
+    0 4
+    0 5
+    0 6
+    0 7
+    0 8
+    0 9
+
+time complexity is O(n), because here o/p depends on the input n
+
 Outer loop runs n times
 Inner loop runs 10 times (constant)
 so: n*10 drop constants so O(n)
@@ -22,7 +35,7 @@ function getFirstAndLast(arr) {
   return [arr[0], arr[arr.length - 1]];
 }
 //console.log(getFirstAndLast([1,2,5,4,6,7]))
-// O(1), here no matter how large the input is the output will always be first and last element
+//T.C and S.C = O(1), here no matter how large the input is the output will always be first and last element
 
 //3:
 function sumOfArray(arr) {
@@ -44,8 +57,8 @@ function printPairs(arr) {
     }
   }
 }
-//console.log(printPairs([1,2,5,4]))
-// O(n^2)
+// console.log(printPairs([1,2,5,4]))
+// T.C and S.C = O(n^2)
 
 //5:
 function reverseArray(arr) {
