@@ -50,7 +50,7 @@
 
         for vs map:
          Both are O(n) in time complexity.
-            But map() internally creates a new array → uses extra O(n) space, while for gives you more control 
+            But map() internally creates a new array → uses extra O(n) space, while for loop gives you more control 
             (you can modify in-place for O(1) space).
             On very large arrays (say 10M items), a plain for loop can sometimes be slightly faster since it avoids some overhead 
             of callbacks. But readability-wise, map is better.

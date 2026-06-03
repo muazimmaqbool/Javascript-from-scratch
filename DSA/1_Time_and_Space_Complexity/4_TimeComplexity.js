@@ -17,7 +17,7 @@ const goingUpDown=(n)=>{
     console.log("At the start") // 1 operation
 }
 
-//2n+3: 2 for loops for 'n' input and 3 console logs, means operations depends on n so time complexity is O(n)
+//2n+3: 2 for loops for 'n' input and 3 console logs, and operations depends on n so time complexity is O(n)
 console.log(goingUpDown(2)) 
 /* o/p: Going forward
         0

@@ -9,7 +9,7 @@ console.log(someOperations(100))
 /*
 Here this function/algorithm have timeComlexity of O(1) because it has only one operation i.e constant number of operations,
  it doesn't matter the number of input i.e n
- Here the 'someOperations' function have 3 operations i.e n*  is one, n+5 is two and /2 is third operation
+ Here the 'someOperations' function have 3 operations i.e n*  is one, n+5 is second and /2 is third operation
 
- So this algorithm will take same amount of time with each and on every call
+ So this algorithm will take same amount of time on each and every call
 */
