@@ -37,11 +37,9 @@ function arrayChunking(arr,n){
     let result=[];
     for(let i=0;i<arr.length;i+=n){
         // console.log("i=",i,)
-        
         result.push(arr.slice(i,i+n))
     }
     return result
-    
 }
 console.log(arrayChunking([1, 2, 3, 4], 2)) // [ [ 1, 2 ], [ 3, 4 ] ]
 console.log(arrayChunking([1, 2, 3, 4, 5], 2)) // [ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
