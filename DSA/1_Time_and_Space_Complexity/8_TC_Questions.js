@@ -107,8 +107,7 @@ function test(arr) {
     n + n = 2n → O(n)
 
 8: O(log n)
-    But since your allowed answers were limited, closest: O(n log n) not correct.
-    However real answer = O(log n)
+    Answer = O(log n)
     Explanation:
         i doubles each time:
         1 → 2 → 4 → 8 → … → n
@@ -181,15 +180,15 @@ function test(n) {
     Total = n × log n = O(n log n)
 
 13: O(log n)
-    (Closest allowed: log n — but not in your list)
-    Explanation:
-    n halves every iteration → logarithmic.
+    Each iteration does constant work (n = n / 2 and console.log).
+    Number of iterations = O(log n).
 
 14: O(n)
     Explanation:
     First loop → O(n)
     Second loop → O(log n)
-    Total: O(n + log n) = O(n)
+    i.e: O(n) + O(log n) 
+    When simplifying Big-O, the dominant term wins: O(n)
 
 15: O(n log n)
     Explanation:
