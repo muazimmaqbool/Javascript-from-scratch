@@ -24,12 +24,11 @@ O(1) → constant
 O(n) → linear
 O(n²) → quadratic
 
-4. Why do we ignore constants in Big-O?
-O(2n + 5) → O(n)
+4. Why do we ignore constants in Big-O? Eg. O(2n + 5) → O(n)
 ✅ Answer:
-Because Big-O focuses on growth trend, not exact values.
+Because Big-O focuses on growth trend, not on exact values.
 👉 For large inputs:
-  2n ≈ n
+  2n = n
   +5 becomes irrelevant
 
 5. Difference between O(n) and O(n²)?
@@ -39,7 +38,7 @@ O(n²) → grows much faster (nested loops)
 👉 Example:
   n = 100
   O(n) → 100 operations
-  O(n²) → 10,000 operations 🚨
+  O(n²) → 100*100 10,000 operations 🚨
 
 🟡 Medium:
 
@@ -125,7 +124,7 @@ Minimum time required when input is ideal
 
 20. Why is Big-O important in interviews?
 ✅ Answer:
-Because it shows:
+  Because it shows:
   Problem-solving efficiency
   Scalability thinking
   Ability to optimize code
