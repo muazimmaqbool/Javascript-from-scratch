@@ -35,6 +35,15 @@ function test(n) {
   let c = 2;
   return a + b + c;
 }
+/*
+Answers:
+Easy:
+    O(1) — Only fixed variables
+    O(1) — No extra memory grows with input
+    O(n) — Creating array of size n
+    O(1) — No extra memory
+    O(1) — Fixed variables
+*/
 
 //Medium:
 
@@ -79,6 +88,16 @@ function test(arr) {
   arr.sort();
   return arr;
 }
+
+/*
+Answers:
+Medium:
+    O(n) — Array grows with n
+    O(n) — New result array
+    O(n) — Recursive stack grows n times
+    O(n²) — n × n matrix
+    O(1) — Sorting in-place (ignoring recursion stack)
+*/
 
 //Hard:
 
@@ -126,21 +145,6 @@ function test(n) {
 }
 /*
 Answers:
-
-Easy:
-    O(1) — Only fixed variables
-    O(1) — No extra memory grows with input
-    O(n) — Creating array of size n
-    O(1) — No extra memory
-    O(1) — Fixed variables
-
-Medium:
-    O(n) — Array grows with n
-    O(n) — New result array
-    O(n) — Recursive stack grows n times
-    O(n²) — n × n matrix
-    O(1) — Sorting in-place (ignoring recursion stack)
-
 Hard:
     O(n) — Recursive call stack
     O(n) — Two arrays but still linear → 2n → O(n)
