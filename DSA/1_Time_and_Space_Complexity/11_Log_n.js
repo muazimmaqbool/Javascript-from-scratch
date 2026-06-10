@@ -2,11 +2,12 @@
 /*
 O(log n) means the work increases very slowly even if input becomes huge.
 ->Usually happens when:
-    we divide the problem into half every step
-    Binary Search
-    Trees
-    Divide & Conquer
-    Heaps
+    we divide the problem into half on every step.
+    Examples:
+      Binary Search
+      Trees
+      Divide & Conquer
+      Heaps
 
 ->Real Life Example:
     Imagine searching a word in a dictionary.
