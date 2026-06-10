@@ -1,8 +1,8 @@
 //-> O(n log n) Time Complexity:
 /*
 O(n log n) means:
-    We do log n work
-    for n elements
+    We do 'log n' work
+    for ''n elements
 
         OR
 
