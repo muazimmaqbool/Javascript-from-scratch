@@ -3,7 +3,8 @@ Array introduction:
     An array is a collection of items of same data type that are stored at contiguous memory locations. 
     It's one of the most popular and simple data structures used in programming.
 
-    Note:A contiguous memory location is a sequence of memory blocks that are adjacent to each other in a single, continuous block, allowing for efficient and fast access to data
+    Note: A contiguous memory location is a sequence of memory blocks that are adjacent to each other in a single, 
+          continuous block, allowing for efficient and fast access to data
     
     ->Basic terminologies of Array:
         Array Element: Elements are items stored in an array.
@@ -29,14 +30,14 @@ const reverseArray=(arr)=>{
 console.log("Original:",numArray)
 console.log("Reverse:",reverseArray(numArray))
 
-//we also have a reverse method which will reverse array in js
+//we also have a reverse() method which will reverse array in js
 console.log("Reverse using reverse():",numArray.reverse())
 
 //Rotation (rotate array by k steps)
 function rotateArray(arr, k) {
   k = k % arr.length; //this is to make sure that rotation count doesn't exceed the array length
   console.log("k % arr.length:",k % arr.length)
-  return [...arr.slice(-k), ...arr.slice(0, -k)];
+  return [...arr.slice(-k), ...arr.slice(0, -k)]; // or  return [...arr.slice(-k),...arr.slice(0,k+1)]
 }
 /*
 in return we first have ...arr.slice(-k)] : .slice returns part of the array and -ve index returns from end, so we have
@@ -47,4 +48,4 @@ in return we first have ...arr.slice(-k)] : .slice returns part of the array and
 */
 
 console.log("rotateArray:",rotateArray([1,2,3,4,5], 2)); // [4,5,1,2,3]
-console.log("rotateArray 2:",rotateArray([1,2,3,4,5,6,7,8,9],5)) // [7, 8, 9, 1, 2,3, 4, 5, 6]
+console.log("rotateArray 2:",rotateArray([1,2,3,4,5,6,7,8,9],3)) // [7, 8, 9, 1, 2,3, 4, 5, 6]
