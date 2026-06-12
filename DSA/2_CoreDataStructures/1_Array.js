@@ -9,6 +9,8 @@ Array introduction:
     ->Basic terminologies of Array:
         Array Element: Elements are items stored in an array.
         Array Index: Elements are accessed by their indexes. Indexes in most of the programming languages start from 0.
+
+    ->Arrays are mutable : means you can change their content, add elements, or remove values directly without changing their reference in memory
 */
 
 let numArray=[1,2,3,4,5,6,7,8,9];

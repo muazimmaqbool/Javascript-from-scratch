@@ -3,7 +3,7 @@ String: In programming, a string is a fundamental data type used to represent se
         These characters can include letters, numbers, symbols, and whitespace. Strings are essentially text data that 
         can be stored, manipulated, and displayed within a program.
 
-        ->Strings are immutable
+        ->Strings are immutable :  meaning that once a string value is created, the characters inside it cannot be altered or overwritten
 */
 
 //String Manipulation:
