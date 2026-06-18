@@ -118,7 +118,6 @@ function substringSearch(text, pattern) {
   }
   return -1;
 }
-
 console.log(substringSearch("hello world", "world")); // 6
 console.log(substringSearch("hello world","llo")) // 2
 console.log(substringSearch("javascript","java")) //0
@@ -129,9 +128,9 @@ Explanation:
 -> for (let i = 0; i <= text.length - pattern.length; i++) {...}
       We only go up to text.length - pattern.length so the pattern has enough room to fit.
       Example:
-      text = "hello world" (length 11)
-      pattern = "world" (length 5)
-      11 - 5 = 6 so i runs 0,1,2,3,4,5,6.
+        text = "hello world" (length 11)
+        pattern = "world" (length 5)
+        11 - 5 = 6 so j runs 0,1,2,3,4,5,6.
     
 -> let j = 0;
     j tracks the index of the current character in pattern we’re comparing.
