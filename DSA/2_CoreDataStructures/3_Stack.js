@@ -74,7 +74,7 @@ console.log("bottom element:", stack.bottomElement());
 
 console.log("**** Undo/Redo Feature Code ****")
 const undo = []; //stores latest actions performed that can be undo
-const redo = []; //stores the actions that were just undo and can be reapplied(redone), it basically temporary holds the actions popped from the undo stack
+const redo = []; //stores the actions that were just undo and can be re-applied(redone), it basically temporary holds the actions popped from the undo stack
 const makeChange = (action) => {
   undo.push(action);
   redo.length = 0; //clear redo when new change happens, this prevents the user from "redoing" old, now-irrelevant actions after making a new one.
