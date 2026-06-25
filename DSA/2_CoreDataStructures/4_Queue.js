@@ -17,14 +17,15 @@
 //-> Implementing Queue with JavaScript Arrays:
 class Queue{
     constructor(){
-        this.items=[]
+        this.items=[]; // 'this' refers to the current Queue object being created
     }
 
     isEmpty(){
-        return this.items.length===0;
+        return this.items.length===0; // Accesses the current object's items array
     }
 
     enqueue(el){
+        // Adds element to this Queue instance
         this.items.push(el)
     }
     
@@ -46,6 +47,9 @@ class Queue{
         console.log("Queue Elements:",this.items.join(","))
     }
 }
+/*
+Note: 'this' in 'Queue' class refers to the current object (instance) of the 'Queue' class. It allows each queue object to maintain its own separate items array.
+*/
 
 const queue=new Queue()
 console.log(queue.dequeue()) // o/p : Queue is empty!
