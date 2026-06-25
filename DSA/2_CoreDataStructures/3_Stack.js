@@ -24,16 +24,19 @@ class Stack {
   //it's called automatically when an object is instantiated using 'new' keyword:  like const stack=new Stack()
   //inside the constructor, the keyword this refers to the newly created object being initialized
   constructor() {
+     // 'this' refers to the current Stack object being created.
     this.items = [];
   }
   push(el) {
+     // Adds an element to this stack instance
     this.items.push(el);
   }
   isEmpty() {
-    return this.items.length === 0;
+    return this.items.length === 0; // Checks if this stack instance is empty
   }
   pop() {
     if (this.isEmpty()) return "Stack is empty";
+    // Removes and returns the top element from this stack
     return this.items.pop();
   }
   peek() {
@@ -52,6 +55,13 @@ class Stack {
     return this.items[0];
   }
 }
+/*
+Role of 'this' in this code:
+  'this' refers to the current Stack object (instance).
+    It lets each stack object maintain its own items array.
+    Without this, all stack objects would not have their own separate data.
+*/
+
 const stack = new Stack();
 stack.push(1);
 stack.push(2);
