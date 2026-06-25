@@ -1,11 +1,10 @@
 /*
 ->Queue Data Structure:
- A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. 
- This means that the first element added to the queue is the first one to be removed, similar to a line of people waiting for a service. 
- A Queue is like a line at a coffee shop — first person in line gets served first.
+    A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. 
+    This means that the first element added to the queue is the first one to be removed, similar to a line of people waiting for a service. 
+    A Queue is like a line at a coffee shop — first person in line gets served first.
 
- -> QUeue Operations:
-
+ -> Queue Operations:
     | Operation   | Description            |
     | ----------- | ---------------------- |
     | `enqueue()` | Add to the rear        |
@@ -24,20 +23,25 @@ class Queue{
     isEmpty(){
         return this.items.length===0;
     }
+
     enqueue(el){
         this.items.push(el)
     }
+    
     dequeue(){
         if(this.isEmpty()) return "Queue is empty!"
         return this.items.shift(); //remove from front,  its first element of the array from left side
     }
+
     peek(){
         if(this.isEmpty()) return "Queue is empty!"
         return this.items[0]
     }
+
     size(){
         return this.items.length;
     }
+
     showQueue(){
         console.log("Queue Elements:",this.items.join(","))
     }
@@ -53,7 +57,7 @@ console.log("peek:",queue.peek())
 console.log("dequeue:",queue.dequeue()) // o/p: Task 1
 queue.showQueue() // o/p: Task2, Task 3
 
-//Browser use case of queue
+//Browser use case of queue:
 console.log("*************** Queue browser usecase ******************")
 //-> Browsers schedule tasks (like rendering, API callbacks, event handlers) in a task queue.
 const taskQueue=[]
