@@ -70,7 +70,7 @@ function addTask(task){
 }
 function processTask(){
     while(taskQueue.length>0){
-        const task=taskQueue.shift()
+        const task=taskQueue.shift(); //with each shift() operation the taskQueue size reduces as elements are getting removed
         //shift() : it removes the element at index 0 from the array
         console.log("Processing:",task)
     }
