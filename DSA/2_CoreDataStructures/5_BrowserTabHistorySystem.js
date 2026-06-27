@@ -7,13 +7,13 @@ We willl maintain two stacks to achieve this:
     forwardStack → keeps track of pages you moved forward to (after going back).
     currentPage → stores the page you’re currently on.
 
-| Action        | backStack     | currentPage | forwardStack |
-| ------------- | ------------- | ----------- | ------------ |
-| Visit Home    | []            | Home        | []           |
-| Visit About   | [Home]        | About       | []           |
-| Visit Contact | [Home, About] | Contact     | []           |
-| Go Back       | [Home]        | About       | [Contact]    |
-| Go Forward    | [Home, About] | Contact     | []           |
+    | Action        | backStack     | currentPage | forwardStack |
+    | ------------- | ------------- | ----------- | ------------ |
+    | Visit Home    | []            | Home        | []           |
+    | Visit About   | [Home]        | About       | []           |
+    | Visit Contact | [Home, About] | Contact     | []           |
+    | Go Back       | [Home]        | About       | [Contact]    |
+    | Go Forward    | [Home, About] | Contact     | []           |
 
 */
 class BrowserTabHistory{
@@ -25,6 +25,7 @@ class BrowserTabHistory{
     //visiting new page
     visit(page){
         if(this.currentPage){
+            //this.currentPage will be true when it's not empty means we have already visited a page, so we put it in the backStack 
             this.backStack.push(this.currentPage)
         }
         this.currentPage=page; //current page is now new visited page
