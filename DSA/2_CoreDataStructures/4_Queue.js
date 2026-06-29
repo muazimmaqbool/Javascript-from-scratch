@@ -47,9 +47,8 @@ class Queue{
         console.log("Queue Elements:",this.items.join(","))
     }
 }
-/*
-Note: 'this' in 'Queue' class refers to the current object (instance) of the 'Queue' class. It allows each queue object to maintain its own separate items array.
-*/
+//Note: 'this' in 'Queue' class refers to the current object (instance) of the 'Queue' class. It allows each queue object to maintain its own separate items array.
+
 
 const queue=new Queue()
 console.log(queue.dequeue()) // o/p : Queue is empty!
@@ -75,7 +74,6 @@ function processTask(){
         console.log("Processing:",task)
     }
 }
-
 
 addTask("Render UI")
 addTask("Open Website")
