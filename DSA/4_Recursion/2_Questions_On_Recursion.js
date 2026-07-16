@@ -2,7 +2,7 @@
 
 console.log("1. Factorial of n:")
 //1: Factorial of number (n).
-    //Example of n =5 the factorial of 5 is: 5*4*3*2*1
+    //Example: n =5 the factorial of 5 is: 5*4*3*2*1 = 120, if n=3 then output is 3*2*1 = 6
 function factorial(n){
     if(n===0)return 1
     return n * factorial(n-1)
