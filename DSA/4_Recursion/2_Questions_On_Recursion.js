@@ -66,7 +66,7 @@ function isPalindrom(num){
 
     //here typeof numReverse is String and typeof num is number 
     //so: numReverse===num returns false for all even if num is palindrom because we are comparing string and num
-    //so before doing the comparsion we convert string to number then the result is as expected
+    //so before doing the comparsion we convert string to number using Number() then the result is as expected
 }
 console.log("121:",isPalindrom(121)) //true
 console.log("6656:",isPalindrom(6656)) //false
@@ -75,9 +75,9 @@ console.log("101:",isPalindrom(101)) //true
 
 //const numReverse=num.toString().split('').reverse().join(''):
 //here we convert num to string
-//then we convert string to array
+//then we convert string to array using split("")
 //then perform reverse operation
-//then back to array using join()
+//then back to array using join("")
 
 console.log("4. Fibonacci number:")
 /*
