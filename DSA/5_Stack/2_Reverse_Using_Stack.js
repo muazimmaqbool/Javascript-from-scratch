@@ -4,7 +4,6 @@
 //input: "  hello world    " ->>> output: "world hello"
 //input: "a good           boy" ->>> output: "boy good a "
 
-
 //Approach:
 // "the sky is blue" => [the, sky, is, blue]
 // [the, sky, is, blue] => [blue, is, sky, the]
@@ -36,8 +35,8 @@ console.log(reverseWords("       hello world  ")) // world hello
 console.log(reverseWords("a good                boy")) //  boy good a 
 
 //for-loop O(n) and while-loop O(n)
-//Time complexity : O(2n) here we don't take constant so : O(n)
+//Time complexity : O(n) + O(n) =  O(2n) here we don't take constant so : O(n)
 
 //Space complexity : O(n)
 
-//Note this questions as a better approach but here we are doing it using stack
+//Note this questions has a better approach but here we are doing it using stack
