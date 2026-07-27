@@ -3,13 +3,13 @@
 Note: More on stacks inside 'CoreDataStructures' folder
 
 ->A stack is a linear data structure that follows the Last-In, First-Out (LIFO) principle, 
-    much like a physical stack of plates where the last plate added to the top is the first one removed. 
+    much like a physical stack of plates where the last plate added to the top is the first one to be removed. 
 
     In JavaScript, stacks are commonly implemented using arrays, leveraging the built-in push() and pop() methods. 
 
 ->Core Principles:
     LIFO (Last-In, First-Out): The fundamental rule of a stack is that the most recently added element is the first one available to be removed.
-    Single End Access: All operations (adding or removing elements) occur at only one end, referred to as the "top" of the stack. 
+    Single End Access: All operations (adding/removing elements) occur at only one end, referred to as the "top" of the stack. 
 
 ->Key Operations (Stacks support several primary operations):
     1. push(element): Adds a new element to the top of the stack.
