@@ -8,22 +8,19 @@
   <body>
     <pre>
     ->Shallow Copy:
-       A shallow copy occurs when you copy the reference of an object to a new variable. 
-       In this process, only the top-level properties are copied, while nested objects or arrays still 
-       reference to the original memory location. 
-       This means that if you change the nested properties in one object, those changes will reflect in the other because
-       they share the same memory reference.
+       - A shallow copy occurs when you copy the reference of an object to a new variable. 
+       - In this process, only the top-level properties are copied, while nested objects or arrays still reference to the original memory location. 
+       - This means that if you change the nested properties in one object, those changes will reflect in the other because they share the same memory reference.
 
       Example:When you assign one object to another using the assignment operator (=), a shallow copy is created:
 
     ->Deep Copy:
-       A deep copy, on the other hand, creates a completely independent copy of the object, 
-       Including all nested objects or arrays. 
-       This ensures that changes made to one object do not affect the other.
-       Each object is stored in a separate memory location, making them entirely independent.
+       - A deep copy, on the other hand, creates a completely independent copy of the object, including all nested objects or arrays. 
+       - This ensures that changes made to one object do not affect the other.
+       - Each object is stored in a separate memory location, making them entirely independent.
 
     ->Note: To create a deep copy of an object in JavaScript we use JSON.parse() and JSON.stringify() methods, because they 
-       effectively break all references to the original object
+              effectively break all references to the original object
     </pre>
   </body>
   <script>
