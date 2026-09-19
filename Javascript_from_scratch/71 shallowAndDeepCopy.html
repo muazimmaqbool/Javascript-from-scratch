@@ -27,9 +27,9 @@
     //Shallow Copy Examples:
     //Example 1:
     let employee = {
-      eid: "E102",
-      ename: "Jack",
-      eaddress: "New York",
+      eId: "E102",
+      eName: "Jack",
+      eAddress: "New York",
       salary: 50000,
     };
 
@@ -38,7 +38,7 @@
     console.log("New Employee=> ", newEmployee);
 
     console.log("---------After modification----------");
-    newEmployee.ename = "Beck";  // Name of the 'employee' as well as 'newEmployee' is changed.
+    newEmployee.eName = "Beck";  // eName field of 'employee' object as well as 'newEmployee' object is changed.
     console.log("Employee=> ", employee);
     console.log("New Employee=> ", newEmployee);
    
@@ -56,8 +56,8 @@
     shallowCopy.hobbies.push("Cricket");
 
     // both objects are affected
-    console.log("orginal:",original.hobbies); // output: ["Gym", "Coding", "Cricket"]
-    console.log("shallowCopy:",shallowCopy.hobbies); // output: ["Gym", "Coding", "CrshallowCopy
+    console.log("original hobbies:",original.hobbies); // output: ["Gym", "Coding", "Cricket"]
+    console.log("shallowCopy hobbies:",shallowCopy.hobbies); // output: ["Gym", "Coding", "Cricket"]
 
     //Deep Copy Example:
     const intro = {
