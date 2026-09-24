@@ -50,16 +50,14 @@ console.log(recursiveBinarySearch(arr,9,0,arr.length-1)); // -1 as their is no 9
 //Important Interview Insight:
 /*
 Recursive Binary Search is often used to teach:
-    recursion
-    divide and conquer
-    call stack understanding
+                    recursion
+                    divide and conquer
+                    call stack understanding
 
-Important:
-Note:But in real-world frontend/backend: iterative version is usually preferred because it uses less memory.
+Important: Note:But in real-world frontend/backend: iterative version is usually preferred because it uses less memory.
 */
 
-//Extra:
-// What Makes It Recursive?
+//Extra: What Makes It Recursive?
 /*
 This line: return recursiveBinarySearch(...)
 
