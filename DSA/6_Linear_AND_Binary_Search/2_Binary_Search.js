@@ -77,7 +77,8 @@ console.log(binarySearch([-1,0,1,2,4,5,9,12], 15)); // -1
 console.log(binarySearch([],5)) // -1
 
 //->Time complexity = O(log n) 
-/*Because in each iteration we are doing an exponentation reduction i.e we are turning the area of search to half and 
+/*
+  Because in each iteration we are doing an exponentation reduction i.e we are turning the area of search to half and 
   when exponentation reduction happens the time complexity is O(log n)
 */
 //->Space complexity = O(1)
