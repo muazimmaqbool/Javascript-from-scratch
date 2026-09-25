@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        //here i have four simple promises and they are always resolved, they are never rejected
+        //Here i have four simple promises and they are always resolved, they are never rejected
         const video1=new Promise((resolve,reject)=>{
             resolve("video one recorded")
         })
@@ -22,8 +22,8 @@
             resolve("video four recorded")
         })
 
-        //now here i want to run all these three prmoises in paralled same time
-        //promise.all will run all of these promises and when its done its going to call .then and .catch
+        //now here i want to run all these three prmoises in parallel same time
+        //promise.all will run all of these promises and when its done it's going to call .then and .catch
 
         Promise.all([ // takes array of promises to run them
             video1,
