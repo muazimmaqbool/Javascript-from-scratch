@@ -16,10 +16,12 @@
     <script>
         
         //promise object takes one parameter which is a function which gets passed with two variables resolve and reject
+
+        //Example 1:
         let p=new Promise((resolve,reject)=>{
             //function definition
             let a =1+1 //try for 1+2 as well
-            //this is what this promise does and if this fail we will reject it otherwise resolve it
+            //this is what this promise does and if this fails we will reject it otherwise resolve it
             if(a==2){
                 resolve('success')
             }
@@ -29,16 +31,16 @@
         })
         //interacting with promises
         //anything inside .then is going to run for resolve
-        //then takes a method in our cases its going to be single parameter i.e success message
+        //.then takes a method in our cases it's going to be single parameter i.e success message
         //to get error/reject we use .catch
         p.then((message)=>{
             console.log('this is inside then: '+message)
         }).catch((message)=>{
-            console.log('this is inside catch: '+message)
+            console.log('this is inside catch: '+message) // or console.error('this is inside catch: '+message)
         })
-        //then is called when our promise resolved successfully and catch is going to called if our promises rejected or failed
+        //.then is called when our promise resolved successfully and .catch is going to called if our promises rejected or failed
 
-        //Example two
+        //Example 2:
         let complete=true;
         let prom = new Promise((res,rej)=>{
             if(complete) res("its completed successfully");
