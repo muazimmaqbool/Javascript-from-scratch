@@ -5,7 +5,11 @@
   </head>
   <body>
     <script>
-      // check notes for basic info
+      /*
+      In JavaScript, async and await are keywords used to handle asynchronous operations (like fetching data from an API, reading files, or waiting for a timer). 
+      They act as "syntactic sugar" built on top of JavaScript Promises—meaning they don't change how JavaScript works under the hood,
+      but they make asynchronous code look and behave like clean, readable synchronous code
+      */
       //->async-await makes asynchronous programming easy
       //->It handles promises easily and in a proper manner
       //->it always returns a promise
@@ -17,14 +21,13 @@
       // console.log(test()); // hello
 
       //async funciton:
-      async function test() {
-        // or let test =  async function(){...}
+      async function test() { // or let test =  async function(){...}
         return "hello Async";
       }
-      console.log(test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
+      console.log("test() function:",test()); //returns promise :o/p -> Promise {<fulfilled>: 'hello async'}
 
       //here we don't need to write resolve and reject we can directly call then and catch:
-      //if test() function runs successfully then() is going to be called automatically
+      //if test() function runs successfully .then() is going to be called automatically
       test().then((result) => {
         //the return value of function gets stored in result
         console.log(result);
