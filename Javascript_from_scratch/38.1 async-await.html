@@ -7,24 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <!--
-        Study previous code before this code and also check notes
-    -->
     <script>
-      //Withoung using await inside async function:
-      console.log("Without using 'await' inside 'async'");
-      async function test() {
-        console.log("2: message");
-        console.log("3: message");
-        console.log("4: message");
-      }
-      console.log("1: message"); // prints first
-      test();
-      console.log("5: message"); // runs last after code inside async function test()
+      // console.log("***** Without using 'await' inside 'async' *****");
+      // async function test() {
+      //   console.log("2: message");
+      //   console.log("3: message");
+      //   console.log("4: message");
+      // }
+      // console.log("1: message"); // prints first
+      // test();
+      // console.log("5: message"); // runs last after code inside async function test()
       // o/p -> 1,2,3,4,5
 
       //Now using await inside async function:
-      console.log("Using 'await' inside 'async'");
+      console.log("***** Using 'await' inside 'async' *****");
       async function test2() {
         console.log("2: message");
         await console.log("3: message : contains await!"); // it waits after printing/running  3
@@ -35,18 +31,19 @@
       console.log("5: message");
       // o/p-> 1,2,3,5,4
 
-      //example3
+      //Another example:
       let test3 = async function () {
         console.log("A");
         await console.log("B");
-        console.log("C");
+        await console.log("C");
         console.log("D");
       };
       test3();
       console.log("E");
       // o/p: A,B,E,C,D
-
-      //next program is example of async await with fetch()
+      //In the above example, the code execution is paused at the first await statement until the promise is resolved.
+      // Once the promise is resolved, the code execution continues to the next line after the await statement.
+  
     </script>
   </body>
 </html>
