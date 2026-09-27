@@ -47,6 +47,17 @@
       sum(10,15)
         .then((result) => console.log(result))
         .catch((e) => console.log("error:", e));
+
+      let enroll=async(id)=>{
+        if(id===6655){
+          return "enrolled successfully";
+        }else{
+          throw new Error("enrollment failed");
+        }
+      }
+      enroll(6653)
+        .then((result) => console.log(result))
+        .catch((e) => console.log("error:", e));
     </script>
   </body>
 </html>
