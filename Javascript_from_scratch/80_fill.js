@@ -1,6 +1,5 @@
 /*
-The Array.prototype.fill() method in JavaScript is used to change elements in an array to a static value, 
-    from a start index to an end index.
+The Array.prototype.fill() method in JavaScript is used to change elements in an array to a static value, from a start index to an end index.
 
 The fill() method modifies the original array and returns the modified array.
     You can use it in a few ways:
