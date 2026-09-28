@@ -7,18 +7,18 @@
   </head>
   <body>
     <pre>
-        The Map Object In JavaScript:
+      The Map Object In JavaScript:
         A Map is a collection of keyed data items, just like an Object.
         A Map object holds key-value pairs where the keys can be any datatype.
         A Map also remembers the original insertion order of the keys.
 
-        In Simple Terms:
+      In Simple Terms:
         The Map object in JavaScript is a built-in object that stores key-value pairs where:
           1) Each key is unique.
           2) Keys can be any data type (not just strings like in objects).
           3) The order of elements is preserved (insertion order).
 
-        ->Maps cannot have duplicate keys (examples below)
+      Note: Maps cannot have duplicate keys (examples below)
     </pre>
   </body>
   <script>
@@ -26,7 +26,7 @@
     /*
     You can create a JavaScript Map by:
         1) Passing an Array to new Map()
-        2) Create a Map and use Map.set()
+        2) Create a Map() and use Map.set()
     */
     //1) The new Map() Method: You can create a Map by passing an Array to the new Map() constructor:
     const fruits = new Map([
@@ -58,7 +58,7 @@
     console.log("Count of carrots:", vegetables.get("spinach")); // 12
 
     //Maps are Objects:
-    console.log("type of fruits:", typeof fruits); // object
+    console.log("type of fruits map:", typeof fruits); // object
     console.log("Is fruits a Map?", fruits instanceof Map); // true
 
     //Example of using Map with different data types:
