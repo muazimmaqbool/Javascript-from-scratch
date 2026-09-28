@@ -32,7 +32,7 @@ console.log("has banana:",fruits.has("banana")) // fase (because b is small)
 
 console.log("deleting banana...")
 fruits.delete("Banana") // or console.log(fruits.delete("Banana")) : returns true when delete is successfully otherwise false
-console.log("fruits set afte deletion:",fruits)
+console.log("fruits set after deletion:",fruits)
 
 console.log("clear all")
 fruits.clear()
@@ -66,7 +66,7 @@ console.log("unique arr:",uniqueArr) // o/p: Set(3) { 'a', 'b', 'c' }
     //1) Remove duplicates from an array
     //2) Checks if any existing element quickly
     
-//->Important Notes
+//->Important:
 // 1) Order of elements is insertion order.
 // 2) Unlike arrays, Sets do not support indexing (e.g. mySet[0] won’t work).
 // 3) Each value in a Set must be unique.
@@ -77,7 +77,7 @@ const setMix=new Set([123,"Banana",true,{Apple:12},false])
 console.log("setMix:",setMix)
 
 console.log("Has banana:",setMix.has("Banana")) // true
-console.log("Has banana:",setMix.has(false)) // true
+console.log("Has false:",setMix.has(false)) // true
 
 setMix.add("Hello")
 setMix.add({Mango:"20"})
