@@ -32,10 +32,9 @@ console.log(findKthPositive([2, 3, 4, 7, 11], 5)); // 9
 =====================================================================
                 Kth Missing Positive Number
 =====================================================================
-
 Problem:
-Given a sorted array of positive integers `arr` and an integer `k`,
-return the k-th missing positive number.
+  Given a sorted array of positive integers `arr` and an integer `k`,
+  return the k-th missing positive number.
 
 Example:
 arr = [2,3,4,7,11]
@@ -45,13 +44,9 @@ Positive numbers should normally look like:
 
 1  2  3  4  5  6  7  8  9  10  11 ...
 
-But the array contains only:
+But the array contains only: 2  3  4 7 11
 
-2  3  4     7     11
-
-So the missing numbers are:
-
-1, 5, 6, 8, 9, 10 ...
+So the missing numbers are: 1, 5, 6, 8, 9, 10 ...
 
 The 5th missing number = 9
 
@@ -62,9 +57,7 @@ CORE IDEA OF THE ALGORITHM
 We iterate through the array and count how many numbers from the array
 fall inside the range of the first k missing numbers.
 
-We use a variable:
-
-count → how many numbers from the array affect the missing sequence.
+We use a variable: count → how many numbers from the array affect the missing sequence.
 
 Each time we encounter a number that is <= (k + count),
 it means this number reduces the missing numbers we expect.
