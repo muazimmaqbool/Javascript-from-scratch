@@ -10,7 +10,7 @@
        2. Compare the current element with the next element in the array.
        3. Swap the elements if the current element is greater than the next one.
        4. Move to the next pair and repeat the comparison and do potential swap process until the end of the array is reached.
-       5. Repeat the entire process (passes) for the remaining unsorted portion of the list. After each pass, one element is guaranteed to be in its correct, final place.
+       5. Repeat the entire process (passes) for the remaining unsorted portion of the list. After each pass, one element is guaranteed to be in its correct final place.
        6. Stop when a full pass is completed without performing any swaps, which means the array is sorted.
 
     ->Characteristics:
@@ -20,7 +20,7 @@
         4. Space Complexity: It is an in-place algorithm, requiring only a constant amount of extra memory for temporary variables so: O(1) of space complexity.
         5. Stability: It is a stable sorting algorithm, meaning elements with the same value maintain their original relative order after sorting. 
 
-    ->Use Cases
+    ->Use Cases:
         Due to its inefficiency, Bubble Sort is rarely used in real-world production applications. 
         It's primary use is as an educational tool in computer science courses to introduce fundamental sorting concepts, such as comparison-based sorting, nested loops, and algorithm analysis. 
         It can be suitable for very small datasets or data that is already nearly sorted
