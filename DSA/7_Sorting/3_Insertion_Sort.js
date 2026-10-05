@@ -54,8 +54,9 @@
 //   Write a function to sort the given array nums in ascending order.
 //   Input: [29,10,14,37,14,33,8,11] --> output: [8,10,11,14,14,29,33,37]
 
-//We will use two: first loop will go from start to end
-//                 second loop will go in reverse manner, example we are at 14 now this loop will run in reverse and compare 14 with its previous two i.e 20 and 29 to place it in proper position
+//We will use two loops: first loop will go from start to end
+//                       second loop will go in reverse manner, example we are at 14 now this loop will run in reverse and 
+//                       compare 14 with its previous two i.e 20 and 29 to place it in proper position
 function insertionSort(arr) {
   const n = arr.length;
 
