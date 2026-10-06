@@ -26,9 +26,9 @@ console.log(nums.sort());
 So in order to fix it we have compare function:
 */
 const compareFunction = (a, b) => {
-  //1. < 0 a comes first
-  //2. 0 nothing
-  //3. > 0 b comes first
+  //1. < 0 : a comes first
+  //2. 0 : nothing
+  //3. > 0 : b comes first
   return a - b; //for sorting in ascending order
   //return b-a // for sorting in descending order
 };
