@@ -110,5 +110,7 @@ function merge(left,right){
     // add remaining elements directly (already sorted)
     return [...sortedArr,...left,...right]
 }
-//Time Complexity: the first function mergeSort is dividing array every single time so O(log n) and merg function its comparing every single element inside the array so O(n) = O(n log n)
+
+//Time Complexity: the first function mergeSort is dividing array every single time so O(log n) and
+//                 merg function its comparing every single element inside the array so O(n) = O(n log n)
 //Space Complexity: O(n) as we are creating new array inside merge function
