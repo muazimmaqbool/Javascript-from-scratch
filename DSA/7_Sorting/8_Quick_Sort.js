@@ -24,8 +24,6 @@
 
 ->QUICK SORT DIAGRAM:
 
-QUICK SORT DIAGRAM
-
 Example: [8, 3, 5, 4, 7, 6, 1, 2]
 Taking pivot as first element i.e arr[0] => 8
 ----------------------------------------------------------------
@@ -149,7 +147,7 @@ console.log(quickSort([1, 5, 0, 3 - 9, 6 - 5, 1, 2, 99, 101])); // [-6,0,1,1,1,2
 Note: Important
 If pivot was the last element then:
     -> const pivot = arr[arr.length - 1];
-    and loop till second last element (exclude pivot)
+    and then loop starts from 0 till second last element (exclude pivot)
     ->for (let i = 0 ; i < arr.length-1; i++) { ... }
 
 */
@@ -161,4 +159,4 @@ If pivot was the last element then:
 
 //Space complexity is O(log n), because we are making recursive calls and quick sort does use some memory to store the data of recursive calls
 
-//Note: Average and best case is O(log n) and worst case is O(n)
+//Note: Average and best case T.C is O(log n) and worst case T.C is O(n)
