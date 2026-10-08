@@ -111,11 +111,9 @@ O(log n) (recursion stack)
 Note: Visit -> https://visualgo.net/en/sorting to see visually working of different sort algorithms
 */
 
-
 //Quick Sort implementation:
 //Write a function to sort the given array in ascending order
 //Input: [8,3,5,4,7,6,1,2] --->>> output: [1,2,3,4,5,6,7,8]
-
 
 function quickSort(arr) {
   //edge case when arr contains only one element
