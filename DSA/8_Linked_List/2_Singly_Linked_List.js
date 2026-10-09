@@ -1,7 +1,7 @@
-//Note: First checkout previous file 1_intro.txt
+//Note: First checkout previous file: 1_intro.txt
 
 /*
-->Singly Linked List: Each node has a pointer only to the next node in the sequence. This is the simplest type.
+->Singly Linked List: Each node has a pointer pointing to the next node in the sequence.
 
 ->SINGLY LINKED LIST (Simple Diagram):
 
@@ -39,7 +39,7 @@ class LinkedList {
     this.head = null; // start of the list - initially it's empty
   }
 
-  //-> 1) adding element at the beginning/top/head (head of the list)
+  //-> 1: adding element at the beginning/top/head (head of the list)
   addFirst(data) {
     const newNode = new Node(data); // create a new node with given data
     newNode.next = this.head; // pointing new node's next to current head

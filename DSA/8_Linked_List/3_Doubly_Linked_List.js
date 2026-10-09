@@ -1,7 +1,8 @@
 //Note: First checkout previous files 1_intro.txt
 
 /*
-->Doubly Linked List: Each node contains pointers to both the next node and the previous node. This allows for traversal in both forward and backward directions.
+->Doubly Linked List: Each node contains pointers to both the next node and the previous node. 
+                      This allows for traversal in both forward and backward directions.
 
 ->DOUBLY LINKED LIST (Simple Diagram):
 
